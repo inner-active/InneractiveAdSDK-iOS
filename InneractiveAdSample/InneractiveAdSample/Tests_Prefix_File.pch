@@ -1,0 +1,36 @@
+//
+//  Prefix header
+//
+//  The contents of this file are implicitly included at the beginning of every source file of unit and integration tests implementations.
+//
+
+#ifdef __OBJC__
+    #import <UIKit/UIKit.h>
+    #import <Foundation/Foundation.h>
+    #import "DDLog.h"
+#endif
+
+#ifndef __IPHONE_5_0
+    #warning "This project uses features only available in iOS SDK 5.0 and later."
+#endif
+
+#undef DDLogVerbose
+#define DDLogVerbose(format, ...)
+#undef DDLogDebug
+#define DDLogDebug(format, ...)
+#undef DDLogInfo
+#define DDLogInfo(format, ...)
+#undef DDLogWarn
+#define DDLogWarn(format, ...)
+#undef DDLogError
+#define DDLogError(format, ...)
+
+static int ddLogLevel = 0;
+
+#define SCREEN_BOUNDS ([UIScreen mainScreen].bounds)
+#define DEVICE_WIDTH CGRectGetWidth(SCREEN_BOUNDS)
+#define DEVICE_HEIGHT CGRectGetHeight(SCREEN_BOUNDS)
+
+// Current width - adjusted for landscape and portrait.
+#define DEVICE_CURR_WIDTH ((([UIApplication sharedApplication].statusBarOrientation == UIInterfaceOrientationPortrait) || ([UIApplication sharedApplication].statusBarOrientation == UIInterfaceOrientationPortraitUpsideDown)) ? SCREEN_BOUNDS.size.width : SCREEN_BOUNDS.size.height)
+#define DEVICE_CURR_HEIGHT ((([UIApplication sharedApplication].statusBarOrientation == UIInterfaceOrientationPortrait) || ([UIApplication sharedApplication].statusBarOrientation == UIInterfaceOrientationPortraitUpsideDown)) ? SCREEN_BOUNDS.size.height : SCREEN_BOUNDS.size.width)
