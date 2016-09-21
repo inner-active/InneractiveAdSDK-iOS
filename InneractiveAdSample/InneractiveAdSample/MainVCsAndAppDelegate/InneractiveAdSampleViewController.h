@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import <InneractiveAdSDK/InneractiveAdSDK.h>
+#import "InneractiveAdSDK.h"
 
 
 

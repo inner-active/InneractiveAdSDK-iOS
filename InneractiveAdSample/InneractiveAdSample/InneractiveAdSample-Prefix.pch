@@ -7,20 +7,6 @@
 #ifdef __OBJC__
     #import <UIKit/UIKit.h>
     #import <Foundation/Foundation.h>
-    #import <Availability.h>
-    #import "DDLog.h"
-#endif
-
-#ifndef __IPHONE_6_0
-    #warning "This project uses features only available in iOS SDK 6.0 and later."
-#endif
-
-// For LumberJack (debug / release log levels).
-#ifdef DEBUG
-    #define DEBUG_EXTRA//used for testing additional cases; can be commented out for every build;
-    static const int ddLogLevel = LOG_LEVEL_VERBOSE;
-#else
-    static const int ddLogLevel = LOG_LEVEL_INFO;
 #endif
 
 // Supress performSelector with an unknown selector warning - for ARC.
@@ -29,12 +15,6 @@ _Pragma("clang diagnostic push") \
 _Pragma("clang diagnostic ignored \"-Warc-performSelector-leaks\"") \
 code; \
 _Pragma("clang diagnostic pop") \
-
-#define SYSTEM_VERSION_EQUAL_TO(v)                  ([[[UIDevice currentDevice] systemVersion] compare:v options:NSNumericSearch] == NSOrderedSame)
-#define SYSTEM_VERSION_GREATER_THAN(v)              ([[[UIDevice currentDevice] systemVersion] compare:v options:NSNumericSearch] == NSOrderedDescending)
-#define SYSTEM_VERSION_GREATER_THAN_OR_EQUAL_TO(v)  ([[[UIDevice currentDevice] systemVersion] compare:v options:NSNumericSearch] != NSOrderedAscending)
-#define SYSTEM_VERSION_LESS_THAN(v)                 ([[[UIDevice currentDevice] systemVersion] compare:v options:NSNumericSearch] == NSOrderedAscending)
-#define SYSTEM_VERSION_LESS_THAN_OR_EQUAL_TO(v)     ([[[UIDevice currentDevice] systemVersion] compare:v options:NSNumericSearch] != NSOrderedDescending)
 
 #define SCREEN_BOUNDS ([UIScreen mainScreen].bounds)
 

@@ -172,7 +172,7 @@
         }
     }
     
-    DDLogInfo(@"NativeAdStoryAdapterTableView - InneractiveAdLoaded: %@", nativeAd);
+    NSLog(@"NativeAdViewController - InneractiveAdLoaded: %@", nativeAd);
 }
 
 - (void)InneractiveAdFailedWithError:(NSError *)error withAdView:(IaNativeAd *)nativeAd {
@@ -180,7 +180,7 @@
         [self.adContainerView switchToTempMode];
     }
     
-    DDLogWarn(@"NativeAdStoryAdapterTableView - InneractiveAdFailedWithError: %@.", error);
+    NSLog(@"NativeAdViewController - InneractiveAdFailedWithError: %@.", error);
     [[iToast makeText:[NSString stringWithFormat:@"InneractiveAdFailed Event Received\n%@", [error localizedDescription]]] show];
 }
 
@@ -189,11 +189,11 @@
 }
 
 - (void)InneractiveAdAppShouldResume:(IaAdView*)adView {
-    DDLogInfo(@"InneractiveAdAppShouldResume");
+    NSLog(@"NativeAdViewController - InneractiveAdAppShouldResume");
 }
 
 - (void)InneractiveAdAppShouldSuspend:(IaAd *)adView {
-    DDLogInfo(@"InneractiveAdAppShouldSuspend");
+    NSLog(@"NativeAdViewController - InneractiveAdAppShouldSuspend");
 }
 
 #pragma mark - Service

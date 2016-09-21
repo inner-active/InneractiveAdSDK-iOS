@@ -185,12 +185,41 @@
  */
 - (void)setUseAudioSessionManagement;
 
+/**
+ *  @typedef InneractiveInterstitialVideoSkipMode
+ *  @brief Enum Defines a time interval, the interstitial video will be available to skip after.
+ */
 typedef NS_ENUM(NSInteger, InneractiveInterstitialVideoSkipMode) {
+    /**
+     *  Default: after 15 seconds.
+     */
     InneractiveInterstitialVideoSkipModeDefault = 0,
+    /**
+     *  Minimum: after 5 seconds.
+     */
     InneractiveInterstitialVideoSkipModeMinTime = 1,
-    InneractiveInterstitialVideoSkipModeDisabled = 2
+    /**
+     *  Skip is not allowed until video finishes.
+     */
+    InneractiveInterstitialVideoSkipModeDisabled = 2,
+    /**
+     *  @brief Skip is always available.
+     */
+    InneractiveInterstitialVideoSkipModeAlways = 3,
 };
+
+/**
+ *  @brief Get skip mode.
+ *
+ *  @return skip mode.
+ */
 - (InneractiveInterstitialVideoSkipMode)interstitialVideoSkipMode;
+
+/**
+ *  @brief Defines a time interval, the interstitial video will be available to skip after.
+ *
+ *  @param interstitialVideoSkipMode Skip mode.
+ */
 - (void)setInterstitialVideoSkipMode:(InneractiveInterstitialVideoSkipMode)interstitialVideoSkipMode;
 
 @end

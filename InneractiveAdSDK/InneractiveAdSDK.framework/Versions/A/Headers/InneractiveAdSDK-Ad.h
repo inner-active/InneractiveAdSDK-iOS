@@ -12,6 +12,18 @@
 @protocol InneractiveAdDelegate;
 
 /**
+ *  @typedef IaVideoProgressBlock
+ *
+ *  @brief Video progress block.
+ *
+ *  @discussion Is used to observe video playback progress.
+ *
+ *  @param currentTime Current playback time in seconds.
+ *  @param totalTime   Total video duration in seconds.
+ */
+typedef void(^IaVideoProgressBlock)(NSTimeInterval currentTime, NSTimeInterval totalTime);
+
+/**
  *  @class IaAd
  *  @discussion The IaAd is an abstract class. It implements the basic ad flow logic.
  * This class should not be allocated explicitly, please use IaAdView class (Display Ads) or IaNativeAd class (Native Ads) instead.
@@ -23,17 +35,26 @@
 /**
  *  @brief Ad Configuration.
  */
-@property (nonatomic, strong) IaAdConfig *adConfig;
+@property (nonnull, nonatomic, strong) IaAdConfig *adConfig;
 
 /**
  *  @brief InneractiveAdDelegate.
  */
-@property (nonatomic, weak) id<InneractiveAdDelegate> delegate;
+@property (nullable, nonatomic, weak) id<InneractiveAdDelegate> delegate;
 
-- (instancetype)init __attribute__((unavailable("IaAd is an abstract class, please use IaAdView class or IaNativeAd class instead")));
-- (instancetype)initWithFrame:(CGRect)frame __attribute__((unavailable("IaAd is an abstract class, please use IaAdView class or IaNativeAd class instead")));
-- (instancetype)initWithCoder:(NSCoder *)aDecoder __attribute__((unavailable("IaAd is an abstract class, please use IaAdView class or IaNativeAd class instead")));
-+ (instancetype)new __attribute__((unavailable("IaAd is an abstract class, please use IaAdView class or IaNativeAd class instead")));
+/**
+ *  @brief Use to get video duration in seconds. Is valid only if the ad is video ad.
+ *
+ *  @discussion Use this method after 'InneractiveAdLoaded:' event has been received.
+ */
+@property (nonatomic, readonly) NSTimeInterval videoDuration;
+
+/**
+ *  @brief Video progress observer. Use to observe current video progress. Is valid only if the ad is video ad and the video is being played.
+ *
+ *  @discussion The block is invoked on the main thread.
+ */
+@property (nullable, nonatomic, copy) IaVideoProgressBlock videoProgressObserver;
 
 /**
  *  @brief Check, whether the interstitial / native ad is video ad.
@@ -43,6 +64,11 @@
  *  @return YES in case of video ad, otherwise NO.
  */
 - (BOOL)isVideoAd;
+
+- (null_unspecified instancetype)init __attribute__((unavailable("IaAd is an abstract class, please use IaAdView class or IaNativeAd class instead")));
+- (null_unspecified instancetype)initWithFrame:(CGRect)frame __attribute__((unavailable("IaAd is an abstract class, please use IaAdView class or IaNativeAd class instead")));
+- (null_unspecified instancetype)initWithCoder:(null_unspecified NSCoder *)aDecoder __attribute__((unavailable("IaAd is an abstract class, please use IaAdView class or IaNativeAd class instead")));
++ (null_unspecified instancetype)new __attribute__((unavailable("IaAd is an abstract class, please use IaAdView class or IaNativeAd class instead")));
 
 #pragma mark - Ads Debugging
 
@@ -54,12 +80,12 @@
  */
 - (void)setAdRequestConnectionTimeoutInSec:(NSTimeInterval)connectionTimeoutInSeconds;
 
-- (void)testEnvironmentAddress:(NSString *)name;
+- (void)testEnvironmentAddress:(nullable NSString *)name;
 /**
  * @param portalsString contains portals separated by dot (.) symbol.
  * For example: @"7714.7715"
  */
-- (void)testEnvironmentPortal:(NSString *)portalsString;
-- (void)testEnvironmentResponse:(NSString *)responseType;
+- (void)testEnvironmentPortal:(nullable NSString *)portalsString;
+- (void)testEnvironmentResponse:(nullable NSString *)responseType;
 
 @end

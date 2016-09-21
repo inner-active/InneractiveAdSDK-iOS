@@ -22,12 +22,6 @@
 		1D778DCF194884BD006B4E54 /* InneractiveAdSampleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D778DCD194884BD006B4E54 /* InneractiveAdSampleViewController.m */; };
 		1D778E3B194885FD006B4E54 /* iToast.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D778DE7194885FD006B4E54 /* iToast.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc -w"; }; };
 		1D778E3C194885FD006B4E54 /* iToast.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D778DE7194885FD006B4E54 /* iToast.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		1D778E41194885FD006B4E54 /* DDFileLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D778DEE194885FD006B4E54 /* DDFileLogger.m */; };
-		1D778E42194885FD006B4E54 /* DDFileLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D778DEE194885FD006B4E54 /* DDFileLogger.m */; };
-		1D778E43194885FD006B4E54 /* DDLog.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D778DF0194885FD006B4E54 /* DDLog.m */; settings = {COMPILER_FLAGS = "-w"; }; };
-		1D778E44194885FD006B4E54 /* DDLog.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D778DF0194885FD006B4E54 /* DDLog.m */; settings = {COMPILER_FLAGS = "-w"; }; };
-		1D778E45194885FD006B4E54 /* DDTTYLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D778DF2194885FD006B4E54 /* DDTTYLogger.m */; };
-		1D778E46194885FD006B4E54 /* DDTTYLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D778DF2194885FD006B4E54 /* DDTTYLogger.m */; };
 		1DA1E7F919A49B7400E5970C /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1DA1E7F819A49B7400E5970C /* Storyboard.storyboard */; };
 		1DA1E7FA19A49B7400E5970C /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1DA1E7F819A49B7400E5970C /* Storyboard.storyboard */; };
 		1DA222D719C0AB190044DF4A /* libxml2.2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DA222D619C0AB190044DF4A /* libxml2.2.dylib */; };
@@ -45,8 +39,8 @@
 		2C86C5931ABED2C400ECEF4A /* InneractiveViewForNativeAd.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C86C5911ABED2C400ECEF4A /* InneractiveViewForNativeAd.m */; };
 		2C86C5981ABEDE4900ECEF4A /* InneractiveMessageTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C86C5971ABEDE4900ECEF4A /* InneractiveMessageTextField.m */; };
 		2C86C59A1ABEDE8900ECEF4A /* InneractiveMessageTextField.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C86C5991ABEDE8900ECEF4A /* InneractiveMessageTextField.xib */; };
-		2C8F7C891D8ECF0D00F988E3 /* InneractiveAdSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C8F7C871D8ECF0D00F988E3 /* InneractiveAdSDK.framework */; };
-		2C8F7C8A1D8ECF0D00F988E3 /* InneractiveSDKResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 2C8F7C881D8ECF0D00F988E3 /* InneractiveSDKResources.bundle */; };
+		2C89A0041D9290B4002E7AC8 /* InneractiveAdSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C89A0021D9290B4002E7AC8 /* InneractiveAdSDK.framework */; };
+		2C89A0051D9290B4002E7AC8 /* InneractiveSDKResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 2C89A0031D9290B4002E7AC8 /* InneractiveSDKResources.bundle */; };
 		2CB9DBCE1AC161E9006A1A89 /* InneractiveNativeAdStoryCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CB9DBCD1AC161E9006A1A89 /* InneractiveNativeAdStoryCollectionViewController.m */; };
 		2CB9DBFB1AC16FDE006A1A89 /* InneractiveFeedCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CB9DBF91AC16FDE006A1A89 /* InneractiveFeedCollectionCell.m */; };
 		2CB9DBFC1AC16FDE006A1A89 /* InneractiveFeedCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2CB9DBFA1AC16FDE006A1A89 /* InneractiveFeedCollectionCell.xib */; };
@@ -137,17 +131,12 @@
 		1D778DCD194884BD006B4E54 /* InneractiveAdSampleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = InneractiveAdSampleViewController.m; path = InneractiveAdSample/MainVCsAndAppDelegate/InneractiveAdSampleViewController.m; sourceTree = SOURCE_ROOT; };
 		1D778DE6194885FD006B4E54 /* iToast.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iToast.h; sourceTree = "<group>"; };
 		1D778DE7194885FD006B4E54 /* iToast.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iToast.m; sourceTree = "<group>"; };
-		1D778DED194885FD006B4E54 /* DDFileLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDFileLogger.h; sourceTree = "<group>"; };
-		1D778DEE194885FD006B4E54 /* DDFileLogger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDFileLogger.m; sourceTree = "<group>"; };
-		1D778DEF194885FD006B4E54 /* DDLog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDLog.h; sourceTree = "<group>"; };
-		1D778DF0194885FD006B4E54 /* DDLog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDLog.m; sourceTree = "<group>"; };
-		1D778DF1194885FD006B4E54 /* DDTTYLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDTTYLogger.h; sourceTree = "<group>"; };
-		1D778DF2194885FD006B4E54 /* DDTTYLogger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDTTYLogger.m; sourceTree = "<group>"; };
 		1D778E8119488703006B4E54 /* InneractiveAdSample-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "InneractiveAdSample-Prefix.pch"; path = "InneractiveAdSample/InneractiveAdSample-Prefix.pch"; sourceTree = SOURCE_ROOT; };
 		1D8AD18B180EEFF900EDB0C9 /* InneractiveAdSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InneractiveAdSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1D8AD18E180EEFF900EDB0C9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		1D8AD190180EEFF900EDB0C9 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		1D8AD192180EEFF900EDB0C9 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		1D8AD1A6180EEFF900EDB0C9 /* InneractiveAdSampleSpecs.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = InneractiveAdSampleSpecs.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1DA1E7F819A49B7400E5970C /* Storyboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Storyboard.storyboard; sourceTree = SOURCE_ROOT; };
 		1DA222D619C0AB190044DF4A /* libxml2.2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.2.dylib; path = usr/lib/libxml2.2.dylib; sourceTree = SDKROOT; };
 		1DA9973B194881E000D33FE5 /* InneractiveAdSample-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "InneractiveAdSample-Info.plist"; path = "InneractiveAdSample/InneractiveAdSample-Info.plist"; sourceTree = SOURCE_ROOT; };
@@ -171,8 +160,8 @@
 		2C86C5961ABEDE4900ECEF4A /* InneractiveMessageTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = InneractiveMessageTextField.h; path = InneractiveAdSample/MainVCsAndAppDelegate/Story/InneractiveMessengerExample/InneractiveMessageTextField.h; sourceTree = SOURCE_ROOT; };
 		2C86C5971ABEDE4900ECEF4A /* InneractiveMessageTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = InneractiveMessageTextField.m; path = InneractiveAdSample/MainVCsAndAppDelegate/Story/InneractiveMessengerExample/InneractiveMessageTextField.m; sourceTree = SOURCE_ROOT; };
 		2C86C5991ABEDE8900ECEF4A /* InneractiveMessageTextField.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = InneractiveMessageTextField.xib; path = InneractiveAdSample/MainVCsAndAppDelegate/Story/InneractiveMessengerExample/InneractiveMessageTextField.xib; sourceTree = SOURCE_ROOT; };
-		2C8F7C871D8ECF0D00F988E3 /* InneractiveAdSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = InneractiveAdSDK.framework; sourceTree = "<group>"; };
-		2C8F7C881D8ECF0D00F988E3 /* InneractiveSDKResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = InneractiveSDKResources.bundle; sourceTree = "<group>"; };
+		2C89A0021D9290B4002E7AC8 /* InneractiveAdSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = InneractiveAdSDK.framework; sourceTree = "<group>"; };
+		2C89A0031D9290B4002E7AC8 /* InneractiveSDKResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = InneractiveSDKResources.bundle; sourceTree = "<group>"; };
 		2CB9DBCC1AC161E9006A1A89 /* InneractiveNativeAdStoryCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InneractiveNativeAdStoryCollectionViewController.h; sourceTree = "<group>"; };
 		2CB9DBCD1AC161E9006A1A89 /* InneractiveNativeAdStoryCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InneractiveNativeAdStoryCollectionViewController.m; sourceTree = "<group>"; };
 		2CB9DBF81AC16FDE006A1A89 /* InneractiveFeedCollectionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InneractiveFeedCollectionCell.h; sourceTree = "<group>"; };
@@ -250,7 +239,7 @@
 				1D5496F31992200F00C447AC /* MessageUI.framework in Frameworks */,
 				1D5496EF19921FD500C447AC /* CoreTelephony.framework in Frameworks */,
 				1D5E24FA19EE88AE00434BB7 /* StoreKit.framework in Frameworks */,
-				2C8F7C891D8ECF0D00F988E3 /* InneractiveAdSDK.framework in Frameworks */,
+				2C89A0041D9290B4002E7AC8 /* InneractiveAdSDK.framework in Frameworks */,
 				1D5496F119921FEB00C447AC /* AdSupport.framework in Frameworks */,
 				1DA222D719C0AB190044DF4A /* libxml2.2.dylib in Frameworks */,
 			);
@@ -272,7 +261,6 @@
 			isa = PBXGroup;
 			children = (
 				1D778DE5194885FD006B4E54 /* iToast */,
-				1D778DE8194885FD006B4E54 /* Lumberjack */,
 			);
 			path = ExternalFrameworks;
 			sourceTree = "<group>";
@@ -286,23 +274,10 @@
 			path = iToast;
 			sourceTree = "<group>";
 		};
-		1D778DE8194885FD006B4E54 /* Lumberjack */ = {
-			isa = PBXGroup;
-			children = (
-				1D778DED194885FD006B4E54 /* DDFileLogger.h */,
-				1D778DEE194885FD006B4E54 /* DDFileLogger.m */,
-				1D778DEF194885FD006B4E54 /* DDLog.h */,
-				1D778DF0194885FD006B4E54 /* DDLog.m */,
-				1D778DF1194885FD006B4E54 /* DDTTYLogger.h */,
-				1D778DF2194885FD006B4E54 /* DDTTYLogger.m */,
-			);
-			path = Lumberjack;
-			sourceTree = "<group>";
-		};
 		1D8AD182180EEFF900EDB0C9 = {
 			isa = PBXGroup;
 			children = (
-				2C8F7C861D8ECF0D00F988E3 /* InneractiveAdSDK */,
+				2C89A0011D9290B4002E7AC8 /* InneractiveAdSDK */,
 				1D778DDA194885FD006B4E54 /* ExternalFrameworks */,
 				1D8AD18D180EEFF900EDB0C9 /* Frameworks */,
 				1D8AD194180EEFF900EDB0C9 /* InneractiveAdSample */,
@@ -314,6 +289,7 @@
 			isa = PBXGroup;
 			children = (
 				1D8AD18B180EEFF900EDB0C9 /* InneractiveAdSample.app */,
+				1D8AD1A6180EEFF900EDB0C9 /* InneractiveAdSampleSpecs.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -418,11 +394,11 @@
 			name = InneractiveMessengerExample;
 			sourceTree = "<group>";
 		};
-		2C8F7C861D8ECF0D00F988E3 /* InneractiveAdSDK */ = {
+		2C89A0011D9290B4002E7AC8 /* InneractiveAdSDK */ = {
 			isa = PBXGroup;
 			children = (
-				2C8F7C871D8ECF0D00F988E3 /* InneractiveAdSDK.framework */,
-				2C8F7C881D8ECF0D00F988E3 /* InneractiveSDKResources.bundle */,
+				2C89A0021D9290B4002E7AC8 /* InneractiveAdSDK.framework */,
+				2C89A0031D9290B4002E7AC8 /* InneractiveSDKResources.bundle */,
 			);
 			name = InneractiveAdSDK;
 			path = ../InneractiveAdSDK;
@@ -576,6 +552,26 @@
 			productReference = 1D8AD18B180EEFF900EDB0C9 /* InneractiveAdSample.app */;
 			productType = "com.apple.product-type.application";
 		};
+		1D8AD1A5180EEFF900EDB0C9 /* InneractiveAdSampleSpecs */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1D8AD1BA180EEFF900EDB0C9 /* Build configuration list for PBXNativeTarget "InneractiveAdSampleSpecs" */;
+			buildPhases = (
+				1D8AD1A2180EEFF900EDB0C9 /* Sources */,
+				1D8AD1A3180EEFF900EDB0C9 /* Frameworks */,
+				1D8AD1A4180EEFF900EDB0C9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1D8AD1AC180EEFF900EDB0C9 /* PBXTargetDependency */,
+				1DF059BD198FACFD00314D91 /* PBXTargetDependency */,
+				1DF059BF198FACFD00314D91 /* PBXTargetDependency */,
+			);
+			name = InneractiveAdSampleSpecs;
+			productName = InneractiveAdSampleTests;
+			productReference = 1D8AD1A6180EEFF900EDB0C9 /* InneractiveAdSampleSpecs.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -583,10 +579,11 @@
 			isa = PBXProject;
 			attributes = {
 				CLASSPREFIX = InneractiveAdSample;
-				LastUpgradeCheck = 0730;
+				LastUpgradeCheck = 0800;
 				ORGANIZATIONNAME = Inneractive;
 				TargetAttributes = {
 					1D8AD18A180EEFF900EDB0C9 = {
+						DevelopmentTeam = 9G2AGGBJ52;
 						SystemCapabilities = {
 							com.apple.GameCenter = {
 								enabled = 0;
@@ -618,6 +615,7 @@
 			projectRoot = "";
 			targets = (
 				1D8AD18A180EEFF900EDB0C9 /* InneractiveAdSample */,
+				1D8AD1A5180EEFF900EDB0C9 /* InneractiveAdSampleSpecs */,
 			);
 		};
 /* End PBXProject section */
@@ -638,7 +636,7 @@
 				8898EA8B1B28490D00884BCA /* 04@2x.png in Resources */,
 				8898EAA31B28490D00884BCA /* 10p@2x.png in Resources */,
 				8898EAA61B28490D00884BCA /* 13p@2x.png in Resources */,
-				2C8F7C8A1D8ECF0D00F988E3 /* InneractiveSDKResources.bundle in Resources */,
+				2C89A0051D9290B4002E7AC8 /* InneractiveSDKResources.bundle in Resources */,
 				8898EA941B28490D00884BCA /* 13@2x.png in Resources */,
 				8898EA8C1B28490D00884BCA /* 05@2x.png in Resources */,
 				1DA1E7F919A49B7400E5970C /* Storyboard.storyboard in Resources */,
@@ -692,14 +690,12 @@
 			files = (
 				88D6348C1B53B04A00F68F50 /* InneractiveNativeAd2TableCell.m in Sources */,
 				2CB9DC151AC18CBB006A1A89 /* InneractiveNativeAdCollectionCell.m in Sources */,
-				1D778E45194885FD006B4E54 /* DDTTYLogger.m in Sources */,
 				2C86C5981ABEDE4900ECEF4A /* InneractiveMessageTextField.m in Sources */,
 				88D6348D1B53B04A00F68F50 /* InneractiveNativeAdStoryManualTableViewController.m in Sources */,
 				1D778E3B194885FD006B4E54 /* iToast.m in Sources */,
 				2C2EA5971A1CA02A00B1924F /* InneractivePositioningPickerView.m in Sources */,
 				88D634891B53B04A00F68F50 /* InneractiveFeed1TableCell.m in Sources */,
 				2C2EA5941A1C81C500B1924F /* InneractivePositioningPicker.m in Sources */,
-				1D778E41194885FD006B4E54 /* DDFileLogger.m in Sources */,
 				1D778DCE194884BD006B4E54 /* InneractiveAdSampleViewController.m in Sources */,
 				8898EAAE1B284DC500884BCA /* InneractiveFeedDataProvider.m in Sources */,
 				2CB9DBCE1AC161E9006A1A89 /* InneractiveNativeAdStoryCollectionViewController.m in Sources */,
@@ -712,7 +708,6 @@
 				1DA99740194881E000D33FE5 /* main.m in Sources */,
 				88D6348B1B53B04A00F68F50 /* InneractiveNativeAd1TableCell.m in Sources */,
 				2C86C5921ABED2C400ECEF4A /* InneractiveNativeAdViewController.m in Sources */,
-				1D778E43194885FD006B4E54 /* DDLog.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -720,13 +715,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1D778E44194885FD006B4E54 /* DDLog.m in Sources */,
 				1D778DCF194884BD006B4E54 /* InneractiveAdSampleViewController.m in Sources */,
 				1DAD3E0E19AB3DD900513B73 /* InneractiveAdSampleTableViewController.m in Sources */,
-				1D778E42194885FD006B4E54 /* DDFileLogger.m in Sources */,
 				1D778DC619488344006B4E54 /* InneractiveAdSampleAppDelegate.m in Sources */,
 				1D778E3C194885FD006B4E54 /* iToast.m in Sources */,
-				1D778E46194885FD006B4E54 /* DDTTYLogger.m in Sources */,
 				1DA99741194881E000D33FE5 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -787,7 +779,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				OTHER_LDFLAGS = "";
 				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
@@ -800,7 +792,6 @@
 		1D7A98F51973FBA100949B42 /* Cert */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
@@ -834,7 +825,7 @@
 					"$(PROJECT_DIR)/ExternalFrameworks/**",
 				);
 				INFOPLIST_FILE = "InneractiveAdSample/InneractiveAdSample-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -888,7 +879,7 @@
 					"$(PROJECT_DIR)/ExternalFrameworks/**",
 				);
 				INFOPLIST_FILE = "InneractiveAdSample/InneractiveAdSampleTests-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -904,6 +895,13 @@
 					"-all_load",
 					"-lstdc++",
 				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.inneractive.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = InneractiveAdSampleSpecs;
+				PROVISIONING_PROFILE = "";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				USER_HEADER_SEARCH_PATHS = "";
+				VALID_ARCHS = "arm64 armv7 armv7s i386 x86_64";
+				WRAPPER_EXTENSION = xctest;
 			};
 			name = Cert;
 		};
@@ -944,7 +942,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_LDFLAGS = "";
 				PROVISIONING_PROFILE = "";
@@ -985,7 +983,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				OTHER_LDFLAGS = "";
 				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
@@ -998,7 +996,6 @@
 		1D8AD1B8180EEFF900EDB0C9 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
@@ -1032,7 +1029,7 @@
 					"$(PROJECT_DIR)/ExternalFrameworks/**",
 				);
 				INFOPLIST_FILE = "InneractiveAdSample/InneractiveAdSample-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1057,7 +1054,6 @@
 		1D8AD1B9180EEFF900EDB0C9 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
@@ -1085,7 +1081,7 @@
 					"$(PROJECT_DIR)/ExternalFrameworks/**",
 				);
 				INFOPLIST_FILE = "InneractiveAdSample/InneractiveAdSample-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1119,7 +1115,6 @@
 					"$(inherited)",
 					"$(DEVELOPER_FRAMEWORKS_DIR)",
 					"$(PROJECT_DIR)/**",
-					"$(PROJECT_DIR)/ExternalFrameworks/**",
 				);
 				GCC_C_LANGUAGE_STANDARD = "compiler-default";
 				GCC_GENERATE_TEST_COVERAGE_FILES = YES;
@@ -1134,11 +1129,10 @@
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
-					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
 					"$(PROJECT_DIR)/ExternalFrameworks/**",
 				);
 				INFOPLIST_FILE = "InneractiveAdSample/InneractiveAdSampleTests-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -1154,6 +1148,13 @@
 					"-all_load",
 					"-lstdc++",
 				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.inneractive.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = InneractiveAdSampleSpecs;
+				PROVISIONING_PROFILE = "";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				USER_HEADER_SEARCH_PATHS = "";
+				VALID_ARCHS = "arm64 armv7 armv7s i386 x86_64";
+				WRAPPER_EXTENSION = xctest;
 			};
 			name = Debug;
 		};
@@ -1170,7 +1171,6 @@
 					"$(inherited)",
 					"$(DEVELOPER_FRAMEWORKS_DIR)",
 					"$(PROJECT_DIR)/**",
-					"$(PROJECT_DIR)/ExternalFrameworks/**",
 				);
 				GCC_C_LANGUAGE_STANDARD = "compiler-default";
 				GCC_GENERATE_TEST_COVERAGE_FILES = YES;
@@ -1180,11 +1180,10 @@
 				GCC_PREPROCESSOR_DEFINITIONS = "RELEASE=1";
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
-					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
 					"$(PROJECT_DIR)/ExternalFrameworks/**",
 				);
 				INFOPLIST_FILE = "InneractiveAdSample/InneractiveAdSampleTests-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -1200,6 +1199,13 @@
 					"-all_load",
 					"-lstdc++",
 				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.inneractive.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = InneractiveAdSampleSpecs;
+				PROVISIONING_PROFILE = "";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				USER_HEADER_SEARCH_PATHS = "";
+				VALID_ARCHS = "arm64 armv7 armv7s i386 x86_64";
+				WRAPPER_EXTENSION = xctest;
 			};
 			name = Release;
 		};
@@ -1237,7 +1243,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				OTHER_LDFLAGS = "";
 				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
@@ -1250,7 +1256,6 @@
 		1DA18439189A7321006D008B /* ADHOC */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
@@ -1279,7 +1284,7 @@
 					"$(PROJECT_DIR)/ExternalFrameworks/**",
 				);
 				INFOPLIST_FILE = "InneractiveAdSample/InneractiveAdSample-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1314,7 +1319,6 @@
 					"$(inherited)",
 					"$(DEVELOPER_FRAMEWORKS_DIR)",
 					"$(PROJECT_DIR)/**",
-					"$(PROJECT_DIR)/ExternalFrameworks/**",
 				);
 				GCC_C_LANGUAGE_STANDARD = "compiler-default";
 				GCC_GENERATE_TEST_COVERAGE_FILES = YES;
@@ -1323,11 +1327,10 @@
 				GCC_PREFIX_HEADER = "InneractiveAdSample/InneractiveAdSample-Prefix.pch";
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
-					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
 					"$(PROJECT_DIR)/ExternalFrameworks/**",
 				);
 				INFOPLIST_FILE = "InneractiveAdSample/InneractiveAdSampleTests-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -1343,6 +1346,13 @@
 					"-all_load",
 					"-lstdc++",
 				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.inneractive.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = InneractiveAdSampleSpecs;
+				PROVISIONING_PROFILE = "";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				USER_HEADER_SEARCH_PATHS = "";
+				VALID_ARCHS = "arm64 armv7 armv7s i386 x86_64";
+				WRAPPER_EXTENSION = xctest;
 			};
 			name = ADHOC;
 		};
@@ -1367,6 +1377,17 @@
 				1D8AD1B9180EEFF900EDB0C9 /* Release */,
 				1DA18439189A7321006D008B /* ADHOC */,
 				1D7A98F51973FBA100949B42 /* Cert */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1D8AD1BA180EEFF900EDB0C9 /* Build configuration list for PBXNativeTarget "InneractiveAdSampleSpecs" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1D8AD1BB180EEFF900EDB0C9 /* Debug */,
+				1D8AD1BC180EEFF900EDB0C9 /* Release */,
+				1DA1843A189A7321006D008B /* ADHOC */,
+				1D7A98F61973FBA100949B42 /* Cert */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

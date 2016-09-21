@@ -39,12 +39,12 @@ static const CGFloat kIARectangleHeight = 250.0f;
  *
  *  @return IaAdView instance.
  */
-- (instancetype)initWithAppId:(NSString *)appId adType:(IaAdType)adType delegate:(id<InneractiveAdDelegate>)adDelegate;
+- (nonnull instancetype)initWithAppId:(nonnull NSString *)appId adType:(IaAdType)adType delegate:(nonnull id<InneractiveAdDelegate>)adDelegate;
 
-- (instancetype)init __attribute__((unavailable("please use 'initWithAppId:adType:delegate:' instead")));
-- (instancetype)initWithFrame:(CGRect)frame __attribute__((unavailable("please use 'initWithAppId:adType:delegate:' instead")));
-- (instancetype)initWithCoder:(NSCoder *)aDecoder __attribute__((unavailable("'using initWithCoder:' programmatically is unavailable, please use 'initWithAppId:adType:delegate:' instead or use Interface Builder and setup the ad required configuration; e.g: adView.adConfig.appId = <app id>; adView.adConfig.adType = <ad type>;")));
-+ (instancetype)new __attribute__((unavailable("please use 'initWithAppId:adType:delegate:' instead")));
+- (null_unspecified instancetype)init __attribute__((unavailable("please use 'initWithAppId:adType:delegate:' instead")));
+- (null_unspecified instancetype)initWithFrame:(CGRect)frame __attribute__((unavailable("please use 'initWithAppId:adType:delegate:' instead")));
+- (null_unspecified instancetype)initWithCoder:(null_unspecified NSCoder *)aDecoder __attribute__((unavailable("'using initWithCoder:' programmatically is unavailable, please use 'initWithAppId:adType:delegate:' instead or use Interface Builder and setup the ad required configuration; e.g: adView.adConfig.appId = <app id>; adView.adConfig.adType = <ad type>;")));
++ (null_unspecified instancetype)new __attribute__((unavailable("please use 'initWithAppId:adType:delegate:' instead")));
 
 /**
  *  @brief Use to limit ad load time.

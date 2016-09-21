@@ -7,15 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
-#import <InneractiveAdSDK/InneractiveAdSDK.h>
-#import <CoreLocation/CLLocationManager.h>
 
+@class CLLocationManager;
 
-@interface InneractiveAdSampleAppDelegate : UIResponder <UIApplicationDelegate> {
-}
+@interface InneractiveAdSampleAppDelegate : UIResponder <UIApplicationDelegate> {}
 
-
-@property (strong, nonatomic) UIWindow *window;
+@property (nonatomic, strong) UIWindow *window;
 @property (nonatomic, strong) CLLocationManager *locationManager;
 
 @end

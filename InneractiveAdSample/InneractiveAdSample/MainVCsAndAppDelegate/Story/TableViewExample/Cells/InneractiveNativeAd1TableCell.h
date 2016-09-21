@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-#import <InneractiveAdSDK/InneractiveAdSDK.h>
+#import "InneractiveAdSDK.h"
 
 @interface InneractiveNativeAd1TableCell : UITableViewCell <IaNativeAdCellRenderingDelegate>
 

@@ -183,24 +183,24 @@
 }
 
 - (void)InneractiveAdLoaded:(IaAd *)ad {
-    DDLogInfo(@"NativeAdStoryAdapterTableView - InneractiveAdLoaded: %@", ad);
+    NSLog(@"NativeAdStoryManualTableView - InneractiveAdLoaded: %@", ad);
 }
 
 - (void)InneractiveAdFailedWithError:(NSError*)error withAdView:(IaAd *)ad {
-    DDLogWarn(@"NativeAdStoryAdapterTableView - InneractiveAdFailedWithError: %@.", error);
+    NSLog(@"NativeAdStoryManualTableView - InneractiveAdFailedWithError: %@.", error);
     [[iToast makeText:[NSString stringWithFormat:@"InneractiveAdFailed Event Received\n%@", [error localizedDescription]]] show];
 }
 
 - (void)InneractiveAdClicked:(IaAd *)ad {
-    DDLogInfo(@"InneractiveAdClicked");
+    NSLog(@"NativeAdStoryManualTableView - InneractiveAdClicked");
 }
 
 - (void)InneractiveAdAppShouldResume:(IaAd *)ad {
-    DDLogInfo(@"InneractiveAdAppShouldResume");
+    NSLog(@"NativeAdStoryManualTableView - InneractiveAdAppShouldResume");
 }
 
 - (void)InneractiveAdAppShouldSuspend:(IaAd *)ad {
-    DDLogInfo(@"InneractiveAdAppShouldSuspend");
+    NSLog(@"NativeAdStoryManualTableView - InneractiveAdAppShouldSuspend");
 }
 
 @end

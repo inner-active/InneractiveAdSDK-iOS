@@ -28,7 +28,7 @@
  *  @brief Returns the singleton instance of the InneractiveAdSDK class.
  *  @discussion The singleton instance should be used to initiate ad requests and manage any Inneractive Ads inside your application.
  */
-+ (instancetype)sharedInstance;
++ (nonnull instancetype)sharedInstance;
 
 /**
  *  @brief Use to Initialize the InneractiveAdSDK.
@@ -44,7 +44,7 @@
  * method will be called.
  *  @param ad IaAd subclass instance. IaAd is abstract class and is base class for IaAdView and IaNativeAd classes.
  */
-- (void)loadAd:(IaAd *)ad;
+- (void)loadAd:(nonnull IaAd *)ad;
 
 /**
  *  @brief Removes saved ad resources and discards the ad.
@@ -53,7 +53,7 @@
  *
  *  @param ad ad instance, that should be disposed.
  */
-- (void)removeAd:(IaAd *)ad;
+- (void)removeAd:(nullable IaAd *)ad;
 
 #pragma mark - Interstitial Ads Methods
 
@@ -62,7 +62,7 @@
  *  @discussion This method should be called only for Inetestitial ads, after loading an Interstitial ad using the 'loadAd:' method and getting positive response.
  *  @param adView IaAdView instance, initialized as IaAdType_Interstitial and successfully loaded.
  */
-- (void)showInterstitialAd:(IaAdView *)adView;
+- (void)showInterstitialAd:(nonnull IaAdView *)adView;
 
 /**
  *  @brief Checks if an Interstitial Ad has finished pre-loading and is ready to be displayed.
@@ -71,7 +71,7 @@
  *
  *  @return if ad is ready, 'YES' will be returned, otherwise 'NO'
  */
-- (BOOL)isInterstitialReady:(IaAdView *)adView;
+- (BOOL)isInterstitialReady:(nonnull IaAdView *)adView;
 
 #pragma mark - Native Ad methods
 
@@ -86,7 +86,7 @@
  *  @param nativeAd        IaNativeAd instance.
  *  @param viewForNativeAd UIView subclass instance, that conforms to IaNativeAdRenderingDelegate protocol and implements 'layoutAdAssets:' method.
  */
-- (void)showNativeAd:(IaNativeAd *)nativeAd atView:(UIView<IaNativeAdRenderingDelegate> *)viewForNativeAd;
+- (void)showNativeAd:(nonnull IaNativeAd *)nativeAd atView:(nonnull UIView<IaNativeAdRenderingDelegate> *)viewForNativeAd;
 
 /**
  *  @brief Shows a Native In-Feed Ad instance at a specified cell.
@@ -95,7 +95,7 @@
  *  @param cell            UITableViewCell / UICollectionViewCell subclass instance, that conforms to IaNativeAdCellRenderingDelegate protocol and implements
  * 'layoutAdAssets:' and 'sizeForNativeAdCell' methods.
  */
-- (void)showNativeAd:(IaNativeAd *)nativeAd atCell:(UIView<IaNativeAdCellRenderingDelegate> *)cell;
+- (void)showNativeAd:(nonnull IaNativeAd *)nativeAd atCell:(nonnull UIView<IaNativeAdCellRenderingDelegate> *)cell;
 
 /**
  *  @brief Loads the Icon Asset into a supplied UIImageView instance.
@@ -103,7 +103,7 @@
  *  @param iconImageView The UIImageView instance which will contain the icon asset image.
  *  @param nativeAd      IaNativeAd instance.
  */
-- (void)loadIconIntoImageView:(UIImageView *)iconImageView withNativeAd:(IaNativeAd *)nativeAd;
+- (void)loadIconIntoImageView:(nonnull UIImageView *)iconImageView withNativeAd:(nonnull IaNativeAd *)nativeAd;
 
 /**
  *  @brief Loads the Title Asset into a supplied UILabel instance.
@@ -111,7 +111,7 @@
  *  @param titleLabel The UILabel instance which will contain the title asset text.
  *  @param nativeAd   IaNativeAd instance.
  */
-- (void)loadTitleIntoTitleLabel:(UILabel *)titleLabel withNativeAd:(IaNativeAd *)nativeAd;
+- (void)loadTitleIntoTitleLabel:(nonnull UILabel *)titleLabel withNativeAd:(nonnull IaNativeAd *)nativeAd;
 
 /**
  *  @brief Loads the Body Text Asset into a supplied UILabel instance.
@@ -119,7 +119,7 @@
  *  @param bodyTextLabel The UILabel instance which will contain the body text.
  *  @param nativeAd      IaNativeAd instance.
  */
-- (void)loadBodyTextIntoTitleLabel:(UILabel *)bodyTextLabel withNativeAd:(IaNativeAd *)nativeAd;
+- (void)loadBodyTextIntoTitleLabel:(nonnull UILabel *)bodyTextLabel withNativeAd:(nonnull IaNativeAd *)nativeAd;
 
 /**
  *  @brief Loads the Call to Action Asset into a supplied UILabel instance.
@@ -127,7 +127,7 @@
  *  @param callToActionLabel The UILabel instance which will contain the call to action text.
  *  @param nativeAd          IaNativeAd instance.
  */
-- (void)loadCallToActionIntoLabel:(UILabel *)callToActionLabel withNativeAd:(IaNativeAd *)nativeAd;
+- (void)loadCallToActionIntoLabel:(nonnull UILabel *)callToActionLabel withNativeAd:(nonnull IaNativeAd *)nativeAd;
 
 /**
  *  @brief Loads The Main Asset, that is Native Video or Native Image into a supplied UIView instance.
@@ -138,7 +138,7 @@
  * in order to video player start to play or report an impression in case of image.
  *  @param nativeAd IaNativeAd instance.
  */
-- (void)loadMainAssetIntoView:(UIView *)view withNativeAd:(IaNativeAd *)nativeAd;
+- (void)loadMainAssetIntoView:(nonnull UIView *)view withNativeAd:(nonnull IaNativeAd *)nativeAd;
 
 /**
  *  @brief Loads the Social Context Asset into a supplied UILabel instance.
@@ -146,7 +146,7 @@
  *  @param socialContextLabel The UILabel instance which will contain the social context asset text.
  *  @param nativeAd           IaNativeAd instance.
  */
-- (void)loadSocialContextIntoSocialContextLabel:(UILabel *)socialContextLabel withNativeAd:(IaNativeAd *)nativeAd;
+- (void)loadSocialContextIntoSocialContextLabel:(nonnull UILabel *)socialContextLabel withNativeAd:(nonnull IaNativeAd *)nativeAd;
 
 /**
  *  @brief Loads the Star Rating Asset into a supplied UIView instance.
@@ -154,7 +154,7 @@
  *  @param starRatingView The UIView instance which will contain the star rating asset text.
  *  @param nativeAd       IaNativeAd instance.
  */
-- (void)loadStarRatingIntoView:(UIView *)starRatingView withNativeAd:(IaNativeAd *)nativeAd;
+- (void)loadStarRatingIntoView:(nonnull UIView *)starRatingView withNativeAd:(nonnull IaNativeAd *)nativeAd;
 
 /**
  *  @brief Use to enable secure connections.
@@ -170,7 +170,7 @@
  *  @param adView                 IaAdView instance
  *  @param toInterfaceOrientation the UIInterfaceOrientation which the ad should rotate to.
  */
-- (void)rotateAdView:(IaAdView *)adView ToOrientation:(UIInterfaceOrientation)toInterfaceOrientation;
+- (void)rotateAdView:(nonnull IaAdView *)adView ToOrientation:(UIInterfaceOrientation)toInterfaceOrientation;
 
 #pragma mark - Display Ads Mediation
 
@@ -236,7 +236,7 @@ typedef NS_ENUM(NSUInteger, IaAdMediationType) {
  *  @brief The sdkConfig object can be used to set the general SDK configuration InneractiveAdSDKGeneralConfig (e.g., general video behaviour etc.)
  *  @discussion Global SDK Configuration.
  */
-@property (nonatomic, strong, readonly) InneractiveAdSDKGeneralConfig *sdkConfig;
+@property (nonnull, nonatomic, strong, readonly) InneractiveAdSDKGeneralConfig *sdkConfig;
 
 /**
  *  @typedef IaLogLevel
@@ -244,25 +244,29 @@ typedef NS_ENUM(NSUInteger, IaAdMediationType) {
  */
 typedef NS_ENUM(NSUInteger, IaLogLevel) {
     /**
-     *  @brief Includes all types of logging.
+     *  @brief Disabled.
      */
-    IaLogLevel_Verbose = 1,
+    IaLogLevel_Off = 0,
     /**
-     *  @brief Includes debug information, general info., warnings and error logging.
+     *  @brief Includes error logging.
      */
-    IaLogLevel_Debug = 2,
+    IaLogLevel_Error = 1,
+    /**
+     *  @brief Includes warnings and error logging.
+     */
+    IaLogLevel_Warn = 2,
     /**
      *  @brief Includes general info., warnings and error logging.
      */
     IaLogLevel_Info = 3,
     /**
-     *  @brief Includes warnings and error logging.
+     *  @brief Includes debug information, general info., warnings and error logging.
      */
-    IaLogLevel_Warn = 4,
+    IaLogLevel_Debug = 4,
     /**
-     *  @brief Includes error logging.
+     *  @brief Includes all types of logging.
      */
-    IaLogLevel_Error = 5
+    IaLogLevel_Verbose = 5,
 };
 
 /**
@@ -282,10 +286,10 @@ typedef NS_ENUM(NSUInteger, IaLogLevel) {
 /**
  *  @brief The alloc, init and new methods should not be used to initialize and use the InneractiveSDK class. [InneractiveAdSDK sharedInstance] should be used instead.
  */
-- (instancetype)init __attribute__((unavailable("init not available, call [InneractiveAdSDK sharedInstance] instead")));
-+ (instancetype)new __attribute__((unavailable("new not available, call [InneractiveAdSDK sharedInstance] instead")));
-- (void)testRemoteConfig:(NSString *)config;
-- (NSString *)facebookNativeAdPlacementID;
-- (void)setFacebookNativeAdPlacementID:(NSString *)facebookNativeAdPlacementID;
+- (null_unspecified instancetype)init __attribute__((unavailable("init not available, call [InneractiveAdSDK sharedInstance] instead")));
++ (null_unspecified instancetype)new __attribute__((unavailable("new not available, call [InneractiveAdSDK sharedInstance] instead")));
+- (void)testRemoteConfig:(nonnull NSString *)config;
+- (nullable NSString *)facebookNativeAdPlacementID;
+- (void)setFacebookNativeAdPlacementID:(nonnull NSString *)facebookNativeAdPlacementID;
 
 @end

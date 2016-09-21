@@ -8,7 +8,6 @@
 
 #import "InneractiveAdSampleViewController.h"
 #import "InneractiveAdSampleAppDelegate.h"
-#import "DDLog.h"
 #import "iToast.h"
 
 @interface InneractiveAdSampleViewController ()
@@ -46,6 +45,16 @@ static NSString *kIaMyAppId = @"MyCompany_MyApp";
                                                   attribute:NSLayoutAttributeCenterX
                                                  multiplier:1.0
                                                    constant:0.0f]];
+                    
+                    // adding top constraint
+                    [self.view addConstraint:
+                     [NSLayoutConstraint constraintWithItem:self.adView
+                                                  attribute:NSLayoutAttributeTop
+                                                  relatedBy:NSLayoutRelationEqual
+                                                     toItem:self.view
+                                                  attribute:NSLayoutAttributeTop
+                                                 multiplier:1.0
+                                                   constant:0.0f]];
                 }
             }
         // Setting the ad's configuration parameters (more info. can be found here: https://confluence.inner-active.com/display/DevWiki/iOS+SDK+guidelines).
@@ -53,6 +62,11 @@ static NSString *kIaMyAppId = @"MyCompany_MyApp";
         
         // Setting the ad's location. Please Note: Passing the location object in the ad configuration allows for better ad targeting, and potentially higher eCPMs.
         self.adView.adConfig.location = ((InneractiveAdSampleAppDelegate *)[[UIApplication sharedApplication] delegate]).locationManager.location;
+        
+        // Observe video progress:
+        self.adView.videoProgressObserver = ^(NSTimeInterval currentTime, NSTimeInterval totalTime) {
+            NSLog(@"[Current video time: %.2lfs total time: %.2lfs progress: %.0lf%%]", currentTime, totalTime, (currentTime / totalTime) * 100.0);
+        };
         
         [[InneractiveAdSDK sharedInstance] loadAd:self.adView];
 }
@@ -97,7 +111,6 @@ static NSString *kIaMyAppId = @"MyCompany_MyApp";
  * Ad Failed handler - This method will receive all errors related to the ad loading / displaying process. */
 
 - (void)InneractiveAdFailedWithError:(NSError *)error withAdView:(IaAd *)ad {
-    DDLogWarn(@"InneractiveAdFailed - %@ for adView: %@", error, ad);
     [self.adLoadActivityIndicator stopAnimating];
     [self displayShowAdButton:NO];
     [self showToastAndOutputToLog:[NSString stringWithFormat:@"InneractiveAdFailed Event Received\n\%@", [error localizedDescription]]];
@@ -197,7 +210,7 @@ static NSString *kIaMyAppId = @"MyCompany_MyApp";
 // Helper method used to display received Ad Events (using iToast) and log output to the console.
 - (void)showToastAndOutputToLog:(NSString *)toastString {
     [[iToast makeText:toastString] show];
-    DDLogInfo(@"%@", toastString);
+    NSLog(@"Toast: %@", toastString);
 }
 
 // Helper method to display / hide the "Show Ad" button which should display when an Interstitial ad is properly loaded.

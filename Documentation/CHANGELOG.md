@@ -1,10 +1,19 @@
 * -=====================================================================-
 *   Inneractive iOS SDK 
 * -=====================================================================-
-*   Update Date: Aug 2016
+*   Update Date: Sep 2016
 *   Further documentation found here:  
 *   https://confluence.inner-active.com/display/DevWiki/iOS+SDK+guidelines
 * -=====================================================================-
+
+- Version 6.3.0
+-========================================================================-
+- Release date: 20/09/2016
+- Improved SDK infrastructure - performance and stability.
+- iOS 10 support
+- Added response data API
+- Added aditional video layout API
+- Added video progress + duration API
 
 - Version 6.2.7
 -========================================================================-

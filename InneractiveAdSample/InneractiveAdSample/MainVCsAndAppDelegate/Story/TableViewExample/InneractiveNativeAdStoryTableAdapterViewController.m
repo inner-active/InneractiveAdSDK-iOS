@@ -74,7 +74,7 @@
     
     self.nativeAd = [[IaNativeAd alloc] initWithAppId:sampleAppIdString adType:IaAdType_InFeedNativeAd delegate:self];
     
-    //optional settings
+    // optional settings:
     self.nativeAd.adConfig.nativeAdAssetsDescription.mainAssetMinSize = IaAdAssetSizeMake(100, 100);
     self.nativeAd.adConfig.nativeAdAssetsDescription.titleAssetPriority = IaNativeAdAssetPriorityRequired;
     self.nativeAd.adConfig.nativeAdAssetsDescription.imageIconAssetPriority = IaNativeAdAssetPriorityRequired;
@@ -86,8 +86,14 @@
     self.nativeAd.adConfig.nativeAdRepeatingInterval = 5;
     
     self.nativeAd.adConfig.videoLayout.progressBarIsVisibleInFeed = YES;
+    self.nativeAd.adConfig.videoLayout.controlsInsideVideoRect = YES;
     
-    self.tableAdapter = [[IaNativeAdTableAdapter alloc] initWithNativeAd:self.nativeAd table:self.table adCellRegisteringClass:InneractiveNativeAd2TableCell.class];
+    self.nativeAd.videoProgressObserver = ^(NSTimeInterval currentTime, NSTimeInterval totalTime) {
+        NSLog(@"[Current video time: %.2lfs total time: %.2lfs progress: %.0lf%%]", currentTime, totalTime, (currentTime / totalTime) * 100.0);
+    };
+    // end of optional settings;
+    
+    self.tableAdapter = [[IaNativeAdTableAdapter alloc] initWithNativeAd:self.nativeAd table:self.table adCellRegisteringClass:InneractiveNativeAd2TableCell.class]; // automatic indexes management;
     
     [[InneractiveAdSDK sharedInstance] loadAd:self.nativeAd];
 }
@@ -156,20 +162,32 @@
 }
 
 - (void)InneractiveAdLoaded:(IaAd *)ad {
-    DDLogInfo(@"NativeAdStoryAdapterTableView - InneractiveAdLoaded: %@", ad);
+    NSLog(@"NativeAdStoryTableAdapterView - InneractiveAdLoaded: %@", ad);
+    
+    if (ad.isVideoAd) {
+        NSLog(@"Video duration is %.2lfs", ad.videoDuration);
+    }
 }
 
 - (void)InneractiveAdFailedWithError:(NSError *)error withAdView:(IaAd *)ad {
-    DDLogWarn(@"NativeAdStoryAdapterTableView - InneractiveAdFailedWithError: %@.", error);
+    NSLog(@"NativeAdStoryTableAdapterView - InneractiveAdFailedWithError: %@.", error);
     [[iToast makeText:[NSString stringWithFormat:@"InneractiveAdFailed Event Received\n%@", [error localizedDescription]]] show];
 }
 
 - (void)InneractiveAdAppShouldResume:(IaAd *)ad {
-    DDLogInfo(@"InneractiveAdAppShouldResume");
+    NSLog(@"NativeAdStoryTableAdapterView - InneractiveAdAppShouldResume");
 }
 
 - (void)InneractiveAdAppShouldSuspend:(IaAd *)ad {
-    DDLogInfo(@"InneractiveAdAppShouldSuspend");
+    NSLog(@"NativeAdStoryTableAdapterView - InneractiveAdAppShouldSuspend");
+}
+
+- (void)InneractiveAdClicked:(IaAd *)ad {
+    NSLog(@"InneractiveAdClicked - %@", ad.adConfig.appId);
+}
+
+- (void)InneractiveAdWillOpenExternalApp:(IaAd *)ad {
+    NSLog(@"InneractiveAdWillOpenExternalApp - %@", ad.adConfig.appId);
 }
 
 #pragma mark - InneractivePositioningPickerDelegate

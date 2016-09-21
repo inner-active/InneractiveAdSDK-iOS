@@ -180,24 +180,24 @@
 }
 
 - (void)InneractiveAdLoaded:(IaAd *)ad {
-    DDLogInfo(@"NativeAdStoryAdapterTableView - InneractiveAdLoaded: %@", ad);
+    NSLog(@"NativeAdStoryCollectionView - InneractiveAdLoaded: %@", ad);
 }
 
 - (void)InneractiveAdFailedWithError:(NSError*)error withAdView:(IaAdView *)ad {
-    DDLogWarn(@"NativeAdStoryAdapterTableView - InneractiveAdFailedWithError: %@.", error);
+    NSLog(@"NativeAdStoryCollectionView - InneractiveAdFailedWithError: %@.", error);
     [[iToast makeText:[NSString stringWithFormat:@"InneractiveAdFailed Event Received\n%@", [error localizedDescription]]] show];
 }
 
 - (void)InneractiveAdClicked:(IaAdView *)adView {
-    DDLogInfo(@"InneractiveAdClicked");
+    NSLog(@"NativeAdStoryCollectionView - InneractiveAdClicked");
 }
 
 - (void)InneractiveAdAppShouldResume:(IaAdView *)adView {
-    DDLogInfo(@"InneractiveAdAppShouldResume");
+    NSLog(@"NativeAdStoryCollectionView - InneractiveAdAppShouldResume");
 }
 
 - (void)InneractiveAdAppShouldSuspend:(IaAd *)adView {
-    DDLogInfo(@"InneractiveAdAppShouldSuspend");
+    NSLog(@"NativeAdStoryCollectionView - InneractiveAdAppShouldSuspend");
 }
 
 #pragma mark - Service

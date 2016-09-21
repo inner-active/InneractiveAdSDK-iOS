@@ -25,61 +25,61 @@
  *
  *  @return UIViewController instance to show modal views from.
  */
-- (UIViewController *)viewControllerForPresentingModalView;
+- (nonnull UIViewController *)viewControllerForPresentingModalView;
 
 @optional
 
 /**
  *  @brief Is called when a paying ad was loaded and is ready to be displayed.
  */
-- (void)InneractiveAdLoaded:(IaAd *)ad;
+- (void)InneractiveAdLoaded:(nonnull IaAd *)ad;
 
 /**
  *  @brief Is Called when there was an error loading the ad.
  */
-- (void)InneractiveAdFailedWithError:(NSError *)error withAdView:(IaAd *)ad;
+- (void)InneractiveAdFailedWithError:(nonnull NSError *)error withAdView:(nonnull IaAd *)ad;
 
 /**
  *  @brief Is called when the ad opens a modal view. The app. can perform logic such as pausing a running game here. 
  */
-- (void)InneractiveAdAppShouldSuspend:(IaAd *)ad;
+- (void)InneractiveAdAppShouldSuspend:(nonnull IaAd *)ad;
 
 /**
  *  @brief Is called when the ad closes it's final modal view. The app. can perform logic such as re-running a paused game here.
  */
-- (void)InneractiveAdAppShouldResume:(IaAd *)ad;
+- (void)InneractiveAdAppShouldResume:(nonnull IaAd *)ad;
 
 /**
  *  @brief Ad clicked event.
  */
-- (void)InneractiveAdClicked:(IaAd *)ad;
+- (void)InneractiveAdClicked:(nonnull IaAd *)ad;
 
 /**
  *  @brief Impression event for Native Image Ads only.
  */
-- (void)InneractiveAdWillLogImpression:(IaAd *)ad;
+- (void)InneractiveAdWillLogImpression:(nonnull IaAd *)ad;
 
 /**
  *  @brief Called before the ad will open an external application (e.g. Safari, the Telephone/Messages/Email apps. etc.).
  */
-- (void)InneractiveAdWillOpenExternalApp:(IaAd *)ad;
+- (void)InneractiveAdWillOpenExternalApp:(nonnull IaAd *)ad;
 
 #pragma mark - Interstitial Ad events
 
 /**
  *  @brief Called before an interstitial ad will be presented on the screen.
  */
-- (void)InneractiveInterstitialAdWillShow:(IaAdView *)adView;
+- (void)InneractiveInterstitialAdWillShow:(nonnull IaAdView *)adView;
 
 /**
  *  @brief Called after the interstitial ad is presented on the screen.
  */
-- (void)InneractiveInterstitialAdDidShow:(IaAdView *)adView;
+- (void)InneractiveInterstitialAdDidShow:(nonnull IaAdView *)adView;
 
 /**
  *  @brief Called when an Interstitial close / skip button was pressed.
  */
-- (void)InneractiveInterstitialAdDismissed:(IaAdView *)adView;
+- (void)InneractiveInterstitialAdDismissed:(nonnull IaAdView *)adView;
 
 #pragma mark - MRAID 2.0 Ad Events
 
@@ -89,7 +89,7 @@
  *  @param adView       IaAdView instance.
  *  @param frameAsValue Resized frame.
  */
-- (void)InneractiveAdWillResize:(IaAdView *)adView toFrame:(NSValue *)frameAsValue;;
+- (void)InneractiveAdWillResize:(nonnull IaAdView *)adView toFrame:(nonnull NSValue *)frameAsValue;
 
 /**
  *  @brief MRAID Resize event did happen.
@@ -97,7 +97,7 @@
  *  @param adView       IaAdView instance.
  *  @param frameAsValue Resized frame.
  */
-- (void)InneractiveAdDidResize:(IaAdView *)adView toFrame:(NSValue *)frameAsValue;
+- (void)InneractiveAdDidResize:(nonnull IaAdView *)adView toFrame:(nonnull NSValue *)frameAsValue;
 
 /**
  *  @brief MRAID Expand event will happen.
@@ -105,7 +105,7 @@
  *  @param adView       IaAdView instance.
  *  @param frameAsValue Expanded frame.
  */
-- (void)InneractiveAdWillExpand:(IaAdView *)adView toFrame:(NSValue *)frameAsValue;
+- (void)InneractiveAdWillExpand:(nonnull IaAdView *)adView toFrame:(nonnull NSValue *)frameAsValue;
 
 /**
  *  @brief MRAID Expand event did happen.
@@ -113,13 +113,13 @@
  *  @param adView       IaAdView instance.
  *  @param frameAsValue Expanded frame.
  */
-- (void)InneractiveAdDidExpand:(IaAdView *)adView toFrame:(NSValue *)frameAsValue;
+- (void)InneractiveAdDidExpand:(nonnull IaAdView *)adView toFrame:(nonnull NSValue *)frameAsValue;
 
 #pragma mark - Video Ad (Interstitial / Native) Events
 
 /**
  *  @brief Called when video did finish playing to end successfully.
  */
-- (void)InneractiveVideoCompleted:(IaAd *)ad;
+- (void)InneractiveVideoCompleted:(nonnull IaAd *)ad;
 
 @end
