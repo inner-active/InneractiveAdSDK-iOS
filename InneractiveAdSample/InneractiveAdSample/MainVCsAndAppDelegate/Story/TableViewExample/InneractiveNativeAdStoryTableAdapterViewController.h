@@ -6,7 +6,7 @@
 //  Copyright (c) 2014 Inneractive. All rights reserved.
 //
 
-#import "InneractiveAdSDK.h"
+#import <InneractiveAdSDK/InneractiveAdSDK.h>
 
 /**
  * Table Story example using table adapter

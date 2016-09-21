@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-#import "InneractiveAdSDK.h"
+#import <InneractiveAdSDK/InneractiveAdSDK.h>
 
 @class InneractivePositioningPicker;
 
