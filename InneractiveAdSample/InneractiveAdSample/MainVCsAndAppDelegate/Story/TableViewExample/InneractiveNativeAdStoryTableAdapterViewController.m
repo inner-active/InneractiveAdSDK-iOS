@@ -95,6 +95,7 @@
     
     self.tableAdapter = [[IaNativeAdTableAdapter alloc] initWithNativeAd:self.nativeAd table:self.table adCellRegisteringClass:InneractiveNativeAd2TableCell.class]; // automatic indexes management;
     
+    
     [[InneractiveAdSDK sharedInstance] loadAd:self.nativeAd];
 }
 
@@ -166,6 +167,32 @@
     
     if (ad.isVideoAd) {
         NSLog(@"Video duration is %.2lfs", ad.videoDuration);
+    }
+    
+    IaNativeAd *nativeAd = (IaNativeAd *)ad;
+    
+    if (nativeAd.responseModel.titleText.length) {
+        NSLog(@"Native ad response contains: Title");
+    }
+    
+    if (nativeAd.responseModel.iconImageURLString.length) {
+        NSLog(@"Native ad response contains: Icon");
+    }
+    
+    if (nativeAd.responseModel.VASTXMLData.length) {
+        NSLog(@"Native ad response contains: Video");
+    }
+    
+    if (nativeAd.responseModel.largeImageURLString.length) {
+        NSLog(@"Native ad response contains: Image");
+    }
+    
+    if (nativeAd.responseModel.descriptionString.length) {
+        NSLog(@"Native ad response contains: Description text");
+    }
+    
+    if (nativeAd.responseModel.CTAText.length) {
+        NSLog(@"Native ad response contains: CTA text");
     }
 }
 

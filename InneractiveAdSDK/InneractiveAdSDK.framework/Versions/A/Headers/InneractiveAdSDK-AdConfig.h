@@ -276,7 +276,9 @@ typedef NS_ENUM(NSUInteger, IaVideoClickActionType) {
 /**
  *  @brief Defines whether controls are aligned to an actual video rect or to a video player superview (placeholder).
  *
- *  @discussion NO by default;
+ *  @discussion This setting will affect only videos that are not fully fitted inside native ad main asset, and the videos that are displayed in fullscreen portrait mode.
+ *
+ * Default: NO.
  */
 @property (nonatomic) BOOL controlsInsideVideoRect;
 
