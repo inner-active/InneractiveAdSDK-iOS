@@ -58,7 +58,9 @@ static NSString *kIaMyAppId = @"MyCompany_MyApp";
                 }
             }
         // Setting the ad's configuration parameters. More info. can be found here: https://confluence.inner-active.com/display/DevWiki/iOS+SDK+guidelines
-        self.adView.adConfig.refreshIntervalInSec = 30;
+        if (self.adView.adConfig.adType != IaAdType_Interstitial) {
+            self.adView.adConfig.refreshIntervalInSec = 30;
+        }
         
         // Setting the ad's location. Please Note: Passing the location object in the ad configuration allows for better ad targeting, and potentially higher eCPMs.
         self.adView.adConfig.location = ((InneractiveAdSampleAppDelegate *)[[UIApplication sharedApplication] delegate]).locationManager.location;

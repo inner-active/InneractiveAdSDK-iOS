@@ -2,7 +2,8 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-    <key>ITSAppUsesNonExemptEncryption</key><false/>
+	<key>ITSAppUsesNonExemptEncryption</key>
+	<false/>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
 	<key>CFBundleDisplayName</key>
@@ -34,8 +35,6 @@
 		<key>NSAllowsArbitraryLoads</key>
 		<true/>
 	</dict>
-	<key>NSLocationAlwaysUsageDescription</key>
-	<string></string>
 	<key>UIAppFonts</key>
 	<array>
 		<string>Roboto-Regular.ttf</string>
@@ -66,9 +65,15 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+    <key>NSLocationAlwaysUsageDescription</key>
+    <string>For ads targeting.</string>
+    <key>NSLocationWhenInUseUsageDescription</key>
+    <string>For ads targeting.</string>
     <key>NSCalendarsUsageDescription</key>
-    <string>For Ads Calendar events creation.</string>
+    <string>For ads Calendar events creation.</string>
     <key>NSPhotoLibraryUsageDescription</key>
-    <string>For Ads Photos saving.</string>
+    <string>For ads Photos saving.</string>
+    <key>NSBluetoothPeripheralUsageDescription</key>
+    <string>For thrid-party interactive media ads.</string>
 </dict>
 </plist>

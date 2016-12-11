@@ -1,65 +1,76 @@
 * -=====================================================================-
 *   Inneractive iOS SDK 
 * -=====================================================================-
-*   Update Date: Sep 2016
+*   Update Date: Nov 2016
 *   Further documentation found here:  
 *   https://confluence.inner-active.com/display/DevWiki/iOS+SDK+guidelines
 * -=====================================================================-
 
+- Version 6.4.0
+-========================================================================-
+- Release date: 23/11/2016
+- Improved SDK infrastructure - performance and stability.
+- Added full support for Apple 2017 ATS requirements. 
+
+- Version 6.3.1
+-========================================================================-
+- Release date: 01/11/2016
+- Improved SDK infrastructure - performance and stability.
+
 - Version 6.3.0
 -========================================================================-
-- Release date: 20/09/2016
+- Release date: 01/09/2016
 - Improved SDK infrastructure - performance and stability.
 - iOS 10 support
 - Added response data API
-- Added aditional video layout API
-- Added video progress + duration API
+- Aditional video layout API
+- Video progress + duration API
 
 - Version 6.2.7
 -========================================================================-
-- Release date: 08/08/2016
-- Deprecated 'Default Ad loaded' API
-- Added new API to configure the video layout
-- Removed mute button visibility API, mute button is always visible
-- Improved SDK infrastracture - performance and stability
+- Release date: 24/07/2016
+- Improved SDK infrastructure - performance and stability.
+- Deprecated 'Default Ad loaded' API.
+- Removed mute button visibility API, mute button is always visible.
+- Added video layout configuration API.
 
 - Version 6.2.6
 -========================================================================-
 - Release date: 06/06/2016
-- Improved SDK infrastracture - performance and stability
+- Improved SDK infrastructure - performance and stability
 
 - Version 6.2.5
 -========================================================================-
 - Release date: 17/05/2016
 - Added audio session management API
-- Improved SDK infrastracture - performance and stability
+- Improved SDK infrastructure - performance and stability
 
 - Version 6.2.4
 -========================================================================-
 - Release date: 01/05/2016
-- Improved SDK infrastracture - performance and stability
+- Improved SDK infrastructure - performance and stability
 
 - Version 6.2.3
 -========================================================================-
 - Release date: 24/04/2016
-- Improved SDK infrastracture - performance and stability 
+- Improved SDK infrastructure - performance and stability 
 
 - Version 6.2.2
 -========================================================================-
 - Release date: 22/03/2016
 - Added Secure Mode API (ATS compatibility)
-- Improved SDK infrastracture - performance and stability 
+- Improved SDK infrastructure - performance and stability 
 
 - Version 6.2.1
 -========================================================================-
 - Release date: 08/12/2016
-- Improved SDK infrastracture - performance and stability 
+- Improved SDK infrastructure - performance and stability 
 
 - Version 6.2.0
 -========================================================================-
 - Release date: 28/12/2015
 - IPv6 support
-- Improved SDK infrastracture - performance and stability
+- Improved SDK infrastructure - performance and stability
 - Auto-redirect blocking - Redirection without use of user interaction is now blocked and reported to Inneractive for inspection
 - Added Native Ads API for requesting Image or Video only
 
