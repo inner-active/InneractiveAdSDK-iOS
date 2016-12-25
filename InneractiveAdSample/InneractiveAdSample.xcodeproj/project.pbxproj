@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1D526FA519B899180064CC1E /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D9D61FA183238DF00599AB6 /* QuartzCore.framework */; };
 		1D5496EF19921FD500C447AC /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D5C628D1962DAD000AC85BD /* CoreTelephony.framework */; };
 		1D5496F019921FE700C447AC /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D5C62A11962DBC100AC85BD /* SystemConfiguration.framework */; };
 		1D5496F119921FEB00C447AC /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DFCABB918C4789A00AA53FE /* AdSupport.framework */; };
@@ -15,6 +16,7 @@
 		1D5496FD199227B700C447AC /* EventKitUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D5496FC199227B700C447AC /* EventKitUI.framework */; };
 		1D5496FE1992283700C447AC /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D8AD190180EEFF900EDB0C9 /* CoreGraphics.framework */; };
 		1D5496FF1992283C00C447AC /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DC31BA9196A9B6500C27435 /* MediaPlayer.framework */; };
+		1D5773011ACBDFC8001F5999 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DECBA9519506DE000E543B0 /* CFNetwork.framework */; };
 		1D5E24FA19EE88AE00434BB7 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D5E24F919EE88AE00434BB7 /* StoreKit.framework */; };
 		1D778DC519488344006B4E54 /* InneractiveAdSampleAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D778DBF19488344006B4E54 /* InneractiveAdSampleAppDelegate.m */; };
 		1D778DC619488344006B4E54 /* InneractiveAdSampleAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D778DBF19488344006B4E54 /* InneractiveAdSampleAppDelegate.m */; };
@@ -26,6 +28,8 @@
 		1DA1E7FA19A49B7400E5970C /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1DA1E7F819A49B7400E5970C /* Storyboard.storyboard */; };
 		1DA222D719C0AB190044DF4A /* libxml2.2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DA222D619C0AB190044DF4A /* libxml2.2.dylib */; };
 		1DA222D819C0AB220044DF4A /* libxml2.2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DA222D619C0AB190044DF4A /* libxml2.2.dylib */; };
+		1DA5783A19C86AF6009BB7A2 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D15E0461924F05D00BB223C /* AudioToolbox.framework */; };
+		1DA5783B19C86AFC009BB7A2 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D15E0491924F07B00BB223C /* AVFoundation.framework */; };
 		1DA99740194881E000D33FE5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DA9973D194881E000D33FE5 /* main.m */; };
 		1DA99741194881E000D33FE5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DA9973D194881E000D33FE5 /* main.m */; };
 		1DA99743194881EE00D33FE5 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1DA99742194881EE00D33FE5 /* Images.xcassets */; };
@@ -38,12 +42,12 @@
 		2C86C5931ABED2C400ECEF4A /* InneractiveViewForNativeAd.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C86C5911ABED2C400ECEF4A /* InneractiveViewForNativeAd.m */; };
 		2C86C5981ABEDE4900ECEF4A /* InneractiveMessageTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C86C5971ABEDE4900ECEF4A /* InneractiveMessageTextField.m */; };
 		2C86C59A1ABEDE8900ECEF4A /* InneractiveMessageTextField.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C86C5991ABEDE8900ECEF4A /* InneractiveMessageTextField.xib */; };
+		2CB377CF1E101D8000F925DF /* InneractiveAdSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CB377CD1E101D8000F925DF /* InneractiveAdSDK.framework */; };
+		2CB377D01E101D8000F925DF /* InneractiveSDKResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 2CB377CE1E101D8000F925DF /* InneractiveSDKResources.bundle */; };
 		2CB9DBCE1AC161E9006A1A89 /* InneractiveNativeAdStoryCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CB9DBCD1AC161E9006A1A89 /* InneractiveNativeAdStoryCollectionViewController.m */; };
 		2CB9DBFB1AC16FDE006A1A89 /* InneractiveFeedCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CB9DBF91AC16FDE006A1A89 /* InneractiveFeedCollectionCell.m */; };
 		2CB9DBFC1AC16FDE006A1A89 /* InneractiveFeedCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2CB9DBFA1AC16FDE006A1A89 /* InneractiveFeedCollectionCell.xib */; };
 		2CB9DC151AC18CBB006A1A89 /* InneractiveNativeAdCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CB9DC141AC18CBB006A1A89 /* InneractiveNativeAdCollectionCell.m */; };
-		2CE2166A1DFDA20F00F44B96 /* InneractiveAdSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CE216681DFDA20F00F44B96 /* InneractiveAdSDK.framework */; };
-		2CE2166B1DFDA20F00F44B96 /* InneractiveSDKResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 2CE216691DFDA20F00F44B96 /* InneractiveSDKResources.bundle */; };
 		888C56091B0F42430092D1F1 /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 888C56081B0F42430092D1F1 /* IOKit.framework */; };
 		8898EA871B28490D00884BCA /* 00@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8898EA601B28490D00884BCA /* 00@2x.png */; };
 		8898EA881B28490D00884BCA /* 01@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8898EA611B28490D00884BCA /* 01@2x.png */; };
@@ -118,7 +122,22 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		2CE216531DFD681600F44B96 /* Embed Resources Bundle */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 7;
+			files = (
+			);
+			name = "Embed Resources Bundle";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		1D15E0461924F05D00BB223C /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		1D15E0491924F07B00BB223C /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		1D5496FC199227B700C447AC /* EventKitUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EventKitUI.framework; path = System/Library/Frameworks/EventKitUI.framework; sourceTree = SDKROOT; };
 		1D5C628D1962DAD000AC85BD /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
 		1D5C628F1962DAE800AC85BD /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
@@ -137,6 +156,7 @@
 		1D8AD190180EEFF900EDB0C9 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		1D8AD192180EEFF900EDB0C9 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		1D8AD1A6180EEFF900EDB0C9 /* InneractiveAdSampleSpecs.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = InneractiveAdSampleSpecs.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		1D9D61FA183238DF00599AB6 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		1DA1E7F819A49B7400E5970C /* Storyboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Storyboard.storyboard; sourceTree = SOURCE_ROOT; };
 		1DA222D619C0AB190044DF4A /* libxml2.2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.2.dylib; path = usr/lib/libxml2.2.dylib; sourceTree = SDKROOT; };
 		1DA9973B194881E000D33FE5 /* InneractiveAdSample-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "InneractiveAdSample-Info.plist"; path = "InneractiveAdSample/InneractiveAdSample-Info.plist"; sourceTree = SOURCE_ROOT; };
@@ -145,6 +165,8 @@
 		1DAD3E0B19AB3DD900513B73 /* InneractiveAdSampleTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = InneractiveAdSampleTableViewController.h; path = InneractiveAdSample/MainVCsAndAppDelegate/InneractiveAdSampleTableViewController.h; sourceTree = SOURCE_ROOT; };
 		1DAD3E0C19AB3DD900513B73 /* InneractiveAdSampleTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = InneractiveAdSampleTableViewController.m; path = InneractiveAdSample/MainVCsAndAppDelegate/InneractiveAdSampleTableViewController.m; sourceTree = SOURCE_ROOT; };
 		1DC31BA9196A9B6500C27435 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
+		1DECBA9319506DD400E543B0 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		1DECBA9519506DE000E543B0 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		1DFCABB918C4789A00AA53FE /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
 		2C2EA5921A1C81C500B1924F /* InneractivePositioningPicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = InneractivePositioningPicker.h; path = InneractiveAdSample/MainVCsAndAppDelegate/Story/InneractivePositioningPicker/InneractivePositioningPicker.h; sourceTree = SOURCE_ROOT; };
 		2C2EA5931A1C81C500B1924F /* InneractivePositioningPicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = InneractivePositioningPicker.m; path = InneractiveAdSample/MainVCsAndAppDelegate/Story/InneractivePositioningPicker/InneractivePositioningPicker.m; sourceTree = SOURCE_ROOT; };
@@ -158,6 +180,8 @@
 		2C86C5961ABEDE4900ECEF4A /* InneractiveMessageTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = InneractiveMessageTextField.h; path = InneractiveAdSample/MainVCsAndAppDelegate/Story/InneractiveMessengerExample/InneractiveMessageTextField.h; sourceTree = SOURCE_ROOT; };
 		2C86C5971ABEDE4900ECEF4A /* InneractiveMessageTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = InneractiveMessageTextField.m; path = InneractiveAdSample/MainVCsAndAppDelegate/Story/InneractiveMessengerExample/InneractiveMessageTextField.m; sourceTree = SOURCE_ROOT; };
 		2C86C5991ABEDE8900ECEF4A /* InneractiveMessageTextField.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = InneractiveMessageTextField.xib; path = InneractiveAdSample/MainVCsAndAppDelegate/Story/InneractiveMessengerExample/InneractiveMessageTextField.xib; sourceTree = SOURCE_ROOT; };
+		2CB377CD1E101D8000F925DF /* InneractiveAdSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = InneractiveAdSDK.framework; sourceTree = "<group>"; };
+		2CB377CE1E101D8000F925DF /* InneractiveSDKResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = InneractiveSDKResources.bundle; sourceTree = "<group>"; };
 		2CB9DBCC1AC161E9006A1A89 /* InneractiveNativeAdStoryCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InneractiveNativeAdStoryCollectionViewController.h; sourceTree = "<group>"; };
 		2CB9DBCD1AC161E9006A1A89 /* InneractiveNativeAdStoryCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InneractiveNativeAdStoryCollectionViewController.m; sourceTree = "<group>"; };
 		2CB9DBF81AC16FDE006A1A89 /* InneractiveFeedCollectionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InneractiveFeedCollectionCell.h; sourceTree = "<group>"; };
@@ -165,8 +189,6 @@
 		2CB9DBFA1AC16FDE006A1A89 /* InneractiveFeedCollectionCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InneractiveFeedCollectionCell.xib; sourceTree = "<group>"; };
 		2CB9DC131AC18CBB006A1A89 /* InneractiveNativeAdCollectionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InneractiveNativeAdCollectionCell.h; sourceTree = "<group>"; };
 		2CB9DC141AC18CBB006A1A89 /* InneractiveNativeAdCollectionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InneractiveNativeAdCollectionCell.m; sourceTree = "<group>"; };
-		2CE216681DFDA20F00F44B96 /* InneractiveAdSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = InneractiveAdSDK.framework; sourceTree = "<group>"; };
-		2CE216691DFDA20F00F44B96 /* InneractiveSDKResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = InneractiveSDKResources.bundle; sourceTree = "<group>"; };
 		888C56081B0F42430092D1F1 /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk/System/Library/Frameworks/IOKit.framework; sourceTree = DEVELOPER_DIR; };
 		8898EA601B28490D00884BCA /* 00@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "00@2x.png"; sourceTree = "<group>"; };
 		8898EA611B28490D00884BCA /* 01@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "01@2x.png"; sourceTree = "<group>"; };
@@ -230,17 +252,21 @@
 			buildActionMask = 2147483647;
 			files = (
 				889FD7521C2D534D0019F660 /* WebKit.framework in Frameworks */,
+				1D5773011ACBDFC8001F5999 /* CFNetwork.framework in Frameworks */,
 				1D5496F019921FE700C447AC /* SystemConfiguration.framework in Frameworks */,
 				1D5496FE1992283700C447AC /* CoreGraphics.framework in Frameworks */,
 				1D5496F219921FF200C447AC /* EventKit.framework in Frameworks */,
+				2CB377CF1E101D8000F925DF /* InneractiveAdSDK.framework in Frameworks */,
 				1D5496FD199227B700C447AC /* EventKitUI.framework in Frameworks */,
 				1D5496FF1992283C00C447AC /* MediaPlayer.framework in Frameworks */,
 				1D5496F31992200F00C447AC /* MessageUI.framework in Frameworks */,
 				1D5496EF19921FD500C447AC /* CoreTelephony.framework in Frameworks */,
 				1D5E24FA19EE88AE00434BB7 /* StoreKit.framework in Frameworks */,
-				2CE2166A1DFDA20F00F44B96 /* InneractiveAdSDK.framework in Frameworks */,
 				1D5496F119921FEB00C447AC /* AdSupport.framework in Frameworks */,
+				1DA5783B19C86AFC009BB7A2 /* AVFoundation.framework in Frameworks */,
 				1DA222D719C0AB190044DF4A /* libxml2.2.dylib in Frameworks */,
+				1D526FA519B899180064CC1E /* QuartzCore.framework in Frameworks */,
+				1DA5783A19C86AF6009BB7A2 /* AudioToolbox.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -276,7 +302,7 @@
 		1D8AD182180EEFF900EDB0C9 = {
 			isa = PBXGroup;
 			children = (
-				2CE216671DFDA20F00F44B96 /* InneractiveAdSDK */,
+				2CB377CC1E101D8000F925DF /* InneractiveAdSDK */,
 				1D778DDA194885FD006B4E54 /* ExternalFrameworks */,
 				1D8AD18D180EEFF900EDB0C9 /* Frameworks */,
 				1D8AD194180EEFF900EDB0C9 /* InneractiveAdSample */,
@@ -297,6 +323,9 @@
 			isa = PBXGroup;
 			children = (
 				1DFCABB918C4789A00AA53FE /* AdSupport.framework */,
+				1D15E0461924F05D00BB223C /* AudioToolbox.framework */,
+				1D15E0491924F07B00BB223C /* AVFoundation.framework */,
+				1DECBA9519506DE000E543B0 /* CFNetwork.framework */,
 				1D8AD190180EEFF900EDB0C9 /* CoreGraphics.framework */,
 				1D5C628D1962DAD000AC85BD /* CoreTelephony.framework */,
 				1D5C629D1962DB8B00AC85BD /* EventKit.framework */,
@@ -306,6 +335,8 @@
 				1DA222D619C0AB190044DF4A /* libxml2.2.dylib */,
 				1DC31BA9196A9B6500C27435 /* MediaPlayer.framework */,
 				1D5C628F1962DAE800AC85BD /* MessageUI.framework */,
+				1D9D61FA183238DF00599AB6 /* QuartzCore.framework */,
+				1DECBA9319506DD400E543B0 /* Security.framework */,
 				1D5E24F919EE88AE00434BB7 /* StoreKit.framework */,
 				1D5C62A11962DBC100AC85BD /* SystemConfiguration.framework */,
 				1D8AD192180EEFF900EDB0C9 /* UIKit.framework */,
@@ -392,6 +423,16 @@
 			name = InneractiveMessengerExample;
 			sourceTree = "<group>";
 		};
+		2CB377CC1E101D8000F925DF /* InneractiveAdSDK */ = {
+			isa = PBXGroup;
+			children = (
+				2CB377CD1E101D8000F925DF /* InneractiveAdSDK.framework */,
+				2CB377CE1E101D8000F925DF /* InneractiveSDKResources.bundle */,
+			);
+			name = InneractiveAdSDK;
+			path = ../InneractiveAdSDK;
+			sourceTree = "<group>";
+		};
 		2CB9DBCB1AC161A8006A1A89 /* CollectionViewExample */ = {
 			isa = PBXGroup;
 			children = (
@@ -415,16 +456,6 @@
 			name = TableViewExample;
 			path = InneractiveAdSample/MainVCsAndAppDelegate/Story/TableViewExample;
 			sourceTree = SOURCE_ROOT;
-		};
-		2CE216671DFDA20F00F44B96 /* InneractiveAdSDK */ = {
-			isa = PBXGroup;
-			children = (
-				2CE216681DFDA20F00F44B96 /* InneractiveAdSDK.framework */,
-				2CE216691DFDA20F00F44B96 /* InneractiveSDKResources.bundle */,
-			);
-			name = InneractiveAdSDK;
-			path = ../InneractiveAdSDK;
-			sourceTree = "<group>";
 		};
 		8898EA5D1B28490D00884BCA /* FeedResources */ = {
 			isa = PBXGroup;
@@ -540,6 +571,7 @@
 				1D8AD187180EEFF900EDB0C9 /* Sources */,
 				1D8AD188180EEFF900EDB0C9 /* Frameworks */,
 				1D8AD189180EEFF900EDB0C9 /* Resources */,
+				2CE216531DFD681600F44B96 /* Embed Resources Bundle */,
 			);
 			buildRules = (
 			);
@@ -634,7 +666,7 @@
 				8898EA8B1B28490D00884BCA /* 04@2x.png in Resources */,
 				8898EAA31B28490D00884BCA /* 10p@2x.png in Resources */,
 				8898EAA61B28490D00884BCA /* 13p@2x.png in Resources */,
-				2CE2166B1DFDA20F00F44B96 /* InneractiveSDKResources.bundle in Resources */,
+				2CB377D01E101D8000F925DF /* InneractiveSDKResources.bundle in Resources */,
 				8898EA941B28490D00884BCA /* 13@2x.png in Resources */,
 				8898EA8C1B28490D00884BCA /* 05@2x.png in Resources */,
 				1DA1E7F919A49B7400E5970C /* Storyboard.storyboard in Resources */,
@@ -815,20 +847,19 @@
 					"DEBUG=1",
 					"IA_CERT=1",
 					"$(inherited)",
+					"RUN_KIF_TESTS=1",
 				);
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				GENERATE_PROFILING_CODE = YES;
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/ExternalFrameworks/**",
-					"$(PROJECT_DIR)/../InneractiveAdSDK",
 				);
 				INFOPLIST_FILE = "InneractiveAdSample/InneractiveAdSample-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)",
 					"$(PROJECT_DIR)/ExternalFrameworks/**",
 				);
 				ONLY_ACTIVE_ARCH = NO;
@@ -867,31 +898,23 @@
 					"$(inherited)",
 					"$(DEVELOPER_FRAMEWORKS_DIR)",
 					"$(PROJECT_DIR)/**",
+					"$(PROJECT_DIR)/../InneractiveAdSDK",
 				);
 				GCC_C_LANGUAGE_STANDARD = "compiler-default";
 				GCC_GENERATE_TEST_COVERAGE_FILES = YES;
 				GCC_INSTRUMENT_PROGRAM_FLOW_ARCS = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "InneractiveAdSample/InneractiveAdSample-Prefix.pch";
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"ADHOC_BUILD=1",
-					"DEBUG=1",
-					"IA_CERT=1",
-					"STUB_SERVER_RESPONSE=1",
-					"RUN_KIF_TESTS=1",
-				);
+				GCC_PREPROCESSOR_DEFINITIONS = "$(inherited)";
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/ExternalFrameworks/**",
 				);
 				INFOPLIST_FILE = "InneractiveAdSample/InneractiveAdSampleTests-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)",
-				);
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				ONLY_ACTIVE_ARCH = YES;
-				OTHER_CFLAGS = "";
+				OTHER_CFLAGS = "$(inherited)";
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-framework",
@@ -1031,14 +1054,12 @@
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/ExternalFrameworks/**",
-					"$(PROJECT_DIR)/../InneractiveAdSDK",
 				);
 				INFOPLIST_FILE = "InneractiveAdSample/InneractiveAdSample-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)",
 					"$(PROJECT_DIR)/ExternalFrameworks/**",
 				);
 				ONLY_ACTIVE_ARCH = YES;
@@ -1092,14 +1113,12 @@
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/ExternalFrameworks/**",
-					"$(PROJECT_DIR)/../InneractiveAdSDK",
 				);
 				INFOPLIST_FILE = "InneractiveAdSample/InneractiveAdSample-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)",
 					"$(PROJECT_DIR)/ExternalFrameworks/**",
 				);
 				ONLY_ACTIVE_ARCH = NO;
@@ -1137,30 +1156,23 @@
 					"$(inherited)",
 					"$(DEVELOPER_FRAMEWORKS_DIR)",
 					"$(PROJECT_DIR)/**",
+					"$(PROJECT_DIR)/../InneractiveAdSDK",
 				);
 				GCC_C_LANGUAGE_STANDARD = "compiler-default";
 				GCC_GENERATE_TEST_COVERAGE_FILES = YES;
 				GCC_INSTRUMENT_PROGRAM_FLOW_ARCS = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "InneractiveAdSample/InneractiveAdSample-Prefix.pch";
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-					"RUN_KIF_TESTS=1",
-					"STUB_SERVER_RESPONSE=1",
-				);
+				GCC_PREPROCESSOR_DEFINITIONS = "$(inherited)";
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/ExternalFrameworks/**",
 				);
 				INFOPLIST_FILE = "InneractiveAdSample/InneractiveAdSampleTests-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)",
-				);
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				ONLY_ACTIVE_ARCH = YES;
-				OTHER_CFLAGS = "";
+				OTHER_CFLAGS = "$(inherited)";
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-framework",
@@ -1192,25 +1204,23 @@
 					"$(inherited)",
 					"$(DEVELOPER_FRAMEWORKS_DIR)",
 					"$(PROJECT_DIR)/**",
+					"$(PROJECT_DIR)/../InneractiveAdSDK",
 				);
 				GCC_C_LANGUAGE_STANDARD = "compiler-default";
 				GCC_GENERATE_TEST_COVERAGE_FILES = YES;
 				GCC_INSTRUMENT_PROGRAM_FLOW_ARCS = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "InneractiveAdSample/InneractiveAdSample-Prefix.pch";
-				GCC_PREPROCESSOR_DEFINITIONS = "RELEASE=1";
+				GCC_PREPROCESSOR_DEFINITIONS = "$(inherited)";
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/ExternalFrameworks/**",
 				);
 				INFOPLIST_FILE = "InneractiveAdSample/InneractiveAdSampleTests-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)",
-				);
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				ONLY_ACTIVE_ARCH = YES;
-				OTHER_CFLAGS = "";
+				OTHER_CFLAGS = "$(inherited)";
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-framework",
@@ -1302,14 +1312,12 @@
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/ExternalFrameworks/**",
-					"$(PROJECT_DIR)/../InneractiveAdSDK",
 				);
 				INFOPLIST_FILE = "InneractiveAdSample/InneractiveAdSample-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)",
 					"$(PROJECT_DIR)/ExternalFrameworks/**",
 				);
 				ONLY_ACTIVE_ARCH = NO;
@@ -1348,24 +1356,23 @@
 					"$(inherited)",
 					"$(DEVELOPER_FRAMEWORKS_DIR)",
 					"$(PROJECT_DIR)/**",
+					"$(PROJECT_DIR)/../InneractiveAdSDK",
 				);
 				GCC_C_LANGUAGE_STANDARD = "compiler-default";
 				GCC_GENERATE_TEST_COVERAGE_FILES = YES;
 				GCC_INSTRUMENT_PROGRAM_FLOW_ARCS = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "InneractiveAdSample/InneractiveAdSample-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = "$(inherited)";
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/ExternalFrameworks/**",
 				);
 				INFOPLIST_FILE = "InneractiveAdSample/InneractiveAdSampleTests-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)",
-				);
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				ONLY_ACTIVE_ARCH = YES;
-				OTHER_CFLAGS = "";
+				OTHER_CFLAGS = "$(inherited)";
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-framework",
