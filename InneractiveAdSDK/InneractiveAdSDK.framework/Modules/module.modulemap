@@ -1,10 +1,22 @@
 
 framework module InneractiveAdSDK {
-	umbrella header "InneractiveAdSDK.h"
-	
-	export *
-	module * { export * }
-	
-	header "InneractiveAdSDK-Bridging-Header.h"
+    umbrella header "InneractiveAdSDK.h"
+        export *
+        module * { export * }
+
+    link framework "SystemConfiguration"
+    link framework "CoreGraphics"
+    link framework "EventKit"
+    link framework "EventKitUI"
+    link framework "MediaPlayer"
+    link framework "MessageUI"
+    link framework "CoreTelephony"
+    link framework "StoreKit"
+    link framework "AdSupport"
+    link framework "AVFoundation"
+    link framework "CoreMedia"
+    link framework "WebKit"
+    link framework "Foundation"
+    link framework "UIKit"
 }
 

@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import <InneractiveAdSDK/InneractiveAdSDK.h>
+@import InneractiveAdSDK;
 
 /*
  * A cell, that is used for ad content.

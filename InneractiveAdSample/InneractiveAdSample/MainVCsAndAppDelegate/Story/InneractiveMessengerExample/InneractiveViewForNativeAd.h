@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-#import <InneractiveAdSDK/InneractiveAdSDK.h>
+@import InneractiveAdSDK;
 
 /*
  * A UIView subclass, that implements "IaNativeAdRenderingDelegate" protocol and is used to render and display the ads.

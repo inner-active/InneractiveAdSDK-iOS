@@ -6,7 +6,7 @@
 //  Copyright (c) 2014 Inneractive. All rights reserved.
 //
 
-#import <InneractiveAdSDK/InneractiveAdSDK.h>
+@import InneractiveAdSDK;
 
 /**
  * Table Story example using manual table management

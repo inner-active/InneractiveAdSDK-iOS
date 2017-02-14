@@ -65,6 +65,7 @@
     self.nativeAd.adConfig.nativeAdAssetsDescription.imageIconAssetPriority = IaNativeAdAssetPriorityNone;
     self.nativeAd.adConfig.nativeAdAssetsDescription.callToActionTextAssetPriority = IaNativeAdAssetPriorityOptional;
     self.nativeAd.adConfig.nativeAdAssetsDescription.descriptionTextAssetPriority = IaNativeAdAssetPriorityNone;
+    
      
     [[InneractiveAdSDK sharedInstance] loadAd:self.nativeAd];
 }

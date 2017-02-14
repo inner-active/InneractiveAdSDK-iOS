@@ -9,7 +9,7 @@
 #import "InneractiveAdSampleAppDelegate.h"
 
 #import <CoreLocation/CLLocationManager.h>
-#import <InneractiveAdSDK/InneractiveAdSDK.h>
+@import InneractiveAdSDK;
 
 @implementation InneractiveAdSampleAppDelegate {}
 
