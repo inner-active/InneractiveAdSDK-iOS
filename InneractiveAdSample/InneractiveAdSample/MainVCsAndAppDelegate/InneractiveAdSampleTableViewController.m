@@ -63,15 +63,10 @@ static const int kIaNumOfAdTypesInEachTableViewSection = 3;
     }
 }
 
-- (void)customizeBackButtonForNavigationItem:(UINavigationItem *)navItem{
-    UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
-    [button setImage:[UIImage imageNamed:@"Back-icon"] forState:UIControlStateNormal];
-    [button addTarget:self action:@selector(backPressed:) forControlEvents:UIControlEventTouchUpInside];
-    button.frame = CGRectMake(0, 0, 30, 30);
-    
-    UIBarButtonItem *barButtonItem = [[UIBarButtonItem alloc] initWithCustomView:button];
-    
-    navItem.leftBarButtonItem = barButtonItem;
+- (void)customizeBackButtonForNavigationItem:(UINavigationItem *)navItem{	
+	UIImage *buttonImage = [[UIImage imageNamed:@"Back-icon"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+	UIBarButtonItem *barButtonItem = [[UIBarButtonItem alloc] initWithImage:buttonImage style:UIBarButtonItemStylePlain target:self action:@selector(backPressed:)];
+	navItem.leftBarButtonItem = barButtonItem;
 }
 
 - (void)backPressed:(UIButton *)sender{
@@ -99,7 +94,11 @@ static const int kIaNumOfAdTypesInEachTableViewSection = 3;
     view.textLabel.textColor = IA_BUTTONS_BACKGROUND_COLOR;
 }
 
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {return 2;}
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+    NSInteger sectionsCount = 2;
+    
+    return sectionsCount;
+}
 
 
 @end

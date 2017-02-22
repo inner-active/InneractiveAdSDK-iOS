@@ -30,3 +30,5 @@ _Pragma("clang diagnostic pop") \
 #define IA_NAV_BAR_COLOR [UIColor whiteColor]
 #define IA_BUTTONS_TEXT_COLOR [UIColor colorWithRed:255/255.0 green:151/255.0 blue:4/255.0 alpha:1.0]
 #define IA_BUTTONS_BACKGROUND_COLOR [UIColor colorWithRed:36/255.0 green:183/255.0 blue:197/255.0 alpha:1.0]
+
+static NSString * const kIAUpdateRequestSettings = @"IAUpdateRequestSettings"; // is used to notify about updated request settings;

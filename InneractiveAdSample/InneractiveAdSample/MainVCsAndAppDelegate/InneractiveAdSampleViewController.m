@@ -70,6 +70,7 @@ static NSString *kIaMyAppId = @"MyCompany_MyApp";
             NSLog(@"[Current video time: %.2lfs total time: %.2lfs progress: %.0lf%%]", currentTime, totalTime, (currentTime / totalTime) * 100.0);
         };
         
+        
         [[InneractiveAdSDK sharedInstance] loadAd:self.adView];
 }
 
@@ -204,8 +205,18 @@ static NSString *kIaMyAppId = @"MyCompany_MyApp";
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.navigationController.navigationBar.translucent = NO;
+	UIImage *buttonImage = [[UIImage imageNamed:@"Back-icon"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+	UIBarButtonItem *barButtonItem = [[UIBarButtonItem alloc] initWithImage:buttonImage style:UIBarButtonItemStylePlain target:self action:@selector(backPressed:)];
+	
+	self.navigationItem.leftBarButtonItem = barButtonItem;
+	self.navigationController.navigationBar.translucent = NO;
+	
 }
+
+- (void)backPressed:(UIButton *)sender {
+    [self.navigationController popViewControllerAnimated:YES];
+}
+
 
 #pragma mark - Sample Helper Methods
 

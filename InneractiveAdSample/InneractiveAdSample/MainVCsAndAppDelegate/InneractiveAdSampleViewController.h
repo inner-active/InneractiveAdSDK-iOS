@@ -10,7 +10,6 @@
 @import InneractiveAdSDK;
 
 
-
 typedef NS_ENUM(NSUInteger, IaTableViewSectionType) {
     IaSection_LoadAdFromCode = 0
 };
