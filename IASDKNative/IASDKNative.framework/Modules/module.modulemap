@@ -1,0 +1,7 @@
+
+framework module IASDKNative {
+    umbrella header "IASDKNative.h"
+        export *
+        module * { export * }
+}
+
