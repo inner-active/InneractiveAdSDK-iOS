@@ -1,10 +1,36 @@
 * -=====================================================================-
 *   Inneractive iOS SDK 
 * -=====================================================================-
-*   Update Date: Nov 2016
+*   Update Date: May 2017
 *   Further documentation found here:  
 *   https://confluence.inner-active.com/display/DevWiki/iOS+SDK+guidelines
 * -=====================================================================-
+
+- Version 6.4.5
+-========================================================================-
+- Release date: 28/05/2017
+- Improved SDK infrastructure - performance and stability.
+
+- Version 6.4.4
+-========================================================================-
+- Release date: 07/03/2017
+- Improved SDK infrastructure - performance and stability.
+- Apple Universal Links support.
+
+- Version 6.4.3
+-========================================================================-
+- Release date: 20/02/2017
+- Improved SDK infrastructure - performance and stability. 
+
+- Version 6.4.2
+-========================================================================-
+- Release date: 31/01/2017
+- Improved SDK infrastructure - performance and stability. 
+
+- Version 6.4.1
+-========================================================================-
+- Release date: 17/12/2016
+- Improved SDK infrastructure - performance and stability. 
 
 - Version 6.4.0
 -========================================================================-

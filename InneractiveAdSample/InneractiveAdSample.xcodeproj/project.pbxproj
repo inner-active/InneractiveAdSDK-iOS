@@ -28,7 +28,6 @@
 		2CB9DC151AC18CBB006A1A89 /* InneractiveNativeAdCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CB9DC141AC18CBB006A1A89 /* InneractiveNativeAdCollectionCell.m */; };
 		2CBF28691E13BA0100EBA551 /* BuildFile in Frameworks */ = {isa = PBXBuildFile; settings = {ATTRIBUTES = (Required, ); }; };
 		2CC965321E23EC84009BC4F8 /* libxml2.2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CC965311E23EC84009BC4F8 /* libxml2.2.tbd */; };
-		4A53FBC5D87F456B57D8E97C /* InneractiveSDKResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = AF946A0FD44F003E3C28A7E2 /* InneractiveSDKResources.bundle */; };
 		8898EA871B28490D00884BCA /* 00@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8898EA601B28490D00884BCA /* 00@2x.png */; };
 		8898EA881B28490D00884BCA /* 01@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8898EA611B28490D00884BCA /* 01@2x.png */; };
 		8898EA891B28490D00884BCA /* 02@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8898EA621B28490D00884BCA /* 02@2x.png */; };
@@ -75,7 +74,8 @@
 		88D6348C1B53B04A00F68F50 /* InneractiveNativeAd2TableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 88D634841B53B04A00F68F50 /* InneractiveNativeAd2TableCell.m */; };
 		88D6348D1B53B04A00F68F50 /* InneractiveNativeAdStoryManualTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 88D634861B53B04A00F68F50 /* InneractiveNativeAdStoryManualTableViewController.m */; };
 		88D6348E1B53B04A00F68F50 /* InneractiveNativeAdStoryTableAdapterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 88D634881B53B04A00F68F50 /* InneractiveNativeAdStoryTableAdapterViewController.m */; };
-		CC90D50D384BEE69861AFE45 /* InneractiveAdSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0A41EB2FD004283DCC89CB4 /* InneractiveAdSDK.framework */; };
+		C7EA57D2712E7A86DF25B36D /* InneractiveAdSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7CD697A592E3FF17030F71D /* InneractiveAdSDK.framework */; };
+		CCA57E46CB0CEF123630D194 /* InneractiveSDKResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = F417E47C31BEB26F1BE66479 /* InneractiveSDKResources.bundle */; };
 		E87E467F1E5096D80017FEA5 /* BuildFile in Sources */ = {isa = PBXBuildFile; };
 		E87E46801E5096D80017FEA5 /* BuildFile in Sources */ = {isa = PBXBuildFile; };
 		E87E46AF1E5097180017FEA5 /* BuildFile in Sources */ = {isa = PBXBuildFile; };
@@ -192,12 +192,12 @@
 		88D634861B53B04A00F68F50 /* InneractiveNativeAdStoryManualTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InneractiveNativeAdStoryManualTableViewController.m; sourceTree = "<group>"; };
 		88D634871B53B04A00F68F50 /* InneractiveNativeAdStoryTableAdapterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InneractiveNativeAdStoryTableAdapterViewController.h; sourceTree = "<group>"; };
 		88D634881B53B04A00F68F50 /* InneractiveNativeAdStoryTableAdapterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InneractiveNativeAdStoryTableAdapterViewController.m; sourceTree = "<group>"; };
-		AF946A0FD44F003E3C28A7E2 /* InneractiveSDKResources.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; name = InneractiveSDKResources.bundle; path = ../InneractiveAdSDK/InneractiveSDKResources.bundle; sourceTree = "<group>"; };
-		D0A41EB2FD004283DCC89CB4 /* InneractiveAdSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = InneractiveAdSDK.framework; path = ../InneractiveAdSDK/InneractiveAdSDK.framework; sourceTree = "<group>"; };
 		E87E46D71E5098780017FEA5 /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BaseViewController.h; path = MainVCsAndAppDelegate/BaseViewController.h; sourceTree = "<group>"; };
 		E87E46D81E5098780017FEA5 /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BaseViewController.m; path = MainVCsAndAppDelegate/BaseViewController.m; sourceTree = "<group>"; };
 		E8F53B5E1E51AB9800AF2115 /* iToast.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iToast.h; sourceTree = "<group>"; };
 		E8F53B5F1E51AB9800AF2115 /* iToast.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iToast.m; sourceTree = "<group>"; };
+		F417E47C31BEB26F1BE66479 /* InneractiveSDKResources.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; name = InneractiveSDKResources.bundle; path = ../InneractiveAdSDK/InneractiveSDKResources.bundle; sourceTree = "<group>"; };
+		F7CD697A592E3FF17030F71D /* InneractiveAdSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = InneractiveAdSDK.framework; path = ../InneractiveAdSDK/InneractiveAdSDK.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -207,7 +207,7 @@
 			files = (
 				2CC965321E23EC84009BC4F8 /* libxml2.2.tbd in Frameworks */,
 				2CBF28691E13BA0100EBA551 /* BuildFile in Frameworks */,
-				CC90D50D384BEE69861AFE45 /* InneractiveAdSDK.framework in Frameworks */,
+				C7EA57D2712E7A86DF25B36D /* InneractiveAdSDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -221,8 +221,8 @@
 				1D8AD194180EEFF900EDB0C9 /* Main */,
 				1D8AD18C180EEFF900EDB0C9 /* Products */,
 				E87E46C31E5097360017FEA5 /* ThirdParty */,
-				D0A41EB2FD004283DCC89CB4 /* InneractiveAdSDK.framework */,
-				AF946A0FD44F003E3C28A7E2 /* InneractiveSDKResources.bundle */,
+				F7CD697A592E3FF17030F71D /* InneractiveAdSDK.framework */,
+				F417E47C31BEB26F1BE66479 /* InneractiveSDKResources.bundle */,
 			);
 			sourceTree = "<group>";
 		};
@@ -588,7 +588,7 @@
 				8898EA9D1B28490D00884BCA /* 04p@2x.png in Resources */,
 				8898EAA01B28490D00884BCA /* 07p@2x.png in Resources */,
 				8898EA981B28490D00884BCA /* 17@2x.png in Resources */,
-				4A53FBC5D87F456B57D8E97C /* InneractiveSDKResources.bundle in Resources */,
+				CCA57E46CB0CEF123630D194 /* InneractiveSDKResources.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
