@@ -184,14 +184,6 @@ static NSString *kIaMyAppId = @"MyCompany_MyApp";
     return YES;
 }
 
-- (void)willRotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration {
-    /* If your application does not support automatic rotation, but rather rotates it's views manually,
-       you can opt to forward orientation changes to the ad's IaAdView by calling the optional
-       rotateToOrientation:(UIInterfaceOrientation)toInterfaceOrientation method like so:
-    */
-    /// [[InneractiveAdSDK sharedInstance] rotateAdView:self.bannerAdView ToOrientation:toInterfaceOrientation];
-}
-
 - (UIInterfaceOrientationMask)supportedInterfaceOrientations {
     return  UIInterfaceOrientationMaskAll;
 }

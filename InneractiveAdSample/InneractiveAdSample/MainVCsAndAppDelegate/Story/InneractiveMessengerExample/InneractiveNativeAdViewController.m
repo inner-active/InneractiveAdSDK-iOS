@@ -232,7 +232,7 @@
         [UIView animateWithDuration:_keyboardTransitionDuration animations:^{
             self.messageTextField.frame = CGRectMake(
                                                      self.messageTextField.frame.origin.x,
-                                                     self.messageTextField.frame.origin.y - _keyboardHeight,
+                                                     self.messageTextField.frame.origin.y - self->_keyboardHeight,
                                                      self.messageTextField.bounds.size.width,
                                                      self.messageTextField.bounds.size.height);
             
@@ -240,7 +240,7 @@
                                                       self.messagesTableView.frame.origin.x,
                                                       self.messagesTableView.frame.origin.y,
                                                       self.messagesTableView.bounds.size.width,
-                                                      self.messagesTableView.bounds.size.height - _keyboardHeight);
+                                                      self.messagesTableView.bounds.size.height - self->_keyboardHeight);
         }];
     }
 }
@@ -254,7 +254,7 @@
     [UIView animateWithDuration:_keyboardTransitionDuration animations:^{
         self.messageTextField.frame = CGRectMake(
                                                  self.messageTextField.frame.origin.x,
-                                                 self.messageTextField.frame.origin.y + _keyboardHeight,
+                                                 self.messageTextField.frame.origin.y + self->_keyboardHeight,
                                                  self.messageTextField.bounds.size.width,
                                                  self.messageTextField.bounds.size.height);
         
@@ -262,7 +262,7 @@
                                                   self.messagesTableView.frame.origin.x,
                                                   self.messagesTableView.frame.origin.y,
                                                   self.messagesTableView.bounds.size.width,
-                                                  self.messagesTableView.bounds.size.height + _keyboardHeight);
+                                                  self.messagesTableView.bounds.size.height + self->_keyboardHeight);
     }];
 }
 

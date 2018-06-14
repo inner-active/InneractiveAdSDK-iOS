@@ -14,6 +14,7 @@
 #import "InneractiveAdSDK-NativeAd.h"
 #import "InneractiveAdSDK-AdDelegate.h"
 #import "InneractiveAdSDK-GeneralConfig.h"
+#import "IAGDPRConsent.h"
 
 /**
  *  @class InneractiveAdSDK
@@ -282,6 +283,13 @@ typedef NS_ENUM(NSUInteger, IaLogLevel) {
  *  @return SDK version as a float number (e.g., 5.01)
  */
 + (float)sdkVersion;
+
+/**
+ *  @brief Sets boolean value indicating whether user has given GDPR consent or not
+ *
+ *  @param consentGiven boolean value
+ */
++ (void)setGDPRConsent:(BOOL)consentGiven;
 
 /**
  *  @brief The alloc, init and new methods should not be used to initialize and use the InneractiveSDK class. [InneractiveAdSDK sharedInstance] should be used instead.
