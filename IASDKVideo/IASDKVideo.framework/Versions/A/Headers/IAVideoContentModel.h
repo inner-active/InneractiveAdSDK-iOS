@@ -35,5 +35,6 @@ typedef enum : NSInteger {
 
 @property (nonatomic) IAVideoType videoType;
 @property (nonatomic, strong, nonnull) IAVASTModel *VASTModel;
+@property (nonatomic) NSTimeInterval skipSeconds;
 
 @end

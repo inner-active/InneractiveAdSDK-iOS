@@ -16,6 +16,9 @@
 #import "IAVideoContentModel.h"
 #import "IAVideoView.h"
 
+/**
+ *  @brief Should not be used never.
+ */
 extern NSString * const _Nonnull kIAVPAIDPlayerURLString;
 
 @interface IASDKVideo : NSObject <IAInterfaceSingleton>

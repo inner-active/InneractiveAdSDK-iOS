@@ -37,6 +37,7 @@
 #import "IAMediationAdMob.h"
 #import "IAMediationDFP.h"
 #import "IAMediationFyber.h"
+#import "IAGDPRConsent.h"
 
 @interface IASDKCore : NSObject <IAInterfaceSingleton>
 
@@ -58,5 +59,12 @@
  *  @discussion The format is 'X.XX'.
  */
 - (NSString * _Null_unspecified)version;
+
+/**
+ *  @brief Use in order to set GDPR consent.
+ *
+ *  @param value Yes - allow, No - deny.
+ */
+- (void)setGDPRConsent:(BOOL)value;
 
 @end
