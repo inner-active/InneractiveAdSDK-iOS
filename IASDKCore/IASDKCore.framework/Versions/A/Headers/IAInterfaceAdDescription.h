@@ -15,7 +15,6 @@
 
 @required
 
-
 @end
 
 #endif /* IAInterfaceAdDescription_h */

@@ -7,8 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		49E167521FF236921590BA21 /* IASDKNative.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A28FAFE2008969A26D0B274 /* IASDKNative.framework */; };
-		66E1C0A5D8FA12587B296851 /* IASDKResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 9D24EC03210FA01CDF05DA33 /* IASDKResources.bundle */; };
+		8024A45221BEB523FB792C54 /* IASDKMRAID.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20A4971D0171C186A119C425 /* IASDKMRAID.framework */; };
 		840FC4CC1E6461FD00724B1B /* libxml2.2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 840FC4CB1E6461FD00724B1B /* libxml2.2.tbd */; };
 		8410CCCA1ED47104007D4884 /* BuildFile in Resources */ = {isa = PBXBuildFile; };
 		841329441E80383800E02FC0 /* BuildFile in Resources */ = {isa = PBXBuildFile; };
@@ -22,12 +21,12 @@
 		844352C91EA65FE10042AFAA /* BuildFile in Sources */ = {isa = PBXBuildFile; };
 		844352CA1EA65FE10042AFAA /* BuildFile in Sources */ = {isa = PBXBuildFile; };
 		84D7A7B41E95A80B00D921EF /* BuildFile in Resources */ = {isa = PBXBuildFile; };
+		90411F2E0D446000F71119CF /* IASDKCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F87557DD158DA117E342A253 /* IASDKCore.framework */; };
+		9F837FA364617CDD7BE3CA52 /* IASDKResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 697B1E4CF4575FC172FB8B51 /* IASDKResources.bundle */; };
 		AE044C0C1F0D35A600C84A80 /* BuildFile in Resources */ = {isa = PBXBuildFile; };
 		AE044C0D1F0D35A600C84A80 /* BuildFile in Resources */ = {isa = PBXBuildFile; };
 		AE044C0E1F0D35A600C84A80 /* BuildFile in Resources */ = {isa = PBXBuildFile; };
 		AE044C0F1F0D35A600C84A80 /* BuildFile in Resources */ = {isa = PBXBuildFile; };
-		BC04D2622EC941A357C65953 /* IASDKMRAID.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D91916730E8E783C9C8ED38 /* IASDKMRAID.framework */; };
-		DEC9C03A2503D4CC7446331C /* IASDKCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E77D29414A916C66D247D379 /* IASDKCore.framework */; };
 		E84D7F2D1FE5CD5100DBA819 /* BuildFile in Sources */ = {isa = PBXBuildFile; };
 		E87DBB931E706C5F00408E1A /* BuildFile in Resources */ = {isa = PBXBuildFile; };
 		E88693AF1E3DFED900B12EAB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E88693AE1E3DFED900B12EAB /* main.m */; };
@@ -110,20 +109,19 @@
 		E8FCDE6F1F559ED800FCA1C6 /* IANativeAdTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E8FCDE3C1F559ED800FCA1C6 /* IANativeAdTableCell.m */; };
 		E8FCDE701F559ED800FCA1C6 /* IANativeAdTwoUnitsTableVС.m in Sources */ = {isa = PBXBuildFile; fileRef = E8FCDE3E1F559ED800FCA1C6 /* IANativeAdTwoUnitsTableVС.m */; };
 		E8FCDE711F559ED800FCA1C6 /* IARegularAdVC.m in Sources */ = {isa = PBXBuildFile; fileRef = E8FCDE411F559ED800FCA1C6 /* IARegularAdVC.m */; };
-		EE4426BC5F78F04D13A50047 /* IASDKVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE7A51D8B0B8BD2B5A5D7BA1 /* IASDKVideo.framework */; };
+		F49B0095279B2C9B539F0349 /* IASDKNative.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FEA064D3F86F652C272B2E12 /* IASDKNative.framework */; };
+		FDFA84FDD9367AB8591C9B99 /* IASDKVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5EE18EA779BB61C9CB631000 /* IASDKVideo.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		1D91916730E8E783C9C8ED38 /* IASDKMRAID.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IASDKMRAID.framework; path = ../IASDKMRAID/IASDKMRAID.framework; sourceTree = "<group>"; };
-		7A28FAFE2008969A26D0B274 /* IASDKNative.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IASDKNative.framework; path = ../IASDKNative/IASDKNative.framework; sourceTree = "<group>"; };
+		20A4971D0171C186A119C425 /* IASDKMRAID.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IASDKMRAID.framework; path = ../IASDKMRAID/IASDKMRAID.framework; sourceTree = "<group>"; };
+		5EE18EA779BB61C9CB631000 /* IASDKVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IASDKVideo.framework; path = ../IASDKVideo/IASDKVideo.framework; sourceTree = "<group>"; };
+		697B1E4CF4575FC172FB8B51 /* IASDKResources.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; name = IASDKResources.bundle; path = ../IASDKCore/IASDKResources.bundle; sourceTree = "<group>"; };
 		840EBA0B1E96DFFE008E8C51 /* IAColors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IAColors.h; path = UI/IAColors.h; sourceTree = "<group>"; };
 		840FC4CB1E6461FD00724B1B /* libxml2.2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libxml2.2.tbd; path = usr/lib/libxml2.2.tbd; sourceTree = SDKROOT; };
 		841621A21E71C8A500F51F77 /* Roboto-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Roboto-Bold.ttf"; path = "Resources/Fonts/Roboto/Roboto-Bold.ttf"; sourceTree = "<group>"; };
 		841621A31E71C8A500F51F77 /* Roboto-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Roboto-Light.ttf"; path = "Resources/Fonts/Roboto/Roboto-Light.ttf"; sourceTree = "<group>"; };
 		841621A41E71C8A500F51F77 /* Roboto-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Roboto-Regular.ttf"; path = "Resources/Fonts/Roboto/Roboto-Regular.ttf"; sourceTree = "<group>"; };
-		9D24EC03210FA01CDF05DA33 /* IASDKResources.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; name = IASDKResources.bundle; path = ../IASDKCore/IASDKResources.bundle; sourceTree = "<group>"; };
-		DE7A51D8B0B8BD2B5A5D7BA1 /* IASDKVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IASDKVideo.framework; path = ../IASDKVideo/IASDKVideo.framework; sourceTree = "<group>"; };
-		E77D29414A916C66D247D379 /* IASDKCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IASDKCore.framework; path = ../IASDKCore/IASDKCore.framework; sourceTree = "<group>"; };
 		E88693AA1E3DFED900B12EAB /* IASDKClient.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IASDKClient.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E88693AE1E3DFED900B12EAB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		E88693B01E3DFED900B12EAB /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -194,6 +192,8 @@
 		E8FCDE3E1F559ED800FCA1C6 /* IANativeAdTwoUnitsTableVС.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "IANativeAdTwoUnitsTableVС.m"; sourceTree = "<group>"; };
 		E8FCDE401F559ED800FCA1C6 /* IARegularAdVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IARegularAdVC.h; sourceTree = "<group>"; };
 		E8FCDE411F559ED800FCA1C6 /* IARegularAdVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IARegularAdVC.m; sourceTree = "<group>"; };
+		F87557DD158DA117E342A253 /* IASDKCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IASDKCore.framework; path = ../IASDKCore/IASDKCore.framework; sourceTree = "<group>"; };
+		FEA064D3F86F652C272B2E12 /* IASDKNative.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IASDKNative.framework; path = ../IASDKNative/IASDKNative.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -206,10 +206,10 @@
 				E8EDCFE61E5481A4002DDB06 /* BuildFile in Frameworks */,
 				E8EDCFDD1E548188002DDB06 /* BuildFile in Frameworks */,
 				E8E1EB5B1E42063B000324D3 /* BuildFile in Frameworks */,
-				DEC9C03A2503D4CC7446331C /* IASDKCore.framework in Frameworks */,
-				EE4426BC5F78F04D13A50047 /* IASDKVideo.framework in Frameworks */,
-				BC04D2622EC941A357C65953 /* IASDKMRAID.framework in Frameworks */,
-				49E167521FF236921590BA21 /* IASDKNative.framework in Frameworks */,
+				90411F2E0D446000F71119CF /* IASDKCore.framework in Frameworks */,
+				FDFA84FDD9367AB8591C9B99 /* IASDKVideo.framework in Frameworks */,
+				8024A45221BEB523FB792C54 /* IASDKMRAID.framework in Frameworks */,
+				F49B0095279B2C9B539F0349 /* IASDKNative.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -248,11 +248,11 @@
 				E886940A1E3E139C00B12EAB /* Frameworks */,
 				E88693AC1E3DFED900B12EAB /* IASDKClient */,
 				E88693AB1E3DFED900B12EAB /* Products */,
-				E77D29414A916C66D247D379 /* IASDKCore.framework */,
-				DE7A51D8B0B8BD2B5A5D7BA1 /* IASDKVideo.framework */,
-				1D91916730E8E783C9C8ED38 /* IASDKMRAID.framework */,
-				7A28FAFE2008969A26D0B274 /* IASDKNative.framework */,
-				9D24EC03210FA01CDF05DA33 /* IASDKResources.bundle */,
+				F87557DD158DA117E342A253 /* IASDKCore.framework */,
+				5EE18EA779BB61C9CB631000 /* IASDKVideo.framework */,
+				20A4971D0171C186A119C425 /* IASDKMRAID.framework */,
+				FEA064D3F86F652C272B2E12 /* IASDKNative.framework */,
+				697B1E4CF4575FC172FB8B51 /* IASDKResources.bundle */,
 			);
 			sourceTree = "<group>";
 		};
@@ -292,11 +292,11 @@
 		E88693E01E3DFEE700B12EAB /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				840EBA0B1E96DFFE008E8C51 /* IAColors.h */,
 				E8EDCFF51E54854D002DDB06 /* MainScreenVC.h */,
 				E8EDCFF61E54854D002DDB06 /* MainScreenVC.m */,
 				E8FCDDFC1F559ED800FCA1C6 /* NativeAds */,
 				E8FCDE3F1F559ED800FCA1C6 /* RegularAds */,
-				840EBA0B1E96DFFE008E8C51 /* IAColors.h */,
 			);
 			name = UI;
 			sourceTree = "<group>";
@@ -580,7 +580,7 @@
 				E88693B81E3DFED900B12EAB /* Main.storyboard in Resources */,
 				E8FCDE5F1F559ED800FCA1C6 /* 08p@2x.png in Resources */,
 				AE044C0E1F0D35A600C84A80 /* BuildFile in Resources */,
-				66E1C0A5D8FA12587B296851 /* IASDKResources.bundle in Resources */,
+				9F837FA364617CDD7BE3CA52 /* IASDKResources.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -707,7 +707,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
-				DYLIB_CURRENT_VERSION = 7.08;
+				DYLIB_CURRENT_VERSION = 7.09;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -740,7 +740,7 @@
 				DEAD_CODE_STRIPPING = NO;
 				DEPLOYMENT_POSTPROCESSING = NO;
 				DEVELOPMENT_TEAM = 9G2AGGBJ52;
-				DYLIB_CURRENT_VERSION = 7.08;
+				DYLIB_CURRENT_VERSION = 7.09;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(PROJECT_DIR)/../IASDKCore",
 					"$(PROJECT_DIR)/../IASDKMRAID",
@@ -811,7 +811,7 @@
 				DEBUG_ACTIVITY_MODE = "";
 				"DEBUG_ACTIVITY_MODE[sdk=iphonesimulator*]" = disable;
 				DEBUG_INFORMATION_FORMAT = dwarf;
-				DYLIB_CURRENT_VERSION = 7.08;
+				DYLIB_CURRENT_VERSION = 7.09;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -869,7 +869,7 @@
 				COPY_PHASE_STRIP = NO;
 				DEBUG_ACTIVITY_MODE = "";
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DYLIB_CURRENT_VERSION = 7.08;
+				DYLIB_CURRENT_VERSION = 7.09;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -895,7 +895,7 @@
 				DEAD_CODE_STRIPPING = NO;
 				DEPLOYMENT_POSTPROCESSING = NO;
 				DEVELOPMENT_TEAM = 9G2AGGBJ52;
-				DYLIB_CURRENT_VERSION = 7.08;
+				DYLIB_CURRENT_VERSION = 7.09;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(PROJECT_DIR)/../IASDKCore",
 					"$(PROJECT_DIR)/../IASDKMRAID",
@@ -934,7 +934,7 @@
 				CLANG_ENABLE_CODE_COVERAGE = NO;
 				DEPLOYMENT_POSTPROCESSING = YES;
 				DEVELOPMENT_TEAM = 9G2AGGBJ52;
-				DYLIB_CURRENT_VERSION = 7.08;
+				DYLIB_CURRENT_VERSION = 7.09;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(PROJECT_DIR)/../IASDKCore",
 					"$(PROJECT_DIR)/../IASDKMRAID",

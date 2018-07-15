@@ -31,6 +31,7 @@
 @property (nonatomic, weak) IAAdView *adView;
 
 @property (nonatomic) BOOL isMRAIDResize;
+@property (nonatomic) CGRect initialFrame;
 
 @end
 
@@ -158,7 +159,26 @@
                                               attribute:NSLayoutAttributeTop
                                              multiplier:1
                                                constant:0]];
-                
+                       self.adViewWidthConstraint =
+         [NSLayoutConstraint constraintWithItem:self.adView
+                                      attribute:NSLayoutAttributeWidth
+                                      relatedBy:NSLayoutRelationEqual
+                                         toItem:nil
+                                      attribute:NSLayoutAttributeWidth
+                                     multiplier:1
+                                       constant:CGRectGetWidth(self.adView.frame)];
+		self.adViewWidthConstraint.active = YES;
+				
+        self.adViewHeightConstraint =
+         [NSLayoutConstraint constraintWithItem:self.adView
+                                      attribute:NSLayoutAttributeHeight
+                                      relatedBy:NSLayoutRelationEqual
+                                         toItem:nil
+                                      attribute:NSLayoutAttributeHeight
+                                     multiplier:1
+                                       constant:CGRectGetHeight(self.adView.frame)];
+		self.adViewHeightConstraint.active = YES;
+
                 // note: that adView is a new object after each refresh;
             }
             
@@ -239,7 +259,8 @@
 - (void)IAMRAIDContentController:(IAMRAIDContentController * _Nullable)contentController MRAIDAdWillResizeToFrame:(CGRect)frame {
     NSLog(@"MRAIDAdWillResizeToFrame");
     self.isMRAIDResize = YES; // a way to distinct in 'collapse', whether was resize or expand;
-    
+	self.initialFrame = self.adView.frame;
+
     if (!self.adView.translatesAutoresizingMaskIntoConstraints) { // a way to distinct the work with constraints;
         // ok, we are working with constraints, if so -> it is publisher responsibility to treat MRAID:RESIZE:
         //
@@ -260,7 +281,8 @@
     // means we are working with constraints;
     if (!self.adView.translatesAutoresizingMaskIntoConstraints) {
         [self.viewUnitController showAdInParentView:self.view]; // add once again to view, because was removed previously in order to remove constraints;
-        
+		
+        [NSLayoutConstraint deactivateConstraints:@[self.adViewWidthConstraint, self.adViewHeightConstraint]];
         // if so, it is on publisher responsibility to set up a new consrtraints:
         [self.view addConstraint:
          [NSLayoutConstraint constraintWithItem:self.adView
@@ -310,6 +332,7 @@
     NSLog(@"MRAIDAdWillExpandToFrame");
     
     self.isMRAIDResize = NO;
+	self.initialFrame = self.adView.frame;
 }
 
 - (void)IAMRAIDContentController:(IAMRAIDContentController * _Nullable)contentController MRAIDAdDidExpandToFrame:(CGRect)frame {
@@ -342,17 +365,17 @@
 										toItem:nil
 									 attribute:NSLayoutAttributeWidth
 									multiplier:1
-									  constant:self.adView.frame.size.width];
+									  constant:CGRectGetWidth(self.initialFrame)];
 		self.adViewWidthConstraint.active = YES;
-		self.adViewWidthConstraint =
+		self.adViewHeightConstraint =
 		[NSLayoutConstraint constraintWithItem:self.adView
-									 attribute:NSLayoutAttributeWidth
+									 attribute:NSLayoutAttributeHeight
 									 relatedBy:NSLayoutRelationEqual
 										toItem:nil
-									 attribute:NSLayoutAttributeWidth
+									 attribute:NSLayoutAttributeHeight
 									multiplier:1
-									  constant:self.adView.frame.size.width];
-		self.adViewWidthConstraint.active = YES;
+									  constant:CGRectGetHeight(self.initialFrame)];
+		self.adViewHeightConstraint.active = YES;
 		
         // adding centerX constraint
         [self.view addConstraint:
