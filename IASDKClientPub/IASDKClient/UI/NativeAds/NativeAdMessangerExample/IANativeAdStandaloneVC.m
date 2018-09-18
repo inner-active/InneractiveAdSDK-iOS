@@ -315,22 +315,29 @@
     if (!self.adPresented) {
         self.adPresented = YES;
         
+        // for some reason Xcode 10 shows warning on `frame` availability, hence suppressing it;
+        #pragma GCC diagnostic push
+        #pragma GCC diagnostic ignored "-Wunguarded-availability"
         self.adContainerView.frame = CGRectMake(
                                                 self.adContainerView.frame.origin.x,
                                                 -self.adContainerView.bounds.size.height,
                                                 self.adContainerView.bounds.size.width,
                                                 self.adContainerView.bounds.size.height);
+        #pragma GCC diagnostic pop
         self.adContainerView.hidden = NO;
         [self.view bringSubviewToFront:self.adContainerView];
         
         __weak typeof(self) weakSelf = self;
         
         [UIView animateWithDuration:self.keyboardTransitionDuration animations:^{
+            #pragma GCC diagnostic push
+            #pragma GCC diagnostic ignored "-Wunguarded-availability"
             weakSelf.adContainerView.frame = CGRectMake(
                                                     weakSelf.adContainerView.frame.origin.x,
                                                     0.0f,
                                                     weakSelf.adContainerView.bounds.size.width,
                                                     weakSelf.adContainerView.bounds.size.height);
+            #pragma GCC diagnostic pop
         } completion:^(BOOL finished) {
             if ([weakSelf.nativeContentController isVideoContent] && !weakSelf.isVideoCompleted) {
                 [weakSelf.nativeContentController play];
@@ -365,11 +372,15 @@
         __weak typeof(self) weakSelf = self;
         
         [UIView animateWithDuration:self.keyboardTransitionDuration animations:^{
+            // for some reason Xcode 10 shows warning on `frame` availability, hence suppressing it;
+            #pragma GCC diagnostic push
+            #pragma GCC diagnostic ignored "-Wunguarded-availability"
             weakSelf.adContainerView.frame = CGRectMake(
                                                         weakSelf.adContainerView.frame.origin.x,
                                                         -weakSelf.adContainerView.bounds.size.height,
                                                         weakSelf.adContainerView.bounds.size.width,
                                                         weakSelf.adContainerView.bounds.size.height);
+            #pragma GCC diagnostic pop
         } completion:^(BOOL finished) {
             
         }];
