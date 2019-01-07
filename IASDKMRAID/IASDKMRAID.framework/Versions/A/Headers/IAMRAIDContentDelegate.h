@@ -49,6 +49,11 @@
 - (void)IAMRAIDContentControllerMRAIDAdWillCollapse:(IAMRAIDContentController * _Nullable)contentController;
 - (void)IAMRAIDContentControllerMRAIDAdDidCollapse:(IAMRAIDContentController * _Nullable)contentController;
 
+/**
+ *  @brief invoked when MRAID video failed to start playing within specified timeout;
+ */
+- (void)IAMRAIDContentController:(IAMRAIDContentController * _Nullable)contentController videoInterruptedWithError:(NSError * _Nonnull)error;
+
 @end
 
 #endif /* IAMRAIDContentDelegate_h */

@@ -31,6 +31,7 @@
 #import "IANativeUnitController.h"
 #import "IAContentController.h"
 #import "IAAdView.h"
+#import "IAMRAIDAdView.h"
 
 #import "IAMediation.h"
 #import "IAMediationMopub.h"
@@ -41,7 +42,7 @@
 
 @interface IASDKCore : NSObject <IAInterfaceSingleton>
 
-@property (nonatomic, strong, nullable, readonly) NSString *appID;
+@property (atomic, strong, nullable, readonly) NSString *appID;
 
 /**
  *  @brief Singleton method, use for any instance call.
@@ -49,7 +50,11 @@
 + (instancetype _Null_unspecified)sharedInstance;
 
 /**
- *  @brief Required IA SDK method. Invoke it first priority.
+ *  @brief Initialisation of the SDK. Must be invoked before requesting the ads.
+ *
+ *  @discussion Should be invoked on the main thread. Otherwise it will convert the flow to the main thread.
+ *
+ *  @param appID A required param. Must be a valid application ID, otherwise the SDK will not be able to request/render the ads.
  */
 - (void)initWithAppID:(NSString * _Nonnull)appID;
 

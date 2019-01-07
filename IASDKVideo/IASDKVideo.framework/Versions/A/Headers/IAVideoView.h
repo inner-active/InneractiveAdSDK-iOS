@@ -6,7 +6,7 @@
 //  Copyright © 2017 Inneractive. All rights reserved.
 //
 
-#import <IASDKCore/IAAdView.h>
+#import <IASDKCore/IAMRAIDAdView.h>
 
 #pragma mark - Statics
 
@@ -14,7 +14,7 @@ static const CGFloat kIALandscapeVPAIDVerticalDelta = 44.0f;
 
 #pragma mark -
 
-@interface IAVideoView : IAAdView
+@interface IAVideoView : IAMRAIDAdView
 
 @property (nonatomic, readonly) CGFloat defaultMRectWidth; // 300;
 @property (nonatomic, readonly) CGFloat defaultMRectHeight; // 250;

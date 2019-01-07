@@ -13,7 +13,6 @@
 #import "IAMRAIDContentController.h"
 #import "IAMRAIDContentDelegate.h"
 #import "IAMRAIDContentModel.h"
-#import "IAMRAIDAdView.h"
 
 @interface IASDKMRAID : NSObject <IAInterfaceSingleton>
 
