@@ -47,10 +47,11 @@
 - (void)customizeBackButtonForNavigationItem:(UINavigationItem *)navItem{	
 	UIImage *buttonImage = [[UIImage imageNamed:@"Back-icon"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
 	UIBarButtonItem *barButtonItem = [[UIBarButtonItem alloc] initWithImage:buttonImage style:UIBarButtonItemStylePlain target:self action:@selector(backPressed:)];
+    
 	navItem.leftBarButtonItem = barButtonItem;
 }
 
-- (void)backPressed:(UIButton *)sender{
+- (void)backPressed:(UIButton *)sender {
     [self.navigationController popViewControllerAnimated:YES];
 }
 

@@ -83,7 +83,7 @@
     [self.contentView addSubview:_CTALabel];
     
     _sponsoredLabel = [UILabel new];
-    _sponsoredLabel.text = @"Sponsored Post";
+    _sponsoredLabel.text = NSLocalizedString(@"Sponsored Post", @"");
     _sponsoredLabel.font = [UIFont fontWithName:@"Roboto-Light" size:14];
     _sponsoredLabel.textColor = [UIColor colorWithRed:204/255.0 green:208/255.0 blue:212/255.0 alpha:1.0];
     [_sponsoredLabel sizeToFit];

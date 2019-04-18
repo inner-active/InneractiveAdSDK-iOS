@@ -21,7 +21,9 @@ static NSNotificationName _Nonnull kIADebuggerDidChangeRequestSettingsNotificati
 @property (nonatomic, copy, nullable) NSString *mockResponsePath;
 @property (nonatomic, copy, nullable) NSString *VPAIDPlayerURLString;
 @property (nonatomic, copy, nullable) NSString *localJSONResponsePath;
+
 @property (class, nonatomic, copy, nullable) NSString *localJSONConfigPath;
+@property (class, nonatomic, copy, nullable) NSString *globalConfigPath;
 
 @end
 

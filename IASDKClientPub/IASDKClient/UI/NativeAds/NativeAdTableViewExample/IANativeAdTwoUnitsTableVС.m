@@ -466,22 +466,24 @@ static const NSInteger kRepeatingInterval = 7;
 
 - (nullable NSAttributedString *)pickerView:(UIPickerView *)pickerView attributedTitleForRow:(NSInteger)row forComponent:(NSInteger)component {
 	NSString *title = @"";
+    
 	switch (row) {
 		case 0:
-			title = @"Native";
+			title = NSLocalizedString(@"Native", @"");
 			break;
 		case 1:
-			title = @"Rectangle";
+			title = NSLocalizedString(@"Rectangle", @"");
 			break;
 		case 2:
-			title = @"Square";
+			title = NSLocalizedString(@"Square", @"");
 			break;
 		case 3:
-			title = @"Landscape";
+			title = NSLocalizedString(@"Landscape", @"");
 			break;
 		default:
 			break;
 	}
+    
 	NSAttributedString *attributedTitle = [[NSAttributedString alloc] initWithString:title attributes:@{NSForegroundColorAttributeName : kIAColorsAquamarine}];
 	
 	return attributedTitle;

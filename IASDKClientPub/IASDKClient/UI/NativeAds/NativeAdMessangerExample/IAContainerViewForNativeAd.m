@@ -133,7 +133,7 @@
     // Sponsored label
     _sponsoredPostLabel = [UILabel new];
     _sponsoredPostLabel.autoresizingMask = UIViewAutoresizingFlexibleRightMargin;
-    _sponsoredPostLabel.text = @"Sponsored Post";
+    _sponsoredPostLabel.text = NSLocalizedString(@"Sponsored Post", @"");
     _sponsoredPostLabel.font = [UIFont fontWithName:@"Roboto-Light" size:14];
     _sponsoredPostLabel.textColor = [UIColor colorWithRed:204/255.0 green:208/255.0 blue:212/255.0 alpha:1.0];
     [_sponsoredPostLabel sizeToFit];

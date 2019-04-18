@@ -19,7 +19,8 @@
     
     NSString * const kAppIDForTest = @"102960";
 
-    [[IASDKCore sharedInstance] initWithAppID:kAppIDForTest]; // init is mandatory;
+    [IASDKCore.sharedInstance initWithAppID:kAppIDForTest]; // init is mandatory;
+
     _locationManager = [[CLLocationManager alloc] init];
     [UIApplication.sharedApplication sendAction:@selector(requestAlwaysAuthorization) to:self.locationManager from:self forEvent:nil];
     [self.locationManager startMonitoringSignificantLocationChanges];
