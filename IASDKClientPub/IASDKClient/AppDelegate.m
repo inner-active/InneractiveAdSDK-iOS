@@ -19,6 +19,8 @@
     
     NSString * const kAppIDForTest = @"102960";
 
+    
+    
     [IASDKCore.sharedInstance initWithAppID:kAppIDForTest]; // init is mandatory;
 
     _locationManager = [[CLLocationManager alloc] init];

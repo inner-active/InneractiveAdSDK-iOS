@@ -39,6 +39,4 @@
  */
 - (void)pause;
 
-- (void)replay;
-
 @end

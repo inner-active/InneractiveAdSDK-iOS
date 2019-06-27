@@ -23,7 +23,7 @@
  *
  *  @discussion The 'modalPresentationStyle' property of the supplied view controller will be changed to 'UIModalPresentationFullScreen';
  */
-- (UIViewController * _Nonnull)IAParentViewControllerForUnitController:(IAUnitController * _Nullable)unitController; // TODO: ?rename to something with word modalView or FS; 
+- (UIViewController * _Nonnull)IAParentViewControllerForUnitController:(IAUnitController * _Nullable)unitController; 
 
 @optional
 - (void)IAAdDidReceiveClick:(IAUnitController * _Nullable)unitController;
