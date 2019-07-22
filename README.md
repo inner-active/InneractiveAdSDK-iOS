@@ -1,4 +1,4 @@
-# VAMP SDK
+# Fyber Marketplace SDK
 ## Useful resources:
 - [Homepage](https://www.fyber.com/fyber-vamp/)
 - [Integration Docs](https://developer.inner-active.com/docs/integrating-ios-sdk)
