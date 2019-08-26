@@ -39,19 +39,19 @@
 - (void)loadAd {
     [self.adView removeFromSuperview]; // in case 'load' button was pressed after ad is already presented;
     self.adView = nil;
-	
+
     IAUserData *userData = [IAUserData build:^(id<IAUserDataBuilder>  _Nonnull builder) {
         builder.age = 34;
         builder.gender = IAUserGenderTypeMale;
         builder.zipCode = @"90210";
     }];
-    
+
     NSString *spotID = nil; // is mandatory;
-    
+
     if (self.requestedAdType == SampleAdTypeBanner) {
         spotID = @"150942"; // banner;
     } else if (self.requestedAdType == SampleAdTypeRectangle) {
-        spotID = @"150945"; // mrect: 150943 for HTML/MRAID, 150945 for video/VPAID;
+        spotID = @"150943"; // mrect: 150943 for HTML/MRAID, 150945 for video/VPAID;
     } else if (self.requestedAdType == SampleAdTypeSquare) {
         spotID = @"150948"; // square;
     } else if (self.requestedAdType == SampleAdTypeLandscape) {
@@ -61,7 +61,7 @@
     } else if (self.requestedAdType == SampleAdTypeVertical) {
         spotID = @"150951"; // video;
     }
-    
+
     IAAdRequest *request = [IAAdRequest build:^(id<IAAdRequestBuilder>  _Nonnull builder) {
         builder.useSecureConnections = NO;
         builder.spotID = spotID;
@@ -71,41 +71,41 @@
         builder.location = nil;
         builder.autoLocationUpdateEnabled = YES;
     }];
-	
+
     _videoContentController = [IAVideoContentController build:^(id<IAVideoContentControllerBuilder>  _Nonnull builder) {
         builder.videoContentDelegate = self;
     }];
-    
+
     _MRAIDContentController = [IAMRAIDContentController build:^(id<IAMRAIDContentControllerBuilder>  _Nonnull builder) {
         builder.MRAIDContentDelegate = self;
     }];
-    
+
     _viewUnitController = [IAViewUnitController build:^(id<IAViewUnitControllerBuilder>  _Nonnull builder) {
         builder.unitDelegate = self;
-        
+
         [builder addSupportedContentController:self.videoContentController];
         [builder addSupportedContentController:self.MRAIDContentController];
     }];
-	
+
     _fullscreenUnitController = [IAFullscreenUnitController build:^(id<IAFullscreenUnitControllerBuilder>  _Nonnull builder) {
         builder.unitDelegate = self;
-        
+
         [builder addSupportedContentController:self.videoContentController];
         [builder addSupportedContentController:self.MRAIDContentController];
     }];
-    
+
     _adSpot = [IAAdSpot build:^(id<IAAdSpotBuilder>  _Nonnull builder) {
         builder.adRequest = request;
         [builder addSupportedUnitController:self.viewUnitController]; // 'self' can be used in builder block, this block is not retained; the concept is similar to iOS method 'enumerateObjectsUsingBlock:';
 		[builder addSupportedUnitController:self.fullscreenUnitController];
     }];
-    
+
     __weak typeof(self) weakSelf = self;
-    
+
     [self.adSpot fetchAdWithCompletion:^(IAAdSpot * _Nullable adSpot, IAAdModel * _Nullable adModel, NSError * _Nullable error) { // 'self' should not be used in this block;
         [weakSelf renderAdWithSpot:adSpot model:adModel error:error];
     }];
-    
+
     [self.adSpot setAdRefreshCompletion:^(IAAdSpot * _Nullable adSpot, IAAdModel * _Nullable adModel, NSError * _Nullable error) {
         [weakSelf renderAdWithSpot:adSpot model:adModel error:error];
     }];
@@ -114,29 +114,29 @@
 - (void)renderAdWithSpot:(IAAdSpot * _Nullable)adSpot model:(IAAdModel * _Nullable)model error:(NSError * _Nullable)error {
     [self.spinner stopAnimating];
     self.spinner.hidden = YES;
-    
+
     if (error) {
         NSLog(@"ad failed with error: %@", error.localizedDescription);
     } else {
         NSLog(@"ad succeeded");
-        
+
         if (adSpot.activeUnitController == self.viewUnitController) {
-            
+
             // the invocation of 'showAdInParentView:' is not needed on refresh, but will not make no trouble;
             // on refresh, IA SDK will use provided superview in order to add the ad to view hierarchy;
             [self.viewUnitController showAdInParentView:self.view];
             self.adView = self.viewUnitController.adView; // update the adView, it will change on each refresh; note: refresh is supported only in "view" unit and only with HTML/MRAID content;
-            
+
             if (self.adView) {
                 self.adView.backgroundColor = [UIColor whiteColor];
-                
+
                 // *** here is a frame positioning example:
                 //const CGFloat x = (self.view.bounds.size.width - self.adView.bounds.size.width) / 2.0;
                 //self.adView.frame = CGRectMake(x, 0, self.adView.bounds.size.width, self.adView.bounds.size.height);
-                
+
                 // *** here is a constraints positioning example:
                 self.adView.translatesAutoresizingMaskIntoConstraints = NO;
-                
+
                 // adding centerX constraint
                 [self.view addConstraint:
                  [NSLayoutConstraint constraintWithItem:self.adView
@@ -146,7 +146,7 @@
                                               attribute:NSLayoutAttributeCenterX
                                              multiplier:1
                                                constant:0]];
-                
+
                 // adding top constraint
                 [self.view addConstraint:
                  [NSLayoutConstraint constraintWithItem:self.adView
@@ -165,7 +165,7 @@
                                      multiplier:1
                                        constant:CGRectGetWidth(self.adView.frame)];
 		self.adViewWidthConstraint.active = YES;
-				
+
         self.adViewHeightConstraint =
          [NSLayoutConstraint constraintWithItem:self.adView
                                       attribute:NSLayoutAttributeHeight
@@ -178,14 +178,14 @@
 
                 // note: that adView is a new object after each refresh;
             }
-            
+
         } else if (adSpot.activeUnitController == self.fullscreenUnitController) {
             self.showAdButton.hidden = NO;
         }
-        
+
         if ([adSpot.activeUnitController.activeContentController isKindOfClass:IAVideoContentController.class]) { // 'is video ad' check;
             IAVideoContentController *videoContentController = (IAVideoContentController *)adSpot.activeUnitController.activeContentController;
-            
+
             videoContentController.videoContentDelegate = self;
             videoContentController.muted = YES;
         }
@@ -287,7 +287,7 @@
     [super viewDidLoad];
     self.navigationController.interactivePopGestureRecognizer.delegate = self;
 
-	
+
     self.spinner.hidden = YES;
     self.showAdButton.hidden = YES;
 }
@@ -303,7 +303,7 @@
     self.spinner.hidden = NO;
     [self.spinner startAnimating];
     self.showAdButton.hidden = YES;
-    
+
     [self loadAd];
 }
 
