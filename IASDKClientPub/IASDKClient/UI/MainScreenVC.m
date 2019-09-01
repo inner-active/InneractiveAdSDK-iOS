@@ -67,6 +67,7 @@
 
 - (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath {
 	cell.textLabel.textColor = kIAColorsAquamarine;
+    cell.textLabel.font = [UIFont systemFontOfSize:18];
 }
 
 @end

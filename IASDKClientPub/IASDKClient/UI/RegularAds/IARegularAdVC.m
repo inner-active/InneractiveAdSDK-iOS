@@ -128,8 +128,6 @@
             self.adView = self.viewUnitController.adView; // update the adView, it will change on each refresh; note: refresh is supported only in "view" unit and only with HTML/MRAID content;
 
             if (self.adView) {
-                self.adView.backgroundColor = [UIColor whiteColor];
-
                 // *** here is a frame positioning example:
                 //const CGFloat x = (self.view.bounds.size.width - self.adView.bounds.size.width) / 2.0;
                 //self.adView.frame = CGRectMake(x, 0, self.adView.bounds.size.width, self.adView.bounds.size.height);
