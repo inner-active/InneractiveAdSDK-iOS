@@ -69,7 +69,6 @@
         builder.userData = userData;
         builder.keywords = @"hell & brimstone + earthly/delight, diving,programming";
         builder.location = nil;
-        builder.autoLocationUpdateEnabled = YES;
     }];
 
     _videoContentController = [IAVideoContentController build:^(id<IAVideoContentControllerBuilder>  _Nonnull builder) {

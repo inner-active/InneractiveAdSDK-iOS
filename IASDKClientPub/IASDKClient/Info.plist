@@ -27,12 +27,6 @@
 	</dict>
 	<key>NSCalendarsUsageDescription</key>
 	<string>MRAID Protocol requirement</string>
-	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
-	<string>For ads targeting</string>
-	<key>NSLocationAlwaysUsageDescription</key>
-	<string>For ads targeting</string>
-	<key>NSLocationWhenInUseUsageDescription</key>
-	<string>For ads targeting</string>
 	<key>NSPhotoLibraryAddUsageDescription</key>
 	<string>MRAID Protocol requirement</string>
 	<key>NSPhotoLibraryUsageDescription</key>

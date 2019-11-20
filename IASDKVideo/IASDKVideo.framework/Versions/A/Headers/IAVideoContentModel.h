@@ -23,10 +23,6 @@ typedef enum : NSInteger {
     IAVideoTypeInterstitial, // fullscreen only in any rotation;
     IAVideoTypeVertical, // fullscreen only in portrait only mode;
     IAVideoTypeRewarded, // interstitial with incentivised;
-    
-    // a publisher is responsible for the size of video's superview;
-    // the video player will fill itself inside it's superview as aspect fill, the video content will fill itself inside video player as aspect fit;
-    IAVideoTypeNative,
 } IAVideoType;
 
 @class IAVASTModel;

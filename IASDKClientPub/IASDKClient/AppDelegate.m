@@ -9,7 +9,6 @@
 #import "AppDelegate.h"
 
 #import <IASDKCore/IASDKCore.h>
-#import <CoreLocation/CLLocationManager.h>
 
 @implementation AppDelegate {}
 
@@ -22,11 +21,6 @@
     
     
     [IASDKCore.sharedInstance initWithAppID:kAppIDForTest]; // init is mandatory;
-
-    _locationManager = [[CLLocationManager alloc] init];
-    [UIApplication.sharedApplication sendAction:@selector(requestAlwaysAuthorization) to:self.locationManager from:self forEvent:nil];
-    [self.locationManager startMonitoringSignificantLocationChanges];
-	
     return YES;
 }
 

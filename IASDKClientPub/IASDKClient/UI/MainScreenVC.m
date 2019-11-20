@@ -29,12 +29,8 @@
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
 	[self customizeBackButtonForNavigationItem:[segue.destinationViewController navigationItem]];
 	
-	if (![segue.identifier isEqualToString:@"ShowStandaloneNativeAd"] &&
-        ![segue.identifier isEqualToString:@"ShowNativeAdWithManualManagement"] &&
-        ![segue.identifier isEqualToString:@"ShowNativeAdWithTableAdapter"] &&
-        ![segue.identifier isEqualToString:@"ShowNativeAdWithCollectionView"] &&
-		![segue.identifier isEqualToString:@"ShowMediationsSegue"] &&
-		![segue.identifier isEqualToString:@"ShowMopubNativeSegue"]) {
+	if (![segue.identifier isEqualToString:@"ShowNativeAdWithManualManagement"] &&
+		![segue.identifier isEqualToString:@"ShowMediationsSegue"]) {
 	
 		// Get the new view controller using [segue destinationViewController].
 		// Pass the selected object to the new view controller.

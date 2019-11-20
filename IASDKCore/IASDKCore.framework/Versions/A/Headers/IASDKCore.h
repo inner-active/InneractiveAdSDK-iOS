@@ -16,7 +16,6 @@
 #import "IAInterfaceSingleton.h"
 
 #import "IAInterfaceUnitController.h"
-#import "IAInterfaceNativeRenderer.h"
 
 #import "IAAdSpot.h"
 #import "IAAdRequest.h"
@@ -28,7 +27,6 @@
 #import "IAUnitDelegate.h"
 #import "IAViewUnitController.h"
 #import "IAFullscreenUnitController.h"
-#import "IANativeUnitController.h"
 #import "IAContentController.h"
 #import "IAAdView.h"
 #import "IAMRAIDAdView.h"
