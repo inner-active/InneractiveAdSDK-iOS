@@ -36,6 +36,8 @@
 #import "IAMediationAdMob.h"
 #import "IAMediationDFP.h"
 #import "IAMediationFyber.h"
+#import "IAMediationMax.h"
+#import "IAMediationIronSource.h"
 #import "IAGDPRConsent.h"
 
 @interface IASDKCore : NSObject <IAInterfaceSingleton>

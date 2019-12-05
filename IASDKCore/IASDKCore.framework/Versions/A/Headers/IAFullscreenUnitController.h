@@ -13,14 +13,6 @@
 #import "IAUnitController.h"
 #import "IAUnitDelegate.h"
 
-/* // TODO: there is no need in subprotocol, remove it;
-@protocol IAFullscreenUnitControllerDelegate <IAUnitDelegate>
-
-@optional
-
-@end
- */
-
 @protocol IAFullscreenUnitControllerBuilder <IAUnitControllerBuilderProtocol>
 
 @required
