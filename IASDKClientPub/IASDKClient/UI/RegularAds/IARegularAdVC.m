@@ -67,7 +67,8 @@
         builder.spotID = spotID;
         builder.timeout = 25;
         builder.userData = userData;
-        builder.keywords = @"hell & brimstone + earthly/delight, diving,programming";
+        builder.keywords = @"hell & brimstone + earthly/delight, diving,programming\
+        new line";
         builder.location = nil;
     }];
 
@@ -120,13 +121,13 @@
         NSLog(@"ad succeeded");
 
         if (adSpot.activeUnitController == self.viewUnitController) {
-
             // the invocation of 'showAdInParentView:' is not needed on refresh, but will not make no trouble;
             // on refresh, IA SDK will use provided superview in order to add the ad to view hierarchy;
             [self.viewUnitController showAdInParentView:self.view];
             self.adView = self.viewUnitController.adView; // update the adView, it will change on each refresh; note: refresh is supported only in "view" unit and only with HTML/MRAID content;
 
             if (self.adView) {
+                self.adView.backgroundColor = UIColor.blackColor;
                 // *** here is a frame positioning example:
                 //const CGFloat x = (self.view.bounds.size.width - self.adView.bounds.size.width) / 2.0;
                 //self.adView.frame = CGRectMake(x, 0, self.adView.bounds.size.width, self.adView.bounds.size.height);

@@ -11,6 +11,8 @@
 /**
  *  @brief  Abstract base class.
  */
+typedef void(^IASucceedBlock)(BOOL succeeded);
+
 @interface IAContentController : NSObject
 
 @end
