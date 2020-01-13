@@ -29,7 +29,9 @@
 @property (nonatomic, copy, nonnull) NSString *spotID;
 
 /**
- *  @brief Timeout in seconds before 'ready on client' will be received.
+ *  @brief The request timeout in seconds before the 'ready on client' will be received.
+ *
+ *  @discussion The min value is 1, the max value is 180, the default is 10. In case the input param is out of bounds, the default one will be set.
  */
 @property (nonatomic) NSTimeInterval timeout;
 

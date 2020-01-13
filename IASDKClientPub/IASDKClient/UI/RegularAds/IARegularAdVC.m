@@ -65,7 +65,6 @@
     IAAdRequest *request = [IAAdRequest build:^(id<IAAdRequestBuilder>  _Nonnull builder) {
         builder.useSecureConnections = NO;
         builder.spotID = spotID;
-        builder.timeout = 25;
         builder.userData = userData;
         builder.keywords = @"hell & brimstone + earthly/delight, diving,programming\
         new line";

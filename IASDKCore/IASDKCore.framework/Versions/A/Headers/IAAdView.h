@@ -9,6 +9,8 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
-@interface IAAdView : UIView
+#import "IABaseView.h"
+
+@interface IAAdView : IABaseView
 
 @end
