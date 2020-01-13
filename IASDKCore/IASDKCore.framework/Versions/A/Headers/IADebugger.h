@@ -24,6 +24,7 @@ static NSNotificationName _Nonnull kIADebuggerDidChangeRequestSettingsNotificati
 
 @property (class, nonatomic, copy, nullable) NSString *localJSONConfigPath;
 @property (class, nonatomic, copy, nullable) NSString *globalConfigPath;
+@property (class, nonatomic) BOOL adReportingEnabled;
 
 @end
 

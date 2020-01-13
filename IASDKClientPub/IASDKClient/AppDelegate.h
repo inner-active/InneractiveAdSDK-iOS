@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <IASDKCore/IAGlobalAdDelegate.h>
 
-@interface AppDelegate : UIResponder <UIApplicationDelegate>
+@interface AppDelegate : UIResponder <UIApplicationDelegate, IAGlobalAdDelegate>
 
 @property (strong, nonatomic) UIWindow * _Nonnull window;
 
