@@ -32,6 +32,11 @@
  */
 - (void)showAdAnimated:(BOOL)flag completion:(void (^ _Nullable)(void))completion;
 
+/**
+ *  @brief Tells whether a creative is presented.
+ */
+- (BOOL)isPresented;
+
 - (void)removeAd;
 
 @end

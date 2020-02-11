@@ -10,8 +10,6 @@
 
 #import "IAInterfaceContentModel.h"
 
-// TODO: does it need to be thread safe?
-
 @interface IAAdModel : NSObject
 
 @property (nonatomic, readonly, getter=isRewarded) BOOL rewarded;
