@@ -54,6 +54,13 @@
  */
 @property (nonatomic, copy, nullable) id<IAInterfaceAdDescription> subtypeDescription;
 
+@optional
+
+/**
+ *  @brief In case is enabled and the responded creative supports this feature, the creative will start interacting without sound.
+ */
+@property (nonatomic) BOOL muteAudio;
+
 @end
 
 @interface IAAdRequest : IARequest <IAInterfaceBuilder, IAAdRequestBuilder, NSCopying>

@@ -22,6 +22,8 @@
     
     [IASDKCore.sharedInstance initWithAppID:kAppIDForTest]; // init is mandatory;
     IASDKCore.sharedInstance.globalAdDelegate = self;
+    
+    IASDKCore.sharedInstance.CCPAString = @"1YYY";
     return YES;
 }
 

@@ -29,6 +29,14 @@
 - (void)IAAdDidReceiveClick:(IAUnitController * _Nullable)unitController;
 - (void)IAAdWillLogImpression:(IAUnitController * _Nullable)unitController;
 
+/**
+ *  @brief The rewarded units callback for a user reward.
+ *
+ *  @discussion This callback is called for all type of the rewarded content, both HTML/JS and video (VAST/VPAID).
+ */
+- (void)IAAdDidReward:(IAUnitController * _Nullable)unitController;
+#warning in order to use the rewarded callback for all available rewarded content, you will have to implement this method (not the `IAVideoCompleted:`;
+
 - (void)IAUnitControllerWillPresentFullscreen:(IAUnitController * _Nullable)unitController;
 - (void)IAUnitControllerDidPresentFullscreen:(IAUnitController * _Nullable)unitController;
 - (void)IAUnitControllerWillDismissFullscreen:(IAUnitController * _Nullable)unitController;
