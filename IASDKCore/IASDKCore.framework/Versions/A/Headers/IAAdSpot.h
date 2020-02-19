@@ -22,7 +22,7 @@ typedef void (^IAAdSpotAdResponseBlock)(IAAdSpot * _Nullable adSpot, IAAdModel *
 @protocol IAAdSpotBuilder <NSObject>
 
 @required
-@property (nonatomic, copy, nonnull) IAAdRequest *adRequest;
+@property (atomic, copy, nonnull) IAAdRequest *adRequest;
 @property (nonatomic, copy, nonnull) IAMediation *mediationType;
 
 - (void)addSupportedUnitController:(IAUnitController * _Nonnull)supportedUnitController;
