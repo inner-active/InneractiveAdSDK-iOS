@@ -11,9 +11,7 @@
 
 #import <Foundation/Foundation.h>
 
-@protocol IAInterfaceContentModel  <NSObject>
-
-@required
+@protocol IAInterfaceContentModel  <NSObject, NSCopying>
 
 @end
 
