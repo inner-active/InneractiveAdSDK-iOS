@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 
 #import <IASDKCore/IAInterfaceBuilder.h>
+#import <IASDKCore/IAInterfaceContentModel.h>
 
 typedef enum : NSInteger {
     IAVideoTypeUndefined = 0,
@@ -27,7 +28,7 @@ typedef enum : NSInteger {
 
 @class IAVASTModel;
 
-@interface IAVideoContentModel : NSObject
+@interface IAVideoContentModel : NSObject <IAInterfaceContentModel>
 
 @property (nonatomic) IAVideoType videoType;
 @property (nonatomic, strong, nonnull) IAVASTModel *VASTModel;

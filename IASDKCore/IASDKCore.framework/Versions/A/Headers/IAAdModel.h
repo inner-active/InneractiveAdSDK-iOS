@@ -10,7 +10,7 @@
 
 #import "IAInterfaceContentModel.h"
 
-@interface IAAdModel : NSObject
+@interface IAAdModel : NSObject <NSCopying>
 
 @property (nonatomic, readonly, getter=isRewarded) BOOL rewarded;
 

@@ -14,7 +14,7 @@
 @protocol IAMRAIDContentModelBuilder <NSObject>
 
 @required
-@property (nonatomic, strong, nonnull) NSString *HTMLString; // TODO: define base type in public protocol, not in internal extension, publisher should have access to it;
+@property (nonatomic, strong, nonnull) NSString *HTMLString;
 
 @end
 
