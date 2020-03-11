@@ -64,7 +64,7 @@
 
     IAAdRequest *request = [IAAdRequest build:^(id<IAAdRequestBuilder>  _Nonnull builder) {
         builder.useSecureConnections = NO;
-        builder.muteAudio = YES;
+        //builder.muteAudio = YES;
         builder.spotID = spotID;
         builder.userData = userData;
         builder.keywords = @"hell & brimstone + earthly/delight, diving,programming\

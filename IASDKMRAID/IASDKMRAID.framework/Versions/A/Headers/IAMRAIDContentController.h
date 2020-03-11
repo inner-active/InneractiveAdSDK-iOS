@@ -19,6 +19,9 @@
 @required
 @property (nonatomic, weak, nullable) id<IAMRAIDContentDelegate> MRAIDContentDelegate;
 
+@optional
+@property (nonatomic, getter=isContentAwareBackground) BOOL contentAwareBackground;
+
 @end
 
 @interface IAMRAIDContentController : IAContentController <IAInterfaceBuilder, IAMRAIDContentControllerBuilder>
