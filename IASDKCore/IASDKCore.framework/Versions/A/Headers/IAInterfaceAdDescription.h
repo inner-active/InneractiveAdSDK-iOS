@@ -2,8 +2,8 @@
 //  IAInterfaceAdDescription.h
 //  IASDKCore
 //
-//  Created by Inneractive on 27/04/2017.
-//  Copyright © 2017 Inneractive. All rights reserved.
+//  Created by Fyber on 27/04/2017.
+//  Copyright © 2017 Fyber. All rights reserved.
 //
 
 #ifndef IAInterfaceAdDescription_h

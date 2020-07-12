@@ -2,8 +2,8 @@
 //  IAUnitDelegate.h
 //  IASDKCore
 //
-//  Created by Inneractive on 14/03/2017.
-//  Copyright © 2017 Inneractive. All rights reserved.
+//  Created by Fyber on 14/03/2017.
+//  Copyright © 2017 Fyber. All rights reserved.
 //
 
 #ifndef IAUnitDelegate_h
@@ -43,6 +43,8 @@
 - (void)IAUnitControllerDidDismissFullscreen:(IAUnitController * _Nullable)unitController;
 
 - (void)IAUnitControllerWillOpenExternalApp:(IAUnitController * _Nullable)unitController;
+
+- (void)IAAdDidExpire:(IAUnitController * _Nullable)unitController;
 
 @end
 

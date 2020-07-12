@@ -3,12 +3,12 @@
 //  IASDKCore
 //
 //  Created by Avi Gelkop on 9/26/19.
-//  Copyright © 2019 Inneractive. All rights reserved.
+//  Copyright © 2019 Fyber. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
 
-#import "IAMediation.h"
+#import <IASDKCore/IAMediation.h>
 
 @interface IAMediationMax : IAMediation
 

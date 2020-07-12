@@ -2,50 +2,61 @@
 //  IASDKCore.h
 //  IASDKCore
 //
-//  Created by Inneractive on 29/01/2017.
-//  Copyright © 2017 Inneractive. All rights reserved.
+//  Created by Fyber on 29/01/2017.
+//  Copyright © 2017 Fyber. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
-#import "IALogger.h"
+#import <IASDKCore/IALogger.h>
 
-#import "IAInterfaceAllocBlocker.h"
-#import "IAInterfaceBuilder.h"
-#import "IAInterfaceSingleton.h"
+#import <IASDKCore/IAInterfaceAllocBlocker.h>
+#import <IASDKCore/IAInterfaceBuilder.h>
+#import <IASDKCore/IAInterfaceSingleton.h>
 
-#import "IAGlobalAdDelegate.h"
+#import <IASDKCore/IAGlobalAdDelegate.h>
 
-#import "IAInterfaceUnitController.h"
+#import <IASDKCore/IAInterfaceUnitController.h>
 
-#import "IAAdSpot.h"
-#import "IAAdRequest.h"
-#import "IAUserData.h"
-#import "IADebugger.h"
-#import "IAAdModel.h"
+#import <IASDKCore/IAAdSpot.h>
+#import <IASDKCore/IAAdRequest.h>
+#import <IASDKCore/IAUserData.h>
+#import <IASDKCore/IADebugger.h>
+#import <IASDKCore/IAAdModel.h>
 
-#import "IAUnitController.h"
-#import "IAUnitDelegate.h"
-#import "IAViewUnitController.h"
-#import "IAFullscreenUnitController.h"
-#import "IAContentController.h"
-#import "IABaseView.h"
-#import "IAAdView.h"
-#import "IAMRAIDAdView.h"
+#import <IASDKCore/IAUnitController.h>
+#import <IASDKCore/IAUnitDelegate.h>
+#import <IASDKCore/IAViewUnitController.h>
+#import <IASDKCore/IAFullscreenUnitController.h>
+#import <IASDKCore/IAContentController.h>
+#import <IASDKCore/IABaseView.h>
+#import <IASDKCore/IAAdView.h>
+#import <IASDKCore/IAMRAIDAdView.h>
 
-#import "IAMediation.h"
-#import "IAMediationMopub.h"
-#import "IAMediationAdMob.h"
-#import "IAMediationDFP.h"
-#import "IAMediationFyber.h"
-#import "IAMediationMax.h"
-#import "IAMediationIronSource.h"
-#import "IAGDPRConsent.h"
+#import <IASDKCore/IAMediation.h>
+#import <IASDKCore/IAMediationMopub.h>
+#import <IASDKCore/IAMediationAdMob.h>
+#import <IASDKCore/IAMediationDFP.h>
+#import <IASDKCore/IAMediationFyber.h>
+#import <IASDKCore/IAMediationMax.h>
+#import <IASDKCore/IAMediationIronSource.h>
+#import <IASDKCore/IAGDPRConsent.h>
+
+typedef void (^IASDKCoreInitBlock)(BOOL success, NSError * _Nullable error);
+
+typedef NS_ENUM(NSInteger, IASDKCoreInitErrorType) {
+    IASDKCoreInitErrorTypeUnknown = 0,
+    IASDKCoreInitErrorTypeFailedToDownloadMandatoryData = 1,
+    IASDKCoreInitErrorTypeMissingModules = 2,
+    IASDKCoreInitErrorTypeInvalidAppID = 3,
+    IASDKCoreInitErrorTypeCancelled = 4
+};
 
 @interface IASDKCore : NSObject <IAInterfaceSingleton>
 
 @property (atomic, strong, nullable, readonly) NSString *appID;
+@property (atomic, readonly, getter=isInitialised) BOOL initialised;
 
 /**
  *  @brief Use this delegate in order to get an info about every shown ad.
@@ -103,11 +114,26 @@
 /**
  *  @brief Initialisation of the SDK. Must be invoked before requesting the ads.
  *
- *  @discussion Should be invoked on the main thread. Otherwise it will convert the flow to the main thread.
+ *  @discussion Should be invoked on the main thread. Otherwise it will convert the flow to the main thread. Is asynchronous method.
  *
  *  @param appID A required param. Must be a valid application ID, otherwise the SDK will not be able to request/render the ads.
  */
 - (void)initWithAppID:(NSString * _Nonnull)appID;
+
+/**
+ *  @brief Initialisation of the SDK. Must be invoked before requesting the ads.
+ *
+ *  @discussion Should be invoked on the main thread. Otherwise it will convert the flow to the main thread. Is asynchronous method.
+ *
+ *  @param appID A required param. Must be a valid application ID, otherwise the SDK will not be able to request/render the ads.
+ *
+ *  @param completionBlock An optional callback for the init result notification. The error code is represented as `IASDKCoreInitErrorType` enum.
+ *
+ *  @param completionQueue An optional queue for the completion block. If is not provided, the completion block will be invoked on the main queue.
+ */
+- (void)initWithAppID:(NSString * _Nonnull)appID
+      completionBlock:(IASDKCoreInitBlock _Nullable)completionBlock
+      completionQueue:(dispatch_queue_t _Nullable)completionQueue;
 
 /**
  *  @brief Get the IASDK current version as the NSString instance.

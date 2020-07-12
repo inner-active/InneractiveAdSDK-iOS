@@ -2,16 +2,16 @@
 //  IAViewUnitController.h
 //  IASDKCore
 //
-//  Created by Inneractive on 14/03/2017.
-//  Copyright © 2017 Inneractive. All rights reserved.
+//  Created by Fyber on 14/03/2017.
+//  Copyright © 2017 Fyber. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
-#import "IAInterfaceBuilder.h"
-#import "IAUnitController.h"
-#import "IAUnitDelegate.h"
+#import <IASDKCore/IAInterfaceBuilder.h>
+#import <IASDKCore/IAUnitController.h>
+#import <IASDKCore/IAUnitDelegate.h>
 
 /**
  *  @brief Builder block. 'self' can be used. The block is not retained.

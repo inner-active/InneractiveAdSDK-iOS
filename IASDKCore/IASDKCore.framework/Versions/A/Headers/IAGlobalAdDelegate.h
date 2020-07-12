@@ -3,14 +3,14 @@
 //  IASDKCore
 //
 //  Created by Avi Gelkop on 08/12/2019.
-//  Copyright © 2019 Inneractive. All rights reserved.
+//  Copyright © 2019 Fyber. All rights reserved.
 //
 
 #ifndef IAGlobalAdDelegate_h
 #define IAGlobalAdDelegate_h
 
-#import "IAAdRequest.h"
-#import "IAImpressionData.h"
+#import <IASDKCore/IAAdRequest.h>
+#import <IASDKCore/IAImpressionData.h>
 
 @protocol IAGlobalAdDelegate <NSObject>
 
