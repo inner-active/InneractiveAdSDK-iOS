@@ -2,8 +2,8 @@
 //  IAContentController.h
 //  IASDKCore
 //
-//  Created by Inneractive on 19/03/2017.
-//  Copyright © 2017 Inneractive. All rights reserved.
+//  Created by Fyber on 19/03/2017.
+//  Copyright © 2017 Fyber. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>

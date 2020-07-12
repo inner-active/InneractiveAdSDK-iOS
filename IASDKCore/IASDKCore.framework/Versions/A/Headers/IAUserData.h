@@ -2,13 +2,13 @@
 //  IAUserData.h
 //  IASDKCore
 //
-//  Created by Inneractive on 19/03/2017.
-//  Copyright © 2017 Inneractive. All rights reserved.
+//  Created by Fyber on 19/03/2017.
+//  Copyright © 2017 Fyber. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
 
-#import "IAInterfaceBuilder.h"
+#import <IASDKCore/IAInterfaceBuilder.h>
 
 typedef NS_ENUM(NSInteger, IAUserGenderType) {
     IAUserGenderTypeUnknown = 0,

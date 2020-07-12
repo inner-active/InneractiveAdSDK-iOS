@@ -2,8 +2,8 @@
 //  IAMRAIDAdView.h
 //  IASDKMRAID
 //
-//  Created by Inneractive on 28/03/2017.
-//  Copyright © 2017 Inneractive. All rights reserved.
+//  Created by Fyber on 28/03/2017.
+//  Copyright © 2017 Fyber. All rights reserved.
 //
 
 #import <IASDKCore/IAAdView.h>

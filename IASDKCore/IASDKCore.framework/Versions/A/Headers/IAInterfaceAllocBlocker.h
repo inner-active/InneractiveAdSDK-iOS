@@ -2,8 +2,8 @@
 //  IAInterfaceAllocBlocker.h
 //  IASDKCore
 //
-//  Created by Inneractive on 22/03/2017.
-//  Copyright © 2017 Inneractive. All rights reserved.
+//  Created by Fyber on 22/03/2017.
+//  Copyright © 2017 Fyber. All rights reserved.
 //
 
 #ifndef IAInterfaceAllocBlocker_h
@@ -14,9 +14,9 @@
 @protocol IAInterfaceAllocBlocker <NSObject>
 
 @required
-+ (null_unspecified instancetype)alloc __attribute__((unavailable("<Inneractive> The 'alloc' is not available, use 'build:' instead.")));
-- (null_unspecified instancetype)init __attribute__((unavailable("<Inneractive> The 'init' is not available, use 'build:' instead.")));
-+ (null_unspecified instancetype)new __attribute__((unavailable("<Inneractive> The 'new' is not available, use 'build:' instead.")));
++ (null_unspecified instancetype)alloc __attribute__((unavailable("<Fyber> The 'alloc' is not available, use 'build:' instead.")));
+- (null_unspecified instancetype)init __attribute__((unavailable("<Fyber> The 'init' is not available, use 'build:' instead.")));
++ (null_unspecified instancetype)new __attribute__((unavailable("<Fyber> The 'new' is not available, use 'build:' instead.")));
 
 @end
 

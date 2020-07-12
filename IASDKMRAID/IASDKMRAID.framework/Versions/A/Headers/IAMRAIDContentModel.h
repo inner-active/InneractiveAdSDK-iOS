@@ -2,8 +2,8 @@
 //  IAMRAIDContentModel.h
 //  IASDKMRAID
 //
-//  Created by Inneractive on 27/03/2017.
-//  Copyright © 2017 Inneractive. All rights reserved.
+//  Created by Fyber on 27/03/2017.
+//  Copyright © 2017 Fyber. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>

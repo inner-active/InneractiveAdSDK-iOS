@@ -2,7 +2,7 @@
 //  IAImpressionData.h
 //  IASDKCore
 //
-//  Copyright © 2019 Inneractive. All rights reserved.
+//  Copyright © 2019 Fyber. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
@@ -62,5 +62,7 @@
  *  @brief Is true in case of skippable ad.
  */
 @property (nonatomic, readonly, getter=isSkippable) BOOL skippable;
+
+- (NSString * _Nonnull)customDescription;
 
 @end
