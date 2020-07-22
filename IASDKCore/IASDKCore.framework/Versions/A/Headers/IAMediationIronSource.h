@@ -2,7 +2,7 @@
 //  IAMediationIronSource.h
 //  IASDKCore
 //
-//  Created by Avi Gelkop on 9/26/19.
+//  Created by Fyber on 9/26/19.
 //  Copyright © 2019 Fyber. All rights reserved.
 //
 

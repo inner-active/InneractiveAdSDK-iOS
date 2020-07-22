@@ -2,7 +2,7 @@
 //  IAGlobalAdDelegate.h
 //  IASDKCore
 //
-//  Created by Avi Gelkop on 08/12/2019.
+//  Created by Fyber on 08/12/2019.
 //  Copyright © 2019 Fyber. All rights reserved.
 //
 
