@@ -11,6 +11,8 @@
 #import <IASDKVideo/IASDKVideo.h>
 #import <IASDKMRAID/IASDKMRAID.h>
 
+#import <AppTrackingTransparency/ATTrackingManager.h>
+
 @interface IARegularAdVC () <IAUnitDelegate, IAVideoContentDelegate, IAMRAIDContentDelegate, UIGestureRecognizerDelegate>
 
 @property (nonatomic, weak) IBOutlet UIButton *loadAdButton;
@@ -97,6 +99,7 @@
     __weak typeof(self) weakSelf = self;
 
     [self.adSpot fetchAdWithCompletion:^(IAAdSpot * _Nullable adSpot, IAAdModel * _Nullable adModel, NSError * _Nullable error) { // 'self' should not be used in this block;
+        [weakSelf requestTrackingPermissionsIfNeeded];
         [weakSelf renderAdWithSpot:adSpot model:adModel error:error];
     }];
 
@@ -189,6 +192,16 @@
 	[self.fullscreenUnitController showAdAnimated:YES completion:nil];
 }
 
+- (void)requestTrackingPermissionsIfNeeded {
+    if (@available(iOS 14, *)) {
+        [ATTrackingManager requestTrackingAuthorizationWithCompletionHandler:^(ATTrackingManagerAuthorizationStatus status) {
+            NSLog(@"<Fyber> Current tracking status is %d", (int)status);
+            if (status == ATTrackingManagerAuthorizationStatusAuthorized) {
+                NSLog(@"<Fyber> IDFA is authorized.");
+            }
+        }];
+    }
+}
 #pragma mark - IAUnitDelegate
 
 - (UIViewController * _Nonnull)IAParentViewControllerForUnitController:(IAUnitController * _Nullable)unitController {
