@@ -57,6 +57,7 @@ typedef NS_ENUM(NSInteger, IASDKCoreInitErrorType) {
 
 @property (atomic, strong, nullable, readonly) NSString *appID;
 @property (atomic, readonly, getter=isInitialised) BOOL initialised;
+@property (atomic, strong, nullable) NSString *publisherAppStoreID; // publisher app ID in Apple’s App Store
 
 /**
  *  @brief Use this delegate in order to get an info about every shown ad.
