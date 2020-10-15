@@ -12,8 +12,10 @@
 		2A99845224B2097D0053058D /* CustomAdsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A99845124B2097D0053058D /* CustomAdsViewController.m */; };
 		2AA47D1B2369D89200104FD5 /* BuildFile in Resources */ = {isa = PBXBuildFile; };
 		2AA47D202369DAF600104FD5 /* BuildFile in Sources */ = {isa = PBXBuildFile; };
-		6D0D7760DC26799E1A7B7732 /* IASDKMRAID.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 90C2753A16F62A0495CEF1CF /* IASDKMRAID.framework */; };
-		6DB932633E3B78AE6EBAE349 /* IASDKVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B11C1CB9D906DE3DFBBAD0AC /* IASDKVideo.framework */; };
+		3887C50EC559E385EDDD3057 /* IASDKMRAID.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D144BC17D8F4879769C4235E /* IASDKMRAID.framework */; };
+		47AD907B0B4098BC2DBF340F /* IASDKResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 3FA1BA9B109B9500747CA316 /* IASDKResources.bundle */; };
+		75C7DFBDE11529F8A36E1C48 /* IASDKVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB6FF792A06D81A0141710B5 /* IASDKVideo.framework */; };
+		7FC9AC23953ABFB44CF4496A /* IASDKCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 375FC97CA8C4D5B7325CFE24 /* IASDKCore.framework */; };
 		840FC4CC1E6461FD00724B1B /* libxml2.2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 840FC4CB1E6461FD00724B1B /* libxml2.2.tbd */; };
 		8410CCCA1ED47104007D4884 /* BuildFile in Resources */ = {isa = PBXBuildFile; };
 		841329441E80383800E02FC0 /* BuildFile in Resources */ = {isa = PBXBuildFile; };
@@ -33,8 +35,6 @@
 		AE044C0D1F0D35A600C84A80 /* BuildFile in Resources */ = {isa = PBXBuildFile; };
 		AE044C0E1F0D35A600C84A80 /* BuildFile in Resources */ = {isa = PBXBuildFile; };
 		AE044C0F1F0D35A600C84A80 /* BuildFile in Resources */ = {isa = PBXBuildFile; };
-		C362A1081339D3FB4A87A1D2 /* IASDKResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = ACD41A6E556CC09166227C84 /* IASDKResources.bundle */; };
-		D9C81032D1A1D65CCFB1E629 /* IASDKCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA9F2B53B79DA3FDEFB568B4 /* IASDKCore.framework */; };
 		E84D7F2D1FE5CD5100DBA819 /* BuildFile in Sources */ = {isa = PBXBuildFile; };
 		E87DBB931E706C5F00408E1A /* BuildFile in Resources */ = {isa = PBXBuildFile; };
 		E88693AF1E3DFED900B12EAB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E88693AE1E3DFED900B12EAB /* main.m */; };
@@ -103,15 +103,15 @@
 		11A972E4234A39CE00194E7C /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
 		2A99845024B2097D0053058D /* CustomAdsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CustomAdsViewController.h; sourceTree = "<group>"; };
 		2A99845124B2097D0053058D /* CustomAdsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CustomAdsViewController.m; sourceTree = "<group>"; };
+		375FC97CA8C4D5B7325CFE24 /* IASDKCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IASDKCore.framework; path = ../IASDKCore/IASDKCore.framework; sourceTree = "<group>"; };
+		3FA1BA9B109B9500747CA316 /* IASDKResources.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; name = IASDKResources.bundle; path = ../IASDKCore/IASDKResources.bundle; sourceTree = "<group>"; };
 		840EBA0B1E96DFFE008E8C51 /* IAColors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IAColors.h; path = UI/IAColors.h; sourceTree = "<group>"; };
 		840FC4CB1E6461FD00724B1B /* libxml2.2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libxml2.2.tbd; path = usr/lib/libxml2.2.tbd; sourceTree = SDKROOT; };
 		841621A21E71C8A500F51F77 /* Roboto-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Roboto-Bold.ttf"; path = "Resources/Fonts/Roboto/Roboto-Bold.ttf"; sourceTree = "<group>"; };
 		841621A31E71C8A500F51F77 /* Roboto-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Roboto-Light.ttf"; path = "Resources/Fonts/Roboto/Roboto-Light.ttf"; sourceTree = "<group>"; };
 		841621A41E71C8A500F51F77 /* Roboto-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Roboto-Regular.ttf"; path = "Resources/Fonts/Roboto/Roboto-Regular.ttf"; sourceTree = "<group>"; };
-		90C2753A16F62A0495CEF1CF /* IASDKMRAID.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IASDKMRAID.framework; path = ../IASDKMRAID/IASDKMRAID.framework; sourceTree = "<group>"; };
-		ACD41A6E556CC09166227C84 /* IASDKResources.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; name = IASDKResources.bundle; path = ../IASDKCore/IASDKResources.bundle; sourceTree = "<group>"; };
-		B11C1CB9D906DE3DFBBAD0AC /* IASDKVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IASDKVideo.framework; path = ../IASDKVideo/IASDKVideo.framework; sourceTree = "<group>"; };
-		CA9F2B53B79DA3FDEFB568B4 /* IASDKCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IASDKCore.framework; path = ../IASDKCore/IASDKCore.framework; sourceTree = "<group>"; };
+		CB6FF792A06D81A0141710B5 /* IASDKVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IASDKVideo.framework; path = ../IASDKVideo/IASDKVideo.framework; sourceTree = "<group>"; };
+		D144BC17D8F4879769C4235E /* IASDKMRAID.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IASDKMRAID.framework; path = ../IASDKMRAID/IASDKMRAID.framework; sourceTree = "<group>"; };
 		E88693AA1E3DFED900B12EAB /* Marketplace.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Marketplace.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E88693AE1E3DFED900B12EAB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		E88693B01E3DFED900B12EAB /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -180,9 +180,9 @@
 				E8EDCFEF1E5481EC002DDB06 /* BuildFile in Frameworks */,
 				E8EDCFE61E5481A4002DDB06 /* BuildFile in Frameworks */,
 				E8E1EB5B1E42063B000324D3 /* BuildFile in Frameworks */,
-				D9C81032D1A1D65CCFB1E629 /* IASDKCore.framework in Frameworks */,
-				6DB932633E3B78AE6EBAE349 /* IASDKVideo.framework in Frameworks */,
-				6D0D7760DC26799E1A7B7732 /* IASDKMRAID.framework in Frameworks */,
+				7FC9AC23953ABFB44CF4496A /* IASDKCore.framework in Frameworks */,
+				75C7DFBDE11529F8A36E1C48 /* IASDKVideo.framework in Frameworks */,
+				3887C50EC559E385EDDD3057 /* IASDKMRAID.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -238,10 +238,10 @@
 				E886940A1E3E139C00B12EAB /* Frameworks */,
 				E88693AC1E3DFED900B12EAB /* FyberMarketplaceTestApp */,
 				E88693AB1E3DFED900B12EAB /* Products */,
-				CA9F2B53B79DA3FDEFB568B4 /* IASDKCore.framework */,
-				B11C1CB9D906DE3DFBBAD0AC /* IASDKVideo.framework */,
-				90C2753A16F62A0495CEF1CF /* IASDKMRAID.framework */,
-				ACD41A6E556CC09166227C84 /* IASDKResources.bundle */,
+				375FC97CA8C4D5B7325CFE24 /* IASDKCore.framework */,
+				CB6FF792A06D81A0141710B5 /* IASDKVideo.framework */,
+				D144BC17D8F4879769C4235E /* IASDKMRAID.framework */,
+				3FA1BA9B109B9500747CA316 /* IASDKResources.bundle */,
 			);
 			sourceTree = "<group>";
 		};
@@ -543,7 +543,7 @@
 				E88693B81E3DFED900B12EAB /* Main.storyboard in Resources */,
 				E8FCDE5F1F559ED800FCA1C6 /* 08p@2x.png in Resources */,
 				AE044C0E1F0D35A600C84A80 /* BuildFile in Resources */,
-				C362A1081339D3FB4A87A1D2 /* IASDKResources.bundle in Resources */,
+				47AD907B0B4098BC2DBF340F /* IASDKResources.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -670,7 +670,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ANALYZER_GCD_PERFORMANCE = YES;
 				CLANG_STATIC_ANALYZER_MODE = deep;
-				CURRENT_PROJECT_VERSION = 7.7.1.6;
+				CURRENT_PROJECT_VERSION = 7.7.2.1;
 				DEAD_CODE_STRIPPING = NO;
 				DEPLOYMENT_POSTPROCESSING = NO;
 				DEVELOPMENT_TEAM = 9G2AGGBJ52;
@@ -698,7 +698,7 @@
 					"$(inherited)",
 					"\"$PODS_CONFIGURATION_BUILD_DIR/mopub-ios-sdk\"",
 				);
-				MARKETING_VERSION = 7.7.1;
+				MARKETING_VERSION = 7.7.2;
 				OTHER_LDFLAGS = (
 					"-ObjC",
 					"$(inherited)",
@@ -829,7 +829,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ANALYZER_GCD_PERFORMANCE = YES;
 				CLANG_STATIC_ANALYZER_MODE = deep;
-				CURRENT_PROJECT_VERSION = 7.7.1.6;
+				CURRENT_PROJECT_VERSION = 7.7.2.1;
 				DEAD_CODE_STRIPPING = NO;
 				DEPLOYMENT_POSTPROCESSING = NO;
 				DEVELOPMENT_TEAM = 9G2AGGBJ52;
@@ -852,7 +852,7 @@
 				);
 				INFOPLIST_FILE = FyberMarketplaceTestApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				MARKETING_VERSION = 7.7.1;
+				MARKETING_VERSION = 7.7.2;
 				OTHER_LDFLAGS = (
 					"-ObjC",
 					"$(inherited)",
@@ -871,7 +871,7 @@
 				CLANG_ANALYZER_GCD_PERFORMANCE = YES;
 				CLANG_ENABLE_CODE_COVERAGE = NO;
 				CLANG_STATIC_ANALYZER_MODE = deep;
-				CURRENT_PROJECT_VERSION = 7.7.1.6;
+				CURRENT_PROJECT_VERSION = 7.7.2.1;
 				DEPLOYMENT_POSTPROCESSING = YES;
 				DEVELOPMENT_TEAM = 9G2AGGBJ52;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -895,7 +895,7 @@
 				);
 				INFOPLIST_FILE = FyberMarketplaceTestApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				MARKETING_VERSION = 7.7.1;
+				MARKETING_VERSION = 7.7.2;
 				OTHER_LDFLAGS = (
 					"-ObjC",
 					"$(inherited)",
