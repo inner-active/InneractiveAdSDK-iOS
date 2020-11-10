@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-#define kIAColorsNavigationBar [UIColor whiteColor]
-#define kIAColorsButtonsText [UIColor colorWithRed:255/255.0 green:151/255.0 blue:4/255.0 alpha:1.0]
+#define kIAColorsNavigationBar UIColor.whiteColor
 #define kIAColorsAquamarine [UIColor colorWithRed:36/255.0 green:183/255.0 blue:197/255.0 alpha:1.0]
+#define kIAColorsFyberGreen [UIColor colorWithRed:0 green:0.839 blue:0.569 alpha:1.0]
+#define kIAColorsFyberDarkBlue [UIColor colorWithRed:0.114 green:0 blue:0.278 alpha:1]

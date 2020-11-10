@@ -31,7 +31,7 @@ typedef NS_ENUM(NSUInteger, AdType) {
     self.tableView.delegate = self;
     self.title = NSLocalizedString(@"Custom Ads", nil);
     UIBarButtonItem *backButton = [[UIBarButtonItem alloc] initWithTitle:NSLocalizedString(@"Back", nil) style:UIBarButtonItemStylePlain target:self action:@selector(backButtonClicked:)];
-    NSDictionary *titleAttributes = [NSDictionary dictionaryWithObject:kIAColorsButtonsText forKey:NSForegroundColorAttributeName];
+    NSDictionary *titleAttributes = [NSDictionary dictionaryWithObject:UIColor.systemPinkColor forKey:NSForegroundColorAttributeName];
     
     [backButton setTitleTextAttributes:titleAttributes forState:UIControlStateNormal];
     self.navigationItem.leftBarButtonItem = backButton;

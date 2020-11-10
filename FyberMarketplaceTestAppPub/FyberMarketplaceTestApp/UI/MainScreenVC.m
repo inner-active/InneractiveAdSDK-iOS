@@ -22,6 +22,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    [UITableViewHeaderFooterView.appearance setTintColor:UIColor.systemPinkColor];
 }
 
 #pragma mark - Navigation
