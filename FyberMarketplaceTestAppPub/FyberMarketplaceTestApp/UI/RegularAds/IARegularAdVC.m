@@ -182,7 +182,6 @@
             IAVideoContentController *videoContentController = (IAVideoContentController *)adSpot.activeUnitController.activeContentController;
 
             videoContentController.videoContentDelegate = self;
-            videoContentController.muted = YES;
         }
     }
 }
@@ -202,6 +201,7 @@
         }];
     }
 }
+
 #pragma mark - IAUnitDelegate
 
 - (UIViewController * _Nonnull)IAParentViewControllerForUnitController:(IAUnitController * _Nullable)unitController {
@@ -303,6 +303,8 @@
 
     self.spinner.hidden = YES;
     self.showAdButton.hidden = YES;
+    self.showAdButton.layer.cornerRadius = UISegmentedControl.new.layer.cornerRadius;
+    self.loadAdButton.layer.cornerRadius = self.showAdButton.layer.cornerRadius;
 }
 
 - (void)viewDidDisappear:(BOOL)animated {

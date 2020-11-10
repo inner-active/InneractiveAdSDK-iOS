@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Wv9-IG-SX6">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Wv9-IG-SX6">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -299,12 +300,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="623"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xh7-6X-Jnc">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xh7-6X-Jnc">
                                 <rect key="frame" x="117.5" y="535" width="140" height="30"/>
-                                <color key="backgroundColor" red="1" green="0.43829772979999998" blue="0.17513149559999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" systemColor="systemPinkColor"/>
                                 <accessibility key="accessibilityConfiguration" label="Load Ad"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="140" id="d03-Xz-e8I"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="140" id="d03-Xz-e8I"/>
                                     <constraint firstAttribute="height" constant="30" id="iy8-Q4-JOv"/>
                                 </constraints>
                                 <state key="normal" title="Load ad">
@@ -314,13 +315,13 @@
                                     <action selector="loadAdPressed:" destination="c3c-VO-ccr" eventType="touchUpInside" id="HAv-gK-gvD"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gbe-gS-8b7">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gbe-gS-8b7">
                                 <rect key="frame" x="117.5" y="573" width="140" height="30"/>
-                                <color key="backgroundColor" red="1" green="0.43829772984515092" blue="0.17513149561395558" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" systemColor="systemPinkColor"/>
                                 <accessibility key="accessibilityConfiguration" label="Show Ad"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="Q6K-L2-Bnb"/>
-                                    <constraint firstAttribute="width" constant="140" id="zgc-2B-6sM"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="140" id="zgc-2B-6sM"/>
                                 </constraints>
                                 <state key="normal" title="Show ad">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -365,12 +366,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="623"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zWf-EF-uOS">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zWf-EF-uOS">
                                 <rect key="frame" x="117.5" y="573" width="140" height="30"/>
-                                <color key="backgroundColor" red="1" green="0.43829772979999998" blue="0.17513149559999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" systemColor="systemPinkColor"/>
                                 <accessibility key="accessibilityConfiguration" label="Show Ad"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="140" id="F6m-8J-Rgs"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="140" id="F6m-8J-Rgs"/>
                                     <constraint firstAttribute="height" constant="30" id="qrs-OD-v0b"/>
                                 </constraints>
                                 <state key="normal" title="Show ad">
@@ -380,13 +381,13 @@
                                     <action selector="showAdPressed:" destination="9a8-zA-vsL" eventType="touchUpInside" id="Eoq-Vh-sXS"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JY8-E3-rsN">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JY8-E3-rsN">
                                 <rect key="frame" x="117.5" y="535" width="140" height="30"/>
-                                <color key="backgroundColor" red="1" green="0.43829772979999998" blue="0.17513149559999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" systemColor="systemPinkColor"/>
                                 <accessibility key="accessibilityConfiguration" label="Load Ad"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="PPg-GV-Vgc"/>
-                                    <constraint firstAttribute="width" constant="140" id="SHj-ZH-3wb"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="140" id="SHj-ZH-3wb"/>
                                 </constraints>
                                 <state key="normal" title="Load ad">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -431,12 +432,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="623"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ByB-2P-pC9">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ByB-2P-pC9">
                                 <rect key="frame" x="117.5" y="573" width="140" height="30"/>
-                                <color key="backgroundColor" red="1" green="0.43829772979999998" blue="0.17513149559999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" systemColor="systemPinkColor"/>
                                 <accessibility key="accessibilityConfiguration" label="Show Ad"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="140" id="KXq-dB-CER"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="140" id="KXq-dB-CER"/>
                                     <constraint firstAttribute="height" constant="30" id="bpS-wk-AdE"/>
                                 </constraints>
                                 <state key="normal" title="Show ad">
@@ -446,13 +447,13 @@
                                     <action selector="showAdPressed:" destination="pct-h7-VpI" eventType="touchUpInside" id="Fec-be-HcP"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b0Z-ww-GRN">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b0Z-ww-GRN">
                                 <rect key="frame" x="117.5" y="535" width="140" height="30"/>
-                                <color key="backgroundColor" red="1" green="0.43829772979999998" blue="0.17513149559999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" systemColor="systemPinkColor"/>
                                 <accessibility key="accessibilityConfiguration" label="Load Ad"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="eU8-uf-4he"/>
-                                    <constraint firstAttribute="width" constant="140" id="lZl-o1-F2w"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="140" id="lZl-o1-F2w"/>
                                 </constraints>
                                 <state key="normal" title="Load ad">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -519,7 +520,7 @@
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="klT-le-LX8">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="623"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="MediationsCell" id="zYO-MM-Rrn">
                                         <rect key="frame" x="0.0" y="28" width="375" height="44"/>
@@ -536,12 +537,11 @@
                                 </connections>
                             </tableView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="klT-le-LX8" secondAttribute="trailing" id="0cI-o7-Vbk"/>
+                            <constraint firstItem="klT-le-LX8" firstAttribute="trailing" secondItem="xmK-nz-Eln" secondAttribute="trailing" id="0cI-o7-Vbk"/>
                             <constraint firstItem="klT-le-LX8" firstAttribute="leading" secondItem="xmK-nz-Eln" secondAttribute="leading" id="9ys-cW-Tp4"/>
-                            <constraint firstItem="Dhy-uA-PXj" firstAttribute="top" secondItem="klT-le-LX8" secondAttribute="bottom" id="Xcv-8e-f7u"/>
-                            <constraint firstItem="klT-le-LX8" firstAttribute="top" secondItem="SIZ-81-xiI" secondAttribute="bottom" id="ruc-CM-0fw"/>
+                            <constraint firstItem="klT-le-LX8" firstAttribute="bottom" secondItem="xmK-nz-Eln" secondAttribute="bottom" id="Xcv-8e-f7u"/>
+                            <constraint firstItem="klT-le-LX8" firstAttribute="top" secondItem="xmK-nz-Eln" secondAttribute="top" id="ruc-CM-0fw"/>
                         </constraints>
                     </view>
                     <connections>
@@ -558,4 +558,12 @@
     <inferredMetricsTieBreakers>
         <segue reference="CtZ-ZH-6Ot"/>
     </inferredMetricsTieBreakers>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemPinkColor">
+            <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
 </document>
