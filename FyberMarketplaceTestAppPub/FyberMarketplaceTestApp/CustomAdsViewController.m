@@ -65,7 +65,7 @@ typedef NS_ENUM(NSUInteger, AdType) {
     NSInteger numberOfRows = 1;
     
     if (section == AdTypeBanner) {
-        numberOfRows = 3;
+        numberOfRows = 4;
     } else if (section == AdTypeFullscreenHTML) {
         numberOfRows = 1;
     } else if (section == AdTypeVAST) {
@@ -94,6 +94,9 @@ typedef NS_ENUM(NSUInteger, AdType) {
                     break;
                 case 2:
                     title = @"Expand banner";
+                    break;
+                case 3:
+                    title = @"Medium rectangle";
                     break;
             }
             break;
@@ -145,40 +148,43 @@ typedef NS_ENUM(NSUInteger, AdType) {
         case AdTypeBanner:
             switch (indexPath.row) {
                 case 0:
-                    [self.delegate updateServer:@"ia-cert" database:@"5430" mockResponse:@"mraidResize"];
+                    [self.delegate updateServer:@"ia-cert" database:@"4321" mockResponse:@"mraidResize"];
                     break;
                 case 1:
-                    [self.delegate updateServer:@"ia-cert" database:@"5430" mockResponse:@"bannerResponseForCI"];
+                    [self.delegate updateServer:@"ia-cert" database:@"4321" mockResponse:@"bannerResponseForCI"];
                     break;
                 case 2:
-                    [self.delegate updateServer:@"ia-cert" database:@"5430" mockResponse:@"bannerExpand"];
+                    [self.delegate updateServer:@"ia-cert" database:@"4321" mockResponse:@"bannerExpand"];
+                    break;
+                case 3:
+                    [self.delegate updateServer:@"ia-cert" database:@"5430" mockResponse:@"rectangleforci"];
                     break;
             }
             break;
         case AdTypeFullscreenHTML:
             switch (indexPath.row) {
                 case 0:
-                    [self.delegate updateServer:@"ia-cert" database:@"5430" mockResponse:@"interstitialadresponseforci"];
+                    [self.delegate updateServer:@"ia-cert" database:@"4321" mockResponse:@"interstitialadresponseforci"];
                     break;
             }
             break;
         case AdTypeVAST:
             switch (indexPath.row) {
                 case 0:
-                    [self.delegate updateServer:@"ia-cert" database:@"5431" mockResponse:@"7715"];
+                    [self.delegate updateServer:@"ia-cert" database:@"4321" mockResponse:@"7715"];
                     break;
                 case 1:
-                    [self.delegate updateServer:@"ia-cert" database:@"5431" mockResponse:@"7714"];
+                    [self.delegate updateServer:@"ia-cert" database:@"4321" mockResponse:@"7714"];
                     break;
                 case 2:
-                    [self.delegate updateServer:@"ia-cert" database:@"5431" mockResponse:@"vastlarge"];
+                    [self.delegate updateServer:@"ia-cert" database:@"4321" mockResponse:@"vastlarge"];
                     break;
             }
             break;
         case AdTypeVPAID:
             switch (indexPath.row) {
                 case 0:
-                    [self.delegate updateServer:@"ia-cert" database:@"5431" mockResponse:@"vpaidTesting"];
+                    [self.delegate updateServer:@"ia-cert" database:@"4321" mockResponse:@"vpaidTesting"];
                     break;
             }
             break;

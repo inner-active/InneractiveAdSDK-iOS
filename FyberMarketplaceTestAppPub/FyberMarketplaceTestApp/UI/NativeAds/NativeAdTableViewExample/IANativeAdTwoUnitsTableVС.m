@@ -10,6 +10,7 @@
 
 #import <IASDKCore/IASDKCore.h>
 #import <IASDKVideo/IASDKVideo.h>
+#import <IASDKMRAID/IASDKMRAID.h>
 
 #import "IAFeedDataProvider.h"
 #import "IAFeedTableCell.h"
@@ -46,10 +47,12 @@ IAVideoContentDelegate>
 @property (nonatomic, strong) IAAdSpot *adSpot1;
 @property (nonatomic, strong) IAUnitController *unit1;
 @property (nonatomic, strong) IAContentController *content1;
+@property (nonatomic, strong) IAContentController *mraidContent1;
 
 @property (nonatomic, strong) IAAdSpot *adSpot2;
 @property (nonatomic, strong) IAUnitController *unit2;
 @property (nonatomic, strong) IAContentController *content2;
+@property (nonatomic, strong) IAContentController *mraidContent2;
 
 @end
 
@@ -66,7 +69,7 @@ static const NSInteger kRepeatingInterval = 7;
     
     if (self) {
         [self initInitialFeedDataArray];
-        [self initVideoAds];
+        [self initAds];
     }
     
     return self;
@@ -93,8 +96,8 @@ static const NSInteger kRepeatingInterval = 7;
     _actualFeedDataArray = [NSMutableArray arrayWithArray:_initialFeedDataArray];
 }
 
-- (void)initVideoAds {
-	NSString *spotID = @"150945";
+- (void)initAds {
+	NSString *spotID = @"150943";
 	
     IAAdRequest *request1 = [IAAdRequest build:^(id<IAAdRequestBuilder>  _Nonnull builder) {
         builder.spotID = spotID;
@@ -104,10 +107,13 @@ static const NSInteger kRepeatingInterval = 7;
     _content1 = [IAVideoContentController build:^(id<IAVideoContentControllerBuilder>  _Nonnull builder) {
         builder.videoContentDelegate = self;
     }];
-    
+
+    _mraidContent1 = [IAMRAIDContentController build:^(id<IAMRAIDContentControllerBuilder>  _Nonnull builder) {}];
+
     _unit1 = [IAViewUnitController build:^(id<IAViewUnitControllerBuilder>  _Nonnull builder) {
         builder.unitDelegate = self;
         [builder addSupportedContentController:self.content1];
+        [builder addSupportedContentController:self.mraidContent1];
     }];
     
     _adSpot1 = [IAAdSpot build:^(id<IAAdSpotBuilder>  _Nonnull builder) {
@@ -121,9 +127,12 @@ static const NSInteger kRepeatingInterval = 7;
         builder.videoContentDelegate = self;
     }];
     
+    _mraidContent2 = [IAMRAIDContentController build:^(id<IAMRAIDContentControllerBuilder>  _Nonnull builder) {}];
+    
     _unit2 = [IAViewUnitController build:^(id<IAViewUnitControllerBuilder>  _Nonnull builder) {
         builder.unitDelegate = self;
         [builder addSupportedContentController:self.content2];
+        [builder addSupportedContentController:self.mraidContent2];
     }];
     
     _adSpot2 = [IAAdSpot build:^(id<IAAdSpotBuilder>  _Nonnull builder) {
@@ -164,7 +173,7 @@ static const NSInteger kRepeatingInterval = 7;
     if (isFirstTimeAdInjection) { // this is first time ad injection, we need to calculate the indices;
         [self.actualFeedDataArray enumerateObjectsUsingBlock:^(IAFeedDataObject * _Nonnull currentFeedObject, NSUInteger idx, BOOL * _Nonnull stop) {
             // we will inject the ad at this index;
-            if ((idx % (kFirstAdUnitStartIndex + kRepeatingInterval)) == 0) {
+            if ((idx != 0 ) && ((idx % (kFirstAdUnitStartIndex + kRepeatingInterval)) == 0)) {
                 IAFeedDataObject *adObject = [IAFeedDataObject new];
                 
                 adObject.isAd = YES;

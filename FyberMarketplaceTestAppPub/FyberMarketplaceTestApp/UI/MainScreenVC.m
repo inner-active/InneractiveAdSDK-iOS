@@ -10,7 +10,7 @@
 #import "IARegularAdVC.h"
 #import "IAColors.h"
 
-@interface MainScreenVC ()
+@interface MainScreenVC () <QRScannerViewControllerDelegate>
 
 @property (weak, nonatomic) IBOutlet UITableView *table;
 
@@ -24,6 +24,8 @@
     [super viewDidLoad];
     
     [UITableViewHeaderFooterView.appearance setTintColor:UIColor.systemPinkColor];
+    
+    
 }
 
 #pragma mark - Navigation
@@ -42,7 +44,7 @@
 	}
 }
 
-- (void)customizeBackButtonForNavigationItem:(UINavigationItem *)navItem{	
+- (void)customizeBackButtonForNavigationItem:(UINavigationItem *)navItem {
 	UIImage *buttonImage = [[UIImage imageNamed:@"Back-icon"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
 	UIBarButtonItem *barButtonItem = [[UIBarButtonItem alloc] initWithImage:buttonImage style:UIBarButtonItemStylePlain target:self action:@selector(backPressed:)];
     
