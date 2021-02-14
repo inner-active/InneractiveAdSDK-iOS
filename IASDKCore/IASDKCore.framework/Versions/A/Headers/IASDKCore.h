@@ -85,7 +85,7 @@ typedef NS_ENUM(NSInteger, IASDKCoreInitErrorType) {
  *
  * - `[IASDKCore.sharedInstance clearGDPRConsentData]`
  *
- * - `IASDKCore.sharedInstance.GDPRConsent = IAGDPRConsentTypeUnknown`. <b>Important</b>: setting the `IAGDPRConsentTypeUnknown`, will clean the `GDPRConsentString` as well.
+ * - `IASDKCore.sharedInstance.GDPRConsent = IAGDPRConsentTypeUnknown`. <b>Important</b>: setting the `IAGDPRConsentTypeUnknown`, will clear the `GDPRConsentString` as well.
  *
  * The default (or after calling the `clearGDPRConsentData` method) value is unknown, which is the `IAGDPRConsentTypeUnknown`.
  *
@@ -103,14 +103,14 @@ typedef NS_ENUM(NSInteger, IASDKCoreInitErrorType) {
 /**
  *  @brief Use this property in order to provide the CCPA string. Once it's set, it is saved on a device.
  *
- *  @discussion It will be passed as is, without any validation/modification. In order to clean this data permanently from a device, pass a nil or empty string.
+ *  @discussion It will be passed as is, without any validation/modification. In order to clear this data permanently from a device, pass a nil or empty string.
  */
 @property (atomic, nullable) NSString *CCPAString;
 
 /**
  *  @brief Use this property in order to provide a user Id. Once it's set, it is saved on a device.
  *
- *  @discussion It will be passed as is, without any validation/modification. In order to clean it from a device, pass a nil or empty string.
+ *  @discussion It will be passed as is, without any validation/modification. In order to clear it from a device, pass a nil or empty string.
  */
 @property (atomic, nullable) NSString *userID;
 
