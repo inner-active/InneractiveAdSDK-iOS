@@ -33,9 +33,9 @@
 @property (nonatomic, weak, readonly, nullable) IAContentController *activeContentController;
 
 /**
- *  @brief Cleans all internal data. After use of this method, current unit controller is no more useable until a new response of same ad unit type is received.
+ *  @brief Clears all internal data. After use of this method, current unit controller is no more useable until a new response of same ad unit type is received.
  */
-- (void)clean;
+- (void)clear;
 
 @end
 
