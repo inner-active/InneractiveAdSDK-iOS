@@ -13,7 +13,7 @@
 
 #import <AppTrackingTransparency/ATTrackingManager.h>
 
-@interface IARegularAdVC () <IAUnitDelegate, IAVideoContentDelegate, IAMRAIDContentDelegate, UIGestureRecognizerDelegate>
+@interface IARegularAdVC () <IAUnitDelegate, IAVideoContentDelegate, IAMRAIDContentDelegate>
 
 @property (nonatomic, weak) IBOutlet UIButton *loadAdButton;
 @property (nonatomic, weak) IBOutlet UIButton *showAdButton;
@@ -298,18 +298,13 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.navigationController.interactivePopGestureRecognizer.delegate = self;
+    self.navigationController.interactivePopGestureRecognizer.delegate = (id<UIGestureRecognizerDelegate>)self;
     
     
     self.spinner.hidden = YES;
     self.showAdButton.hidden = YES;
     self.showAdButton.layer.cornerRadius = UISegmentedControl.new.layer.cornerRadius;
     self.loadAdButton.layer.cornerRadius = self.showAdButton.layer.cornerRadius;
-}
-
-- (void)viewDidDisappear:(BOOL)animated {
-    [super viewDidDisappear:animated];
-    self.navigationController.interactivePopGestureRecognizer.enabled = YES;
 }
 
 #pragma mark - IB
