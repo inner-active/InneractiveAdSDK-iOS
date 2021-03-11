@@ -10,7 +10,8 @@
 #import "IARegularAdVC.h"
 #import "IAColors.h"
 
-@interface MainScreenVC () <QRScannerViewControllerDelegate>
+@interface MainScreenVC () <
+UINavigationControllerDelegate>
 
 @property (weak, nonatomic) IBOutlet UITableView *table;
 
@@ -23,9 +24,16 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    self.navigationController.delegate = self;
     [UITableViewHeaderFooterView.appearance setTintColor:UIColor.systemPinkColor];
     
     
+}
+
+#pragma mark - UINavigationControllerDelegate
+
+- (void)navigationController:(UINavigationController *)navigationController didShowViewController:(UIViewController *)viewController animated:(BOOL)animated {
+    viewController.navigationController.interactivePopGestureRecognizer.enabled = ![viewController isKindOfClass:MainScreenVC.class];
 }
 
 #pragma mark - Navigation
@@ -35,7 +43,6 @@
 	
 	if (![segue.identifier isEqualToString:@"ShowNativeAdWithManualManagement"] &&
 		![segue.identifier isEqualToString:@"ShowMediationsSegue"]) {
-	
 		// Get the new view controller using [segue destinationViewController].
 		// Pass the selected object to the new view controller.
 		IARegularAdVC *VC = [segue destinationViewController];
