@@ -121,7 +121,11 @@ static const NSInteger kRepeatingInterval = 7;
         [builder addSupportedUnitController:self.unit1];
     }];
     
-    IAAdRequest *request2 = [request1 copy]; // will perform deep copy;
+    IAAdRequest *request2 = [IAAdRequest build:^(id<IAAdRequestBuilder>  _Nonnull builder) {
+        builder.spotID = spotID;
+        builder.timeout = 20;
+    }];
+    
     
     _content2 = [IAVideoContentController build:^(id<IAVideoContentControllerBuilder>  _Nonnull builder) {
         builder.videoContentDelegate = self;

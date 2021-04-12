@@ -13,7 +13,7 @@
 
 #import <AppTrackingTransparency/ATTrackingManager.h>
 
-@interface IARegularAdVC () <IAUnitDelegate, IAVideoContentDelegate, IAMRAIDContentDelegate, UIGestureRecognizerDelegate>
+@interface IARegularAdVC () <IAUnitDelegate, IAVideoContentDelegate, IAMRAIDContentDelegate>
 
 @property (nonatomic, weak) IBOutlet UIButton *loadAdButton;
 @property (nonatomic, weak) IBOutlet UIButton *showAdButton;
@@ -53,7 +53,7 @@
     if (self.requestedAdType == SampleAdTypeBanner) {
         spotID = @"150942"; // banner;
     } else if (self.requestedAdType == SampleAdTypeRectangle) {
-        spotID = @"150943"; // mrect: 150943 for HTML/MRAID, 150945 for video/VPAID;
+        spotID = @"150943"; // mrect: 150943 for HTML/MRAID
     } else if (self.requestedAdType == SampleAdTypeInterstitial) {
         spotID = @"150946"; // interstitial;
     } else if (self.requestedAdType == SampleAdTypeRewarded) {
@@ -298,18 +298,13 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.navigationController.interactivePopGestureRecognizer.delegate = self;
+    self.navigationController.interactivePopGestureRecognizer.delegate = (id<UIGestureRecognizerDelegate>)self;
     
     
     self.spinner.hidden = YES;
     self.showAdButton.hidden = YES;
     self.showAdButton.layer.cornerRadius = UISegmentedControl.new.layer.cornerRadius;
     self.loadAdButton.layer.cornerRadius = self.showAdButton.layer.cornerRadius;
-}
-
-- (void)viewDidDisappear:(BOOL)animated {
-    [super viewDidDisappear:animated];
-    self.navigationController.interactivePopGestureRecognizer.enabled = YES;
 }
 
 #pragma mark - IB
