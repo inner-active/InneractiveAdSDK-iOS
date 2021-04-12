@@ -53,7 +53,7 @@
     if (self.requestedAdType == SampleAdTypeBanner) {
         spotID = @"150942"; // banner;
     } else if (self.requestedAdType == SampleAdTypeRectangle) {
-        spotID = @"150943"; // mrect: 150943 for HTML/MRAID, 150945 for video/VPAID;
+        spotID = @"150943"; // mrect: 150943 for HTML/MRAID
     } else if (self.requestedAdType == SampleAdTypeInterstitial) {
         spotID = @"150946"; // interstitial;
     } else if (self.requestedAdType == SampleAdTypeRewarded) {

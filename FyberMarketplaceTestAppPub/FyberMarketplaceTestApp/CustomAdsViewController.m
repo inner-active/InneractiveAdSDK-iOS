@@ -13,7 +13,6 @@ typedef NS_ENUM(NSUInteger, AdType) {
     AdTypeBanner,
     AdTypeFullscreenHTML,
     AdTypeVAST,
-    AdTypeVPAID,
     AdTypeProduction
 };
 
@@ -52,8 +51,6 @@ typedef NS_ENUM(NSUInteger, AdType) {
         name = @"Fullscreen HTML";
     } else if (section == AdTypeVAST) {
         name = @"VAST";
-    } else if (section == AdTypeVPAID) {
-        name = @"VPAID";
     } else if (section == AdTypeProduction) {
         name = @"Production";
     }
@@ -70,8 +67,6 @@ typedef NS_ENUM(NSUInteger, AdType) {
         numberOfRows = 1;
     } else if (section == AdTypeVAST) {
         numberOfRows = 3;
-    } else if (section == AdTypeVPAID) {
-        numberOfRows = 1;
     } else if (section == AdTypeProduction) {
         numberOfRows = 1;
     }
@@ -117,13 +112,6 @@ typedef NS_ENUM(NSUInteger, AdType) {
                     break;
                 case 2:
                     title = @"Long VAST";
-                    break;
-            }
-            break;
-        case AdTypeVPAID:
-            switch (indexPath.row) {
-                case 0:
-                    title = @"Jin wigmore";
                     break;
             }
             break;
@@ -178,13 +166,6 @@ typedef NS_ENUM(NSUInteger, AdType) {
                     break;
                 case 2:
                     [self.delegate updateServer:@"ia-cert" database:@"4321" mockResponse:@"vastlarge"];
-                    break;
-            }
-            break;
-        case AdTypeVPAID:
-            switch (indexPath.row) {
-                case 0:
-                    [self.delegate updateServer:@"ia-cert" database:@"4321" mockResponse:@"vpaidTesting"];
                     break;
             }
             break;
