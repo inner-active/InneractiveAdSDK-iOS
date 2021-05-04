@@ -15,7 +15,8 @@
 
 @required
 + (null_unspecified instancetype)alloc __attribute__((unavailable("<Fyber> The 'alloc' is not available, use 'build:' instead.")));
-- (null_unspecified instancetype)init __attribute__((unavailable("<Fyber> The 'init' is not available, use 'build:' instead.")));
+// Causes error during building in xcode 12.5
+//- (null_unspecified instancetype)init __attribute__((unavailable("<Fyber> The 'init' is not available, use 'build:' instead.")));
 + (null_unspecified instancetype)new __attribute__((unavailable("<Fyber> The 'new' is not available, use 'build:' instead.")));
 
 @end
