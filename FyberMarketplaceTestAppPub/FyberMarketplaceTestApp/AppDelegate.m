@@ -16,8 +16,8 @@
     [IALogger setLogLevel:IALogLevelVerbose];
     NSString * const kAppIDForTest = @"102960";
 
-    
-    
+
+
     [IASDKCore.sharedInstance initWithAppID:kAppIDForTest completionBlock:^(BOOL success, NSError * _Nullable error) { // init is mandatory;
         if (success) {
             NSLog(@"Fyber Marketplace SDK has been initialised, version: %@", IASDKCore.sharedInstance.version);
@@ -26,24 +26,24 @@
         }
     } completionQueue:dispatch_queue_create("appDelegate queue", DISPATCH_QUEUE_SERIAL)];
     IASDKCore.sharedInstance.globalAdDelegate = self;
-    
+
     IASDKCore.sharedInstance.CCPAString = @"1YYY";
-    
+
     return YES;
 }
 
 - (UIViewController *)topViewController {
     UIViewController *topVC = UIApplication.sharedApplication.keyWindow.rootViewController;
-    
+
     if ([topVC isKindOfClass:UINavigationController.class]) {
         UINavigationController *navigationVC = (UINavigationController *)topVC;
         topVC = [navigationVC topViewController];
     }
-    
+
     while (topVC.presentedViewController) {
         topVC = topVC.presentedViewController;
     }
-    
+
     return topVC;
 }
 

@@ -103,6 +103,11 @@ static const NSInteger kRepeatingInterval = 7;
         builder.spotID = spotID;
         builder.timeout = 20;
     }];
+#ifdef DEBUG
+    request1.debugger.server = @"ia-cert";
+    request1.debugger.database = @"4321";
+    //request1.debugger.mockResponsePath = @"";
+#endif
     
     _content1 = [IAVideoContentController build:^(id<IAVideoContentControllerBuilder>  _Nonnull builder) {
         builder.videoContentDelegate = self;
@@ -126,6 +131,12 @@ static const NSInteger kRepeatingInterval = 7;
         builder.timeout = 20;
     }];
     
+#ifdef DEBUG
+    request2.debugger.server = @"ia-cert";
+    request2.debugger.database = @"4321";
+    //request2.debugger.mockResponsePath = @"";
+
+#endif
     
     _content2 = [IAVideoContentController build:^(id<IAVideoContentControllerBuilder>  _Nonnull builder) {
         builder.videoContentDelegate = self;
