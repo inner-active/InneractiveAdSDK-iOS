@@ -7,33 +7,104 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		09343BD4473E1233F9D32376 /* IASDKVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BB547F6937592D022AAEDAB /* IASDKVideo.framework */; };
 		1140A5922426735D006AA910 /* main_logo@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1140A5912426735D006AA910 /* main_logo@3x.png */; };
+		1142780B266E467B007D3038 /* IAFeedTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E8FCDE381F559ED800FCA1C6 /* IAFeedTableCell.m */; };
+		1142780D266E467B007D3038 /* BuildFile in Sources */ = {isa = PBXBuildFile; };
+		1142780F266E467B007D3038 /* BuildFile in Sources */ = {isa = PBXBuildFile; };
+		11427811266E467B007D3038 /* BuildFile in Sources */ = {isa = PBXBuildFile; };
+		11427812266E467B007D3038 /* IAFeedDataProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = E8FCDE2D1F559ED800FCA1C6 /* IAFeedDataProvider.m */; };
+		11427813266E467B007D3038 /* CustomAdsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A99845124B2097D0053058D /* CustomAdsViewController.m */; };
+		11427814266E467B007D3038 /* Stub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C17898257B102B00702557 /* Stub.swift */; };
+		11427815266E467B007D3038 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E88693AE1E3DFED900B12EAB /* main.m */; };
+		11427816266E467B007D3038 /* IANativeAdTwoUnitsTableVС.m in Sources */ = {isa = PBXBuildFile; fileRef = E8FCDE3E1F559ED800FCA1C6 /* IANativeAdTwoUnitsTableVС.m */; };
+		11427817266E467B007D3038 /* BuildFile in Sources */ = {isa = PBXBuildFile; };
+		11427819266E467B007D3038 /* IARegularAdVC.m in Sources */ = {isa = PBXBuildFile; fileRef = E8FCDE411F559ED800FCA1C6 /* IARegularAdVC.m */; };
+		1142781A266E467B007D3038 /* BuildFile in Sources */ = {isa = PBXBuildFile; };
+		1142781B266E467B007D3038 /* MainScreenVC.m in Sources */ = {isa = PBXBuildFile; fileRef = E8EDCFF61E54854D002DDB06 /* MainScreenVC.m */; };
+		1142781D266E467B007D3038 /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 11A972E4234A39CE00194E7C /* libsqlite3.0.tbd */; };
+		1142781E266E467B007D3038 /* libxml2.2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 840FC4CB1E6461FD00724B1B /* libxml2.2.tbd */; };
+		1142781F266E467B007D3038 /* BuildFile in Frameworks */ = {isa = PBXBuildFile; };
+		11427820266E467B007D3038 /* BuildFile in Frameworks */ = {isa = PBXBuildFile; };
+		11427821266E467B007D3038 /* BuildFile in Frameworks */ = {isa = PBXBuildFile; };
+		11427825266E467B007D3038 /* 07@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E8FCDE0E1F559ED800FCA1C6 /* 07@2x.png */; };
+		11427826266E467B007D3038 /* 09@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E8FCDE101F559ED800FCA1C6 /* 09@2x.png */; };
+		11427827266E467B007D3038 /* BuildFile in Resources */ = {isa = PBXBuildFile; };
+		11427828266E467B007D3038 /* 05@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E8FCDE0C1F559ED800FCA1C6 /* 05@2x.png */; };
+		11427829266E467B007D3038 /* 07p@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E8FCDE211F559ED800FCA1C6 /* 07p@2x.png */; };
+		1142782A266E467B007D3038 /* 12p@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E8FCDE261F559ED800FCA1C6 /* 12p@2x.png */; };
+		1142782C266E467B007D3038 /* 17@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E8FCDE181F559ED800FCA1C6 /* 17@2x.png */; };
+		1142782D266E467B007D3038 /* 00p@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E8FCDE1A1F559ED800FCA1C6 /* 00p@2x.png */; };
+		1142782E266E467B007D3038 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E88693BB1E3DFED900B12EAB /* LaunchScreen.storyboard */; };
+		1142782F266E467B007D3038 /* 02p@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E8FCDE1C1F559ED800FCA1C6 /* 02p@2x.png */; };
+		11427830266E467B007D3038 /* 03p@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E8FCDE1D1F559ED800FCA1C6 /* 03p@2x.png */; };
+		11427831266E467B007D3038 /* 15p@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E8FCDE291F559ED800FCA1C6 /* 15p@2x.png */; };
+		11427832266E467B007D3038 /* 06p@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E8FCDE201F559ED800FCA1C6 /* 06p@2x.png */; };
+		11427833266E467B007D3038 /* 03@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E8FCDE0A1F559ED800FCA1C6 /* 03@2x.png */; };
+		11427835266E467B007D3038 /* 15@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E8FCDE161F559ED800FCA1C6 /* 15@2x.png */; };
+		11427836266E467B007D3038 /* 13@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E8FCDE141F559ED800FCA1C6 /* 13@2x.png */; };
+		11427837266E467B007D3038 /* 04p@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E8FCDE1E1F559ED800FCA1C6 /* 04p@2x.png */; };
+		11427838266E467B007D3038 /* 00@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E8FCDE071F559ED800FCA1C6 /* 00@2x.png */; };
+		11427839266E467B007D3038 /* BuildFile in Resources */ = {isa = PBXBuildFile; };
+		1142783A266E467B007D3038 /* 14p@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E8FCDE281F559ED800FCA1C6 /* 14p@2x.png */; };
+		1142783B266E467B007D3038 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E88693B91E3DFED900B12EAB /* Assets.xcassets */; };
+		1142783C266E467B007D3038 /* 05p@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E8FCDE1F1F559ED800FCA1C6 /* 05p@2x.png */; };
+		1142783D266E467B007D3038 /* BuildFile in Resources */ = {isa = PBXBuildFile; };
+		1142783E266E467B007D3038 /* 16@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E8FCDE171F559ED800FCA1C6 /* 16@2x.png */; };
+		1142783F266E467B007D3038 /* 04@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E8FCDE0B1F559ED800FCA1C6 /* 04@2x.png */; };
+		11427840266E467B007D3038 /* 10p@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E8FCDE241F559ED800FCA1C6 /* 10p@2x.png */; };
+		11427841266E467B007D3038 /* 13p@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E8FCDE271F559ED800FCA1C6 /* 13p@2x.png */; };
+		11427843266E467B007D3038 /* 17p@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E8FCDE2B1F559ED800FCA1C6 /* 17p@2x.png */; };
+		11427844266E467B007D3038 /* 06@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E8FCDE0D1F559ED800FCA1C6 /* 06@2x.png */; };
+		11427845266E467B007D3038 /* main_logo@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1140A5912426735D006AA910 /* main_logo@3x.png */; };
+		11427846266E467B007D3038 /* 02@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E8FCDE091F559ED800FCA1C6 /* 02@2x.png */; };
+		11427847266E467B007D3038 /* 09p@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E8FCDE231F559ED800FCA1C6 /* 09p@2x.png */; };
+		11427848266E467B007D3038 /* 12@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E8FCDE131F559ED800FCA1C6 /* 12@2x.png */; };
+		11427849266E467B007D3038 /* BuildFile in Resources */ = {isa = PBXBuildFile; };
+		1142784A266E467B007D3038 /* BuildFile in Resources */ = {isa = PBXBuildFile; };
+		1142784B266E467B007D3038 /* 16p@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E8FCDE2A1F559ED800FCA1C6 /* 16p@2x.png */; };
+		1142784C266E467B007D3038 /* 10@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E8FCDE111F559ED800FCA1C6 /* 10@2x.png */; };
+		1142784D266E467B007D3038 /* BuildFile in Resources */ = {isa = PBXBuildFile; };
+		1142784F266E467B007D3038 /* 01p@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E8FCDE1B1F559ED800FCA1C6 /* 01p@2x.png */; };
+		11427850266E467B007D3038 /* 11@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E8FCDE121F559ED800FCA1C6 /* 11@2x.png */; };
+		11427852266E467B007D3038 /* 01@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E8FCDE081F559ED800FCA1C6 /* 01@2x.png */; };
+		11427854266E467B007D3038 /* 11p@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E8FCDE251F559ED800FCA1C6 /* 11p@2x.png */; };
+		11427856266E467B007D3038 /* 08@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E8FCDE0F1F559ED800FCA1C6 /* 08@2x.png */; };
+		11427857266E467B007D3038 /* 14@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E8FCDE151F559ED800FCA1C6 /* 14@2x.png */; };
+		11427858266E467B007D3038 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E88693B61E3DFED900B12EAB /* Main.storyboard */; };
+		11427859266E467B007D3038 /* 08p@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E8FCDE221F559ED800FCA1C6 /* 08p@2x.png */; };
+		1142785C266E467B007D3038 /* BuildFile in Embed PlugIns */ = {isa = PBXBuildFile; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		11427876266E4E73007D3038 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E88693B11E3DFED900B12EAB /* AppDelegate.m */; };
 		11A972E5234A39CE00194E7C /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 11A972E4234A39CE00194E7C /* libsqlite3.0.tbd */; };
+		11BC972126764A240070E03A /* BuildFile in Sources */ = {isa = PBXBuildFile; };
+		11BC972226764A240070E03A /* BuildFile in Sources */ = {isa = PBXBuildFile; };
+		11BC972326764A240070E03A /* BuildFile in Sources */ = {isa = PBXBuildFile; };
+		11BC975D26764D390070E03A /* FyberAdapterConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = 11BC975426764D390070E03A /* FyberAdapterConfiguration.m */; };
+		11BC975E26764D390070E03A /* FyberRewardedVideoCustomEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = 11BC975526764D390070E03A /* FyberRewardedVideoCustomEvent.m */; };
+		11BC975F26764D390070E03A /* FyberBannerCustomEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = 11BC975926764D390070E03A /* FyberBannerCustomEvent.m */; };
+		11BC976026764D390070E03A /* FyberInterstitialCustomEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = 11BC975A26764D390070E03A /* FyberInterstitialCustomEvent.m */; };
+		11BC977526764F990070E03A /* GADMediationAdapterFyber.m in Sources */ = {isa = PBXBuildFile; fileRef = 11BC976A26764F990070E03A /* GADMediationAdapterFyber.m */; };
+		11BC977626764F990070E03A /* GADMAdapterFyberUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 11BC976B26764F990070E03A /* GADMAdapterFyberUtils.m */; };
+		11BC977726764F990070E03A /* GADMAdapterFyberInterstitialAd.m in Sources */ = {isa = PBXBuildFile; fileRef = 11BC976E26764F990070E03A /* GADMAdapterFyberInterstitialAd.m */; };
+		11BC977826764F990070E03A /* GADMAdapterFyberBannerAd.m in Sources */ = {isa = PBXBuildFile; fileRef = 11BC976F26764F990070E03A /* GADMAdapterFyberBannerAd.m */; };
+		11BC977926764F990070E03A /* GADMAdapterFyberExtras.m in Sources */ = {isa = PBXBuildFile; fileRef = 11BC977026764F990070E03A /* GADMAdapterFyberExtras.m */; };
+		11BC977A26764F990070E03A /* GADMAdapterFyberRewardedAd.m in Sources */ = {isa = PBXBuildFile; fileRef = 11BC977326764F990070E03A /* GADMAdapterFyberRewardedAd.m */; };
 		2A99845224B2097D0053058D /* CustomAdsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A99845124B2097D0053058D /* CustomAdsViewController.m */; };
 		2AA47D1B2369D89200104FD5 /* BuildFile in Resources */ = {isa = PBXBuildFile; };
 		2AA47D202369DAF600104FD5 /* BuildFile in Sources */ = {isa = PBXBuildFile; };
-		65DCD6A357C51EE8E70A4180 /* IASDKMRAID.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DD75C54F14B79856DDC9E87 /* IASDKMRAID.framework */; };
+		4B3DA3BB4F74655D36BA5E52 /* IASDKCore.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 178194B0C51DA8FBCA93AA5A /* IASDKCore.xcframework */; };
+		52C41CC2A58532A8F3CC1D27 /* IASDKVideo.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = D58F24D5EDEDB1A244B929BE /* IASDKVideo.xcframework */; };
+		7244C9595CC31162157756CF /* IASDKMRAID.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = F08D167657AFF9BEE5D354E6 /* IASDKMRAID.xcframework */; };
 		840FC4CC1E6461FD00724B1B /* libxml2.2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 840FC4CB1E6461FD00724B1B /* libxml2.2.tbd */; };
 		841329441E80383800E02FC0 /* BuildFile in Resources */ = {isa = PBXBuildFile; };
-		841621A51E71C8A500F51F77 /* Roboto-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 841621A21E71C8A500F51F77 /* Roboto-Bold.ttf */; };
-		841621A61E71C8A500F51F77 /* Roboto-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 841621A31E71C8A500F51F77 /* Roboto-Light.ttf */; };
-		841621A71E71C8A500F51F77 /* Roboto-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 841621A41E71C8A500F51F77 /* Roboto-Regular.ttf */; };
 		841C69701ECDA83100C069B9 /* BuildFile in Resources */ = {isa = PBXBuildFile; };
 		841C69711ECDA83600C069B9 /* BuildFile in Resources */ = {isa = PBXBuildFile; };
-		842533732223B5DB006393E2 /* BuildFile in Sources */ = {isa = PBXBuildFile; };
 		844352C11EA65FB70042AFAA /* BuildFile in Sources */ = {isa = PBXBuildFile; };
 		844352C21EA65FB70042AFAA /* BuildFile in Sources */ = {isa = PBXBuildFile; };
 		844352C91EA65FE10042AFAA /* BuildFile in Sources */ = {isa = PBXBuildFile; };
 		844352CA1EA65FE10042AFAA /* BuildFile in Sources */ = {isa = PBXBuildFile; };
 		84C17899257B102B00702557 /* Stub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C17898257B102B00702557 /* Stub.swift */; };
-		84D7A7B41E95A80B00D921EF /* BuildFile in Resources */ = {isa = PBXBuildFile; };
-		940727C0C5675358CDA1D7CD /* IASDKResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 1257FD8C6018CF682B6FD834 /* IASDKResources.bundle */; };
-		AE044C0C1F0D35A600C84A80 /* BuildFile in Resources */ = {isa = PBXBuildFile; };
-		AE044C0D1F0D35A600C84A80 /* BuildFile in Resources */ = {isa = PBXBuildFile; };
-		AE044C0E1F0D35A600C84A80 /* BuildFile in Resources */ = {isa = PBXBuildFile; };
 		AE044C0F1F0D35A600C84A80 /* BuildFile in Resources */ = {isa = PBXBuildFile; };
-		E84D7F2D1FE5CD5100DBA819 /* BuildFile in Sources */ = {isa = PBXBuildFile; };
+		C5D305A061297C88A40D280F /* IASDKResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = AE4E702ACB65D5BA0FE4BE00 /* IASDKResources.bundle */; };
 		E87DBB931E706C5F00408E1A /* BuildFile in Resources */ = {isa = PBXBuildFile; };
 		E88693AF1E3DFED900B12EAB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E88693AE1E3DFED900B12EAB /* main.m */; };
 		E88693B21E3DFED900B12EAB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E88693B11E3DFED900B12EAB /* AppDelegate.m */; };
@@ -44,12 +115,6 @@
 		E8EDCFE61E5481A4002DDB06 /* BuildFile in Frameworks */ = {isa = PBXBuildFile; };
 		E8EDCFEF1E5481EC002DDB06 /* BuildFile in Frameworks */ = {isa = PBXBuildFile; };
 		E8EDCFF71E54854D002DDB06 /* MainScreenVC.m in Sources */ = {isa = PBXBuildFile; fileRef = E8EDCFF61E54854D002DDB06 /* MainScreenVC.m */; };
-		E8FCDDC11F559BB000FCA1C6 /* BuildFile in Sources */ = {isa = PBXBuildFile; };
-		E8FCDDC21F559BB000FCA1C6 /* BuildFile in Sources */ = {isa = PBXBuildFile; };
-		E8FCDDC81F559BB000FCA1C6 /* BuildFile in Sources */ = {isa = PBXBuildFile; };
-		E8FCDDD01F559BE000FCA1C6 /* BuildFile in Sources */ = {isa = PBXBuildFile; };
-		E8FCDDD11F559BE000FCA1C6 /* BuildFile in Sources */ = {isa = PBXBuildFile; };
-		E8FCDDD21F559BE000FCA1C6 /* BuildFile in Sources */ = {isa = PBXBuildFile; };
 		E8FCDE451F559ED800FCA1C6 /* 00@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E8FCDE071F559ED800FCA1C6 /* 00@2x.png */; };
 		E8FCDE461F559ED800FCA1C6 /* 01@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E8FCDE081F559ED800FCA1C6 /* 01@2x.png */; };
 		E8FCDE471F559ED800FCA1C6 /* 02@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E8FCDE091F559ED800FCA1C6 /* 02@2x.png */; };
@@ -90,25 +155,60 @@
 		E8FCDE6D1F559ED800FCA1C6 /* IAFeedTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E8FCDE381F559ED800FCA1C6 /* IAFeedTableCell.m */; };
 		E8FCDE701F559ED800FCA1C6 /* IANativeAdTwoUnitsTableVС.m in Sources */ = {isa = PBXBuildFile; fileRef = E8FCDE3E1F559ED800FCA1C6 /* IANativeAdTwoUnitsTableVС.m */; };
 		E8FCDE711F559ED800FCA1C6 /* IARegularAdVC.m in Sources */ = {isa = PBXBuildFile; fileRef = E8FCDE411F559ED800FCA1C6 /* IARegularAdVC.m */; };
-		F3D6AC5C65114B0CCB7A610E /* IASDKCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DCA329C77043CC8EFB553245 /* IASDKCore.framework */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		1142785B266E467B007D3038 /* Embed PlugIns */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 7;
+			files = (
+				1142785C266E467B007D3038 /* BuildFile in Embed PlugIns */,
+			);
+			name = "Embed PlugIns";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		1140A5912426735D006AA910 /* main_logo@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "main_logo@3x.png"; sourceTree = "<group>"; };
+		11427864266E467B007D3038 /* Marketplace.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Marketplace.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		11427867266E467C007D3038 /* FyberMarketplaceTestAppMediation-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "FyberMarketplaceTestAppMediation-Info.plist"; path = "/Users/nikita/Desktop/dev/fyber_main/ios-sdk-modules/FyberMarketplaceTestApp/FyberMarketplaceTestAppMediation-Info.plist"; sourceTree = "<absolute>"; };
 		11A972E4234A39CE00194E7C /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
-		1257FD8C6018CF682B6FD834 /* IASDKResources.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; name = IASDKResources.bundle; path = ../IASDKCore/IASDKResources.bundle; sourceTree = "<group>"; };
+		11BC975126764D390070E03A /* CHANGELOG.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = CHANGELOG.md; path = "../../mopub-ios-mediation/Fyber/CHANGELOG.md"; sourceTree = "<group>"; };
+		11BC975226764D390070E03A /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = "../../mopub-ios-mediation/Fyber/README.md"; sourceTree = "<group>"; };
+		11BC975326764D390070E03A /* FyberBannerCustomEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FyberBannerCustomEvent.h; path = "../../mopub-ios-mediation/Fyber/FyberBannerCustomEvent.h"; sourceTree = "<group>"; };
+		11BC975426764D390070E03A /* FyberAdapterConfiguration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FyberAdapterConfiguration.m; path = "../../mopub-ios-mediation/Fyber/FyberAdapterConfiguration.m"; sourceTree = "<group>"; };
+		11BC975526764D390070E03A /* FyberRewardedVideoCustomEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FyberRewardedVideoCustomEvent.m; path = "../../mopub-ios-mediation/Fyber/FyberRewardedVideoCustomEvent.m"; sourceTree = "<group>"; };
+		11BC975626764D390070E03A /* FyberAdapterConfiguration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FyberAdapterConfiguration.h; path = "../../mopub-ios-mediation/Fyber/FyberAdapterConfiguration.h"; sourceTree = "<group>"; };
+		11BC975726764D390070E03A /* FyberRewardedVideoCustomEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FyberRewardedVideoCustomEvent.h; path = "../../mopub-ios-mediation/Fyber/FyberRewardedVideoCustomEvent.h"; sourceTree = "<group>"; };
+		11BC975826764D390070E03A /* FyberInterstitialCustomEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FyberInterstitialCustomEvent.h; path = "../../mopub-ios-mediation/Fyber/FyberInterstitialCustomEvent.h"; sourceTree = "<group>"; };
+		11BC975926764D390070E03A /* FyberBannerCustomEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FyberBannerCustomEvent.m; path = "../../mopub-ios-mediation/Fyber/FyberBannerCustomEvent.m"; sourceTree = "<group>"; };
+		11BC975A26764D390070E03A /* FyberInterstitialCustomEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FyberInterstitialCustomEvent.m; path = "../../mopub-ios-mediation/Fyber/FyberInterstitialCustomEvent.m"; sourceTree = "<group>"; };
+		11BC976926764F990070E03A /* GADMediationAdapterFyber.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GADMediationAdapterFyber.h; path = "../../googleads-mobile-ios-mediation/adapters/Fyber/FyberAdapter/GADMediationAdapterFyber.h"; sourceTree = "<group>"; };
+		11BC976A26764F990070E03A /* GADMediationAdapterFyber.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GADMediationAdapterFyber.m; path = "../../googleads-mobile-ios-mediation/adapters/Fyber/FyberAdapter/GADMediationAdapterFyber.m"; sourceTree = "<group>"; };
+		11BC976B26764F990070E03A /* GADMAdapterFyberUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GADMAdapterFyberUtils.m; path = "../../googleads-mobile-ios-mediation/adapters/Fyber/FyberAdapter/GADMAdapterFyberUtils.m"; sourceTree = "<group>"; };
+		11BC976C26764F990070E03A /* GADMAdapterFyberConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GADMAdapterFyberConstants.h; path = "../../googleads-mobile-ios-mediation/adapters/Fyber/FyberAdapter/GADMAdapterFyberConstants.h"; sourceTree = "<group>"; };
+		11BC976D26764F990070E03A /* GADMAdapterFyberBannerAd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GADMAdapterFyberBannerAd.h; path = "../../googleads-mobile-ios-mediation/adapters/Fyber/FyberAdapter/GADMAdapterFyberBannerAd.h"; sourceTree = "<group>"; };
+		11BC976E26764F990070E03A /* GADMAdapterFyberInterstitialAd.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GADMAdapterFyberInterstitialAd.m; path = "../../googleads-mobile-ios-mediation/adapters/Fyber/FyberAdapter/GADMAdapterFyberInterstitialAd.m"; sourceTree = "<group>"; };
+		11BC976F26764F990070E03A /* GADMAdapterFyberBannerAd.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GADMAdapterFyberBannerAd.m; path = "../../googleads-mobile-ios-mediation/adapters/Fyber/FyberAdapter/GADMAdapterFyberBannerAd.m"; sourceTree = "<group>"; };
+		11BC977026764F990070E03A /* GADMAdapterFyberExtras.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GADMAdapterFyberExtras.m; path = "../../googleads-mobile-ios-mediation/adapters/Fyber/FyberAdapter/GADMAdapterFyberExtras.m"; sourceTree = "<group>"; };
+		11BC977126764F990070E03A /* GADMAdapterFyberInterstitialAd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GADMAdapterFyberInterstitialAd.h; path = "../../googleads-mobile-ios-mediation/adapters/Fyber/FyberAdapter/GADMAdapterFyberInterstitialAd.h"; sourceTree = "<group>"; };
+		11BC977226764F990070E03A /* GADMAdapterFyberUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GADMAdapterFyberUtils.h; path = "../../googleads-mobile-ios-mediation/adapters/Fyber/FyberAdapter/GADMAdapterFyberUtils.h"; sourceTree = "<group>"; };
+		11BC977326764F990070E03A /* GADMAdapterFyberRewardedAd.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GADMAdapterFyberRewardedAd.m; path = "../../googleads-mobile-ios-mediation/adapters/Fyber/FyberAdapter/GADMAdapterFyberRewardedAd.m"; sourceTree = "<group>"; };
+		11BC977426764F990070E03A /* GADMAdapterFyberRewardedAd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GADMAdapterFyberRewardedAd.h; path = "../../googleads-mobile-ios-mediation/adapters/Fyber/FyberAdapter/GADMAdapterFyberRewardedAd.h"; sourceTree = "<group>"; };
+		178194B0C51DA8FBCA93AA5A /* IASDKCore.xcframework */ = {isa = PBXFileReference; includeInIndex = 1; name = IASDKCore.xcframework; path = ../IASDKCore/IASDKCore.xcframework; sourceTree = "<group>"; };
+		2A57B9F52678F40E009456CD /* GADMAdapterFyberExtras.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GADMAdapterFyberExtras.h; path = "../../googleads-mobile-ios-mediation/adapters/Fyber/Public/Headers/GADMAdapterFyberExtras.h"; sourceTree = "<group>"; };
+		2A57B9F82678F40E009456CD /* FyberAdapter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FyberAdapter.h; path = "../../googleads-mobile-ios-mediation/adapters/Fyber/Public/Headers/FyberAdapter.h"; sourceTree = "<group>"; };
 		2A99845024B2097D0053058D /* CustomAdsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CustomAdsViewController.h; sourceTree = "<group>"; };
 		2A99845124B2097D0053058D /* CustomAdsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CustomAdsViewController.m; sourceTree = "<group>"; };
-		5DD75C54F14B79856DDC9E87 /* IASDKMRAID.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IASDKMRAID.framework; path = ../IASDKMRAID/IASDKMRAID.framework; sourceTree = "<group>"; };
-		6BB547F6937592D022AAEDAB /* IASDKVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IASDKVideo.framework; path = ../IASDKVideo/IASDKVideo.framework; sourceTree = "<group>"; };
 		840EBA0B1E96DFFE008E8C51 /* IAColors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IAColors.h; path = UI/IAColors.h; sourceTree = "<group>"; };
 		840FC4CB1E6461FD00724B1B /* libxml2.2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libxml2.2.tbd; path = usr/lib/libxml2.2.tbd; sourceTree = SDKROOT; };
-		841621A21E71C8A500F51F77 /* Roboto-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Roboto-Bold.ttf"; path = "Resources/Fonts/Roboto/Roboto-Bold.ttf"; sourceTree = "<group>"; };
-		841621A31E71C8A500F51F77 /* Roboto-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Roboto-Light.ttf"; path = "Resources/Fonts/Roboto/Roboto-Light.ttf"; sourceTree = "<group>"; };
-		841621A41E71C8A500F51F77 /* Roboto-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Roboto-Regular.ttf"; path = "Resources/Fonts/Roboto/Roboto-Regular.ttf"; sourceTree = "<group>"; };
 		84C17897257B102A00702557 /* FyberMarketplaceTestApp-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FyberMarketplaceTestApp-Bridging-Header.h"; sourceTree = "<group>"; };
 		84C17898257B102B00702557 /* Stub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stub.swift; sourceTree = "<group>"; };
-		DCA329C77043CC8EFB553245 /* IASDKCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IASDKCore.framework; path = ../IASDKCore/IASDKCore.framework; sourceTree = "<group>"; };
+		AE4E702ACB65D5BA0FE4BE00 /* IASDKResources.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; name = IASDKResources.bundle; path = ../IASDKCore/IASDKCore.xcframework/IASDKResources.bundle; sourceTree = "<group>"; };
+		D58F24D5EDEDB1A244B929BE /* IASDKVideo.xcframework */ = {isa = PBXFileReference; includeInIndex = 1; name = IASDKVideo.xcframework; path = ../IASDKVideo/IASDKVideo.xcframework; sourceTree = "<group>"; };
 		E88693AA1E3DFED900B12EAB /* Marketplace.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Marketplace.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E88693AE1E3DFED900B12EAB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		E88693B01E3DFED900B12EAB /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -165,9 +265,22 @@
 		E8FCDE3E1F559ED800FCA1C6 /* IANativeAdTwoUnitsTableVС.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "IANativeAdTwoUnitsTableVС.m"; sourceTree = "<group>"; };
 		E8FCDE401F559ED800FCA1C6 /* IARegularAdVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IARegularAdVC.h; sourceTree = "<group>"; };
 		E8FCDE411F559ED800FCA1C6 /* IARegularAdVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IARegularAdVC.m; sourceTree = "<group>"; };
+		F08D167657AFF9BEE5D354E6 /* IASDKMRAID.xcframework */ = {isa = PBXFileReference; includeInIndex = 1; name = IASDKMRAID.xcframework; path = ../IASDKMRAID/IASDKMRAID.xcframework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		1142781C266E467B007D3038 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1142781D266E467B007D3038 /* libsqlite3.0.tbd in Frameworks */,
+				1142781E266E467B007D3038 /* libxml2.2.tbd in Frameworks */,
+				1142781F266E467B007D3038 /* BuildFile in Frameworks */,
+				11427820266E467B007D3038 /* BuildFile in Frameworks */,
+				11427821266E467B007D3038 /* BuildFile in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		E88693A71E3DFED900B12EAB /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -177,9 +290,9 @@
 				E8EDCFEF1E5481EC002DDB06 /* BuildFile in Frameworks */,
 				E8EDCFE61E5481A4002DDB06 /* BuildFile in Frameworks */,
 				E8E1EB5B1E42063B000324D3 /* BuildFile in Frameworks */,
-				F3D6AC5C65114B0CCB7A610E /* IASDKCore.framework in Frameworks */,
-				09343BD4473E1233F9D32376 /* IASDKVideo.framework in Frameworks */,
-				65DCD6A357C51EE8E70A4180 /* IASDKMRAID.framework in Frameworks */,
+				4B3DA3BB4F74655D36BA5E52 /* IASDKCore.xcframework in Frameworks */,
+				52C41CC2A58532A8F3CC1D27 /* IASDKVideo.xcframework in Frameworks */,
+				7244C9595CC31162157756CF /* IASDKMRAID.xcframework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -194,30 +307,51 @@
 			path = Images;
 			sourceTree = "<group>";
 		};
-		8416219F1E71C86400F51F77 /* Resources */ = {
+		11BC972426764A910070E03A /* Mediations */ = {
 			isa = PBXGroup;
 			children = (
-				841621A01E71C88300F51F77 /* Fonts */,
+				11BC976826764F710070E03A /* Google */,
+				11BC975026764D160070E03A /* MoPub */,
 			);
-			name = Resources;
+			name = Mediations;
 			sourceTree = "<group>";
 		};
-		841621A01E71C88300F51F77 /* Fonts */ = {
+		11BC975026764D160070E03A /* MoPub */ = {
 			isa = PBXGroup;
 			children = (
-				841621A11E71C89200F51F77 /* Roboto */,
+				11BC975126764D390070E03A /* CHANGELOG.md */,
+				11BC975626764D390070E03A /* FyberAdapterConfiguration.h */,
+				11BC975426764D390070E03A /* FyberAdapterConfiguration.m */,
+				11BC975326764D390070E03A /* FyberBannerCustomEvent.h */,
+				11BC975926764D390070E03A /* FyberBannerCustomEvent.m */,
+				11BC975826764D390070E03A /* FyberInterstitialCustomEvent.h */,
+				11BC975A26764D390070E03A /* FyberInterstitialCustomEvent.m */,
+				11BC975726764D390070E03A /* FyberRewardedVideoCustomEvent.h */,
+				11BC975526764D390070E03A /* FyberRewardedVideoCustomEvent.m */,
+				11BC975226764D390070E03A /* README.md */,
 			);
-			name = Fonts;
+			name = MoPub;
 			sourceTree = "<group>";
 		};
-		841621A11E71C89200F51F77 /* Roboto */ = {
+		11BC976826764F710070E03A /* Google */ = {
 			isa = PBXGroup;
 			children = (
-				841621A21E71C8A500F51F77 /* Roboto-Bold.ttf */,
-				841621A31E71C8A500F51F77 /* Roboto-Light.ttf */,
-				841621A41E71C8A500F51F77 /* Roboto-Regular.ttf */,
+				11BC976D26764F990070E03A /* GADMAdapterFyberBannerAd.h */,
+				2A57B9F82678F40E009456CD /* FyberAdapter.h */,
+				11BC976F26764F990070E03A /* GADMAdapterFyberBannerAd.m */,
+				11BC976C26764F990070E03A /* GADMAdapterFyberConstants.h */,
+				2A57B9F52678F40E009456CD /* GADMAdapterFyberExtras.h */,
+				11BC977026764F990070E03A /* GADMAdapterFyberExtras.m */,
+				11BC977126764F990070E03A /* GADMAdapterFyberInterstitialAd.h */,
+				11BC976E26764F990070E03A /* GADMAdapterFyberInterstitialAd.m */,
+				11BC977426764F990070E03A /* GADMAdapterFyberRewardedAd.h */,
+				11BC977326764F990070E03A /* GADMAdapterFyberRewardedAd.m */,
+				11BC977226764F990070E03A /* GADMAdapterFyberUtils.h */,
+				11BC976B26764F990070E03A /* GADMAdapterFyberUtils.m */,
+				11BC976926764F990070E03A /* GADMediationAdapterFyber.h */,
+				11BC976A26764F990070E03A /* GADMediationAdapterFyber.m */,
 			);
-			name = Roboto;
+			name = Google;
 			sourceTree = "<group>";
 		};
 		844352C31EA65FCD0042AFAA /* SettingsMenu */ = {
@@ -236,10 +370,10 @@
 				E88693AC1E3DFED900B12EAB /* FyberMarketplaceTestApp */,
 				84C17897257B102A00702557 /* FyberMarketplaceTestApp-Bridging-Header.h */,
 				E88693AB1E3DFED900B12EAB /* Products */,
-				DCA329C77043CC8EFB553245 /* IASDKCore.framework */,
-				6BB547F6937592D022AAEDAB /* IASDKVideo.framework */,
-				5DD75C54F14B79856DDC9E87 /* IASDKMRAID.framework */,
-				1257FD8C6018CF682B6FD834 /* IASDKResources.bundle */,
+				178194B0C51DA8FBCA93AA5A /* IASDKCore.xcframework */,
+				D58F24D5EDEDB1A244B929BE /* IASDKVideo.xcframework */,
+				F08D167657AFF9BEE5D354E6 /* IASDKMRAID.xcframework */,
+				AE4E702ACB65D5BA0FE4BE00 /* IASDKResources.bundle */,
 			);
 			sourceTree = "<group>";
 		};
@@ -249,6 +383,7 @@
 				E88693AA1E3DFED900B12EAB /* Marketplace.app */,
 				E88693C31E3DFED900B12EAB /* FyberMarketplaceTestAppTests.xctest */,
 				E88693CE1E3DFED900B12EAB /* FyberMarketplaceTestAppUITests.xctest */,
+				11427864266E467B007D3038 /* Marketplace.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -259,7 +394,7 @@
 				E88693B01E3DFED900B12EAB /* AppDelegate.h */,
 				E88693B11E3DFED900B12EAB /* AppDelegate.m */,
 				1140A5902426735D006AA910 /* Images */,
-				8416219F1E71C86400F51F77 /* Resources */,
+				11BC972426764A910070E03A /* Mediations */,
 				844352C31EA65FCD0042AFAA /* SettingsMenu */,
 				E88693E11E3DFEF500B12EAB /* Storyboards */,
 				E88693AD1E3DFED900B12EAB /* Supporting Files */,
@@ -272,6 +407,7 @@
 			isa = PBXGroup;
 			children = (
 				E88693B91E3DFED900B12EAB /* Assets.xcassets */,
+				11427867266E467C007D3038 /* FyberMarketplaceTestAppMediation-Info.plist */,
 				E88693BE1E3DFED900B12EAB /* Info.plist */,
 				E88693AE1E3DFED900B12EAB /* main.m */,
 				84C17898257B102B00702557 /* Stub.swift */,
@@ -420,6 +556,25 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		11427800266E467B007D3038 /* FyberMarketplaceTestAppMediation */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 11427860266E467B007D3038 /* Build configuration list for PBXNativeTarget "FyberMarketplaceTestAppMediation" */;
+			buildPhases = (
+				11427806266E467B007D3038 /* Sources */,
+				1142781C266E467B007D3038 /* Frameworks */,
+				11427823266E467B007D3038 /* Resources */,
+				1142785B266E467B007D3038 /* Embed PlugIns */,
+				1142785D266E467B007D3038 /* Release Script */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FyberMarketplaceTestAppMediation;
+			productName = FyberMarketplaceTestApp;
+			productReference = 11427864266E467B007D3038 /* Marketplace.app */;
+			productType = "com.apple.product-type.application";
+		};
 		E88693A91E3DFED900B12EAB /* FyberMarketplaceTestApp */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = E88693D71E3DFEDA00B12EAB /* Build configuration list for PBXNativeTarget "FyberMarketplaceTestApp" */;
@@ -443,9 +598,13 @@
 		E88693A21E3DFED900B12EAB /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 1250;
+				LastUpgradeCheck = 1300;
 				ORGANIZATIONNAME = Inneractive;
 				TargetAttributes = {
+					11427800266E467B007D3038 = {
+						DevelopmentTeam = 9G2AGGBJ52;
+						ProvisioningStyle = Automatic;
+					};
 					E88693A91E3DFED900B12EAB = {
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = 9G2AGGBJ52;
@@ -480,16 +639,69 @@
 			projectRoot = "";
 			targets = (
 				E88693A91E3DFED900B12EAB /* FyberMarketplaceTestApp */,
+				11427800266E467B007D3038 /* FyberMarketplaceTestAppMediation */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		11427823266E467B007D3038 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				11427825266E467B007D3038 /* 07@2x.png in Resources */,
+				11427826266E467B007D3038 /* 09@2x.png in Resources */,
+				11427827266E467B007D3038 /* BuildFile in Resources */,
+				11427828266E467B007D3038 /* 05@2x.png in Resources */,
+				11427829266E467B007D3038 /* 07p@2x.png in Resources */,
+				1142782A266E467B007D3038 /* 12p@2x.png in Resources */,
+				1142782C266E467B007D3038 /* 17@2x.png in Resources */,
+				1142782D266E467B007D3038 /* 00p@2x.png in Resources */,
+				1142782E266E467B007D3038 /* LaunchScreen.storyboard in Resources */,
+				1142782F266E467B007D3038 /* 02p@2x.png in Resources */,
+				11427830266E467B007D3038 /* 03p@2x.png in Resources */,
+				11427831266E467B007D3038 /* 15p@2x.png in Resources */,
+				11427832266E467B007D3038 /* 06p@2x.png in Resources */,
+				11427833266E467B007D3038 /* 03@2x.png in Resources */,
+				11427835266E467B007D3038 /* 15@2x.png in Resources */,
+				11427836266E467B007D3038 /* 13@2x.png in Resources */,
+				11427837266E467B007D3038 /* 04p@2x.png in Resources */,
+				11427838266E467B007D3038 /* 00@2x.png in Resources */,
+				11427839266E467B007D3038 /* BuildFile in Resources */,
+				1142783A266E467B007D3038 /* 14p@2x.png in Resources */,
+				1142783B266E467B007D3038 /* Assets.xcassets in Resources */,
+				1142783C266E467B007D3038 /* 05p@2x.png in Resources */,
+				1142783D266E467B007D3038 /* BuildFile in Resources */,
+				1142783E266E467B007D3038 /* 16@2x.png in Resources */,
+				1142783F266E467B007D3038 /* 04@2x.png in Resources */,
+				11427840266E467B007D3038 /* 10p@2x.png in Resources */,
+				11427841266E467B007D3038 /* 13p@2x.png in Resources */,
+				11427843266E467B007D3038 /* 17p@2x.png in Resources */,
+				11427844266E467B007D3038 /* 06@2x.png in Resources */,
+				11427845266E467B007D3038 /* main_logo@3x.png in Resources */,
+				11427846266E467B007D3038 /* 02@2x.png in Resources */,
+				11427847266E467B007D3038 /* 09p@2x.png in Resources */,
+				11427848266E467B007D3038 /* 12@2x.png in Resources */,
+				11427849266E467B007D3038 /* BuildFile in Resources */,
+				1142784A266E467B007D3038 /* BuildFile in Resources */,
+				1142784B266E467B007D3038 /* 16p@2x.png in Resources */,
+				1142784C266E467B007D3038 /* 10@2x.png in Resources */,
+				1142784D266E467B007D3038 /* BuildFile in Resources */,
+				1142784F266E467B007D3038 /* 01p@2x.png in Resources */,
+				11427850266E467B007D3038 /* 11@2x.png in Resources */,
+				11427852266E467B007D3038 /* 01@2x.png in Resources */,
+				11427854266E467B007D3038 /* 11p@2x.png in Resources */,
+				11427856266E467B007D3038 /* 08@2x.png in Resources */,
+				11427857266E467B007D3038 /* 14@2x.png in Resources */,
+				11427858266E467B007D3038 /* Main.storyboard in Resources */,
+				11427859266E467B007D3038 /* 08p@2x.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		E88693A81E3DFED900B12EAB /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AE044C0D1F0D35A600C84A80 /* BuildFile in Resources */,
 				E8FCDE4C1F559ED800FCA1C6 /* 07@2x.png in Resources */,
 				E8FCDE4E1F559ED800FCA1C6 /* 09@2x.png in Resources */,
 				841329441E80383800E02FC0 /* BuildFile in Resources */,
@@ -504,7 +716,6 @@
 				E8FCDE661F559ED800FCA1C6 /* 15p@2x.png in Resources */,
 				E8FCDE5D1F559ED800FCA1C6 /* 06p@2x.png in Resources */,
 				E8FCDE481F559ED800FCA1C6 /* 03@2x.png in Resources */,
-				841621A51E71C8A500F51F77 /* Roboto-Bold.ttf in Resources */,
 				E8FCDE541F559ED800FCA1C6 /* 15@2x.png in Resources */,
 				E8FCDE521F559ED800FCA1C6 /* 13@2x.png in Resources */,
 				E8FCDE5B1F559ED800FCA1C6 /* 04p@2x.png in Resources */,
@@ -518,7 +729,6 @@
 				E8FCDE491F559ED800FCA1C6 /* 04@2x.png in Resources */,
 				E8FCDE611F559ED800FCA1C6 /* 10p@2x.png in Resources */,
 				E8FCDE641F559ED800FCA1C6 /* 13p@2x.png in Resources */,
-				84D7A7B41E95A80B00D921EF /* BuildFile in Resources */,
 				E8FCDE681F559ED800FCA1C6 /* 17p@2x.png in Resources */,
 				E8FCDE4B1F559ED800FCA1C6 /* 06@2x.png in Resources */,
 				1140A5922426735D006AA910 /* main_logo@3x.png in Resources */,
@@ -532,47 +742,87 @@
 				841C69701ECDA83100C069B9 /* BuildFile in Resources */,
 				E8FCDE581F559ED800FCA1C6 /* 01p@2x.png in Resources */,
 				E8FCDE501F559ED800FCA1C6 /* 11@2x.png in Resources */,
-				AE044C0C1F0D35A600C84A80 /* BuildFile in Resources */,
 				E8FCDE461F559ED800FCA1C6 /* 01@2x.png in Resources */,
-				841621A61E71C8A500F51F77 /* Roboto-Light.ttf in Resources */,
 				E8FCDE621F559ED800FCA1C6 /* 11p@2x.png in Resources */,
-				841621A71E71C8A500F51F77 /* Roboto-Regular.ttf in Resources */,
 				E8FCDE4D1F559ED800FCA1C6 /* 08@2x.png in Resources */,
 				E8FCDE531F559ED800FCA1C6 /* 14@2x.png in Resources */,
 				E88693B81E3DFED900B12EAB /* Main.storyboard in Resources */,
 				E8FCDE5F1F559ED800FCA1C6 /* 08p@2x.png in Resources */,
-				AE044C0E1F0D35A600C84A80 /* BuildFile in Resources */,
-				940727C0C5675358CDA1D7CD /* IASDKResources.bundle in Resources */,
+				C5D305A061297C88A40D280F /* IASDKResources.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		1142785D266E467B007D3038 /* Release Script */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Release Script";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = "/bin/bash -l";
+			shellScript = "if [ \"${CONFIGURATION}\" == \"Release\" ]; then\n    if [ -z \"$CI_OUTPUT_DIRECTORY\" ]; then\n        TEMPORARY_DIRECTORY_WITH_SAMPLES=\"/tmp/fyber\"\n    else\n        TEMPORARY_DIRECTORY_WITH_SAMPLES=\"$CI_OUTPUT_DIRECTORY\"\n    fi\n\n    ### vars:\n    FINAL_PRODUCT_PATH=\"$TEMPORARY_DIRECTORY_WITH_SAMPLES/ios-sdk-modules\"\n    FRM_MODULE_NAME_CORE=IASDKCore\n    FRM_PATH=\"$TEMPORARY_DIRECTORY_WITH_SAMPLES/$FRM_MODULE_NAME_CORE\"\n    FRM_MODULE_NAME_VIDEO=IASDKVideo\n    FRM_MODULE_NAME_MRAID=IASDKMRAID\n\n    ### invoking 'build_script_create_sdk_package_phase_1.sh':\n    nice -n 0 \"${PROJECT_DIR}\"/Scripts/build_script_create_sdk_packages.sh \"$FINAL_PRODUCT_PATH\" \"$FRM_PATH\" \"$FRM_MODULE_NAME_CORE\" \"$FRM_MODULE_NAME_VIDEO\" \"$FRM_MODULE_NAME_MRAID\"\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
+		11427806266E467B007D3038 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				11BC977926764F990070E03A /* GADMAdapterFyberExtras.m in Sources */,
+				11BC977A26764F990070E03A /* GADMAdapterFyberRewardedAd.m in Sources */,
+				1142780B266E467B007D3038 /* IAFeedTableCell.m in Sources */,
+				1142780D266E467B007D3038 /* BuildFile in Sources */,
+				1142780F266E467B007D3038 /* BuildFile in Sources */,
+				11BC976026764D390070E03A /* FyberInterstitialCustomEvent.m in Sources */,
+				11BC977726764F990070E03A /* GADMAdapterFyberInterstitialAd.m in Sources */,
+				11427811266E467B007D3038 /* BuildFile in Sources */,
+				11427812266E467B007D3038 /* IAFeedDataProvider.m in Sources */,
+				11BC975E26764D390070E03A /* FyberRewardedVideoCustomEvent.m in Sources */,
+				11BC972126764A240070E03A /* BuildFile in Sources */,
+				11BC977626764F990070E03A /* GADMAdapterFyberUtils.m in Sources */,
+				11BC977526764F990070E03A /* GADMediationAdapterFyber.m in Sources */,
+				11427813266E467B007D3038 /* CustomAdsViewController.m in Sources */,
+				11427814266E467B007D3038 /* Stub.swift in Sources */,
+				11427815266E467B007D3038 /* main.m in Sources */,
+				11BC975F26764D390070E03A /* FyberBannerCustomEvent.m in Sources */,
+				11427816266E467B007D3038 /* IANativeAdTwoUnitsTableVС.m in Sources */,
+				11427817266E467B007D3038 /* BuildFile in Sources */,
+				11BC972226764A240070E03A /* BuildFile in Sources */,
+				11427819266E467B007D3038 /* IARegularAdVC.m in Sources */,
+				11BC975D26764D390070E03A /* FyberAdapterConfiguration.m in Sources */,
+				1142781A266E467B007D3038 /* BuildFile in Sources */,
+				11BC972326764A240070E03A /* BuildFile in Sources */,
+				1142781B266E467B007D3038 /* MainScreenVC.m in Sources */,
+				11BC977826764F990070E03A /* GADMAdapterFyberBannerAd.m in Sources */,
+				11427876266E4E73007D3038 /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		E88693A61E3DFED900B12EAB /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E8FCDDD11F559BE000FCA1C6 /* BuildFile in Sources */,
-				E8FCDDD21F559BE000FCA1C6 /* BuildFile in Sources */,
 				E8FCDE6D1F559ED800FCA1C6 /* IAFeedTableCell.m in Sources */,
 				844352C91EA65FE10042AFAA /* BuildFile in Sources */,
-				E8FCDDC11F559BB000FCA1C6 /* BuildFile in Sources */,
 				E88693B21E3DFED900B12EAB /* AppDelegate.m in Sources */,
 				2AA47D202369DAF600104FD5 /* BuildFile in Sources */,
-				E8FCDDC81F559BB000FCA1C6 /* BuildFile in Sources */,
 				844352CA1EA65FE10042AFAA /* BuildFile in Sources */,
 				E8FCDE691F559ED800FCA1C6 /* IAFeedDataProvider.m in Sources */,
 				2A99845224B2097D0053058D /* CustomAdsViewController.m in Sources */,
 				84C17899257B102B00702557 /* Stub.swift in Sources */,
 				E88693AF1E3DFED900B12EAB /* main.m in Sources */,
-				E84D7F2D1FE5CD5100DBA819 /* BuildFile in Sources */,
-				E8FCDDC21F559BB000FCA1C6 /* BuildFile in Sources */,
 				E8FCDE701F559ED800FCA1C6 /* IANativeAdTwoUnitsTableVС.m in Sources */,
 				844352C11EA65FB70042AFAA /* BuildFile in Sources */,
-				E8FCDDD01F559BE000FCA1C6 /* BuildFile in Sources */,
 				E8FCDE711F559ED800FCA1C6 /* IARegularAdVC.m in Sources */,
-				842533732223B5DB006393E2 /* BuildFile in Sources */,
 				844352C21EA65FB70042AFAA /* BuildFile in Sources */,
 				E8EDCFF71E54854D002DDB06 /* MainScreenVC.m in Sources */,
 			);
@@ -600,6 +850,153 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		11427861266E467B007D3038 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = NO;
+				CLANG_ANALYZER_GCD_PERFORMANCE = YES;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_STATIC_ANALYZER_MODE = deep;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 7.8.8.3;
+				DEAD_CODE_STRIPPING = NO;
+				DEPLOYMENT_POSTPROCESSING = NO;
+				DEVELOPMENT_TEAM = 9G2AGGBJ52;
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(PROJECT_DIR)/../IASDKVideo",
+					"$(PROJECT_DIR)/../IASDKMRAID",
+					"$(PROJECT_DIR)/../IASDKCore",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"CERT_BUILD=1",
+				);
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(BUILT_PRODUCTS_DIR)/include/IASDKCore",
+					"$(BUILT_PRODUCTS_DIR)/include/IASDKVideo",
+					"$(BUILT_PRODUCTS_DIR)/include/IASDKMRAID",
+					"$(SDKROOT)/usr/include/libxml2",
+				);
+				INFOPLIST_FILE = "FyberMarketplaceTestAppMediation-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				MARKETING_VERSION = 7.8.8;
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"$(inherited)",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.Inneractive.SDKSample;
+				PRODUCT_NAME = Marketplace;
+				RUN_CLANG_STATIC_ANALYZER = YES;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_OBJC_BRIDGING_HEADER = "FyberMarketplaceTestApp-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		11427862266E467B007D3038 /* Mediations */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = NO;
+				CLANG_ANALYZER_GCD_PERFORMANCE = YES;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_STATIC_ANALYZER_MODE = deep;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 7.8.8.3;
+				DEAD_CODE_STRIPPING = NO;
+				DEPLOYMENT_POSTPROCESSING = NO;
+				DEVELOPMENT_TEAM = 9G2AGGBJ52;
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(PROJECT_DIR)/../IASDKVideo",
+					"$(PROJECT_DIR)/../IASDKMRAID",
+					"$(PROJECT_DIR)/../IASDKCore",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"CERT_BUILD=1",
+				);
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(BUILT_PRODUCTS_DIR)/include/IASDKCore",
+					"$(BUILT_PRODUCTS_DIR)/include/IASDKVideo",
+					"$(BUILT_PRODUCTS_DIR)/include/IASDKMRAID",
+					"$(SDKROOT)/usr/include/libxml2",
+				);
+				INFOPLIST_FILE = "FyberMarketplaceTestAppMediation-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				MARKETING_VERSION = 7.8.8;
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"$(inherited)",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.Inneractive.SDKSample;
+				PRODUCT_NAME = Marketplace;
+				RUN_CLANG_STATIC_ANALYZER = YES;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_OBJC_BRIDGING_HEADER = "FyberMarketplaceTestApp-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Mediations;
+		};
+		11427863266E467B007D3038 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = NO;
+				CLANG_ANALYZER_GCD_PERFORMANCE = YES;
+				CLANG_ENABLE_CODE_COVERAGE = NO;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_STATIC_ANALYZER_MODE = deep;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 7.8.8.3;
+				DEPLOYMENT_POSTPROCESSING = YES;
+				DEVELOPMENT_TEAM = 9G2AGGBJ52;
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(PROJECT_DIR)/../IASDKVideo",
+					"$(PROJECT_DIR)/../IASDKMRAID",
+					"$(PROJECT_DIR)/../IASDKCore",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"RELEASE=1",
+					"CERT_BUILD=1",
+					"MEDIATIONS_BUILD=1",
+				);
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(BUILT_PRODUCTS_DIR)/include/IASDKCore",
+					"$(BUILT_PRODUCTS_DIR)/include/IASDKVideo",
+					"$(BUILT_PRODUCTS_DIR)/include/IASDKMRAID",
+					"$(SDKROOT)/usr/include/libxml2",
+				);
+				INFOPLIST_FILE = "FyberMarketplaceTestAppMediation-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				MARKETING_VERSION = 7.8.8;
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"$(inherited)",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.Inneractive.SDKSample;
+				PRODUCT_NAME = Marketplace;
+				RUN_CLANG_STATIC_ANALYZER = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "FyberMarketplaceTestApp-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
 		84D7A7EE1E969AB000D921EF /* Mediations */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -663,11 +1060,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = NO;
 				CLANG_ANALYZER_GCD_PERFORMANCE = YES;
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_STATIC_ANALYZER_MODE = deep;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 7.8.7.3;
+				CURRENT_PROJECT_VERSION = 7.8.8.3;
 				DEAD_CODE_STRIPPING = NO;
 				DEPLOYMENT_POSTPROCESSING = NO;
 				DEVELOPMENT_TEAM = 9G2AGGBJ52;
@@ -677,7 +1075,6 @@
 					"$(PROJECT_DIR)/../IASDKMRAID",
 					"$(PROJECT_DIR)/../IASDKVideo",
 					"$(inherited)",
-					"\"${PODS_ROOT}/Google-Mobile-Ads-SDK/Frameworks/frameworks\"",
 				);
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"$(inherited)",
@@ -696,7 +1093,7 @@
 					"$(inherited)",
 					"\"$PODS_CONFIGURATION_BUILD_DIR/mopub-ios-sdk\"",
 				);
-				MARKETING_VERSION = 7.8.7;
+				MARKETING_VERSION = 7.8.8;
 				OTHER_LDFLAGS = (
 					"-ObjC",
 					"$(inherited)",
@@ -829,11 +1226,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = NO;
 				CLANG_ANALYZER_GCD_PERFORMANCE = YES;
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_STATIC_ANALYZER_MODE = deep;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 7.8.7.3;
+				CURRENT_PROJECT_VERSION = 7.8.8.3;
 				DEAD_CODE_STRIPPING = NO;
 				DEPLOYMENT_POSTPROCESSING = NO;
 				DEVELOPMENT_TEAM = 9G2AGGBJ52;
@@ -857,7 +1255,7 @@
 				);
 				INFOPLIST_FILE = FyberMarketplaceTestApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				MARKETING_VERSION = 7.8.7;
+				MARKETING_VERSION = 7.8.8;
 				OTHER_LDFLAGS = (
 					"-ObjC",
 					"$(inherited)",
@@ -876,12 +1274,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = NO;
 				CLANG_ANALYZER_GCD_PERFORMANCE = YES;
 				CLANG_ENABLE_CODE_COVERAGE = NO;
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_STATIC_ANALYZER_MODE = deep;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 7.8.7.3;
+				CURRENT_PROJECT_VERSION = 7.8.8.3;
 				DEPLOYMENT_POSTPROCESSING = YES;
 				DEVELOPMENT_TEAM = 9G2AGGBJ52;
 				ENABLE_BITCODE = NO;
@@ -906,7 +1305,7 @@
 				);
 				INFOPLIST_FILE = FyberMarketplaceTestApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				MARKETING_VERSION = 7.8.7;
+				MARKETING_VERSION = 7.8.8;
 				OTHER_LDFLAGS = (
 					"-ObjC",
 					"$(inherited)",
@@ -922,6 +1321,16 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		11427860266E467B007D3038 /* Build configuration list for PBXNativeTarget "FyberMarketplaceTestAppMediation" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				11427861266E467B007D3038 /* Debug */,
+				11427862266E467B007D3038 /* Mediations */,
+				11427863266E467B007D3038 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		E88693A51E3DFED900B12EAB /* Build configuration list for PBXProject "FyberMarketplaceTestApp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

@@ -30,7 +30,7 @@
 	<key>NSCameraUsageDescription</key>
 	<string>For using QR code</string>
 	<key>NSUserTrackingUsageDescription</key>
-	<string>For ads targeting</string>
+	<string>For showing Fyber Marketplace SDK Ads</string>
 	<key>SKAdNetworkItems</key>
 	<array>
 		<dict>
@@ -181,12 +181,6 @@
 			<key>SKAdNetworkIdentifier</key>
 			<string>mlmmfzh3r3.skadnetwork</string>
 		</dict>
-	</array>
-	<key>UIAppFonts</key>
-	<array>
-		<string>Roboto-Regular.ttf</string>
-		<string>Roboto-Bold.ttf</string>
-		<string>Roboto-Light.ttf</string>
 	</array>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>

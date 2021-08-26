@@ -67,6 +67,24 @@
         new line";
         builder.location = nil;
     }];
+#ifdef DEBUG
+    // test env:
+    request.debugger.server = @"ia-cert";
+    
+    if (self.requestedAdType == SampleAdTypeBanner) {
+        request.debugger.mockResponsePath = @"mraidResize";
+        request.debugger.database = @"4321";
+    } else if (self.requestedAdType == SampleAdTypeRectangle) {
+        request.debugger.database = @"4321";
+        request.debugger.mockResponsePath = @"ios_playable_3pp_voodo_army";
+    } else if (self.requestedAdType == SampleAdTypeInterstitial) {
+        request.debugger.database = @"4321";
+        request.debugger.mockResponsePath = @"audio_tags_testing";
+    } else if (self.requestedAdType == SampleAdTypeRewarded) {
+        request.debugger.database = @"4321";
+        request.debugger.mockResponsePath = @"7714";
+    }
+#endif
     
     _videoContentController = [IAVideoContentController build:^(id<IAVideoContentControllerBuilder>  _Nonnull builder) {
         builder.videoContentDelegate = self;
@@ -300,6 +318,9 @@
     [super viewDidLoad];
     self.navigationController.interactivePopGestureRecognizer.delegate = (id<UIGestureRecognizerDelegate>)self;
     
+#ifdef DEBUG
+    self.spinner.accessibilityLabel = NSLocalizedString(@"Ad loading activity indicator", @"Ad loading activity indicator accessibility label");
+#endif
     
     self.spinner.hidden = YES;
     self.showAdButton.hidden = YES;
