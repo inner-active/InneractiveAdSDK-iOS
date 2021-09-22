@@ -91,9 +91,9 @@
 		2A99845224B2097D0053058D /* CustomAdsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A99845124B2097D0053058D /* CustomAdsViewController.m */; };
 		2AA47D1B2369D89200104FD5 /* BuildFile in Resources */ = {isa = PBXBuildFile; };
 		2AA47D202369DAF600104FD5 /* BuildFile in Sources */ = {isa = PBXBuildFile; };
-		565A07E1DE2C843E7454E184 /* IASDKResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 52C3FB26E4B50AC3F64A9AEF /* IASDKResources.bundle */; };
-		56D212E418F414C6EBE05F81 /* IASDKVideo.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5ECCE452B44FC43C7364954 /* IASDKVideo.xcframework */; };
-		5D393C7E82815DFECA5CFA7C /* IASDKMRAID.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD1A4172BA52CA85E5385E9C /* IASDKMRAID.xcframework */; };
+		512F469D46EF5F4B215CA750 /* IASDKVideo.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 406919942DBBD662BBBC969F /* IASDKVideo.xcframework */; };
+		6BF1E84E68D8AB3D44AA8ED8 /* IASDKCore.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A1D70A5DBD8753C787907FD /* IASDKCore.xcframework */; };
+		760E52AF0573F9F8F6759CC4 /* IASDKMRAID.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 13FEB3CEFA2A720DF24D104C /* IASDKMRAID.xcframework */; };
 		840FC4CC1E6461FD00724B1B /* libxml2.2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 840FC4CB1E6461FD00724B1B /* libxml2.2.tbd */; };
 		841329441E80383800E02FC0 /* BuildFile in Resources */ = {isa = PBXBuildFile; };
 		841C69701ECDA83100C069B9 /* BuildFile in Resources */ = {isa = PBXBuildFile; };
@@ -103,8 +103,8 @@
 		844352C91EA65FE10042AFAA /* BuildFile in Sources */ = {isa = PBXBuildFile; };
 		844352CA1EA65FE10042AFAA /* BuildFile in Sources */ = {isa = PBXBuildFile; };
 		84C17899257B102B00702557 /* Stub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C17898257B102B00702557 /* Stub.swift */; };
+		A65DAB9266CFF72459935C7E /* IASDKResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = DDCE07FA6BFAAB4A376FE5AD /* IASDKResources.bundle */; };
 		AE044C0F1F0D35A600C84A80 /* BuildFile in Resources */ = {isa = PBXBuildFile; };
-		B8812ACCDAFE786556CF7D04 /* IASDKCore.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 64CF78D8DED540E6C374B9CF /* IASDKCore.xcframework */; };
 		E87DBB931E706C5F00408E1A /* BuildFile in Resources */ = {isa = PBXBuildFile; };
 		E88693AF1E3DFED900B12EAB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E88693AE1E3DFED900B12EAB /* main.m */; };
 		E88693B21E3DFED900B12EAB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E88693B11E3DFED900B12EAB /* AppDelegate.m */; };
@@ -174,6 +174,7 @@
 /* Begin PBXFileReference section */
 		1140A5912426735D006AA910 /* main_logo@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "main_logo@3x.png"; sourceTree = "<group>"; };
 		11427864266E467B007D3038 /* Marketplace.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Marketplace.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		11427867266E467C007D3038 /* FyberMarketplaceTestAppMediation-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "FyberMarketplaceTestAppMediation-Info.plist"; path = "/Users/nikita/Desktop/dev/fyber_main/ios-sdk-modules/FyberMarketplaceTestApp/FyberMarketplaceTestAppMediation-Info.plist"; sourceTree = "<absolute>"; };
 		11A972E4234A39CE00194E7C /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
 		11BC975126764D390070E03A /* CHANGELOG.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = CHANGELOG.md; path = "../../mopub-ios-mediation/Fyber/CHANGELOG.md"; sourceTree = "<group>"; };
 		11BC975226764D390070E03A /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = "../../mopub-ios-mediation/Fyber/README.md"; sourceTree = "<group>"; };
@@ -197,17 +198,18 @@
 		11BC977226764F990070E03A /* GADMAdapterFyberUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GADMAdapterFyberUtils.h; path = "../../googleads-mobile-ios-mediation/adapters/Fyber/FyberAdapter/GADMAdapterFyberUtils.h"; sourceTree = "<group>"; };
 		11BC977326764F990070E03A /* GADMAdapterFyberRewardedAd.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GADMAdapterFyberRewardedAd.m; path = "../../googleads-mobile-ios-mediation/adapters/Fyber/FyberAdapter/GADMAdapterFyberRewardedAd.m"; sourceTree = "<group>"; };
 		11BC977426764F990070E03A /* GADMAdapterFyberRewardedAd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GADMAdapterFyberRewardedAd.h; path = "../../googleads-mobile-ios-mediation/adapters/Fyber/FyberAdapter/GADMAdapterFyberRewardedAd.h"; sourceTree = "<group>"; };
+		13FEB3CEFA2A720DF24D104C /* IASDKMRAID.xcframework */ = {isa = PBXFileReference; includeInIndex = 1; name = IASDKMRAID.xcframework; path = ../IASDKMRAID/IASDKMRAID.xcframework; sourceTree = "<group>"; };
+		1A1D70A5DBD8753C787907FD /* IASDKCore.xcframework */ = {isa = PBXFileReference; includeInIndex = 1; name = IASDKCore.xcframework; path = ../IASDKCore/IASDKCore.xcframework; sourceTree = "<group>"; };
 		2A57B9F52678F40E009456CD /* GADMAdapterFyberExtras.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GADMAdapterFyberExtras.h; path = "../../googleads-mobile-ios-mediation/adapters/Fyber/Public/Headers/GADMAdapterFyberExtras.h"; sourceTree = "<group>"; };
 		2A57B9F82678F40E009456CD /* FyberAdapter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FyberAdapter.h; path = "../../googleads-mobile-ios-mediation/adapters/Fyber/Public/Headers/FyberAdapter.h"; sourceTree = "<group>"; };
 		2A99845024B2097D0053058D /* CustomAdsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CustomAdsViewController.h; sourceTree = "<group>"; };
 		2A99845124B2097D0053058D /* CustomAdsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CustomAdsViewController.m; sourceTree = "<group>"; };
-		52C3FB26E4B50AC3F64A9AEF /* IASDKResources.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; name = IASDKResources.bundle; path = ../IASDKCore/IASDKCore.xcframework/IASDKResources.bundle; sourceTree = "<group>"; };
-		64CF78D8DED540E6C374B9CF /* IASDKCore.xcframework */ = {isa = PBXFileReference; includeInIndex = 1; name = IASDKCore.xcframework; path = ../IASDKCore/IASDKCore.xcframework; sourceTree = "<group>"; };
+		406919942DBBD662BBBC969F /* IASDKVideo.xcframework */ = {isa = PBXFileReference; includeInIndex = 1; name = IASDKVideo.xcframework; path = ../IASDKVideo/IASDKVideo.xcframework; sourceTree = "<group>"; };
 		840EBA0B1E96DFFE008E8C51 /* IAColors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IAColors.h; path = UI/IAColors.h; sourceTree = "<group>"; };
 		840FC4CB1E6461FD00724B1B /* libxml2.2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libxml2.2.tbd; path = usr/lib/libxml2.2.tbd; sourceTree = SDKROOT; };
 		84C17897257B102A00702557 /* FyberMarketplaceTestApp-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FyberMarketplaceTestApp-Bridging-Header.h"; sourceTree = "<group>"; };
 		84C17898257B102B00702557 /* Stub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stub.swift; sourceTree = "<group>"; };
-		A5ECCE452B44FC43C7364954 /* IASDKVideo.xcframework */ = {isa = PBXFileReference; includeInIndex = 1; name = IASDKVideo.xcframework; path = ../IASDKVideo/IASDKVideo.xcframework; sourceTree = "<group>"; };
+		DDCE07FA6BFAAB4A376FE5AD /* IASDKResources.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; name = IASDKResources.bundle; path = ../IASDKCore/IASDKCore.xcframework/IASDKResources.bundle; sourceTree = "<group>"; };
 		E88693AA1E3DFED900B12EAB /* Marketplace.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Marketplace.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E88693AE1E3DFED900B12EAB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		E88693B01E3DFED900B12EAB /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -264,7 +266,6 @@
 		E8FCDE3E1F559ED800FCA1C6 /* IANativeAdTwoUnitsTableVС.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "IANativeAdTwoUnitsTableVС.m"; sourceTree = "<group>"; };
 		E8FCDE401F559ED800FCA1C6 /* IARegularAdVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IARegularAdVC.h; sourceTree = "<group>"; };
 		E8FCDE411F559ED800FCA1C6 /* IARegularAdVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IARegularAdVC.m; sourceTree = "<group>"; };
-		FD1A4172BA52CA85E5385E9C /* IASDKMRAID.xcframework */ = {isa = PBXFileReference; includeInIndex = 1; name = IASDKMRAID.xcframework; path = ../IASDKMRAID/IASDKMRAID.xcframework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -289,9 +290,9 @@
 				E8EDCFEF1E5481EC002DDB06 /* BuildFile in Frameworks */,
 				E8EDCFE61E5481A4002DDB06 /* BuildFile in Frameworks */,
 				E8E1EB5B1E42063B000324D3 /* BuildFile in Frameworks */,
-				B8812ACCDAFE786556CF7D04 /* IASDKCore.xcframework in Frameworks */,
-				56D212E418F414C6EBE05F81 /* IASDKVideo.xcframework in Frameworks */,
-				5D393C7E82815DFECA5CFA7C /* IASDKMRAID.xcframework in Frameworks */,
+				6BF1E84E68D8AB3D44AA8ED8 /* IASDKCore.xcframework in Frameworks */,
+				512F469D46EF5F4B215CA750 /* IASDKVideo.xcframework in Frameworks */,
+				760E52AF0573F9F8F6759CC4 /* IASDKMRAID.xcframework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -369,10 +370,10 @@
 				E88693AC1E3DFED900B12EAB /* FyberMarketplaceTestApp */,
 				84C17897257B102A00702557 /* FyberMarketplaceTestApp-Bridging-Header.h */,
 				E88693AB1E3DFED900B12EAB /* Products */,
-				64CF78D8DED540E6C374B9CF /* IASDKCore.xcframework */,
-				A5ECCE452B44FC43C7364954 /* IASDKVideo.xcframework */,
-				FD1A4172BA52CA85E5385E9C /* IASDKMRAID.xcframework */,
-				52C3FB26E4B50AC3F64A9AEF /* IASDKResources.bundle */,
+				1A1D70A5DBD8753C787907FD /* IASDKCore.xcframework */,
+				406919942DBBD662BBBC969F /* IASDKVideo.xcframework */,
+				13FEB3CEFA2A720DF24D104C /* IASDKMRAID.xcframework */,
+				DDCE07FA6BFAAB4A376FE5AD /* IASDKResources.bundle */,
 			);
 			sourceTree = "<group>";
 		};
@@ -406,6 +407,7 @@
 			isa = PBXGroup;
 			children = (
 				E88693B91E3DFED900B12EAB /* Assets.xcassets */,
+				11427867266E467C007D3038 /* FyberMarketplaceTestAppMediation-Info.plist */,
 				E88693BE1E3DFED900B12EAB /* Info.plist */,
 				E88693AE1E3DFED900B12EAB /* main.m */,
 				84C17898257B102B00702557 /* Stub.swift */,
@@ -746,7 +748,7 @@
 				E8FCDE531F559ED800FCA1C6 /* 14@2x.png in Resources */,
 				E88693B81E3DFED900B12EAB /* Main.storyboard in Resources */,
 				E8FCDE5F1F559ED800FCA1C6 /* 08p@2x.png in Resources */,
-				565A07E1DE2C843E7454E184 /* IASDKResources.bundle in Resources */,
+				A65DAB9266CFF72459935C7E /* IASDKResources.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -857,7 +859,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_STATIC_ANALYZER_MODE = deep;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 7.8.9.1;
+				CURRENT_PROJECT_VERSION = 7.9.0.2;
 				DEAD_CODE_STRIPPING = NO;
 				DEPLOYMENT_POSTPROCESSING = NO;
 				DEVELOPMENT_TEAM = 9G2AGGBJ52;
@@ -882,7 +884,7 @@
 				INFOPLIST_FILE = "FyberMarketplaceTestAppMediation-Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
-				MARKETING_VERSION = 7.8.9;
+				MARKETING_VERSION = 7.9.0;
 				OTHER_LDFLAGS = (
 					"-ObjC",
 					"$(inherited)",
@@ -906,7 +908,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_STATIC_ANALYZER_MODE = deep;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 7.8.9.1;
+				CURRENT_PROJECT_VERSION = 7.9.0.2;
 				DEAD_CODE_STRIPPING = NO;
 				DEPLOYMENT_POSTPROCESSING = NO;
 				DEVELOPMENT_TEAM = 9G2AGGBJ52;
@@ -931,7 +933,7 @@
 				INFOPLIST_FILE = "FyberMarketplaceTestAppMediation-Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
-				MARKETING_VERSION = 7.8.9;
+				MARKETING_VERSION = 7.9.0;
 				OTHER_LDFLAGS = (
 					"-ObjC",
 					"$(inherited)",
@@ -956,7 +958,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_STATIC_ANALYZER_MODE = deep;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 7.8.9.1;
+				CURRENT_PROJECT_VERSION = 7.9.0.2;
 				DEPLOYMENT_POSTPROCESSING = YES;
 				DEVELOPMENT_TEAM = 9G2AGGBJ52;
 				ENABLE_BITCODE = NO;
@@ -982,7 +984,7 @@
 				INFOPLIST_FILE = "FyberMarketplaceTestAppMediation-Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
-				MARKETING_VERSION = 7.8.9;
+				MARKETING_VERSION = 7.9.0;
 				OTHER_LDFLAGS = (
 					"-ObjC",
 					"$(inherited)",
@@ -1063,7 +1065,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_STATIC_ANALYZER_MODE = deep;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 7.8.9.1;
+				CURRENT_PROJECT_VERSION = 7.9.0.2;
 				DEAD_CODE_STRIPPING = NO;
 				DEPLOYMENT_POSTPROCESSING = NO;
 				DEVELOPMENT_TEAM = 9G2AGGBJ52;
@@ -1091,7 +1093,7 @@
 					"$(inherited)",
 					"\"$PODS_CONFIGURATION_BUILD_DIR/mopub-ios-sdk\"",
 				);
-				MARKETING_VERSION = 7.8.9;
+				MARKETING_VERSION = 7.9.0;
 				OTHER_LDFLAGS = (
 					"-ObjC",
 					"$(inherited)",
@@ -1229,7 +1231,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_STATIC_ANALYZER_MODE = deep;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 7.8.9.1;
+				CURRENT_PROJECT_VERSION = 7.9.0.2;
 				DEAD_CODE_STRIPPING = NO;
 				DEPLOYMENT_POSTPROCESSING = NO;
 				DEVELOPMENT_TEAM = 9G2AGGBJ52;
@@ -1253,7 +1255,7 @@
 				);
 				INFOPLIST_FILE = FyberMarketplaceTestApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				MARKETING_VERSION = 7.8.9;
+				MARKETING_VERSION = 7.9.0;
 				OTHER_LDFLAGS = (
 					"-ObjC",
 					"$(inherited)",
@@ -1278,7 +1280,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_STATIC_ANALYZER_MODE = deep;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 7.8.9.1;
+				CURRENT_PROJECT_VERSION = 7.9.0.2;
 				DEPLOYMENT_POSTPROCESSING = YES;
 				DEVELOPMENT_TEAM = 9G2AGGBJ52;
 				ENABLE_BITCODE = NO;
@@ -1303,7 +1305,7 @@
 				);
 				INFOPLIST_FILE = FyberMarketplaceTestApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				MARKETING_VERSION = 7.8.9;
+				MARKETING_VERSION = 7.9.0;
 				OTHER_LDFLAGS = (
 					"-ObjC",
 					"$(inherited)",
