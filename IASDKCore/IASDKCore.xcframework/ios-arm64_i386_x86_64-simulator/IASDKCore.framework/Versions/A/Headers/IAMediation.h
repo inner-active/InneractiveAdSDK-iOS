@@ -8,6 +8,14 @@
 
 #import <Foundation/Foundation.h>
 
-@interface IAMediation : NSObject
+@protocol IAMediationInterface <NSObject>
+
+@required
+- (NSString * _Nonnull)name;
+- (NSString * _Nonnull)version;
+
+@end
+
+@interface IAMediation : NSObject<IAMediationInterface>
 
 @end

@@ -1,6 +1,6 @@
 //
 //  IAMRAIDAdView.h
-//  IASDKMRAID
+//  IASDKCore
 //
 //  Created by Fyber on 28/03/2017.
 //  Copyright © 2017 Fyber. All rights reserved.

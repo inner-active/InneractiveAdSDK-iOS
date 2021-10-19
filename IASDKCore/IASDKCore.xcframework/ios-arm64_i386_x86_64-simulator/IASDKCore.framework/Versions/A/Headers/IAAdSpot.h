@@ -48,6 +48,8 @@ typedef void (^IAAdSpotAdResponseBlock)(IAAdSpot * _Nullable adSpot, IAAdModel *
  */
 - (void)fetchAdWithCompletion:(IAAdSpotAdResponseBlock _Nonnull)completionHandler;
 
+- (void)loadAdWithMarkup:(NSString * _Nullable)admString withCompletion:(IAAdSpotAdResponseBlock _Nonnull)completionHandler;
+
 /**
  *  @brief Use for being notified about ad reload result.
  *  @discussion IA SDK will copy this block, if you want to clear it, you should provide a 'nil' value.
