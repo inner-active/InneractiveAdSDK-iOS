@@ -8,8 +8,6 @@
 
 #import "IARegularAdVC.h"
 #import <IASDKCore/IASDKCore.h>
-#import <IASDKVideo/IASDKVideo.h>
-#import <IASDKMRAID/IASDKMRAID.h>
 
 #import <AppTrackingTransparency/ATTrackingManager.h>
 

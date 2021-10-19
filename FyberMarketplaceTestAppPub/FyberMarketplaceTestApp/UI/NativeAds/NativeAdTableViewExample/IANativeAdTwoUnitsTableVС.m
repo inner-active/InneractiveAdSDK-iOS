@@ -9,8 +9,6 @@
 #import "IANativeAdTwoUnitsTableVС.h"
 
 #import <IASDKCore/IASDKCore.h>
-#import <IASDKVideo/IASDKVideo.h>
-#import <IASDKMRAID/IASDKMRAID.h>
 
 #import "IAFeedDataProvider.h"
 #import "IAFeedTableCell.h"
