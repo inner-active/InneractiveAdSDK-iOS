@@ -41,7 +41,23 @@
 #import <IASDKCore/IAMediationFyber.h>
 #import <IASDKCore/IAMediationMax.h>
 #import <IASDKCore/IAMediationIronSource.h>
+#import <IASDKCore/IAMediationAdmost.h>
 #import <IASDKCore/IAGDPRConsent.h>
+#import <IASDKCore/FMPBiddingManager.h>
+
+#import <IASDKCore/IASDKMRAID.h>
+
+#import <IASDKCore/IAMRAIDContentController.h>
+#import <IASDKCore/IAMRAIDContentDelegate.h>
+#import <IASDKCore/IAMRAIDContentModel.h>
+
+#import <IASDKCore/IASDKVideo.h>
+
+#import <IASDKCore/IAVideoContentController.h>
+#import <IASDKCore/IAVideoContentDelegate.h>
+#import <IASDKCore/IAVideoLayout.h>
+#import <IASDKCore/IAVideoContentModel.h>
+#import <IASDKCore/IAVideoView.h>
 
 typedef void (^IASDKCoreInitBlock)(BOOL success, NSError * _Nullable error);
 
@@ -113,6 +129,41 @@ typedef NS_ENUM(NSInteger, IASDKCoreInitErrorType) {
  *  @discussion It will be passed as is, without any validation/modification. In order to clear it from a device, pass a nil or empty string.
  */
 @property (atomic, nullable) NSString *userID;
+
+/**
+ *  @brief Use userData for better ad targeting.
+ *  @discussion This userData will be used in bidding flow, while bidding token creation.
+ */
+@property (nonatomic, nullable) IAUserData *userData;
+
+/**
+ *  @brief Single keyword string or several keywords, separated by comma.
+ *  @discussion These keywords will be used in bidding flow, while bidding token creation.
+ */
+@property (nonatomic, nullable) NSString *keywords;
+
+/**
+ *  @brief Current location. Use for better ad targeting.
+ *  @discussion This value will be used in bidding flow, while bidding token creation.
+ */
+@property (nonatomic, nullable) CLLocation *location;
+
+/**
+ *  @brief In case is enabled and the responded creative supports this feature, the creative will start interacting without sound.
+ *  @discussion This value will be used in bidding flow, while bidding token creation.
+ */
+@property (nonatomic) BOOL muteAudio;
+
+/**
+ *  @brief Indicates which SDK is mediating Fyber. Mediation type value set for IAAdSpot will be checked before and used if there was any set.
+ *  @discussion This value will be used in bidding flow, while bidding token creation.
+ */
+@property (nonatomic, nullable) IAMediation *mediationType;
+
+/**
+ *  @brief Can be used in order to get test ads in bidding flow.
+ */
+@property (nonatomic, strong, nullable) IADebugger *debugger;
 
 /**
  *  @brief Singleton method, use for any instance call.
