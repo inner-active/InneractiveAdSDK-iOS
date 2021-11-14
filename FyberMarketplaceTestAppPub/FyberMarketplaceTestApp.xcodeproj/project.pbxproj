@@ -662,7 +662,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_STATIC_ANALYZER_MODE = deep;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 8.1.0.3;
+				CURRENT_PROJECT_VERSION = 8.1.1.1;
 				DEAD_CODE_STRIPPING = NO;
 				DEPLOYMENT_POSTPROCESSING = NO;
 				DEVELOPMENT_TEAM = 9G2AGGBJ52;
@@ -689,7 +689,7 @@
 					"$(inherited)",
 					"\"$PODS_CONFIGURATION_BUILD_DIR/mopub-ios-sdk\"",
 				);
-				MARKETING_VERSION = 8.1.0;
+				MARKETING_VERSION = 8.1.1;
 				OTHER_LDFLAGS = (
 					"-ObjC",
 					"$(inherited)",
@@ -827,7 +827,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_STATIC_ANALYZER_MODE = deep;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 8.1.0.3;
+				CURRENT_PROJECT_VERSION = 8.1.1.1;
 				DEAD_CODE_STRIPPING = NO;
 				DEPLOYMENT_POSTPROCESSING = NO;
 				DEVELOPMENT_TEAM = 9G2AGGBJ52;
@@ -850,7 +850,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 8.1.0;
+				MARKETING_VERSION = 8.1.1;
 				OTHER_LDFLAGS = (
 					"-ObjC",
 					"$(inherited)",
@@ -875,7 +875,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_STATIC_ANALYZER_MODE = deep;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 8.1.0.3;
+				CURRENT_PROJECT_VERSION = 8.1.1.1;
 				DEPLOYMENT_POSTPROCESSING = YES;
 				DEVELOPMENT_TEAM = 9G2AGGBJ52;
 				ENABLE_BITCODE = NO;
@@ -899,7 +899,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 8.1.0;
+				MARKETING_VERSION = 8.1.1;
 				OTHER_LDFLAGS = (
 					"-ObjC",
 					"$(inherited)",

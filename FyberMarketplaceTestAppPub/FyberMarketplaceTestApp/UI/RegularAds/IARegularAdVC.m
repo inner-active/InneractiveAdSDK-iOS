@@ -159,14 +159,24 @@
                                                constant:0]];
                 
                 // adding top constraint
-                [self.view addConstraint:
-                 [NSLayoutConstraint constraintWithItem:self.adView
-                                              attribute:NSLayoutAttributeTop
-                                              relatedBy:NSLayoutRelationEqual
-                                                 toItem:self.view
-                                              attribute:NSLayoutAttributeTop
-                                             multiplier:1
-                                               constant:0]];
+                if (@available(iOS 11.0, *)) {
+                    [self.view addConstraint:
+                     [NSLayoutConstraint constraintWithItem:self.adView
+                                                  attribute:NSLayoutAttributeTop
+                                                  relatedBy:NSLayoutRelationEqual
+                                                     toItem:self.view.safeAreaLayoutGuide
+                                                  attribute:NSLayoutAttributeTop
+                                                 multiplier:1
+                                                   constant:10]];
+                } else {
+                    [self.view addConstraint:
+                     [NSLayoutConstraint constraintWithItem:self.adView
+                                                  attribute:NSLayoutAttributeTop
+                                                  relatedBy:NSLayoutRelationEqual
+                                                     toItem:self.view
+                                                  attribute:NSLayoutAttributeTop
+                                                 multiplier:1
+                                                   constant:10]];                }
                 self.adViewWidthConstraint =
                 [NSLayoutConstraint constraintWithItem:self.adView
                                              attribute:NSLayoutAttributeWidth

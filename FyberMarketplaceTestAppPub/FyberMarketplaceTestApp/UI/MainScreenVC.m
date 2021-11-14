@@ -25,6 +25,12 @@ UINavigationControllerDelegate>
     [super viewDidLoad];
     
     self.navigationController.delegate = self;
+    
+    if (@available(iOS 13.0, *)) {
+        self.navigationController.navigationBar.scrollEdgeAppearance = self.navigationController.navigationBar.standardAppearance;
+        self.navigationController.navigationBar.translucent = YES;
+    }
+    
     [UITableViewHeaderFooterView.appearance setTintColor:UIColor.systemPinkColor];
     
     
