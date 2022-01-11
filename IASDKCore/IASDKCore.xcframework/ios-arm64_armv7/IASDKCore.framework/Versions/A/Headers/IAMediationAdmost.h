@@ -3,7 +3,7 @@
 //  IASDKCore
 //
 //  Created by Nikita on 14/07/2021.
-//  Copyright © 2021 Inneractive. All rights reserved.
+//  Copyright ©2021 Fyber. All rights reserved.
 //
 
 #import <IASDKCore/IASDKCore.h>

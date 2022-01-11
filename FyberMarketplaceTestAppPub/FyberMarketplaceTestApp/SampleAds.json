@@ -1,0 +1,110 @@
+[{
+        "title": "Banner",
+        "adUnits": [{
+                "id": "bannerResponseForCI",
+                "name": "HTML Banner",
+                "format": "Banner",
+                "source": "Mock"
+            },
+            {
+                "id": "bannerexpand",
+                "name": "Banner Expand",
+                "format": "Banner",
+                "source": "Mock"
+            },
+            {
+                "id": "mraidResize",
+                "name": "MRAID Resize",
+                "format": "Banner",
+                "source": "Mock"
+            },
+            {
+                "id": "",
+                "name": "Production Banner",
+                "format": "Banner",
+                "source": "Production"
+            },
+            {
+                "id": "rectangleforci",
+                "name": "MRAID Medium Rectangle",
+                "format": "Rectangle",
+                "source": "Mock"
+            },
+            {
+                "id": "",
+                "name": "Production Medium Rectangle",
+                "format": "Rectangle",
+                "source": "Production"
+            }
+        ]
+    },
+
+    {
+        "title": "Interstitial Display",
+        "adUnits": [{
+
+                "id": "interstitialadresponseforcilandscape",
+                "name": "HTML Interstitial",
+                "format": "Interstitial",
+                "source": "Mock"
+            },
+            {
+                "id": "crossins_mraid_playable4",
+                "name": "Playable",
+                "format": "Interstitial",
+                "source": "Mock"
+            },
+            {
+                "id": "",
+                "name": "Production Display",
+                "format": "Interstitial Display",
+                "source": "Production"
+            }
+        ]
+    },
+    {
+        "title": "Interstitial Video",
+        "adUnits": [{
+                "id": "7714",
+                "name": "Simple Vast",
+                "format": "Interstitial",
+                "source": "Mock"
+            },
+            {
+                "id": "7715",
+                "name": "Short Vast",
+                "format": "Interstitial",
+                "source": "Mock"
+            },
+            {
+                "id": "",
+                "name": "Production VAST",
+                "format": "Interstitial Video",
+                "source": "Production"
+            }
+        ]
+    },
+
+    {
+        "title": "Rewarded",
+        "adUnits": [{
+                "id": "7714",
+                "name": "Rewarded Vast",
+                "format": "Rewarded",
+                "source": "Mock"
+            },
+            {
+                "id": "crossins_mraid_playable4",
+                "name": "Rewarded Playable",
+                "format": "Rewarded",
+                "source": "Mock"
+            },
+            {
+                "id": "",
+                "name": "Production Rewarded",
+                "format": "Rewarded",
+                "source": "Production"
+            }
+        ]
+    }
+]
