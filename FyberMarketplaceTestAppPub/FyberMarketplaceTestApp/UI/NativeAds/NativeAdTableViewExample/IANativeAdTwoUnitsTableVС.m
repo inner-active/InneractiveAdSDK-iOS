@@ -9,6 +9,8 @@
 #import "IANativeAdTwoUnitsTableVС.h"
 
 #import <IASDKCore/IASDKCore.h>
+#import <IASDKCore/IASDKVideo.h>
+#import <IASDKCore/IASDKMRAID.h>
 
 #import "IAFeedDataProvider.h"
 #import "IAFeedTableCell.h"
@@ -100,12 +102,18 @@ static const NSInteger kRepeatingInterval = 7;
     IAAdRequest *request1 = [IAAdRequest build:^(id<IAAdRequestBuilder>  _Nonnull builder) {
         builder.spotID = spotID;
         builder.timeout = 20;
+#ifdef CERT_BUILD
+        builder.debugger = [IADebugger build:^(id<IADebuggerBuilder>  _Nonnull builder) {}];
+#endif
     }];
 #ifdef DEBUG
     request1.debugger.server = @"ia-cert";
     request1.debugger.database = @"4321";
     //request1.debugger.mockResponsePath = @"";
 #endif
+//#ifdef CERT_BUILD
+//    [[ClientRequestSettingss sharedInstance] updateRequestObjectWithCustomSettings:request1];
+//#endif
     
     _content1 = [IAVideoContentController build:^(id<IAVideoContentControllerBuilder>  _Nonnull builder) {
         builder.videoContentDelegate = self;
@@ -135,6 +143,9 @@ static const NSInteger kRepeatingInterval = 7;
     //request2.debugger.mockResponsePath = @"";
 
 #endif
+//#ifdef CERT_BUILD
+//    [[ClientRequestSettingss sharedInstance] updateRequestObjectWithCustomSettings:request2];
+//#endif
     
     _content2 = [IAVideoContentController build:^(id<IAVideoContentControllerBuilder>  _Nonnull builder) {
         builder.videoContentDelegate = self;

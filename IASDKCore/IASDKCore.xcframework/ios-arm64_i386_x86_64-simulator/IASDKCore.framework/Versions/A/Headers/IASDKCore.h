@@ -10,6 +10,7 @@
 #import <UIKit/UIKit.h>
 
 #import <IASDKCore/IALogger.h>
+#import <IASDKCore/FMPLogger.h>
 
 #import <IASDKCore/IAInterfaceAllocBlocker.h>
 #import <IASDKCore/IAInterfaceBuilder.h>
