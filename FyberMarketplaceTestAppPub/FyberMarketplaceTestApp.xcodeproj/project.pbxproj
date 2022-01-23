@@ -7,14 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0A32B31041CB50B2D5F5B4D4 /* IASDKResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 7B0D8BAF2D51C218938B3B61 /* IASDKResources.bundle */; };
 		1140A5922426735D006AA910 /* main_logo@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1140A5912426735D006AA910 /* main_logo@3x.png */; };
 		11A972E5234A39CE00194E7C /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 11A972E4234A39CE00194E7C /* libsqlite3.0.tbd */; };
 		2AA47D1B2369D89200104FD5 /* BuildFile in Resources */ = {isa = PBXBuildFile; };
-		2B5232F59C05662496DAFAC7 /* IASDKCore.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 717ADB89D37328F2C33D57C4 /* IASDKCore.xcframework */; };
 		525086D02739F48E00CBDA45 /* Console.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525086CC2739F48E00CBDA45 /* Console.swift */; };
 		525086D22739F48E00CBDA45 /* ConsoleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525086CD2739F48E00CBDA45 /* ConsoleViewController.swift */; };
 		525086D42739F48E00CBDA45 /* LoggingConsoleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525086CE2739F48E00CBDA45 /* LoggingConsoleViewController.swift */; };
 		525086D62739F48E00CBDA45 /* ConsoleViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 525086CF2739F48E00CBDA45 /* ConsoleViewController.xib */; };
+		7D0998E76F3B24D55675836C /* IASDKCore.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74A1A08D503E6C1F0929B5AB /* IASDKCore.xcframework */; };
 		840FC4CC1E6461FD00724B1B /* libxml2.2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 840FC4CB1E6461FD00724B1B /* libxml2.2.tbd */; };
 		841329441E80383800E02FC0 /* BuildFile in Resources */ = {isa = PBXBuildFile; };
 		841C69701ECDA83100C069B9 /* BuildFile in Resources */ = {isa = PBXBuildFile; };
@@ -104,7 +105,6 @@
 		E8FCDE691F559ED800FCA1C6 /* IAFeedDataProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = E8FCDE2D1F559ED800FCA1C6 /* IAFeedDataProvider.m */; };
 		E8FCDE6D1F559ED800FCA1C6 /* IAFeedTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E8FCDE381F559ED800FCA1C6 /* IAFeedTableCell.m */; };
 		E8FCDE701F559ED800FCA1C6 /* IANativeAdTwoUnitsTableVС.m in Sources */ = {isa = PBXBuildFile; fileRef = E8FCDE3E1F559ED800FCA1C6 /* IANativeAdTwoUnitsTableVС.m */; };
-		E9C6AF84DB9ACED3F4F08BB1 /* IASDKResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 043FBF5D92B1819194F3315C /* IASDKResources.bundle */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -132,7 +132,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		043FBF5D92B1819194F3315C /* IASDKResources.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; name = IASDKResources.bundle; path = ../IASDKCore/IASDKCore.xcframework/IASDKResources.bundle; sourceTree = "<group>"; };
 		1140A5912426735D006AA910 /* main_logo@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "main_logo@3x.png"; sourceTree = "<group>"; };
 		11427864266E467B007D3038 /* Marketplace.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Marketplace.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		11A972E4234A39CE00194E7C /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
@@ -166,7 +165,8 @@
 		525086CD2739F48E00CBDA45 /* ConsoleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConsoleViewController.swift; sourceTree = "<group>"; };
 		525086CE2739F48E00CBDA45 /* LoggingConsoleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoggingConsoleViewController.swift; sourceTree = "<group>"; };
 		525086CF2739F48E00CBDA45 /* ConsoleViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ConsoleViewController.xib; sourceTree = "<group>"; };
-		717ADB89D37328F2C33D57C4 /* IASDKCore.xcframework */ = {isa = PBXFileReference; includeInIndex = 1; name = IASDKCore.xcframework; path = ../IASDKCore/IASDKCore.xcframework; sourceTree = "<group>"; };
+		74A1A08D503E6C1F0929B5AB /* IASDKCore.xcframework */ = {isa = PBXFileReference; includeInIndex = 1; name = IASDKCore.xcframework; path = ../IASDKCore/IASDKCore.xcframework; sourceTree = "<group>"; };
+		7B0D8BAF2D51C218938B3B61 /* IASDKResources.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; name = IASDKResources.bundle; path = ../IASDKCore/IASDKCore.xcframework/IASDKResources.bundle; sourceTree = "<group>"; };
 		840EBA0B1E96DFFE008E8C51 /* IAColors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IAColors.h; path = UI/IAColors.h; sourceTree = "<group>"; };
 		840FC4CB1E6461FD00724B1B /* libxml2.2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libxml2.2.tbd; path = usr/lib/libxml2.2.tbd; sourceTree = SDKROOT; };
 		844352BC1EA65FB70042AFAA /* DPTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DPTextField.h; path = ThirdParty/DPTextField/DPTextField.h; sourceTree = "<group>"; };
@@ -257,7 +257,7 @@
 				11A972E5234A39CE00194E7C /* libsqlite3.0.tbd in Frameworks */,
 				840FC4CC1E6461FD00724B1B /* libxml2.2.tbd in Frameworks */,
 				E8E1EB5B1E42063B000324D3 /* BuildFile in Frameworks */,
-				2B5232F59C05662496DAFAC7 /* IASDKCore.xcframework in Frameworks */,
+				7D0998E76F3B24D55675836C /* IASDKCore.xcframework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -462,8 +462,8 @@
 				84C17897257B102A00702557 /* FyberMarketplaceTestApp-Bridging-Header.h */,
 				E88693AB1E3DFED900B12EAB /* Products */,
 				844352BA1EA65F8E0042AFAA /* ThirdParty */,
-				717ADB89D37328F2C33D57C4 /* IASDKCore.xcframework */,
-				043FBF5D92B1819194F3315C /* IASDKResources.bundle */,
+				74A1A08D503E6C1F0929B5AB /* IASDKCore.xcframework */,
+				7B0D8BAF2D51C218938B3B61 /* IASDKResources.bundle */,
 			);
 			sourceTree = "<group>";
 		};
@@ -787,7 +787,7 @@
 				E8FCDE531F559ED800FCA1C6 /* 14@2x.png in Resources */,
 				E88693B81E3DFED900B12EAB /* Main.storyboard in Resources */,
 				E8FCDE5F1F559ED800FCA1C6 /* 08p@2x.png in Resources */,
-				E9C6AF84DB9ACED3F4F08BB1 /* IASDKResources.bundle in Resources */,
+				0A32B31041CB50B2D5F5B4D4 /* IASDKResources.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -942,7 +942,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_STATIC_ANALYZER_MODE = deep;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 8.1.2.5;
+				CURRENT_PROJECT_VERSION = 8.1.3.1;
 				DEAD_CODE_STRIPPING = NO;
 				DEPLOYMENT_POSTPROCESSING = NO;
 				DEVELOPMENT_TEAM = 9G2AGGBJ52;
@@ -966,7 +966,7 @@
 					"$(inherited)",
 					"\"$PODS_CONFIGURATION_BUILD_DIR/mopub-ios-sdk\"",
 				);
-				MARKETING_VERSION = 8.1.2;
+				MARKETING_VERSION = 8.1.3;
 				OTHER_LDFLAGS = (
 					"-ObjC",
 					"$(inherited)",
@@ -1105,7 +1105,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_STATIC_ANALYZER_MODE = deep;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 8.1.2.5;
+				CURRENT_PROJECT_VERSION = 8.1.3.1;
 				DEAD_CODE_STRIPPING = NO;
 				DEPLOYMENT_POSTPROCESSING = NO;
 				DEVELOPMENT_TEAM = 9G2AGGBJ52;
@@ -1125,7 +1125,7 @@
 				);
 				INFOPLIST_FILE = FyberMarketplaceTestApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				MARKETING_VERSION = 8.1.2;
+				MARKETING_VERSION = 8.1.3;
 				OTHER_LDFLAGS = (
 					"-ObjC",
 					"$(inherited)",
@@ -1151,7 +1151,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_STATIC_ANALYZER_MODE = deep;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 8.1.2.5;
+				CURRENT_PROJECT_VERSION = 8.1.3.1;
 				DEPLOYMENT_POSTPROCESSING = YES;
 				DEVELOPMENT_TEAM = 9G2AGGBJ52;
 				ENABLE_BITCODE = NO;
@@ -1171,7 +1171,7 @@
 				);
 				INFOPLIST_FILE = FyberMarketplaceTestApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				MARKETING_VERSION = 8.1.2;
+				MARKETING_VERSION = 8.1.3;
 				OTHER_LDFLAGS = (
 					"-ObjC",
 					"$(inherited)",
