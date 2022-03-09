@@ -6,10 +6,8 @@
 #import <CoreLocation/CoreLocation.h>
 #import <AppTrackingTransparency/ATTrackingManager.h>
 
-#import "IAColors.h"
 #import <IASDKCore/IASDKCore.h>
 #import <IASDKCore/IADebugger.h>
-#import "IANativeAdTwoUnitsTableVС.h"
 
 
 

@@ -20,8 +20,9 @@ enum SampleSetting:String {
     case SDKVersion   = "SDK Version"
     case ShouldLoadCurrentAdAfterStartup = "Load Last Ad On Startup"
     
+    
     //New Ad Unit related
-    case NewAdUnitType = "Ad Unit Type"
+    case NewAdFormat = "Ad Format"
     case NewMockName   = "Mock"
     
     //SDK Bidding related - need to exclude on the Publihser Test APP

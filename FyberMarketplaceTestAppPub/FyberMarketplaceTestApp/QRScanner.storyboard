@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Scanner View Controller-->
+        <scene sceneID="F6s-U9-UlH">
+            <objects>
+                <viewController storyboardIdentifier="QRScannerVC" id="KTR-Oh-Kka" customClass="QRScannerViewController" sceneMemberID="viewController">
+                    <view key="view" autoresizesSubviews="NO" clipsSubviews="YES" contentMode="scaleAspectFill" id="eha-a8-SyR">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view autoresizesSubviews="NO" clipsSubviews="YES" contentMode="scaleAspectFill" translatesAutoresizingMaskIntoConstraints="NO" id="RTy-zz-HHt">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <viewLayoutGuide key="safeArea" id="ahh-y9-g3b"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="RTy-zz-HHt" firstAttribute="top" secondItem="eha-a8-SyR" secondAttribute="top" id="6ea-de-kuz"/>
+                            <constraint firstAttribute="trailing" secondItem="RTy-zz-HHt" secondAttribute="trailing" id="D9p-tg-6X8"/>
+                            <constraint firstAttribute="bottom" secondItem="RTy-zz-HHt" secondAttribute="bottom" id="chP-Fi-SxP"/>
+                            <constraint firstItem="RTy-zz-HHt" firstAttribute="leading" secondItem="eha-a8-SyR" secondAttribute="leading" id="qxU-Uu-48n"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="tcF-d5-ZL0"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Bda-QX-UAT">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="LNe-Cb-6wH">
+                            <connections>
+                                <action selector="cancel:" destination="KTR-Oh-Kka" id="0yC-HU-2k7"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="cameraView" destination="RTy-zz-HHt" id="uZ1-at-vF0"/>
+                        <outlet property="view" destination="eha-a8-SyR" id="62t-ei-Cyz"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="z86-pd-TAQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="614.49275362318849" y="218.97321428571428"/>
+        </scene>
+    </scenes>
+</document>

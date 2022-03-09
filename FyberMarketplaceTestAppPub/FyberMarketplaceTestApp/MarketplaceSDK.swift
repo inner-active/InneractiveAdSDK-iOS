@@ -19,7 +19,7 @@ class MarketplaceSDK: NSObject, SampleSDKProtocol {
     var viewUnitController: IAViewUnitController?
     var fullscreenUnitController: IAFullscreenUnitController?
     var MRAIDContentController: IAMRAIDContentController?
-    var videoContentController: IAVideoContentController??
+    var videoContentController: IAVideoContentController?
     var adSpot: IAAdSpot?
 
 
@@ -47,7 +47,7 @@ class MarketplaceSDK: NSObject, SampleSDKProtocol {
             builder.unitDelegate = self
 
             builder.addSupportedContentController(self.MRAIDContentController!)
-            builder.addSupportedContentController(self.videoContentController!!)
+            builder.addSupportedContentController(self.videoContentController!)
         })
 
         adSpot = IAAdSpot .build({ (builder:IAAdSpotBuilder) in

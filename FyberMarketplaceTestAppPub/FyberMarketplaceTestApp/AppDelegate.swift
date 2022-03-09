@@ -23,8 +23,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate , IAGlobalAdDelegate{
 
 
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let sampleAdsViewController = storyboard.instantiateViewController(withIdentifier: "SampleAdsViewController") as! SampleAdsViewController
-        let navigationController = UINavigationController(rootViewController: sampleAdsViewController)
+        let SaveAdsViewController = storyboard.instantiateViewController(withIdentifier: "SaveAdsViewController") as! SaveAdsViewController
+        let navigationController = UINavigationController(rootViewController: SaveAdsViewController)
         self.window?.rootViewController = navigationController
 
         return true
@@ -55,6 +55,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate , IAGlobalAdDelegate{
                 IASDKCore.sharedInstance().keywords = "tango, music"
                 IASDKCore.sharedInstance().location = CLLocation(latitude:50.45, longitude:30.52)
                 IASDKCore.sharedInstance().muteAudio = true
+                                
             } else {
                 Console.shared.add(message: "Fyber Marketplace SDK init has failed: \(error.debugDescription)", messageType: .error)
             }
