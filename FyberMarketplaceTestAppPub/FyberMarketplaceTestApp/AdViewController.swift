@@ -14,20 +14,28 @@ class AdViewController: UIViewController {
     private var sdkInstance: SampleSDKProtocol!
     private var adType: SampleAdType!
     private var userAlertLabel: UILabel?
-    
-    @IBOutlet weak var loadAdBtn: UIButton!
-    @IBOutlet weak var showAdBtn: UIButton!
+    private var adViewContent: AdViewControllerContentState!
+    @IBOutlet weak var loadAdButton: UIButton!
+    @IBOutlet weak var showAdButton: UIButton!
     @IBOutlet weak var adView: UIView!
     @IBOutlet weak var spinner: UIActivityIndicatorView!
-    @IBOutlet weak var adView_height: NSLayoutConstraint!
-    @IBOutlet weak var adView_width: NSLayoutConstraint!
-  
-
+    @IBOutlet weak var adViewHeight: NSLayoutConstraint!
+    @IBOutlet weak var adViewWidth: NSLayoutConstraint!
+    @IBOutlet weak var loadAdTopConstraintsToScrollViewTopForAdView: NSLayoutConstraint!
+    @IBOutlet weak var loadAdTopConstraintToScrollViewTopForInterstitialView: NSLayoutConstraint!
+    
     //MARK: - Lifecycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        adViewContent = AdViewControllerContentState(with: adType)
+        adViewContent.delegate = self
+        adViewContent.adjustLoadAdTopConstraint()
         
+        if adType.isInterstitial() {
+            loadAdTopConstraintToScrollViewTopForInterstitialView.priority = .defaultHigh
+            loadAdTopConstraintsToScrollViewTopForAdView.priority = .defaultLow
+        }
         navigationItem.rightBarButtonItems?.removeAll(where: {$0.title == "Settings"})
         
         if #available(iOS 13.0, *) {
@@ -37,6 +45,19 @@ class AdViewController: UIViewController {
         if (!adType.isInterstitial()) {
             setupSubviewsForNonInterstitialAds()
         }
+    }
+    
+    override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
+        if UIApplication.shared.statusBarOrientation != .unknown {
+            adViewContent.adjustLoadAdTopConstraint()
+        }
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        loadAdButton.isUserInteractionEnabled = true
+        loadAdButton.isEnabled = true
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -60,15 +81,16 @@ class AdViewController: UIViewController {
     
     private func setupSubviewsForNonInterstitialAds() {
         adView.isHidden = false
+
         if ((adType == .Rectangle) || (adType == .Banner)) {
-            adView_height.constant = adType.size.height
-            adView_width.constant  = adType.size.width
+            adViewHeight.constant = adType.size.height
+            adViewWidth.constant  = adType.size.width
         }
     }
     
     private func loadAd() {
         sdkInstance.loadAd()
-        showAdBtn.isHidden = true
+        showAdButton.isHidden = true
         spinner.startAnimating()
         saveCurrentAdToUserDefaultsIfNeeded()
     }
@@ -98,9 +120,11 @@ class AdViewController: UIViewController {
     }
     
     @IBAction func ShowAdClicked(_ sender: Any) {
+        loadAdButton.isUserInteractionEnabled = false
+        loadAdButton.isEnabled = false
         UIImpactFeedbackGenerator(style: .light).impactOccurred()
         sdkInstance.showInterstitial()
-        showAdBtn.isHidden = true
+        showAdButton.isHidden = true
     }
     
     //MARK: - deInit
@@ -117,7 +141,7 @@ extension AdViewController: SampleSDKProtocolDelegate {
         DispatchQueue.main.async {
             self.spinner.stopAnimating()
             UINotificationFeedbackGenerator().notificationOccurred(.success)
-            self.showAdBtn.isHidden = !type.isInterstitial()
+            self.showAdButton.isHidden = !type.isInterstitial()
             
             Console.shared.add(message: "Ad with type: \(type.stringValue) was loaded")
         }
@@ -144,8 +168,8 @@ extension AdViewController: SampleSDKProtocolDelegate {
     }
     
     func adDidResize(to frame:CGRect) {
-        adView_height.constant = frame.width
-        adView_height.constant = frame.height
+        adViewHeight.constant = frame.width
+        adViewHeight.constant = frame.height
     }
 }
 
@@ -157,6 +181,7 @@ extension AdViewController {
             userAlertLabel!.removeFromSuperview()
             userAlertLabel = nil;
         }
+        
         userAlertLabel = UILabel(frame: CGRect(x: 0, y: 0, width: 100, height: self.view.frame.height/5))
         userAlertLabel!.text = message
         userAlertLabel!.lineBreakMode = .byWordWrapping
@@ -191,5 +216,16 @@ extension AdViewController {
                 }
             }
         }
+    }
+}
+
+//MARK: - AdViewContentStateDelegate
+extension AdViewController:AdViewContentStateDelegate {
+    func updateAdViewConstraintForAdView(with constant: CGFloat) {
+        loadAdTopConstraintsToScrollViewTopForAdView.constant = constant
+    }
+    
+    func updateAdViewConstraintForAdInterstitialView(with constant: CGFloat) {
+        loadAdTopConstraintToScrollViewTopForInterstitialView.constant = constant
     }
 }

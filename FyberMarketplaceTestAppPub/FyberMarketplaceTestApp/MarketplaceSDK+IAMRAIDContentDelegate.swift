@@ -12,25 +12,23 @@ import Foundation
 
 // MARK: - IAMRAIDContentDelegate
 extension MarketplaceSDK: IAMRAIDContentDelegate {
-
     func iamraidContentController(_ contentController: IAMRAIDContentController?, mraidAdDidResizeToFrame frame: CGRect) {
-        Console.shared.add(message: "MRAIDAdWillResizeToFrame")
-
+        Console.shared.add(message: "IMRAIDAdWillResizeToFrame to (\(frame.width),\(frame.height))")
         DispatchQueue.main.async {
             self.delegate?.adDidResize(to: frame)
         }
     }
 
     func iamraidContentController(_ contentController: IAMRAIDContentController?, mraidAdWillResizeToFrame frame: CGRect){
-        Console.shared.add(message: "MRAIDAdDidResizeToFrame")
+        Console.shared.add(message: "IMRAIDAdDidResizeToFrame to (\(frame.width),\(frame.height))")
     }
 
     func iamraidContentController(_ contentController: IAMRAIDContentController?, mraidAdWillExpandToFrame frame: CGRect){
-        Console.shared.add(message: "MRAIDAdWillExpandToFrame")
+        Console.shared.add(message: "IMRAIDAdWillExpandToFrame to (\(frame.width),\(frame.height))")
     }
 
     func iamraidContentController(_ contentController: IAMRAIDContentController?, mraidAdDidExpandToFrame frame: CGRect) {
-        Console.shared.add(message: "MRAIDAdDidExpandToFrame")
+        Console.shared.add(message: "IMRAIDAdDidExpandToFrame to (\(frame.width),\(frame.height))")
     }
 
     func iamraidContentControllerMRAIDAdWillCollapse(_ contentController: IAMRAIDContentController?) {
@@ -39,10 +37,10 @@ extension MarketplaceSDK: IAMRAIDContentDelegate {
 
     func iamraidContentControllerMRAIDAdDidCollapse(_ contentController: IAMRAIDContentController?) {
         Console.shared.add(message: "IAMRAIDContentControllerMRAIDAdDidCollapse")
-        
-        guard let adView = self.viewUnitController?.adView else { return }
+
+        guard self.viewUnitController?.adView != nil else { return }
         DispatchQueue.main.async {
-            self.delegate?.adDidResize(to: adView.frame)
+            self.delegate?.adDidResize(to: CGRect.init(origin: CGPoint.zero, size: self.requestAdType!.size))
         }
     }
 

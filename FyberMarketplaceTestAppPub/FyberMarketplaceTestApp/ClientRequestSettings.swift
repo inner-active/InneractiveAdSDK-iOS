@@ -16,6 +16,7 @@ enum UserDefaultsKey:String {
     case AdUnitID = "FMPAdUnitID"
     case Server = "FMPServer"
     case SampleAdType = "FMPSampleAdType"
+    case SDKEventsDebugMode = "FMPSDKEventsDebugMode"
 }
 
 protocol ClientRequestSettingsDelegate:AnyObject {
@@ -113,10 +114,10 @@ class ClientRequestSettings {
     /**
      Optional - Represents New Ad Unit Type. Banner by default.
      */
-    private var newAdUnitType: String? = SampleAdType.Banner.rawValue
+    private var newAdFormat: String? = SampleAdType.Banner.rawValue
     
     /**
-     Optional - For better Targeting
+     Optional - User Targeting
      */
     private var userID: String  {
         get {
@@ -128,6 +129,13 @@ class ClientRequestSettings {
         }
     }
     
+    // Debugging realated -
+    
+    /**
+     When set to True - App will launch on User last Ad View.
+     Ad Unit will load automatically.
+     */
+
     private var shouldLoadCurrentAdAfterStartup: Bool! = false {
         didSet {
             let defaults = UserDefaults.standard
@@ -135,6 +143,7 @@ class ClientRequestSettings {
             defaults.set(shouldLoadCurrentAdAfterStartup, forKey: UserDefaultsKey.ShouldLoadCurrentAdAfterStartup.rawValue)
         }
     }
+    
     
     //SDK Bidding related - need to exclude on the Publihser Test APP
     //MARK: - Service
@@ -186,9 +195,10 @@ class ClientRequestSettings {
         case .GDPRData: return gdprData
         case .GDPR: return gdpr
         case .SDKVersion: return IASDKCore.sharedInstance().version()
-        case .NewAdUnitType: return newAdUnitType
+        case .NewAdFormat: return newAdFormat
         case .NewMockName: return newMockName
         case .ShouldLoadCurrentAdAfterStartup: return shouldLoadCurrentAdAfterStartup.description
+        
 
         }
     }
@@ -211,6 +221,16 @@ class ClientRequestSettings {
         }
     }
     
+    internal func saveToUserDefaultRequest(with mock:String, portal:String) {
+        let dictionary = [SDKDebugKeys.FYBPortalKey.rawValue: portal, SDKDebugKeys.FYBMockResponseKey.rawValue: mock]
+    
+        UserDefaults.standard.set(dictionary, forKey: SDKDebugKeys.FYBUserDefaultsPortalAndMockKey.rawValue)
+    }
+    
+    internal func removeUserDefaultsIfNeeded() {
+        UserDefaults.standard.removeObject(forKey: SDKDebugKeys.FYBUserDefaultsPortalAndMockKey.rawValue)
+    }
+    
     internal func useValuesFromUserDefaults() -> Bool {
         let defaults = UserDefaults.standard
         
@@ -226,7 +246,7 @@ class ClientRequestSettings {
             server = userDefaultsServer
             spotId = userDefaultsSpotID
             adUnitId = userDefaultsAdUnitID
-            portal = "4321"
+            portal = adUnitId != "" ?  "4321" : ""
             
             AdViewController.shouldAutoLoad = true
 
@@ -254,11 +274,20 @@ extension ClientRequestSettings: ClientRequestSettingsDelegate {
         case .NewMockName: newMockName = value
         case .Server: server = value
         case .GDPR: gdpr = value
-        case.NewAdUnitType: newAdUnitType = value
+        case.NewAdFormat: newAdFormat = value
         case .ShouldLoadCurrentAdAfterStartup: shouldLoadCurrentAdAfterStartup.toggle()
         case .SDKVersion: return
         
+            
         }
+    }
+}
+
+//MARK: - ScannerViewControllerDelegate
+
+extension ClientRequestSettings: ScannerViewControllerDelegate {
+    func receivedQRCode(with mock: String) {
+        newMockName = mock
     }
 }
 
