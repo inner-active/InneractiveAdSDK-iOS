@@ -9,12 +9,12 @@
 /* Begin PBXBuildFile section */
 		1140A5922426735D006AA910 /* main_logo@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1140A5912426735D006AA910 /* main_logo@3x.png */; };
 		11A972E5234A39CE00194E7C /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 11A972E4234A39CE00194E7C /* libsqlite3.0.tbd */; };
-		1EAE37A4B7DBD53391429263 /* IASDKResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 25C07ADE1FF52BBDE7EE89FB /* IASDKResources.bundle */; };
 		2AA47D1B2369D89200104FD5 /* QRScanner.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2AA47D1A2369D89200104FD5 /* QRScanner.storyboard */; };
 		525086D02739F48E00CBDA45 /* Console.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525086CC2739F48E00CBDA45 /* Console.swift */; };
 		525086D22739F48E00CBDA45 /* ConsoleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525086CD2739F48E00CBDA45 /* ConsoleViewController.swift */; };
 		525086D42739F48E00CBDA45 /* LoggingConsoleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525086CE2739F48E00CBDA45 /* LoggingConsoleViewController.swift */; };
 		525086D62739F48E00CBDA45 /* ConsoleViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 525086CF2739F48E00CBDA45 /* ConsoleViewController.xib */; };
+		8276BE18ADB91C3CE4133007 /* IASDKResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = F757789095495594C99DFCAE /* IASDKResources.bundle */; };
 		840FC4CC1E6461FD00724B1B /* libxml2.2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 840FC4CB1E6461FD00724B1B /* libxml2.2.tbd */; };
 		841329441E80383800E02FC0 /* BuildFile in Resources */ = {isa = PBXBuildFile; };
 		841C69701ECDA83100C069B9 /* BuildFile in Resources */ = {isa = PBXBuildFile; };
@@ -61,7 +61,7 @@
 		9AFE24F227031B830097E68B /* TextFieldCustomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9AFE24EF27031B830097E68B /* TextFieldCustomCell.xib */; };
 		9AFE24F527031BA00097E68B /* BuildFile in Sources */ = {isa = PBXBuildFile; };
 		AE044C0F1F0D35A600C84A80 /* BuildFile in Resources */ = {isa = PBXBuildFile; };
-		CCCE5E387B553634D065C822 /* IASDKCore.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8A8356E55224844EEE19BB9 /* IASDKCore.xcframework */; };
+		DBA40FD733FFEAA54EA2EE36 /* IASDKCore.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = B834179DC23FC02D04F554E9 /* IASDKCore.xcframework */; };
 		E87DBB931E706C5F00408E1A /* BuildFile in Resources */ = {isa = PBXBuildFile; };
 		E88693AF1E3DFED900B12EAB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E88693AE1E3DFED900B12EAB /* main.m */; };
 		E88693B81E3DFED900B12EAB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E88693B61E3DFED900B12EAB /* Main.storyboard */; };
@@ -131,7 +131,6 @@
 		11BC977426764F990070E03A /* GADMAdapterFyberRewardedAd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GADMAdapterFyberRewardedAd.h; path = "../../googleads-mobile-ios-mediation/adapters/Fyber/FyberAdapter/GADMAdapterFyberRewardedAd.h"; sourceTree = "<group>"; };
 		11CAD83726923E9D00E41E15 /* FyberMockMediatingSDK.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = FyberMockMediatingSDK.xcodeproj; path = ../FyberMockMediatingSDK/FyberMockMediatingSDK.xcodeproj; sourceTree = "<group>"; };
 		11E2DDBE2688A56500EDC425 /* FyberMockMediatingSDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FyberMockMediatingSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		25C07ADE1FF52BBDE7EE89FB /* IASDKResources.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; name = IASDKResources.bundle; path = ../IASDKCore/IASDKCore.xcframework/IASDKResources.bundle; sourceTree = "<group>"; };
 		2A57B9F52678F40E009456CD /* GADMAdapterFyberExtras.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GADMAdapterFyberExtras.h; path = "../../googleads-mobile-ios-mediation/adapters/Fyber/Public/Headers/GADMAdapterFyberExtras.h"; sourceTree = "<group>"; };
 		2A57B9F82678F40E009456CD /* FyberAdapter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FyberAdapter.h; path = "../../googleads-mobile-ios-mediation/adapters/Fyber/Public/Headers/FyberAdapter.h"; sourceTree = "<group>"; };
 		2AA47D1A2369D89200104FD5 /* QRScanner.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = QRScanner.storyboard; sourceTree = "<group>"; };
@@ -139,7 +138,6 @@
 		525086CD2739F48E00CBDA45 /* ConsoleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConsoleViewController.swift; sourceTree = "<group>"; };
 		525086CE2739F48E00CBDA45 /* LoggingConsoleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoggingConsoleViewController.swift; sourceTree = "<group>"; };
 		525086CF2739F48E00CBDA45 /* ConsoleViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ConsoleViewController.xib; sourceTree = "<group>"; };
-		58FBE30D3B4716F556504510 /* AppLovinQualityService.xcframework */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = wrapper.xcframework; name = AppLovinQualityService.xcframework; path = AppLovinQualityService/AppLovinQualityService.xcframework; sourceTree = "<group>"; };
 		840FC4CB1E6461FD00724B1B /* libxml2.2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libxml2.2.tbd; path = usr/lib/libxml2.2.tbd; sourceTree = SDKROOT; };
 		844352BC1EA65FB70042AFAA /* DPTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DPTextField.h; path = ThirdParty/DPTextField/DPTextField.h; sourceTree = "<group>"; };
 		844352BD1EA65FB70042AFAA /* DPTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DPTextField.m; path = ThirdParty/DPTextField/DPTextField.m; sourceTree = "<group>"; };
@@ -180,6 +178,7 @@
 		9AFE24E927031B690097E68B /* MultiValuesCustomCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MultiValuesCustomCell.xib; sourceTree = "<group>"; };
 		9AFE24EE27031B830097E68B /* TextFieldCustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldCustomCell.swift; sourceTree = "<group>"; };
 		9AFE24EF27031B830097E68B /* TextFieldCustomCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TextFieldCustomCell.xib; sourceTree = "<group>"; };
+		B834179DC23FC02D04F554E9 /* IASDKCore.xcframework */ = {isa = PBXFileReference; includeInIndex = 1; name = IASDKCore.xcframework; path = ../IASDKCore/IASDKCore.xcframework; sourceTree = "<group>"; };
 		E88693AA1E3DFED900B12EAB /* Marketplace.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Marketplace.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E88693AE1E3DFED900B12EAB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		E88693B71E3DFED900B12EAB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -190,7 +189,7 @@
 		E88693CE1E3DFED900B12EAB /* FyberMarketplaceTestAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FyberMarketplaceTestAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F1E0A0DF278B1BAF00619021 /* AdFeedCustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdFeedCustomCell.swift; sourceTree = "<group>"; };
 		F1E0A0E1278B1D0500619021 /* AdFeedCustomCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AdFeedCustomCell.xib; sourceTree = "<group>"; };
-		F8A8356E55224844EEE19BB9 /* IASDKCore.xcframework */ = {isa = PBXFileReference; includeInIndex = 1; name = IASDKCore.xcframework; path = ../IASDKCore/IASDKCore.xcframework; sourceTree = "<group>"; };
+		F757789095495594C99DFCAE /* IASDKResources.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; name = IASDKResources.bundle; path = ../IASDKCore/IASDKCore.xcframework/IASDKResources.bundle; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -201,7 +200,7 @@
 				11A972E5234A39CE00194E7C /* libsqlite3.0.tbd in Frameworks */,
 				840FC4CC1E6461FD00724B1B /* libxml2.2.tbd in Frameworks */,
 				E8E1EB5B1E42063B000324D3 /* BuildFile in Frameworks */,
-				CCCE5E387B553634D065C822 /* IASDKCore.xcframework in Frameworks */,
+				DBA40FD733FFEAA54EA2EE36 /* IASDKCore.xcframework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -270,14 +269,6 @@
 				11CAD86026946B2000E41E15 /* FyberMockMediatingSDKTests.xctest */,
 			);
 			name = Products;
-			sourceTree = "<group>";
-		};
-		3DB56BC24EE014A0C76CD171 /* AppLovinQualityService */ = {
-			isa = PBXGroup;
-			children = (
-				58FBE30D3B4716F556504510 /* AppLovinQualityService.xcframework */,
-			);
-			name = AppLovinQualityService;
 			sourceTree = "<group>";
 		};
 		525086CB2739F48E00CBDA45 /* Console */ = {
@@ -467,9 +458,8 @@
 				84C17897257B102A00702557 /* FyberMarketplaceTestApp-Bridging-Header.h */,
 				E88693AB1E3DFED900B12EAB /* Products */,
 				844352BA1EA65F8E0042AFAA /* ThirdParty */,
-				3DB56BC24EE014A0C76CD171 /* AppLovinQualityService */,
-				F8A8356E55224844EEE19BB9 /* IASDKCore.xcframework */,
-				25C07ADE1FF52BBDE7EE89FB /* IASDKResources.bundle */,
+				B834179DC23FC02D04F554E9 /* IASDKCore.xcframework */,
+				F757789095495594C99DFCAE /* IASDKResources.bundle */,
 			);
 			sourceTree = "<group>";
 		};
@@ -663,7 +653,7 @@
 				F1A2C93E2753972500C6837B /* BuildFile in Resources */,
 				E88693B81E3DFED900B12EAB /* Main.storyboard in Resources */,
 				F1A349B4279EAEFA0038B379 /* BuildFile in Resources */,
-				1EAE37A4B7DBD53391429263 /* IASDKResources.bundle in Resources */,
+				8276BE18ADB91C3CE4133007 /* IASDKResources.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
