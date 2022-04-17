@@ -9,10 +9,12 @@
 import Foundation
 
 public extension UITableViewController {
-    func adjustForDarkMode() {
-        if #available(iOS 12.0, *) {
-            if self.traitCollection.userInterfaceStyle == .dark {
+    func adjustBackgroundColor() {
+        if #available(iOS 13.0, *) {
+            if ((self.traitCollection.userInterfaceStyle == .dark) &&  (tableView.backgroundColor != .black)) {
                 tableView.backgroundColor = .black
+            } else if ((self.traitCollection.userInterfaceStyle == .light) &&  (tableView.backgroundColor != .systemGray6)){
+                tableView.backgroundColor = .systemGray6
             }
         }
     }

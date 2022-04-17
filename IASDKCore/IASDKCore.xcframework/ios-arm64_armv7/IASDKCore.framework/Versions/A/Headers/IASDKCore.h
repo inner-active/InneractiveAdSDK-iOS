@@ -36,7 +36,6 @@
 #import <IASDKCore/IAMRAIDAdView.h>
 
 #import <IASDKCore/IAMediation.h>
-#import <IASDKCore/IAMediationMopub.h>
 #import <IASDKCore/IAMediationAdMob.h>
 #import <IASDKCore/IAMediationDFP.h>
 #import <IASDKCore/IAMediationFyber.h>
@@ -44,6 +43,7 @@
 #import <IASDKCore/IAMediationIronSource.h>
 #import <IASDKCore/IAMediationAdmost.h>
 #import <IASDKCore/IAGDPRConsent.h>
+#import <IASDKCore/IALGPDConsent.h>
 #import <IASDKCore/FMPBiddingManager.h>
 
 #import <IASDKCore/IASDKMRAID.h>
@@ -123,6 +123,35 @@ typedef NS_ENUM(NSInteger, IASDKCoreInitErrorType) {
  *  @discussion It will be passed as is, without any validation/modification. In order to clear this data permanently from a device, pass a nil or empty string.
  */
 @property (atomic, nullable) NSString *CCPAString;
+
+/**
+ *  @brief The LGPD consent status.
+ *
+ *  @discussion Use this property in order to set the LGPD consent accoring to your preferences.
+ *
+ * It can be used as one of the following, in order to allow/restrict:
+ *
+ * - `[IASDKCore.sharedInstance setLGPDConsent:YES]`
+ *
+ * - `[IASDKCore.sharedInstance setLGPDConsent:true]`
+ *
+ * - `IASDKCore.sharedInstance.LGPDConsent = NO`
+ *
+ * - `IASDKCore.sharedInstance.LGPDConsent = 1`
+ *
+ * - `IASDKCore.sharedInstance.LGPDConsent = IALGPDConsentTypeGiven`
+ *
+ * Or it can be cleared by using the one of the following:
+ *
+ * - `[IASDKCore.sharedInstance clearLGPDConsentData]`
+ *
+ * - `IASDKCore.sharedInstance.LGPDConsent = IALGPDConsentTypeUnknown`. <b>Important</b>: setting the `IALGPDConsentTypeUnknown`, will clear the `LGPDConsentString` as well.
+ *
+ * The default (or after calling the `clearLGPDConsentData` method) value is unknown, which is the `IALGPDConsentTypeUnknown`.
+ *
+ * The property is thread-safe.
+ */
+@property (atomic) IALGPDConsentType LGPDConsent;
 
 /**
  *  @brief Use this property in order to provide a user Id. Once it's set, it is saved on a device.
@@ -206,5 +235,10 @@ typedef NS_ENUM(NSInteger, IASDKCoreInitErrorType) {
  *  @brief Clears all the GDPR related information. The state of the `GDPRConsent` property will become `-1` or `IAGDPRConsentTypeUnknown`.
  */
 - (void)clearGDPRConsentData;
+
+/**
+ *  @brief Clears all the LGPD related information. The state of the `LGPDConsent` property will become `-1` or `IALGPDConsentTypeUnknown`.
+ */
+- (void)clearLGPDConsentData;
 
 @end

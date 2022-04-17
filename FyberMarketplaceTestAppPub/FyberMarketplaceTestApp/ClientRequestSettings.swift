@@ -100,6 +100,14 @@ class ClientRequestSettings {
         didSet {
         }
     }
+
+    /**
+     User privacy preferences. 'Given' By default.
+     */
+    private var lgpd: String? = "Given" {
+        didSet {
+        }
+    }
     
     /**
      Represents Mock Name as specified in Forest .
@@ -194,6 +202,7 @@ class ClientRequestSettings {
         case .GlobalConfig: return globalConfig
         case .GDPRData: return gdprData
         case .GDPR: return gdpr
+        case .LGPD: return lgpd
         case .SDKVersion: return IASDKCore.sharedInstance().version()
         case .NewAdFormat: return newAdFormat
         case .NewMockName: return newMockName
@@ -274,6 +283,7 @@ extension ClientRequestSettings: ClientRequestSettingsDelegate {
         case .NewMockName: newMockName = value
         case .Server: server = value
         case .GDPR: gdpr = value
+        case .LGPD: lgpd = value
         case.NewAdFormat: newAdFormat = value
         case .ShouldLoadCurrentAdAfterStartup: shouldLoadCurrentAdAfterStartup.toggle()
         case .SDKVersion: return
