@@ -8,20 +8,19 @@
 
 import UIKit
 
-class MultiValueTableViewController: UITableViewController {
+class MultiValueTableViewController: BaseTableViewController {
     private var model: MultiValuesCustomCell!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        adjustForDarkMode()
         title = model.title.text
     }
     
     internal func configure(with model:MultiValuesCustomCell) {
         self.model = model
     }
-    // MARK: - Table view data source
     
+    // MARK: - Table view data source
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
@@ -47,7 +46,6 @@ class MultiValueTableViewController: UITableViewController {
     }
     
     // MARK: - IBAction
-    
     @IBAction func doneButtonClicked(_ sender: Any) {
         navigationController?.popViewController(animated: true)
     }

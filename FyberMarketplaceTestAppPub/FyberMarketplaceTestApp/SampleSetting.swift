@@ -17,6 +17,7 @@ enum SampleSetting:String {
     case GlobalConfig = "Global Config"
     case GDPRData     = "GDPR Data"
     case GDPR         = "GDPR"
+    case LGPD         = "LGPD"
     case SDKVersion   = "SDK Version"
     case ShouldLoadCurrentAdAfterStartup = "Load Last Ad On Startup"
     

@@ -41,6 +41,12 @@ class TextFieldCustomCell: UITableViewCell {
         textFieldCell.userInput.text = value
         return textFieldCell
     }
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        field = nil
+        title.text = ""
+        userInput.text = ""
+    }
 }
 
 //MARK: - UITextFieldDelegate
