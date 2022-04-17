@@ -8,20 +8,18 @@
 
 import UIKit
  
-class SaveAdsViewController: UITableViewController {
+class SaveAdsViewController: BaseTableViewController {
     private let dataSource = SaveAdsDatasource()
-
-    //MARK: - LifeCycle
+    private let router = AdsViewRouter()
     
+    //MARK: - LifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        adjustForDarkMode()
         
         tableView.dataSource = dataSource
         dataSource.dataChange = { [weak self] in
             self?.tableView.reloadData()
         }
-    
         navigationItem.rightBarButtonItems?.removeAll(where: {$0.title == "Settings"})
     }
     
@@ -31,7 +29,6 @@ class SaveAdsViewController: UITableViewController {
     }
     
     //MARK: - UITableView Delegate
-    
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let cell = tableView.cellForRow(at: indexPath) as! AdUnitCustomCell
         
@@ -41,16 +38,12 @@ class SaveAdsViewController: UITableViewController {
     }
     
     // MARK: - Navigation
-    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard segue.identifier != StoryboardsSegues.ConsoleViewControllerSegues.rawValue else { return }
         
         self.tabBarController?.tabBar.isHidden = true
         if segue.identifier == StoryboardsSegues.ShowAdVCSegue.rawValue  {
-            let model = sender as! AdUnit
-            let controller = segue.destination as! AdViewController
-            controller.setup(with: MarketplaceSDK(presentingViewController: controller), adType: model.format, title: model.name)
-            ClientRequestSettings.shared.removeUserDefaultsIfNeeded()
+            router.routeToAdViewController(segue: segue, sender: sender)
         }
     }
 }
