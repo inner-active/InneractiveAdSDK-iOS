@@ -7,10 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0FFA689F6153C7B4FC166CD2 /* IASDKResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 51B791B2374DCC418382DA1F /* IASDKResources.bundle */; };
 		1140A5922426735D006AA910 /* main_logo@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1140A5912426735D006AA910 /* main_logo@3x.png */; };
 		11A972E5234A39CE00194E7C /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 11A972E4234A39CE00194E7C /* libsqlite3.0.tbd */; };
-		1EAE37A4B7DBD53391429263 /* IASDKResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 25C07ADE1FF52BBDE7EE89FB /* IASDKResources.bundle */; };
 		2AA47D1B2369D89200104FD5 /* QRScanner.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2AA47D1A2369D89200104FD5 /* QRScanner.storyboard */; };
+		3E4BF086E710F9185C39FFBC /* IASDKCore.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = C2A951170716FCDD9E61ABE5 /* IASDKCore.xcframework */; };
 		525086D02739F48E00CBDA45 /* Console.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525086CC2739F48E00CBDA45 /* Console.swift */; };
 		525086D22739F48E00CBDA45 /* ConsoleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525086CD2739F48E00CBDA45 /* ConsoleViewController.swift */; };
 		525086D42739F48E00CBDA45 /* LoggingConsoleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525086CE2739F48E00CBDA45 /* LoggingConsoleViewController.swift */; };
@@ -60,8 +61,9 @@
 		9AFE24F027031B830097E68B /* TextFieldCustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AFE24EE27031B830097E68B /* TextFieldCustomCell.swift */; };
 		9AFE24F227031B830097E68B /* TextFieldCustomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9AFE24EF27031B830097E68B /* TextFieldCustomCell.xib */; };
 		9AFE24F527031BA00097E68B /* BuildFile in Sources */ = {isa = PBXBuildFile; };
+		9AFF135F2807181800E35024 /* BaseTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AFF135E2807181800E35024 /* BaseTableViewController.swift */; };
+		9AFF13632808052E00E35024 /* AdsViewRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AFF13622808052E00E35024 /* AdsViewRouter.swift */; };
 		AE044C0F1F0D35A600C84A80 /* BuildFile in Resources */ = {isa = PBXBuildFile; };
-		CCCE5E387B553634D065C822 /* IASDKCore.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8A8356E55224844EEE19BB9 /* IASDKCore.xcframework */; };
 		E87DBB931E706C5F00408E1A /* BuildFile in Resources */ = {isa = PBXBuildFile; };
 		E88693AF1E3DFED900B12EAB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E88693AE1E3DFED900B12EAB /* main.m */; };
 		E88693B81E3DFED900B12EAB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E88693B61E3DFED900B12EAB /* Main.storyboard */; };
@@ -107,16 +109,6 @@
 		1140A5912426735D006AA910 /* main_logo@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "main_logo@3x.png"; sourceTree = "<group>"; };
 		11427864266E467B007D3038 /* Marketplace.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Marketplace.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		11A972E4234A39CE00194E7C /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
-		11BC975126764D390070E03A /* CHANGELOG.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = CHANGELOG.md; path = "../../mopub-ios-mediation/Fyber/CHANGELOG.md"; sourceTree = "<group>"; };
-		11BC975226764D390070E03A /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = "../../mopub-ios-mediation/Fyber/README.md"; sourceTree = "<group>"; };
-		11BC975326764D390070E03A /* FyberBannerCustomEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FyberBannerCustomEvent.h; path = "../../mopub-ios-mediation/Fyber/FyberBannerCustomEvent.h"; sourceTree = "<group>"; };
-		11BC975426764D390070E03A /* FyberAdapterConfiguration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FyberAdapterConfiguration.m; path = "../../mopub-ios-mediation/Fyber/FyberAdapterConfiguration.m"; sourceTree = "<group>"; };
-		11BC975526764D390070E03A /* FyberRewardedVideoCustomEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FyberRewardedVideoCustomEvent.m; path = "../../mopub-ios-mediation/Fyber/FyberRewardedVideoCustomEvent.m"; sourceTree = "<group>"; };
-		11BC975626764D390070E03A /* FyberAdapterConfiguration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FyberAdapterConfiguration.h; path = "../../mopub-ios-mediation/Fyber/FyberAdapterConfiguration.h"; sourceTree = "<group>"; };
-		11BC975726764D390070E03A /* FyberRewardedVideoCustomEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FyberRewardedVideoCustomEvent.h; path = "../../mopub-ios-mediation/Fyber/FyberRewardedVideoCustomEvent.h"; sourceTree = "<group>"; };
-		11BC975826764D390070E03A /* FyberInterstitialCustomEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FyberInterstitialCustomEvent.h; path = "../../mopub-ios-mediation/Fyber/FyberInterstitialCustomEvent.h"; sourceTree = "<group>"; };
-		11BC975926764D390070E03A /* FyberBannerCustomEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FyberBannerCustomEvent.m; path = "../../mopub-ios-mediation/Fyber/FyberBannerCustomEvent.m"; sourceTree = "<group>"; };
-		11BC975A26764D390070E03A /* FyberInterstitialCustomEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FyberInterstitialCustomEvent.m; path = "../../mopub-ios-mediation/Fyber/FyberInterstitialCustomEvent.m"; sourceTree = "<group>"; };
 		11BC976926764F990070E03A /* GADMediationAdapterFyber.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GADMediationAdapterFyber.h; path = "../../googleads-mobile-ios-mediation/adapters/Fyber/FyberAdapter/GADMediationAdapterFyber.h"; sourceTree = "<group>"; };
 		11BC976A26764F990070E03A /* GADMediationAdapterFyber.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GADMediationAdapterFyber.m; path = "../../googleads-mobile-ios-mediation/adapters/Fyber/FyberAdapter/GADMediationAdapterFyber.m"; sourceTree = "<group>"; };
 		11BC976B26764F990070E03A /* GADMAdapterFyberUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GADMAdapterFyberUtils.m; path = "../../googleads-mobile-ios-mediation/adapters/Fyber/FyberAdapter/GADMAdapterFyberUtils.m"; sourceTree = "<group>"; };
@@ -131,15 +123,14 @@
 		11BC977426764F990070E03A /* GADMAdapterFyberRewardedAd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GADMAdapterFyberRewardedAd.h; path = "../../googleads-mobile-ios-mediation/adapters/Fyber/FyberAdapter/GADMAdapterFyberRewardedAd.h"; sourceTree = "<group>"; };
 		11CAD83726923E9D00E41E15 /* FyberMockMediatingSDK.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = FyberMockMediatingSDK.xcodeproj; path = ../FyberMockMediatingSDK/FyberMockMediatingSDK.xcodeproj; sourceTree = "<group>"; };
 		11E2DDBE2688A56500EDC425 /* FyberMockMediatingSDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FyberMockMediatingSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		25C07ADE1FF52BBDE7EE89FB /* IASDKResources.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; name = IASDKResources.bundle; path = ../IASDKCore/IASDKCore.xcframework/IASDKResources.bundle; sourceTree = "<group>"; };
 		2A57B9F52678F40E009456CD /* GADMAdapterFyberExtras.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GADMAdapterFyberExtras.h; path = "../../googleads-mobile-ios-mediation/adapters/Fyber/Public/Headers/GADMAdapterFyberExtras.h"; sourceTree = "<group>"; };
 		2A57B9F82678F40E009456CD /* FyberAdapter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FyberAdapter.h; path = "../../googleads-mobile-ios-mediation/adapters/Fyber/Public/Headers/FyberAdapter.h"; sourceTree = "<group>"; };
 		2AA47D1A2369D89200104FD5 /* QRScanner.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = QRScanner.storyboard; sourceTree = "<group>"; };
+		51B791B2374DCC418382DA1F /* IASDKResources.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; name = IASDKResources.bundle; path = ../IASDKCore/IASDKCore.xcframework/IASDKResources.bundle; sourceTree = "<group>"; };
 		525086CC2739F48E00CBDA45 /* Console.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Console.swift; sourceTree = "<group>"; };
 		525086CD2739F48E00CBDA45 /* ConsoleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConsoleViewController.swift; sourceTree = "<group>"; };
 		525086CE2739F48E00CBDA45 /* LoggingConsoleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoggingConsoleViewController.swift; sourceTree = "<group>"; };
 		525086CF2739F48E00CBDA45 /* ConsoleViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ConsoleViewController.xib; sourceTree = "<group>"; };
-		58FBE30D3B4716F556504510 /* AppLovinQualityService.xcframework */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = wrapper.xcframework; name = AppLovinQualityService.xcframework; path = AppLovinQualityService/AppLovinQualityService.xcframework; sourceTree = "<group>"; };
 		840FC4CB1E6461FD00724B1B /* libxml2.2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libxml2.2.tbd; path = usr/lib/libxml2.2.tbd; sourceTree = SDKROOT; };
 		844352BC1EA65FB70042AFAA /* DPTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DPTextField.h; path = ThirdParty/DPTextField/DPTextField.h; sourceTree = "<group>"; };
 		844352BD1EA65FB70042AFAA /* DPTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DPTextField.m; path = ThirdParty/DPTextField/DPTextField.m; sourceTree = "<group>"; };
@@ -180,6 +171,9 @@
 		9AFE24E927031B690097E68B /* MultiValuesCustomCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MultiValuesCustomCell.xib; sourceTree = "<group>"; };
 		9AFE24EE27031B830097E68B /* TextFieldCustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldCustomCell.swift; sourceTree = "<group>"; };
 		9AFE24EF27031B830097E68B /* TextFieldCustomCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TextFieldCustomCell.xib; sourceTree = "<group>"; };
+		9AFF135E2807181800E35024 /* BaseTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTableViewController.swift; sourceTree = "<group>"; };
+		9AFF13622808052E00E35024 /* AdsViewRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdsViewRouter.swift; sourceTree = "<group>"; };
+		C2A951170716FCDD9E61ABE5 /* IASDKCore.xcframework */ = {isa = PBXFileReference; includeInIndex = 1; name = IASDKCore.xcframework; path = ../IASDKCore/IASDKCore.xcframework; sourceTree = "<group>"; };
 		E88693AA1E3DFED900B12EAB /* Marketplace.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Marketplace.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E88693AE1E3DFED900B12EAB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		E88693B71E3DFED900B12EAB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -190,7 +184,6 @@
 		E88693CE1E3DFED900B12EAB /* FyberMarketplaceTestAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FyberMarketplaceTestAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F1E0A0DF278B1BAF00619021 /* AdFeedCustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdFeedCustomCell.swift; sourceTree = "<group>"; };
 		F1E0A0E1278B1D0500619021 /* AdFeedCustomCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AdFeedCustomCell.xib; sourceTree = "<group>"; };
-		F8A8356E55224844EEE19BB9 /* IASDKCore.xcframework */ = {isa = PBXFileReference; includeInIndex = 1; name = IASDKCore.xcframework; path = ../IASDKCore/IASDKCore.xcframework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -201,7 +194,7 @@
 				11A972E5234A39CE00194E7C /* libsqlite3.0.tbd in Frameworks */,
 				840FC4CC1E6461FD00724B1B /* libxml2.2.tbd in Frameworks */,
 				E8E1EB5B1E42063B000324D3 /* BuildFile in Frameworks */,
-				CCCE5E387B553634D065C822 /* IASDKCore.xcframework in Frameworks */,
+				3E4BF086E710F9185C39FFBC /* IASDKCore.xcframework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -220,26 +213,8 @@
 			isa = PBXGroup;
 			children = (
 				11BC976826764F710070E03A /* Google */,
-				11BC975026764D160070E03A /* MoPub */,
 			);
 			name = MediationsAdapters;
-			sourceTree = "<group>";
-		};
-		11BC975026764D160070E03A /* MoPub */ = {
-			isa = PBXGroup;
-			children = (
-				11BC975126764D390070E03A /* CHANGELOG.md */,
-				11BC975626764D390070E03A /* FyberAdapterConfiguration.h */,
-				11BC975426764D390070E03A /* FyberAdapterConfiguration.m */,
-				11BC975326764D390070E03A /* FyberBannerCustomEvent.h */,
-				11BC975926764D390070E03A /* FyberBannerCustomEvent.m */,
-				11BC975826764D390070E03A /* FyberInterstitialCustomEvent.h */,
-				11BC975A26764D390070E03A /* FyberInterstitialCustomEvent.m */,
-				11BC975726764D390070E03A /* FyberRewardedVideoCustomEvent.h */,
-				11BC975526764D390070E03A /* FyberRewardedVideoCustomEvent.m */,
-				11BC975226764D390070E03A /* README.md */,
-			);
-			name = MoPub;
 			sourceTree = "<group>";
 		};
 		11BC976826764F710070E03A /* Google */ = {
@@ -270,14 +245,6 @@
 				11CAD86026946B2000E41E15 /* FyberMockMediatingSDKTests.xctest */,
 			);
 			name = Products;
-			sourceTree = "<group>";
-		};
-		3DB56BC24EE014A0C76CD171 /* AppLovinQualityService */ = {
-			isa = PBXGroup;
-			children = (
-				58FBE30D3B4716F556504510 /* AppLovinQualityService.xcframework */,
-			);
-			name = AppLovinQualityService;
 			sourceTree = "<group>";
 		};
 		525086CB2739F48E00CBDA45 /* Console */ = {
@@ -417,8 +384,10 @@
 		9A90862D26FE2BA900048EEC /* Client */ = {
 			isa = PBXGroup;
 			children = (
-				F1A2C91A274FA53A00C6837B /* FeedTable */,
 				9A3F94702709B95E00CC939B /* SampleTabBarController.swift */,
+				9AFF13612808050F00E35024 /* Routers */,
+				9AFF135B280717FF00E35024 /* Base */,
+				F1A2C91A274FA53A00C6837B /* FeedTable */,
 				9A90861826FDB11500048EEC /* AdUnit */,
 				9A90863026FE2C1300048EEC /* SettingsMenu */,
 				9A458BDF2700B6F10005DC60 /* NewAdUnit */,
@@ -459,6 +428,22 @@
 			name = SettingsTableViewCells;
 			sourceTree = "<group>";
 		};
+		9AFF135B280717FF00E35024 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				9AFF135E2807181800E35024 /* BaseTableViewController.swift */,
+			);
+			name = Base;
+			sourceTree = "<group>";
+		};
+		9AFF13612808050F00E35024 /* Routers */ = {
+			isa = PBXGroup;
+			children = (
+				9AFF13622808052E00E35024 /* AdsViewRouter.swift */,
+			);
+			name = Routers;
+			sourceTree = "<group>";
+		};
 		E88693A11E3DFED900B12EAB = {
 			isa = PBXGroup;
 			children = (
@@ -467,9 +452,8 @@
 				84C17897257B102A00702557 /* FyberMarketplaceTestApp-Bridging-Header.h */,
 				E88693AB1E3DFED900B12EAB /* Products */,
 				844352BA1EA65F8E0042AFAA /* ThirdParty */,
-				3DB56BC24EE014A0C76CD171 /* AppLovinQualityService */,
-				F8A8356E55224844EEE19BB9 /* IASDKCore.xcframework */,
-				25C07ADE1FF52BBDE7EE89FB /* IASDKResources.bundle */,
+				C2A951170716FCDD9E61ABE5 /* IASDKCore.xcframework */,
+				51B791B2374DCC418382DA1F /* IASDKResources.bundle */,
 			);
 			sourceTree = "<group>";
 		};
@@ -663,7 +647,7 @@
 				F1A2C93E2753972500C6837B /* BuildFile in Resources */,
 				E88693B81E3DFED900B12EAB /* Main.storyboard in Resources */,
 				F1A349B4279EAEFA0038B379 /* BuildFile in Resources */,
-				1EAE37A4B7DBD53391429263 /* IASDKResources.bundle in Resources */,
+				0FFA689F6153C7B4FC166CD2 /* IASDKResources.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -694,6 +678,7 @@
 				9A458BD827006E550005DC60 /* ScannerViewController.swift in Sources */,
 				F1E0A0E0278B1BAF00619021 /* AdFeedCustomCell.swift in Sources */,
 				9A3F940927048BA600CC939B /* MarketplaceSDK+IAVideoContentDelegate.swift in Sources */,
+				9AFF135F2807181800E35024 /* BaseTableViewController.swift in Sources */,
 				84C17899257B102B00702557 /* Stub.swift in Sources */,
 				9A458BDA2700AE560005DC60 /* SaveAdsDatasource.swift in Sources */,
 				525086D22739F48E00CBDA45 /* ConsoleViewController.swift in Sources */,
@@ -719,6 +704,7 @@
 				9A3F940B27048BC600CC939B /* MarketplaceSDK+IAMRAIDContentDelegate.swift in Sources */,
 				9A3F9400270450C600CC939B /* MultiValueTableViewController.swift in Sources */,
 				9A3F94562705B12600CC939B /* NewAdUnitController.swift in Sources */,
+				9AFF13632808052E00E35024 /* AdsViewRouter.swift in Sources */,
 				9A3F94712709B95E00CC939B /* SampleTabBarController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -825,11 +811,11 @@
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_STATIC_ANALYZER_MODE = deep;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 8.1.4.3;
+				CURRENT_PROJECT_VERSION = 8.1.5.1;
 				DEAD_CODE_STRIPPING = NO;
 				DEPLOYMENT_POSTPROCESSING = NO;
 				DEVELOPMENT_TEAM = 9G2AGGBJ52;
-				ENABLE_BITCODE = NO;
+				ENABLE_BITCODE = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(PROJECT_DIR)/../IASDKCore",
 					"$(inherited)",
@@ -848,11 +834,8 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"\"$PODS_CONFIGURATION_BUILD_DIR/mopub-ios-sdk\"",
-				);
-				MARKETING_VERSION = 8.1.4;
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				MARKETING_VERSION = 8.1.5;
 				OTHER_LDFLAGS = (
 					"-ObjC",
 					"$(inherited)",
@@ -999,11 +982,11 @@
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_STATIC_ANALYZER_MODE = deep;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 8.1.4.3;
+				CURRENT_PROJECT_VERSION = 8.1.5.1;
 				DEAD_CODE_STRIPPING = NO;
 				DEPLOYMENT_POSTPROCESSING = NO;
 				DEVELOPMENT_TEAM = 9G2AGGBJ52;
-				ENABLE_BITCODE = NO;
+				ENABLE_BITCODE = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(PROJECT_DIR)/../IASDKCore",
 					"$(inherited)",
@@ -1022,7 +1005,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 8.1.4;
+				MARKETING_VERSION = 8.1.5;
 				OTHER_LDFLAGS = (
 					"-ObjC",
 					"$(inherited)",
@@ -1048,10 +1031,10 @@
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_STATIC_ANALYZER_MODE = deep;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 8.1.4.3;
+				CURRENT_PROJECT_VERSION = 8.1.5.1;
 				DEPLOYMENT_POSTPROCESSING = YES;
 				DEVELOPMENT_TEAM = 9G2AGGBJ52;
-				ENABLE_BITCODE = NO;
+				ENABLE_BITCODE = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(PROJECT_DIR)/../IASDKCore",
 					"$(inherited)",
@@ -1071,7 +1054,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 8.1.4;
+				MARKETING_VERSION = 8.1.5;
 				OTHER_LDFLAGS = (
 					"-ObjC",
 					"$(inherited)",

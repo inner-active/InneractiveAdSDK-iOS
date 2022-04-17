@@ -11,6 +11,7 @@ import AudioToolbox
 
 class AdViewController: UIViewController {
     static var shouldAutoLoad = false
+    private var isLoadingAd = false
     private var sdkInstance: SampleSDKProtocol!
     private var adType: SampleAdType!
     private var userAlertLabel: UILabel?
@@ -89,10 +90,16 @@ class AdViewController: UIViewController {
     }
     
     private func loadAd() {
-        sdkInstance.loadAd()
-        showAdButton.isHidden = true
-        spinner.startAnimating()
-        saveCurrentAdToUserDefaultsIfNeeded()
+        if (!isLoadingAd) {
+            Console.shared.add(message: "<Fyber> Will start loading ad... ", messageType: .debug)
+            isLoadingAd = true
+            sdkInstance.loadAd()
+            showAdButton.isHidden = true
+            spinner.startAnimating()
+            saveCurrentAdToUserDefaultsIfNeeded()
+        } else {
+            Console.shared.add(message: "<Fyber> Loading ad is already in progress... ", messageType: .error)
+        }
     }
     
     private func saveCurrentAdToUserDefaultsIfNeeded() {
@@ -139,6 +146,7 @@ class AdViewController: UIViewController {
 extension AdViewController: SampleSDKProtocolDelegate {
     func adDidLoad(with type: SampleAdType) {
         DispatchQueue.main.async {
+            self.isLoadingAd = false
             self.spinner.stopAnimating()
             UINotificationFeedbackGenerator().notificationOccurred(.success)
             self.showAdButton.isHidden = !type.isInterstitial()
@@ -149,6 +157,7 @@ extension AdViewController: SampleSDKProtocolDelegate {
     
     func adFailedToLoad(with error: String) {
         DispatchQueue.main.async {
+            self.isLoadingAd = false
             self.spinner.stopAnimating()
             UINotificationFeedbackGenerator().notificationOccurred(.error)
             self.showError(with: "Failed to load Ad with error: \(error)")
