@@ -7,9 +7,6 @@
 //
 
 import Foundation
-
-let k_production = "wv.inner-active"
-
 enum UserDefaultsKey:String {
     case ShouldLoadCurrentAdAfterStartup = "FMPShouldLoadCurrentAdAfterStartup"
     case SpotID = "FMPSpotID"
@@ -52,13 +49,13 @@ class ClientRequestSettings {
     /**
      Represents Marketplace server  - wv.inner-active = Production | ia-cert = Stagin
      */
-    private var server: String? = k_production
+    private var server: String? = Constants.SDKSettings.k_production
     
  
     /**
      Optional text used to choose different portal  on Forest.
      */
-    private var portal: String? = "4321"
+    private var portal: String? = Constants.SDKSettings.defaultPort
     
     /**
      Optional text to for user extra data on ccpa param.
@@ -94,9 +91,18 @@ class ClientRequestSettings {
     }
     
     /**
-     User privacy preferences. 'Given' By default.
+     User privacy preferences. Corresponds to and taken from IASDKCore.
      */
-    private var gdpr: String? = "Given" {
+    // (of: IASDKCore.sharedInstance().gdprConsent.rawValue + 1)
+    private var gdpr: String? = Constants.SDKSettings.gdprArray[IASDKCore.sharedInstance().gdprConsent.rawValue + 1] {
+        didSet {
+        }
+    }
+
+    /**
+     User privacy preferences. Corresponds to and taken from IASDKCore.
+     */
+    private var lgpd: String? = Constants.SDKSettings.lgpdArray[IASDKCore.sharedInstance().lgpdConsent.rawValue + 1] {
         didSet {
         }
     }
@@ -151,11 +157,11 @@ class ClientRequestSettings {
     internal func updateClientRequest(with adUnit:AdUnit) {
         spotId = adUnit.format.spotId
         adUnitId = adUnit.id
-        portal = adUnit.source == .Mock ? "4321" : ""
+        portal = adUnit.source == .Mock ? Constants.SDKSettings.defaultPort : ""
     }
     
     internal func updateRequestObject(with request:IAAdRequest) {
-        let server = self.server == k_production ? "" : self.server
+        let server = self.server == Constants.SDKSettings.k_production ? "" : self.server
         
         if let spotid = spotId {
             request.spotID = spotid
@@ -194,6 +200,7 @@ class ClientRequestSettings {
         case .GlobalConfig: return globalConfig
         case .GDPRData: return gdprData
         case .GDPR: return gdpr
+        case .LGPD: return lgpd
         case .SDKVersion: return IASDKCore.sharedInstance().version()
         case .NewAdFormat: return newAdFormat
         case .NewMockName: return newMockName
@@ -246,7 +253,7 @@ class ClientRequestSettings {
             server = userDefaultsServer
             spotId = userDefaultsSpotID
             adUnitId = userDefaultsAdUnitID
-            portal = adUnitId != "" ?  "4321" : ""
+            portal = adUnitId != "" ?  Constants.SDKSettings.defaultPort : ""
             
             AdViewController.shouldAutoLoad = true
 
@@ -274,6 +281,7 @@ extension ClientRequestSettings: ClientRequestSettingsDelegate {
         case .NewMockName: newMockName = value
         case .Server: server = value
         case .GDPR: gdpr = value
+        case .LGPD: lgpd = value
         case.NewAdFormat: newAdFormat = value
         case .ShouldLoadCurrentAdAfterStartup: shouldLoadCurrentAdAfterStartup.toggle()
         case .SDKVersion: return

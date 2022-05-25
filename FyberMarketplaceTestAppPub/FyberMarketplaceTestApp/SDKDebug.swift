@@ -2,8 +2,8 @@
 //  SDKDebug.swift
 //  FyberMarketplaceTestApp
 //
-//  Created by Digital Turbin on 26/01/2022.
-//  Copyright © 2022 Digital Turbin. All rights reserved.
+//  Created by Fyber on 26/01/2022.
+//  Copyright © 2022 Fyber. All rights reserved.
 //
 
 import Foundation

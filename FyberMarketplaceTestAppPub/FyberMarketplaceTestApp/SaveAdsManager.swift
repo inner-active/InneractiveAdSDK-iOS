@@ -51,23 +51,28 @@ final class SavedAdsManager {
 }
 
 // MARK: - UserDefaults
-
 private extension UserDefaults {
     var savedAds: [AdUnit] {
         get {
-            let res = [AdUnit]()
+            var defaultValue = [AdUnit]()
+            
+            defaultValue.append(AdUnit(id: "", "Production Banner", .Banner, .Production))
+            defaultValue.append(AdUnit(id: "", "Production Rectangle", .Rectangle, .Production))
+            defaultValue.append(AdUnit(id: "", "Production Interstitial", .Interstitial, .Production))
+            defaultValue.append(AdUnit(id: "", "Production Rewarded", .Rewarded, .Production))
             
             do {
                 guard let data = self.object(forKey:"SavedAdsKey" ) as? Data else {
                     print("<SaveAdsManager> \(#function) Failed to fetch Data from UserDefaults.")
-                    return res
+                    return defaultValue
                 }
                 
-                let res = try JSONDecoder().decode([AdUnit].self, from: data)
-                return res.count > 0 ? res : res
+                let result = try JSONDecoder().decode([AdUnit].self, from: data)
+                
+                return result.count > 0 ? result : defaultValue
             } catch {
                 print("<SaveAdsManager> \(#function) caught error: \(error)")
-                return res
+                return defaultValue
             }
         }
         set {
