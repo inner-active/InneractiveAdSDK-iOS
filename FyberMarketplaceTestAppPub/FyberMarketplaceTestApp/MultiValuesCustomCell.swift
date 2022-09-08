@@ -13,7 +13,7 @@ class MultiValuesCustomCell: UITableViewCell {
     
     var delegate:ClientRequestSettingsDelegate!
     var options: [String]!
-    var field:SampleSetting!
+    var field:SampleSettingsEnum!
     @IBOutlet var title: UILabel!
     @IBOutlet var value: UILabel!
     
@@ -27,7 +27,7 @@ class MultiValuesCustomCell: UITableViewCell {
         return UINib(nibName: identifier, bundle: nil)
     }
     
-    static func configure(with field:SampleSetting, table:UITableView, indexPath:IndexPath, options:[String], delegate: ClientRequestSettingsDelegate) -> MultiValuesCustomCell {
+    static func configure(with field:SampleSettingsEnum, table:UITableView, indexPath:IndexPath, options:[String], delegate: ClientRequestSettingsDelegate) -> MultiValuesCustomCell {
         let multiValueCell = table.dequeueReusableCell(withIdentifier: MultiValuesCustomCell.identifier, for: indexPath) as! MultiValuesCustomCell
         
         multiValueCell.delegate = delegate
@@ -39,6 +39,7 @@ class MultiValuesCustomCell: UITableViewCell {
         multiValueCell.value.textColor = .lightGray
         multiValueCell.accessoryType = .disclosureIndicator
         multiValueCell.selectionStyle = .default
+        multiValueCell.clipsToBounds = true
         
         return multiValueCell
     }

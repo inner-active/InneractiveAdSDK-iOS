@@ -18,6 +18,7 @@ extension MarketplaceSDK: IAVideoContentDelegate {
     
     func iaVideoContentController(_ contentController: IAVideoContentController?, videoInterruptedWithError error: Error){
         Console.shared.add(message:"IAVideoInterruptedWithError: \(error.localizedDescription)", messageType: .error)
+        delegate?.adFailedToLoad(with: error.localizedDescription)
     }
     
     func iaVideoContentController(_ contentController: IAVideoContentController?, videoDurationUpdated videoDuration: TimeInterval) {

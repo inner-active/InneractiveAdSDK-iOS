@@ -9,68 +9,65 @@
 import UIKit
 import AVFoundation
 
+typealias JSON = [String:Any]
+
 enum QRRequestDataKey:String {
     case Portal = "portal"
     case Mock = "mock"
 }
 
-protocol ScannerViewControllerDelegate: AnyObject {
-    func receivedQRCode(with mock: String)
+enum GetDataFailureReason: Error {
+    case parsingError(
+        title: String? = "Failed to parse QR Data",
+        description: String?
+    )
+    
+    case notSupported(
+        title: String? = "Scanning not supported",
+        description: String? = "Your device does not support scanning a code from an item. Please use a device with a camera."
+    )
 }
 
-class ScannerViewController: UIViewController, AVCaptureMetadataOutputObjectsDelegate {
-    private var captureSession: AVCaptureSession!
-    private var previewLayer: AVCaptureVideoPreviewLayer!
-    weak var delegate: ScannerViewControllerDelegate?
+protocol ScannerViewControllerDelegate: AnyObject {
+    func successfullyFetchedData(json: JSON)
+    func failedToFetchData(error: GetDataFailureReason)
+}
+
+class ScannerViewController: UIViewController {
+    private weak var delegate: ScannerViewControllerDelegate?
+    
+    private lazy var captureSession: AVCaptureSession = {
+        let captureSession = AVCaptureSession()
+        return captureSession
+    }()
+    
+    private lazy var previewLayer: AVCaptureVideoPreviewLayer = {
+        let layer = AVCaptureVideoPreviewLayer(session: captureSession)
+        layer.frame = view.layer.bounds
+        layer.videoGravity = .resizeAspectFill
+        return layer
+    }()
+    
+    
+    //MARK: - Setup
+    func setup(delegate: ScannerViewControllerDelegate) {
+        self.delegate = delegate
+    }
     
     //MARK: - Lifecycle
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        view.backgroundColor = UIColor.black
-        captureSession = AVCaptureSession()
+        guard setupCaptureSession() else { return }
         
-        guard let videoCaptureDevice = AVCaptureDevice.default(for: .video) else { return }
-        let videoInput: AVCaptureDeviceInput
-        
-        do {
-            videoInput = try AVCaptureDeviceInput(device: videoCaptureDevice)
-        } catch {
-            return
-        }
-        
-        if (captureSession.canAddInput(videoInput)) {
-            captureSession.addInput(videoInput)
-        } else {
-            failed()
-            return
-        }
-        
-        let metadataOutput = AVCaptureMetadataOutput()
-        
-        if (captureSession.canAddOutput(metadataOutput)) {
-            captureSession.addOutput(metadataOutput)
-            
-            metadataOutput.setMetadataObjectsDelegate(self, queue: DispatchQueue.main)
-            metadataOutput.metadataObjectTypes = [.qr]
-        } else {
-            failed()
-            return
-        }
-        
-        previewLayer = AVCaptureVideoPreviewLayer(session: captureSession)
-        previewLayer.frame = view.layer.bounds
-        previewLayer.videoGravity = .resizeAspectFill
-        view.layer.addSublayer(previewLayer)
-        
+        setupSubViews()
         captureSession.startRunning()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        if (captureSession?.isRunning == false) {
+        if (captureSession.isRunning == false) {
             captureSession.startRunning()
         }
     }
@@ -78,7 +75,7 @@ class ScannerViewController: UIViewController, AVCaptureMetadataOutputObjectsDel
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         
-        if (captureSession?.isRunning == true) {
+        if (captureSession.isRunning == true) {
             captureSession.stopRunning()
         }
     }
@@ -86,29 +83,84 @@ class ScannerViewController: UIViewController, AVCaptureMetadataOutputObjectsDel
     override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
         return .portrait
     }
-    
-    //MARK: - Serivce
-    
-    func failed() {
-        let ac = UIAlertController(title: "Scanning not supported", message: "Your device does not support scanning a code from an item. Please use a device with a camera.", preferredStyle: .alert)
-        ac.addAction(UIAlertAction(title: "OK", style: .default))
-        present(ac, animated: true)
-        captureSession = nil
+}
+
+//MARK: - Serivce
+private extension ScannerViewController {
+    func addVideoInputToCaptureSession(videoInput: AVCaptureInput) -> Bool {
+        var res = false
+        if (captureSession.canAddInput(videoInput)) {
+            captureSession.addInput(videoInput)
+            res = true
+        }
+        
+        return res
     }
     
+    func setupAVCaptureInput() -> AVCaptureInput? {
+        guard let videoCaptureDevice = AVCaptureDevice.default(for: .video),
+              let videoInput = try? AVCaptureDeviceInput(device: videoCaptureDevice) else {
+                  return nil
+              }
+        
+        return videoInput
+    }
+    
+    func setupCaptureSession() -> Bool {
+        guard let videoInput = setupAVCaptureInput(),
+              addVideoInputToCaptureSession(videoInput: videoInput),
+              setMetaDetaOutput() else {
+                  delegate?.failedToFetchData(error: .notSupported())
+                  return false
+              }
+        return true
+    }
+    
+    func setMetaDetaOutput() -> Bool {
+        let metadataOutput = AVCaptureMetadataOutput()
+    
+        guard (captureSession.canAddOutput(metadataOutput)) else { return false }
+        
+        captureSession.addOutput(metadataOutput)
+        metadataOutput.setMetadataObjectsDelegate(self, queue: DispatchQueue.main)
+        metadataOutput.metadataObjectTypes = [.qr]
+        
+        return true
+    }
+    
+    func setupSubViews() {
+        view.backgroundColor = UIColor.black
+        view.layer.addSublayer(previewLayer)
+    }
+    
+    func failed(with title: String , message: String?) {
+        let ac = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        ac.addAction(UIAlertAction(title: "OK", style: .default))
+        present(ac, animated: true)
+    }
+    
+    func getDataFromMetaData(metadataObjects: [AVMetadataObject]) -> Data? {
+        guard let metadataObject = metadataObjects.first,
+              let readableObject = metadataObject as? AVMetadataMachineReadableCodeObject,
+              let data = readableObject.stringValue?.data(using: .utf8) else {
+                  return nil
+              }
+        return data
+    }
+}
+
+//MARK: - AVCaptureMetadataOutputObjectsDelegate
+extension ScannerViewController: AVCaptureMetadataOutputObjectsDelegate {
     func metadataOutput(_ output: AVCaptureMetadataOutput, didOutput metadataObjects: [AVMetadataObject], from connection: AVCaptureConnection) {
         captureSession.stopRunning()
         
-        if let metadataObject = metadataObjects.first {
-            guard let readableObject = metadataObject as? AVMetadataMachineReadableCodeObject else { return }
-            guard let data = readableObject.stringValue?.data(using: .utf8) else { return }
-            do {
-                let json = try JSONSerialization.jsonObject(with: data, options: []) as? [String: Any]
-                AudioServicesPlaySystemSound(SystemSoundID(kSystemSoundID_Vibrate))
-                delegate?.receivedQRCode(with: (json?[QRRequestDataKey.Mock.rawValue]) as! String)
-            } catch let error as NSError {
-                print("Failed to load: \(error.localizedDescription)")
-            }
+        guard let data = getDataFromMetaData(metadataObjects: metadataObjects) else { return }
+        do {
+            let json = try JSONSerialization.jsonObject(with: data, options: []) as? JSON
+            AudioServicesPlaySystemSound(SystemSoundID(kSystemSoundID_Vibrate))
+            delegate?.successfullyFetchedData(json: json!)
+        } catch let error as NSError {
+            delegate?.failedToFetchData(error: .parsingError(description: error.localizedDescription))
         }
         navigationController?.popViewController(animated: true)
     }

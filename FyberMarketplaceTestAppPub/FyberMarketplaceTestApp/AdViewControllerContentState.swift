@@ -14,11 +14,11 @@ protocol AdViewContentStateDelegate: AnyObject {
 }
 
 class AdViewControllerContentState {
-    let adType:SampleAdType
+    let adType:SampleAdTypeEnum
     weak var delegate: AdViewContentStateDelegate?
     
     //MARK: - Init
-    init(with adType:SampleAdType) {
+    init(with adType:SampleAdTypeEnum) {
         self.adType = adType
     }
     
