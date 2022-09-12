@@ -12,7 +12,7 @@ class TextFieldCustomCell: UITableViewCell {
     static let identifier = "TextFieldCustomCell"
     
     weak var delegate:ClientRequestSettingsDelegate!
-    var field:SampleSetting!
+    var field:SampleSettingsEnum!
     @IBOutlet var title: UILabel!
     @IBOutlet var userInput: UITextField!
    
@@ -20,7 +20,7 @@ class TextFieldCustomCell: UITableViewCell {
         return UINib(nibName: identifier, bundle: nil)
     }
     
-    static func configure(with field:SampleSetting, table:UITableView, indexPath:IndexPath, delegate: ClientRequestSettingsDelegate) -> TextFieldCustomCell {
+    static func configure(with field:SampleSettingsEnum, table:UITableView, indexPath:IndexPath, delegate: ClientRequestSettingsDelegate) -> TextFieldCustomCell {
         
         let textFieldCell = table.dequeueReusableCell(withIdentifier: TextFieldCustomCell.identifier, for: indexPath) as! TextFieldCustomCell
         
@@ -28,24 +28,33 @@ class TextFieldCustomCell: UITableViewCell {
         textFieldCell.field = field
         textFieldCell.title.text = field.rawValue
         textFieldCell.userInput.delegate = textFieldCell
-        
+        textFieldCell.clipsToBounds = true
+
         guard let value = field.ClientSettingsValue, !value.isEmpty else {
-            if field == .NewMockName {
-                textFieldCell.userInput.placeholder = "Enter Mock Name"
-            } else {
-                textFieldCell.userInput.placeholder = field.ClientSettingsValue == nil ?  "Click to override" : "Empty"
-            }
+            textFieldCell.setDefaultValues(field: field)
             return textFieldCell
         }
         
         textFieldCell.userInput.text = value
         return textFieldCell
     }
+    
     override func prepareForReuse() {
         super.prepareForReuse()
         field = nil
         title.text = ""
         userInput.text = ""
+    }
+}
+
+//MARK: - Service
+private extension TextFieldCustomCell {
+    private func setDefaultValues(field: SampleSettingsEnum) {
+        if field == .MockName {
+            userInput.placeholder = field.ClientSettingsValue == nil ? "Enter Mock Name" : field.ClientSettingsValue
+        } else {
+            userInput.placeholder = field.ClientSettingsValue == nil ?  "Click to override" : "Empty"
+        }
     }
 }
 

@@ -9,9 +9,12 @@
 import Foundation
 
 enum StoryboardsSegues:String {
-    case showScannerSegue = "showScannerSegue"
-    case ShowAdVCSegue = "ShowAdVCSegue"
-    case multiValueShowSegue = "multiValueShowSegue"
+    case showScannerSegue = "Scanner"
+    case ShowAdVCSegue = "AdView"
+    case showMultiValue = "MultiValue"
     case feedTableVCSegue = "feedTableVCSegue"
     case ConsoleViewControllerSegues = "ConsoleViewControllerSegues"
+    case ShowNewAdUnitSegue = "showNewAdUnitSegue"
+    case ShowSettings = "ShowSettings"
+    case Configuration = "Configuration"
 }

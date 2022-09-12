@@ -8,15 +8,16 @@
 
 import Foundation
 
+typealias UserInput = (mock: String, spot: String, portal: String)
+
 struct NewAdUnitSection {
     let title: String
-    let model: SampleSetting
+    let model: SampleSettingsEnum
 }
 
 class NewAdUnitDataSource:NSObject {
     private var models: [[NewAdUnitSection]]!
-    private var newAdUnitType:SampleAdType? = .Banner
-    
+    private var newAdUnitType:SampleAdTypeEnum? = .Banner
     
     override init() {
         super.init()
@@ -26,14 +27,15 @@ class NewAdUnitDataSource:NSObject {
     //MARK: - Service
     private func configureCells() {
         models = [
-            [NewAdUnitSection(title: "Ad Format", model: .NewAdFormat)],
-            [NewAdUnitSection(title: "Mock", model: .NewMockName)]
-        ]
+            [NewAdUnitSection(title: "Ad Format", model: .AdFormat)],
+            [NewAdUnitSection(title: "Spot Id", model: .SpotIdNew)],
+            [NewAdUnitSection(title: "Portal", model: .PortalNew)],
+            [NewAdUnitSection(title: "Mock", model: .MockName)]]
     }
     
-    private func getMultiValueCellOptions(for setting: SampleSetting) -> [String] {
+    private func getMultiValueCellOptions(for setting: SampleSettingsEnum) -> [String] {
         switch setting {
-        case .NewAdFormat: return [SampleAdType.Banner.rawValue, SampleAdType.Rectangle.rawValue, SampleAdType.Interstitial.rawValue, SampleAdType.Rewarded.rawValue]
+        case .AdFormat: return [SampleAdTypeEnum.Banner.rawValue, SampleAdTypeEnum.Rectangle.rawValue, SampleAdTypeEnum.Interstitial.rawValue, SampleAdTypeEnum.Rewarded.rawValue]
         default: return [""]
         }
     }
@@ -41,12 +43,27 @@ class NewAdUnitDataSource:NSObject {
     func createNewAdUnit() -> AdUnit? {
         var adUnit:AdUnit? = nil
         
-        if  let mockName = ClientRequestSettings.shared.getValue(of: .NewMockName), mockName.count > 0 {
-            let unitType = SampleAdType.init(rawValue: ClientRequestSettings.shared.getValue(of: .NewAdFormat)!)
-            adUnit = AdUnit(id: mockName, mockName, unitType!, .Mock)
+        if let userInput = validateUserInputs() {
+            let unitType = SampleAdTypeEnum(rawValue: ClientRequestSettings.shared.getValue(of: .AdFormat)!)
+            adUnit = AdUnit(id: userInput.mock,
+                            name: userInput.mock,
+                            format: unitType!,
+                            source: .Mock,
+                            spotid: userInput.spot,
+                            portal: userInput.portal)
+            
             SavedAdsManager.sharedInstance.addSavedAd(adUnit: adUnit!)
         }
         return adUnit
+    }
+    
+    private func validateUserInputs() -> UserInput? {
+        if let spotId = ClientRequestSettings.shared.getValue(of: .SpotIdNew), spotId.count > 0,
+           let portal = ClientRequestSettings.shared.getValue(of: .PortalNew), portal.count > 0,
+           let mockName = ClientRequestSettings.shared.getValue(of: .MockName), mockName.count > 0 {
+            return UserInput(mock: mockName, spot: spotId, portal: portal)
+        }
+        return nil
     }
 }
 
@@ -65,11 +82,12 @@ extension NewAdUnitDataSource: UITableViewDataSource {
         let model = models[indexPath.section][indexPath.row].model
         
         switch model {
-        case .NewAdFormat:
-            return MultiValuesCustomCell.configure(with: model, table: tableView, indexPath: indexPath, options: getMultiValueCellOptions(for: model), delegate: ClientRequestSettings.shared)
-        case .NewMockName:
+        case .AdFormat:
+            return MultiValuesCustomCell.configure(with: model, table: tableView, indexPath: indexPath, options: getMultiValueCellOptions(for: model), delegate:  ClientRequestSettings.shared)
+        case .SpotIdNew, .PortalNew, .MockName:
             return TextFieldCustomCell.configure(with: model, table: tableView, indexPath: indexPath, delegate: ClientRequestSettings.shared)
         default:return UITableViewCell()
         }
     }
 }
+

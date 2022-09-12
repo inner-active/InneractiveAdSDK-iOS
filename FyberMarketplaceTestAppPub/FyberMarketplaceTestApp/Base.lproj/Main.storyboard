@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Wvf-A6-3dJ">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Wvf-A6-3dJ">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -34,7 +34,7 @@
                     <navigationItem key="navigationItem" title="Marketplace" id="zwV-J2-tIB">
                         <barButtonItem key="leftBarButtonItem" systemItem="add" id="Rpk-ay-d5o">
                             <connections>
-                                <segue destination="4wv-6r-dM1" kind="show" id="bEV-PV-sSN"/>
+                                <action selector="addButtonPressed:" destination="8zh-jr-ENb" id="Ye5-U8-WmU"/>
                             </connections>
                         </barButtonItem>
                         <rightBarButtonItems>
@@ -51,8 +51,10 @@
                         </rightBarButtonItems>
                     </navigationItem>
                     <connections>
-                        <segue destination="QsV-NQ-qoY" kind="show" identifier="ShowAdVCSegue" id="NCv-Mk-CsV"/>
+                        <segue destination="QsV-NQ-qoY" kind="show" identifier="AdView" id="NCv-Mk-CsV"/>
                         <segue destination="Z2X-Mm-IQ8" kind="show" identifier="feedTableVCSegue" id="qFT-Eb-XCB"/>
+                        <segue destination="4wv-6r-dM1" kind="show" identifier="showNewAdUnitSegue" id="JVN-Ju-lqW"/>
+                        <segue destination="fS8-h9-Jo3" kind="show" identifier="Scanner" id="bjo-3f-fND"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fon-ZP-xQ4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -109,6 +111,12 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Mediations" id="QLh-Yl-JyX">
+                        <barButtonItem key="leftBarButtonItem" image="debug" id="dzk-5T-gL8">
+                            <color key="tintColor" systemColor="systemPinkColor"/>
+                            <connections>
+                                <action selector="mediationDebuggerPressed:" destination="gEV-Fb-rob" id="X2h-BP-tOy"/>
+                            </connections>
+                        </barButtonItem>
                         <rightBarButtonItems>
                             <barButtonItem title="Settings" image="gearshape" catalog="system" id="hIE-Zm-pI1">
                                 <connections>
@@ -123,8 +131,9 @@
                         </rightBarButtonItems>
                     </navigationItem>
                     <connections>
+                        <outlet property="mediationDebuggerButtonItem" destination="dzk-5T-gL8" id="v7z-bk-c7o"/>
                         <outlet property="tableView" destination="Iwi-ry-AfU" id="spv-P3-HDH"/>
-                        <segue destination="QsV-NQ-qoY" kind="show" identifier="ShowAdVCSegue" id="H1t-u9-9JF"/>
+                        <segue destination="QsV-NQ-qoY" kind="show" identifier="AdView" id="H1t-u9-9JF"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wBK-lT-Msa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -247,7 +256,7 @@
                         <rightBarButtonItems>
                             <barButtonItem title="Settings" image="gearshape" catalog="system" id="z1w-h4-Z1p">
                                 <connections>
-                                    <segue destination="LR9-Vp-j3H" kind="show" id="Myl-94-k8j"/>
+                                    <segue destination="LR9-Vp-j3H" kind="show" identifier="ShowSettings" id="Myl-94-k8j"/>
                                 </connections>
                             </barButtonItem>
                             <barButtonItem title="Console Logs" image="Logs-icon" id="IXy-GE-L5d">
@@ -292,7 +301,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nYv-Zp-he8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-11625" y="-4411"/>
+            <point key="canvasLocation" x="-11577" y="-5438"/>
         </scene>
         <!--Sample Ads-->
         <scene sceneID="2qo-Tw-UT2">
@@ -374,7 +383,7 @@
                     <navigationItem key="navigationItem" title="Marketplace" id="oHJ-vH-e8p">
                         <barButtonItem key="leftBarButtonItem" systemItem="add" id="ILS-6N-XZG">
                             <connections>
-                                <segue destination="4wv-6r-dM1" kind="show" id="ML6-Pa-2mP"/>
+                                <action selector="addButtonPressed:" destination="Hf6-RI-tLe" id="9BB-VZ-Ghx"/>
                             </connections>
                         </barButtonItem>
                         <rightBarButtonItems>
@@ -391,7 +400,9 @@
                         </rightBarButtonItems>
                     </navigationItem>
                     <connections>
-                        <segue destination="QsV-NQ-qoY" kind="show" identifier="ShowAdVCSegue" id="5El-tD-1a9"/>
+                        <segue destination="QsV-NQ-qoY" kind="show" identifier="AdView" id="5El-tD-1a9"/>
+                        <segue destination="4wv-6r-dM1" kind="show" identifier="showNewAdUnitSegue" id="Gtl-Ia-t98"/>
+                        <segue destination="fS8-h9-Jo3" kind="show" identifier="Scanner" id="H3e-Fi-WRS"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="338-4j-bZh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -447,11 +458,11 @@
                                 <rect key="frame" x="0.0" y="93" width="414" height="43.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="W2p-pQ-K2a" id="zbm-gr-i57">
-                                    <rect key="frame" x="0.0" y="0.0" width="384.5" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="385.5" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="OYx-yL-EQ2">
-                                            <rect key="frame" x="20" y="0.0" width="356.5" height="43.5"/>
+                                            <rect key="frame" x="20" y="0.0" width="357.5" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
                                             <nil key="textColor"/>
@@ -464,11 +475,11 @@
                                 <rect key="frame" x="0.0" y="136.5" width="414" height="43.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="hv8-hq-mdq" id="7T0-XF-dQi">
-                                    <rect key="frame" x="0.0" y="0.0" width="384.5" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="385.5" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="6j5-Ao-EN2">
-                                            <rect key="frame" x="20" y="0.0" width="356.5" height="43.5"/>
+                                            <rect key="frame" x="20" y="0.0" width="357.5" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
                                             <nil key="textColor"/>
@@ -481,11 +492,11 @@
                                 <rect key="frame" x="0.0" y="180" width="414" height="43.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="eIH-10-8Z7" id="zNK-2s-S0C">
-                                    <rect key="frame" x="0.0" y="0.0" width="384.5" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="385.5" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="UVD-fP-x0J">
-                                            <rect key="frame" x="20" y="0.0" width="356.5" height="43.5"/>
+                                            <rect key="frame" x="20" y="0.0" width="357.5" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
@@ -502,7 +513,8 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="Settings" largeTitleDisplayMode="always" id="sA9-GT-883"/>
                     <connections>
-                        <segue destination="9lD-ZQ-VXd" kind="show" identifier="multiValueShowSegue" id="q1C-AE-a4Z"/>
+                        <segue destination="9lD-ZQ-VXd" kind="show" identifier="MultiValue" id="q1C-AE-a4Z"/>
+                        <segue destination="YgY-aQ-xyv" kind="show" identifier="Configuration" id="pHg-fc-HJX"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tsj-Nr-ioz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -542,7 +554,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="B1B-vH-aks" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-11692" y="-3493"/>
+            <point key="canvasLocation" x="-11670" y="-3058"/>
         </scene>
         <!--Sample Tab Bar Controller-->
         <scene sceneID="ZAE-Dj-Q7g">
@@ -602,11 +614,11 @@
                                         <rect key="frame" x="0.0" y="49.5" width="414" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="suf-zx-SSO" id="6j6-Rz-3gI">
-                                            <rect key="frame" x="0.0" y="0.0" width="384.5" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="385.5" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="zW1-pc-qkp">
-                                                    <rect key="frame" x="20" y="0.0" width="356.5" height="43.5"/>
+                                                    <rect key="frame" x="20" y="0.0" width="357.5" height="43.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
                                                     <nil key="textColor"/>
@@ -619,11 +631,11 @@
                                         <rect key="frame" x="0.0" y="93" width="414" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="5g5-GE-gBJ" id="lHQ-4S-GIH">
-                                            <rect key="frame" x="0.0" y="0.0" width="384.5" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="385.5" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="bMJ-uY-Yn8">
-                                                    <rect key="frame" x="20" y="0.0" width="356.5" height="43.5"/>
+                                                    <rect key="frame" x="20" y="0.0" width="357.5" height="43.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
                                                     <nil key="textColor"/>
@@ -657,32 +669,81 @@
                     <navigationItem key="navigationItem" title="New Ad Unit" id="bQj-kp-9nj">
                         <barButtonItem key="rightBarButtonItem" title="qr" image="QR" id="oZb-6J-UwS">
                             <connections>
-                                <segue destination="fS8-h9-Jo3" kind="show" identifier="showScannerSegue" id="365-Nx-4Q9"/>
+                                <action selector="QRButtonClicked:" destination="4wv-6r-dM1" id="o40-Or-FKV"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="qrButton" destination="oZb-6J-UwS" id="dPg-uX-QOF"/>
                         <outlet property="tableView" destination="LAe-e4-Jk6" id="hJY-kP-mdb"/>
-                        <segue destination="9lD-ZQ-VXd" kind="show" identifier="multiValueShowSegue" id="7fx-K8-eYS"/>
-                        <segue destination="QsV-NQ-qoY" kind="show" identifier="ShowAdVCSegue" id="1Tu-gq-6no"/>
+                        <segue destination="9lD-ZQ-VXd" kind="show" identifier="MultiValue" id="7fx-K8-eYS"/>
+                        <segue destination="QsV-NQ-qoY" kind="show" identifier="AdView" id="1Tu-gq-6no"/>
+                        <segue destination="fS8-h9-Jo3" kind="show" identifier="Scanner" id="eqh-4R-lJ2"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1yJ-UN-Q8b" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-12914" y="-2543"/>
         </scene>
+        <!--Configuration View Controller-->
+        <scene sceneID="dpH-kU-H6x">
+            <objects>
+                <tableViewController id="YgY-aQ-xyv" customClass="ConfigurationViewController" customModule="Marketplace" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="InX-7R-WBt">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemGray6Color"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="reuseIdentifier" id="7eU-ap-eAA">
+                                <rect key="frame" x="0.0" y="49.5" width="414" height="43.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="7eU-ap-eAA" id="coZ-oA-Eug">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="TextFieldTableViewCell" id="2Hk-dM-2LV" customClass="TextFieldCustomCell" customModule="Marketplace" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="93" width="414" height="43.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="2Hk-dM-2LV" id="RGi-vf-nVX">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="YgY-aQ-xyv" id="Fgp-9A-IxY"/>
+                            <outlet property="delegate" destination="YgY-aQ-xyv" id="W9S-k3-b90"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="Zai-rw-txs">
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="FkC-4F-NTT">
+                            <connections>
+                                <action selector="saveClicked:" destination="YgY-aQ-xyv" id="6lI-df-1P1"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="saveButton" destination="FkC-4F-NTT" id="wIq-Ue-IXg"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UK3-UA-j2m" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-11626" y="-3695"/>
+        </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="ML6-Pa-2mP"/>
-        <segue reference="q1C-AE-a4Z"/>
-        <segue reference="JS1-K7-xKX"/>
-        <segue reference="4l3-EK-ybF"/>
-        <segue reference="5El-tD-1a9"/>
+        <segue reference="JVN-Ju-lqW"/>
+        <segue reference="7fx-K8-eYS"/>
+        <segue reference="B4a-H8-nxX"/>
+        <segue reference="bjo-3f-fND"/>
+        <segue reference="efw-Yo-hZl"/>
+        <segue reference="H1t-u9-9JF"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="Logs-icon" width="26" height="26"/>
         <image name="QR" width="50" height="50"/>
+        <image name="debug" width="32" height="32"/>
         <image name="folder" catalog="system" width="128" height="97"/>
         <image name="gearshape" catalog="system" width="128" height="121"/>
         <image name="m.circle" catalog="system" width="128" height="121"/>
@@ -695,6 +756,9 @@
         </systemColor>
         <systemColor name="systemGray6Color">
             <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemPinkColor">
+            <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

@@ -257,74 +257,6 @@
 		</dict>
 		<dict>
 			<key>SKAdNetworkIdentifier</key>
-			<string>3rd42ekr43.skadnetwork</string>
-		</dict>
-		<dict>
-			<key>SKAdNetworkIdentifier</key>
-			<string>p78axxw29g.skadnetwork</string>
-		</dict>
-		<dict>
-			<key>SKAdNetworkIdentifier</key>
-			<string>bmxgpxpgc.skadnetwork</string>
-		</dict>
-		<dict>
-			<key>SKAdNetworkIdentifier</key>
-			<string>s39g8k73mm.skadnetwork</string>
-		</dict>
-		<dict>
-			<key>SKAdNetworkIdentifier</key>
-			<string>krvm3zuq6h.skadnetwork</string>
-		</dict>
-		<dict>
-			<key>SKAdNetworkIdentifier</key>
-			<string>294l99pt4k.skadnetwork</string>
-		</dict>
-		<dict>
-			<key>SKAdNetworkIdentifier</key>
-			<string>424m5254lk.skadnetwork</string>
-		</dict>
-		<dict>
-			<key>SKAdNetworkIdentifier</key>
-			<string>ggvn48r87g.skadnetwork</string>
-		</dict>
-		<dict>
-			<key>SKAdNetworkIdentifier</key>
-			<string>cg4yq2srnc.skadnetwork</string>
-		</dict>
-		<dict>
-			<key>SKAdNetworkIdentifier</key>
-			<string>5a6flpkh64.skadnetwork</string>
-		</dict>
-		<dict>
-			<key>SKAdNetworkIdentifier</key>
-			<string>x8uqf25wch.skadnetwork</string>
-		</dict>
-		<dict>
-			<key>SKAdNetworkIdentifier</key>
-			<string>rx5hdcabgc.skadnetwork</string>
-		</dict>
-		<dict>
-			<key>SKAdNetworkIdentifier</key>
-			<string>e5fvkxwrpn.skadnetwork</string>
-		</dict>
-		<dict>
-			<key>SKAdNetworkIdentifier</key>
-			<string>32z4fx6l9h.skadnetwork</string>
-		</dict>
-		<dict>
-			<key>SKAdNetworkIdentifier</key>
-			<string>24t9a8vw3c.skadnetwork</string>
-		</dict>
-		<dict>
-			<key>SKAdNetworkIdentifier</key>
-			<string>5lm9lj6jb7.skadnetwork</string>
-		</dict>
-		<dict>
-			<key>SKAdNetworkIdentifier</key>
-			<string>3sh42y64q3.skadnetwork</string>
-		</dict>
-		<dict>
-			<key>SKAdNetworkIdentifier</key>
 			<string>6g9af3uyq4.skadnetwork</string>
 		</dict>
 		<dict>
@@ -361,11 +293,15 @@
 		</dict>
 		<dict>
 			<key>SKAdNetworkIdentifier</key>
+			<string>mtkv5xtk9e.skadnetwork</string>
+		</dict>
+		<dict>
+			<key>SKAdNetworkIdentifier</key>
 			<string>kbmxgpxpgc.skadnetwork</string>
 		</dict>
 		<dict>
 			<key>SKAdNetworkIdentifier</key>
-			<string>mtkv5xtk9e.skadnetwork</string>
+			<string>c3frkrj4fj.skadnetwork</string>
 		</dict>
 	</array>
 	<key>UILaunchStoryboardName</key>

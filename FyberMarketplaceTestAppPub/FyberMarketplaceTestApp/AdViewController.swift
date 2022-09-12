@@ -7,15 +7,15 @@
 //
 
 import UIKit
-import AudioToolbox
 
 class AdViewController: UIViewController {
     static var shouldAutoLoad = false
     private var isLoadingAd = false
     private var sdkInstance: SampleSDKProtocol!
-    private var adType: SampleAdType!
+    private var adType: SampleAdTypeEnum!
     private var userAlertLabel: UILabel?
     private var adViewContent: AdViewControllerContentState!
+    private var router: Router = RouterImpl()
     @IBOutlet weak var loadAdButton: UIButton!
     @IBOutlet weak var showAdButton: UIButton!
     @IBOutlet weak var adView: UIView!
@@ -26,26 +26,12 @@ class AdViewController: UIViewController {
     @IBOutlet weak var loadAdTopConstraintToScrollViewTopForInterstitialView: NSLayoutConstraint!
     
     //MARK: - Lifecycle
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        adViewContent = AdViewControllerContentState(with: adType)
-        adViewContent.delegate = self
-        adViewContent.adjustLoadAdTopConstraint()
+        setupSubViews()
         
-        if adType.isInterstitial() {
-            loadAdTopConstraintToScrollViewTopForInterstitialView.priority = .defaultHigh
-            loadAdTopConstraintsToScrollViewTopForAdView.priority = .defaultLow
-        }
         navigationItem.rightBarButtonItems?.removeAll(where: {$0.title == "Settings"})
-        
-        if #available(iOS 13.0, *) {
-            spinner.style = .large
-        }
-        
-        if (!adType.isInterstitial()) {
-            setupSubviewsForNonInterstitialAds()
-        }
+    
     }
     
     override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
@@ -56,9 +42,7 @@ class AdViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        
-        loadAdButton.isUserInteractionEnabled = true
-        loadAdButton.isEnabled = true
+        prepareSubViewToCorrectState()
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -66,61 +50,18 @@ class AdViewController: UIViewController {
         
         if self.isMovingFromParent {
             self.navigationController?.popToRootViewController(animated: true)
+        }
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        
+        if self.isMovingFromParent {
             sdkInstance = nil
         }
     }
-
-    //MARK: - Service
-    
-    internal func setup(with sdk:SampleSDKProtocol, adType:SampleAdType, title:String) {
-        sdkInstance = sdk
-        sdkInstance.requestAdType = adType
-        sdkInstance.delegate = self
-        self.adType = adType
-        self.title = title
-    }
-    
-    private func setupSubviewsForNonInterstitialAds() {
-        adView.isHidden = false
-
-        if ((adType == .Rectangle) || (adType == .Banner)) {
-            adViewHeight.constant = adType.size.height
-            adViewWidth.constant  = adType.size.width
-        }
-    }
-    
-    private func loadAd() {
-        if (!isLoadingAd) {
-            Console.shared.add(message: "<Fyber> Will start loading ad... ", messageType: .debug)
-            isLoadingAd = true
-            sdkInstance.loadAd()
-            showAdButton.isHidden = true
-            spinner.startAnimating()
-            saveCurrentAdToUserDefaultsIfNeeded()
-        } else {
-            Console.shared.add(message: "<Fyber> Loading ad is already in progress... ", messageType: .error)
-        }
-    }
-    
-    private func saveCurrentAdToUserDefaultsIfNeeded() {
-        if isLoadAdAfterStartupEnabled() {
-            let defaults = UserDefaults.standard
-            
-            defaults.set(adType.rawValue, forKey: UserDefaultsKey.SampleAdType.rawValue)
-            ClientRequestSettings.shared.saveCurrentAdToUserDefaults()
-        }
-    }
-    
-    private func isLoadAdAfterStartupEnabled() -> Bool {
-        if let value = ClientRequestSettings.shared.getValue(of: .ShouldLoadCurrentAdAfterStartup), value == "true", sdkInstance is MarketplaceSDK {
-            return true
-        }
-        
-        return false
-    }
     
     //MARK: - IBOutlets
-    
     @IBAction func LoadAdClicked(_ sender: Any) {
         UIImpactFeedbackGenerator(style: .light).impactOccurred()
         loadAd()
@@ -133,18 +74,102 @@ class AdViewController: UIViewController {
         sdkInstance.showInterstitial()
         showAdButton.isHidden = true
     }
+
+    //MARK: - Navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        router.route(with: segue, sender: true)
+    }
     
     //MARK: - deInit
-    
     deinit {
         Console.shared.add(message: "\(String(describing: self)) deinit")
     }
 }
 
-//MARK: - FMPSDKProtocolDelegate
+//MARK: - API
+extension AdViewController {
+    func setup(with sdk:SampleSDKProtocol, adType:SampleAdTypeEnum, title:String) {
+        sdkInstance = sdk
+        sdkInstance.requestAdType = adType
+        sdkInstance.delegate = self
+        self.adType = adType
+        self.title = title
+    }
+}
 
+//MARK: - Service
+private extension AdViewController {
+    func setupSubViews() {
+        setupAdViewContent()
+        setupSpinnerStyle()
+        
+        if adType.isInterstitial() {
+            setupSubViewsForInterstitialAds()
+        } else {
+            setupSubviewsForNonInterstitialAds()
+        }
+    }
+    
+    func setupSpinnerStyle() {
+        if #available(iOS 13.0, *) {
+            spinner.style = .large
+        }
+    }
+    
+    func setupAdViewContent() {
+        adViewContent = AdViewControllerContentState(with: adType)
+        adViewContent.delegate = self
+        adViewContent.adjustLoadAdTopConstraint()
+    }
+    
+    func setupSubViewsForInterstitialAds() {
+        loadAdTopConstraintToScrollViewTopForInterstitialView.priority = .defaultHigh
+        loadAdTopConstraintsToScrollViewTopForAdView.priority = .defaultLow
+    }
+    func setupSubviewsForNonInterstitialAds() {
+        adView.isHidden = false
+        
+        if ((adType == .Rectangle) || (adType == .Banner)) {
+            adViewHeight.constant = adType.size.height
+            adViewWidth.constant  = adType.size.width
+        }
+    }
+    
+    func prepareSubViewToCorrectState() {
+        loadAdButton.isUserInteractionEnabled = true
+        loadAdButton.isEnabled = true
+        tabBarController?.tabBar.isHidden = true
+        removeUserAlertLabelIfNeeded()
+    }
+    
+    func loadAd() {
+        if (!isLoadingAd) {
+            Console.shared.add(message: "<Fyber> Will start loading ad... ", messageType: .debug)
+            isLoadingAd = true
+            sdkInstance.loadAd()
+            showAdButton.isHidden = true
+            spinner.startAnimating()
+        } else {
+            Console.shared.add(message: "<Fyber> Loading ad is already in progress... ", messageType: .error)
+        }
+    }
+    
+    
+    func removeUserAlertLabelIfNeeded() {
+        guard let userAlertLabel = self.userAlertLabel else {return}
+        UIView.animate(withDuration: 0.5, delay: 3) {
+            userAlertLabel.alpha = 0
+        } completion: { res in
+            guard res else { return }
+            userAlertLabel.removeFromSuperview()
+            self.userAlertLabel = nil
+        }
+    }
+}
+
+//MARK: - FMPSDKProtocolDelegate
 extension AdViewController: SampleSDKProtocolDelegate {
-    func adDidLoad(with type: SampleAdType) {
+    func adDidLoad(with type: SampleAdTypeEnum) {
         DispatchQueue.main.async {
             self.isLoadingAd = false
             self.spinner.stopAnimating()
@@ -158,6 +183,7 @@ extension AdViewController: SampleSDKProtocolDelegate {
     func adFailedToLoad(with error: String) {
         DispatchQueue.main.async {
             self.isLoadingAd = false
+            self.showAdButton.isHidden = true
             self.spinner.stopAnimating()
             UINotificationFeedbackGenerator().notificationOccurred(.error)
             self.showError(with: "Failed to load Ad with error: \(error)")
@@ -177,13 +203,12 @@ extension AdViewController: SampleSDKProtocolDelegate {
     }
     
     func adDidResize(to frame:CGRect) {
-        adViewHeight.constant = frame.width
+        adViewWidth.constant = frame.width
         adViewHeight.constant = frame.height
     }
 }
 
 //MARK: - UI Utils
-
 extension AdViewController {
     func showError(with message: String) {
         if userAlertLabel != nil {
@@ -216,13 +241,7 @@ extension AdViewController {
                 userAlertLabel.alpha = 1
             } completion: { res in
                 guard res else { return }
-                UIView.animate(withDuration: 0.5 , delay: 3) {
-                    userAlertLabel.alpha = 0
-                } completion: { (res) in
-                    guard res else { return }
-                    userAlertLabel.removeFromSuperview()
-                    self.userAlertLabel = nil;
-                }
+                self.removeUserAlertLabelIfNeeded()
             }
         }
     }

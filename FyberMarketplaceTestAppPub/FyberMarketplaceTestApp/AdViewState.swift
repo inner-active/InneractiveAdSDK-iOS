@@ -16,7 +16,7 @@ enum AdViewContentState {
     case InterstitialAndLandscape
     case InterstitialAndPortrait
     
-    func getTopConstraint(from adType: SampleAdType) -> CGFloat {
+    func getTopConstraint(from adType: SampleAdTypeEnum) -> CGFloat {
         switch self {
         case .BannerAndPortrait: // Use percentages to support different screen sizes
             return ((UIScreen.main.fixedCoordinateSpace.bounds.height - adType.size.height) * 0.6)
@@ -33,7 +33,7 @@ enum AdViewContentState {
         }
     }
     
-    static func getState(adType: SampleAdType) -> AdViewContentState? {
+    static func getState(adType: SampleAdTypeEnum) -> AdViewContentState? {
         guard !adType.isInterstitial() else {
             return  UIDevice.current.orientation.isLandscape ? InterstitialAndLandscape : InterstitialAndPortrait
         }

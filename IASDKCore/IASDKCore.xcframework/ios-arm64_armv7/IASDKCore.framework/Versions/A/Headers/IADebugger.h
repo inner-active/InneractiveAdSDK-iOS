@@ -10,8 +10,6 @@
 
 #import <IASDKCore/IAInterfaceBuilder.h>
 
-static NSNotificationName _Nonnull kIADebuggerDidChangeRequestSettingsNotification = @"kIADebuggerDidChangeRequestSettingsNotification";
-
 @protocol IADebuggerBuilder <NSObject>
 
 @required

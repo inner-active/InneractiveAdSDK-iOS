@@ -7,38 +7,26 @@
 //
 
 import Foundation
-enum UserDefaultsKey:String {
-    case ShouldLoadCurrentAdAfterStartup = "FMPShouldLoadCurrentAdAfterStartup"
-    case SpotID = "FMPSpotID"
-    case AdUnitID = "FMPAdUnitID"
-    case Server = "FMPServer"
-    case SampleAdType = "FMPSampleAdType"
-    case SDKEventsDebugMode = "FMPSDKEventsDebugMode"
-}
+
+typealias AdUnitValues = (adUnitId: String?, spotId: String?, server: String?, portal: String?)
 
 protocol ClientRequestSettingsDelegate:AnyObject {
-    func valueDidChange(for field:SampleSetting, with value:String)
+    func valueDidChange(for field:SampleSettingsEnum, with value:String)
 }
 
 class ClientRequestSettings {
-
     static let shared = ClientRequestSettings()
     
     private init() {
-        let defaults = UserDefaults.standard
-
-        shouldLoadCurrentAdAfterStartup = defaults.bool(forKey: UserDefaultsKey.ShouldLoadCurrentAdAfterStartup.rawValue)
     }
     
     //MARK: - Properties
-    
     /**
      Represents App id  as specified on Fyber dashboard.
      */
     internal var appId: String? = nil {
         didSet {
-            let appDelegate = UIApplication.shared.delegate as! AppDelegate
-            appDelegate.initSDKCore(with: appId!)
+            MarketplaceSDK.initSDKCore(with: appId!)
         }
     }
     /**
@@ -51,7 +39,6 @@ class ClientRequestSettings {
      */
     private var server: String? = Constants.SDKSettings.k_production
     
- 
     /**
      Optional text used to choose different portal  on Forest.
      */
@@ -60,7 +47,7 @@ class ClientRequestSettings {
     /**
      Optional text to for user extra data on ccpa param.
      */
-    private var ccpaString: String? {
+    private var ccpaString: String? = IASDKCore.sharedInstance().ccpaString ?? "1YYY" {
         didSet {
             IASDKCore.sharedInstance().ccpaString = ccpaString
         }
@@ -80,7 +67,7 @@ class ClientRequestSettings {
     /**
      Optional text to for user extra data on gdpr param
      */
-    private var gdprData: String? = "" {
+    private var gdprData: String? = IASDKCore.sharedInstance().gdprConsentString ?? "" {
         didSet {
             if gdprData!.isEmpty {
                 IASDKCore.sharedInstance().clearGDPRConsentData()
@@ -120,7 +107,28 @@ class ClientRequestSettings {
     /**
      Optional - Represents New Ad Unit Type. Banner by default.
      */
-    private var newAdFormat: String? = SampleAdType.Banner.rawValue
+    private var newAdFormat: String? = SampleAdTypeEnum.Banner.rawValue {
+        didSet {
+            if shouldAutoFillSpotIdTextField {
+                newAdUnitSpotId = SampleAdTypeEnum(rawValue: newAdFormat!)?.defaultSpotId
+            }
+        }
+    }
+    
+    /**
+     Optional - Represents New Ad Unit's Spot Id
+     */
+    private var newAdUnitSpotId: String?
+    
+    /**
+     Optional - Represents New Ad Unit's Portal
+     */
+    private var newAdUnitPortal: String? = "4321"
+    
+    /**
+     Optional - When editing an Ad Unit, we want to block the autofill for the spotId textfield.
+     */
+    private var shouldAutoFillSpotIdTextField: Bool = true
     
     /**
      Optional - User Targeting
@@ -134,33 +142,66 @@ class ClientRequestSettings {
             IASDKCore.sharedInstance().userID = newValue
         }
     }
-    
-    // Debugging realated -
-    
-    /**
-     When set to True - App will launch on User last Ad View.
-     Ad Unit will load automatically.
-     */
 
-    private var shouldLoadCurrentAdAfterStartup: Bool! = false {
-        didSet {
-            let defaults = UserDefaults.standard
-            
-            defaults.set(shouldLoadCurrentAdAfterStartup, forKey: UserDefaultsKey.ShouldLoadCurrentAdAfterStartup.rawValue)
+    private func loadGlobalConfig(from path:String) {
+        IADebugger.globalConfigPath = path
+    }
+    
+    private func isValidAdUnitValuesFromUserDefault(adValues: AdUnitValues) -> Bool {
+        return adValues.spotId != nil && adValues.adUnitId != nil &&
+                adValues.server != nil && adValues.portal != nil
+    }
+    
+    private func pullLastAdValuesFromUserDefault() -> (AdUnitValues) {
+        let userDefaultsServer = UserDefaults.standard.string(forKey: UserDefaultsKey.Server.rawValue)
+        let userDefaultsSpotID = UserDefaults.standard.string(forKey: UserDefaultsKey.SpotID.rawValue)
+        let userDefaultsAdUnitID = UserDefaults.standard.string(forKey: UserDefaultsKey.AdUnitID.rawValue)
+        let userDefaultsPortal = UserDefaults.standard.string(forKey: UserDefaultsKey.Portal.rawValue)
+        
+        return (userDefaultsServer, userDefaultsSpotID, userDefaultsAdUnitID, userDefaultsPortal)
+    }
+    
+    private func removeLastAdFromUserDefault() {
+        UserDefaults.standard.removeObject(forKey: UserDefaultsKey.Server.rawValue)
+        UserDefaults.standard.removeObject(forKey: UserDefaultsKey.SpotID.rawValue)
+        UserDefaults.standard.removeObject(forKey: UserDefaultsKey.AdUnitID.rawValue)
+        UserDefaults.standard.removeObject(forKey: UserDefaultsKey.Portal.rawValue)
+    }
+    //MARK: - Getters & Setters
+    internal func getValue(of setting:SampleSettingsEnum) -> String? {
+        switch setting {
+        case .Server: return server
+        case .AppId: return appId
+        case .AdFormat: return newAdFormat
+        case .SpotId: return spotId
+        case .SpotIdNew: return newAdUnitSpotId ?? SampleAdTypeEnum(rawValue: newAdFormat!)!.defaultSpotId
+        case .Portal: return portal
+        case .PortalNew: return newAdUnitPortal
+        case .MockName: return newMockName
+        case .CCPAString: return ccpaString
+        case .GlobalConfig: return globalConfig
+        case .GDPRData: return gdprData
+        case .GDPR: return gdpr
+        case .LGPD: return lgpd
+        case .SDKVersion: return IASDKCore.sharedInstance().version()
+        case .UserId: return userID
         }
     }
-    
-    
-    //SDK Bidding related - need to exclude on the Publihser Test APP
-    //MARK: - Service
-    
-    internal func updateClientRequest(with adUnit:AdUnit) {
-        spotId = adUnit.format.spotId
-        adUnitId = adUnit.id
-        portal = adUnit.source == .Mock ? Constants.SDKSettings.defaultPort : ""
+
+    //MARK: - API
+    func resetNewMockName() {
+        newMockName = nil
     }
     
-    internal func updateRequestObject(with request:IAAdRequest) {
+    func willEditAdUnit() {
+        shouldAutoFillSpotIdTextField = false
+    }
+    
+    func didShowEditingViewController() {
+        shouldAutoFillSpotIdTextField = true
+    }
+    
+    func updateRequestObject(with request:IAAdRequest) {
         let server = self.server == Constants.SDKSettings.k_production ? "" : self.server
         
         if let spotid = spotId {
@@ -174,128 +215,88 @@ class ClientRequestSettings {
         }
     }
     
-    internal func getDebugValuesForSDKBidding() -> IADebugger {
-        let debugger = IADebugger.build({ (builder: IADebuggerBuilder) in
-            builder.database = self.portal
-            builder.server = self.server
-            builder.mockResponsePath = self.adUnitId
-        })
-        
-        return debugger!
+    func updateClientRequest(with adUnit:AdUnit) {
+        spotId = adUnit.spotId
+        adUnitId = adUnit.id
+        portal = adUnit.source == .Mock ? adUnit.portal : ""
     }
     
-    private func loadGlobalConfig(from path:String) {
-        IADebugger.globalConfigPath = path
-    }
-    
-    //MARK: - Getters & Setters
-
-    internal func getValue(of setting:SampleSetting) -> String? {
-        switch setting {
-        case .AppId: return appId
-        case .SpotId: return spotId
-        case .Portal: return portal
-        case .Server: return server
-        case .CCPAString: return ccpaString
-        case .GlobalConfig: return globalConfig
-        case .GDPRData: return gdprData
-        case .GDPR: return gdpr
-        case .LGPD: return lgpd
-        case .SDKVersion: return IASDKCore.sharedInstance().version()
-        case .NewAdFormat: return newAdFormat
-        case .NewMockName: return newMockName
-        case .ShouldLoadCurrentAdAfterStartup: return shouldLoadCurrentAdAfterStartup.description
-        
-
-        }
-    }
-
-    //MARK: - API
-
-    internal func resetNewMockName() {
-        newMockName = nil
-    }
-
-    internal func saveCurrentAdToUserDefaults() {
+    func saveCurrentAdToUserDefaults() {
         let defaults = UserDefaults.standard
         
-        if spotId != nil && adUnitId != nil && server != nil {
+        if spotId != nil && adUnitId != nil && server != nil , portal != nil {
+            defaults.set(server, forKey: UserDefaultsKey.Server.rawValue)
             defaults.set(spotId, forKey: UserDefaultsKey.SpotID.rawValue)
             defaults.set(adUnitId, forKey: UserDefaultsKey.AdUnitID.rawValue)
-            defaults.set(server, forKey: UserDefaultsKey.Server.rawValue)
+            defaults.set(portal, forKey: UserDefaultsKey.Portal.rawValue)
             
-            Console.shared.add(message: "Saving spotID \(spotId!), adUnitId \(adUnitId!), server \(server!) to user defaults")
+            Console.shared.add(message: "Saving spotID \(spotId!), adUnitId \(adUnitId!), server \(server!), portal \(portal!) to user defaults")
         }
     }
     
-    internal func saveToUserDefaultRequest(with mock:String, portal:String) {
+    func saveToUserDefaultRequest(with mock:String, portal:String) {
         let dictionary = [SDKDebugKeys.FYBPortalKey.rawValue: portal, SDKDebugKeys.FYBMockResponseKey.rawValue: mock]
     
         UserDefaults.standard.set(dictionary, forKey: SDKDebugKeys.FYBUserDefaultsPortalAndMockKey.rawValue)
     }
     
-    internal func removeUserDefaultsIfNeeded() {
+    func removeUserDefaultsIfNeeded() {
         UserDefaults.standard.removeObject(forKey: SDKDebugKeys.FYBUserDefaultsPortalAndMockKey.rawValue)
     }
     
+    
     internal func useValuesFromUserDefaults() -> Bool {
-        let defaults = UserDefaults.standard
+        let adValues = pullLastAdValuesFromUserDefault()
         
-        let userDefaultsSpotID = defaults.string(forKey: UserDefaultsKey.SpotID.rawValue)
-        let userDefaultsAdUnitID = defaults.string(forKey: UserDefaultsKey.AdUnitID.rawValue)
-        let userDefaultsServer = defaults.string(forKey: UserDefaultsKey.Server.rawValue)
-
-        defaults.removeObject(forKey: UserDefaultsKey.SpotID.rawValue)
-        defaults.removeObject(forKey: UserDefaultsKey.AdUnitID.rawValue)
-        defaults.removeObject(forKey: UserDefaultsKey.Server.rawValue)
-
-        if userDefaultsSpotID != nil && userDefaultsServer != nil && userDefaultsAdUnitID != nil {
-            server = userDefaultsServer
-            spotId = userDefaultsSpotID
-            adUnitId = userDefaultsAdUnitID
-            portal = adUnitId != "" ?  Constants.SDKSettings.defaultPort : ""
+        if isValidAdUnitValuesFromUserDefault(adValues: adValues) {
+            removeLastAdFromUserDefault()
+            self.server = adValues.server
+            self.spotId = adValues.spotId
+            adUnitId = adValues.adUnitId
             
+            portal = adUnitId != "" ? adValues.portal : ""
             AdViewController.shouldAutoLoad = true
 
-            Console.shared.add(message: "Using spotID \(spotId!), adUnitId \(adUnitId!), server \(server!) from user defaults")
+            Console.shared.add(message: "Using server \(server!), spotID \(spotId!), adUnitId \(adUnitId!), portal \(portal!) from user defaults")
             return true
         } else {
             Console.shared.add(message: "Tried to fetch spot ID, adUnitID and server values from user defaults but something is missing")
             return false
         }
     }
-
 }
 
 //MARK: - SampleSettingDelegate
-
 extension ClientRequestSettings: ClientRequestSettingsDelegate {
-    func valueDidChange(for field: SampleSetting, with value: String) {
+    func valueDidChange(for field: SampleSettingsEnum, with value: String) {
         switch field {
+        case .Server: server = value
         case .AppId: appId = value
+        case .AdFormat: newAdFormat = value
         case .SpotId: spotId = value
+        case .SpotIdNew: newAdUnitSpotId = value
         case .Portal: portal = value
+        case .PortalNew: newAdUnitPortal = value
+        case .MockName: newMockName = value
         case .CCPAString: ccpaString = value
         case .GlobalConfig: globalConfig = value
         case .GDPRData: gdprData = value
-        case .NewMockName: newMockName = value
-        case .Server: server = value
         case .GDPR: gdpr = value
         case .LGPD: lgpd = value
-        case.NewAdFormat: newAdFormat = value
-        case .ShouldLoadCurrentAdAfterStartup: shouldLoadCurrentAdAfterStartup.toggle()
+        case .UserId: userID = value
         case .SDKVersion: return
-        
-            
         }
     }
 }
 
-//MARK: - ScannerViewControllerDelegate
-
+//MARK: - ScannerViewControllerCompetionHandlers
 extension ClientRequestSettings: ScannerViewControllerDelegate {
-    func receivedQRCode(with mock: String) {
+    func successfullyFetchedData(json: JSON) {
+        guard let mock =  json[QRRequestDataKey.Mock.rawValue] as? String  else { return }
         newMockName = mock
     }
+    
+    func failedToFetchData(error: GetDataFailureReason) {
+        Console.shared.add(message: "<Fyber> Failed to read Mock with error:\n \(error.localizedDescription)")
+    }
 }
-
