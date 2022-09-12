@@ -9,7 +9,7 @@
 import Foundation
 
 
-public extension UIViewController {
+extension UIViewController {
     func alertUser(message: String, title: String = "" , onCompletion: (() -> Void)? = {return} ) {
         let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
         let OKAction = UIAlertAction(title: "OK", style: .default, handler: {action in
@@ -18,4 +18,11 @@ public extension UIViewController {
         alertController.addAction(OKAction)
         self.present(alertController, animated: true, completion: nil)
     }
+    
+    
+    func addButtonAction(_ sender: Any, delegate: ScannerViewControllerDelegate?) {
+        performSegue(withIdentifier: StoryboardsSegues.ShowNewAdUnitSegue.rawValue, sender: nil)
+        
+    }
 }
+

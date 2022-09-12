@@ -13,7 +13,7 @@ class MarketplaceSDK: NSObject, SampleSDKProtocol {
     /* FMPSDKProtocol Properties */
     var presentingViewController: AdViewController!
     var delegate: SampleSDKProtocolDelegate?
-    var requestAdType: SampleAdType?
+    var requestAdType: SampleAdTypeEnum?
 
     /* MarketplaceSDK Properties */
     var viewUnitController: IAViewUnitController?
@@ -31,30 +31,30 @@ class MarketplaceSDK: NSObject, SampleSDKProtocol {
 
     func initUnitAndContentController(with request:IAAdRequest? = nil) {
         videoContentController = IAVideoContentController.build({
-                                                                    (builder: IAVideoContentControllerBuilder) in builder.videoContentDelegate = self})
-
+            (builder: IAVideoContentControllerBuilder) in builder.videoContentDelegate = self})
+        
         MRAIDContentController = IAMRAIDContentController.build({ (builder: IAMRAIDContentControllerBuilder) in
             builder.mraidContentDelegate = self
         })
-
+        
         viewUnitController = IAViewUnitController.build({ (builder: IAViewUnitControllerBuilder) in
             builder.unitDelegate = self
-
+            
             builder.addSupportedContentController(self.MRAIDContentController!)
         })
-
+        
         fullscreenUnitController = IAFullscreenUnitController.build({ (builder: IAFullscreenUnitControllerBuilder) in
             builder.unitDelegate = self
-
+            
             builder.addSupportedContentController(self.MRAIDContentController!)
             builder.addSupportedContentController(self.videoContentController!)
         })
-
+        
         adSpot = IAAdSpot .build({ (builder:IAAdSpotBuilder) in
             if (request != nil) {
                 builder.adRequest = request!
             }
-
+            
             builder.addSupportedUnitController(self.fullscreenUnitController!)
             builder.addSupportedUnitController(self.viewUnitController!)
         })
@@ -63,10 +63,10 @@ class MarketplaceSDK: NSObject, SampleSDKProtocol {
     //MARK: - Service
 
     func setupRequestAndControllers() {
+        IASDKCore.sharedInstance().keywords = "hell & brimstone + earthly/delight, diving,programming\new line"
         let request = IAAdRequest .build({ (builder:IAAdRequestBuilder) in
             builder.spotID = ClientRequestSettings.shared.getValue(of: .SpotId) ?? ""
             builder.debugger = IADebugger.build({ (IADebuggerBuilder) in /* ... */ })
-            builder.keywords = "hell & brimstone + earthly/delight, diving,programming\new line"
             builder.timeout = 15
         })
 
@@ -88,13 +88,15 @@ class MarketplaceSDK: NSObject, SampleSDKProtocol {
             })
         })
     }
-
-   func showInterstitial() {
+    
+    func showInterstitial() {
         DispatchQueue.main.async { [weak self] in
             Console.shared.add(message: "<Fyber> Marketplace SDK will show fullscreen ad.")
             self?.fullscreenUnitController?.showAd(animated: true, completion:nil)
         }
     }
+    
+    static func showMediationDebugger() {}
 
     //MARK: - Service
 
@@ -129,9 +131,11 @@ class MarketplaceSDK: NSObject, SampleSDKProtocol {
 
     @objc func requestTrackingPermissionsIfNeeded() {
         guard #available (iOS 14, *) else { return }
+        
+        let statusExplanationMap = [0: "not determined", 1: "restricted", 2: "denied", 3: "authorized"]
 
         ATTrackingManager.requestTrackingAuthorization { (status:ATTrackingManager.AuthorizationStatus) in
-            Console.shared.add(message: "<Fyber> Current tracking status is \(status.rawValue)")
+            Console.shared.add(message: "<Fyber> Current tracking status is \(statusExplanationMap[Int(status.rawValue)]!)")
             if (status.rawValue == 3) {
                 Console.shared.add(message: "<Fyber> IDFA is authorized.")
             }

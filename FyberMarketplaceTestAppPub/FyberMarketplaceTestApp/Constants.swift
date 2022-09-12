@@ -17,5 +17,7 @@ struct Constants {
         static let gdprArray = ["Unknown", "Denied", "Given"]
         static let lgpdArray = ["Unknown", "Denied", "Given"]
         static let serverArray = ["wv.inner-active", "ia-cert"]
+        static let ConfigurationOn = "Manual"
+        static let ConfigurationArray = ["Off", ConfigurationOn]
     }
 }

@@ -23,7 +23,7 @@ typedef void (^IAAdSpotAdResponseBlock)(IAAdSpot * _Nullable adSpot, IAAdModel *
 
 @required
 @property (atomic, copy, nonnull) IAAdRequest *adRequest;
-@property (nonatomic, copy, nonnull) IAMediation *mediationType;
+@property (nonatomic, copy, nonnull) IAMediation *mediationType DEPRECATED_MSG_ATTRIBUTE("In current version setting this property set corresponding value also for IASDKCore.sharedInstance. In the next SDK version this property will be removed. Please use 'mediationType' property of IASDKCore instance instead.");
 
 - (void)addSupportedUnitController:(IAUnitController * _Nonnull)supportedUnitController;
 

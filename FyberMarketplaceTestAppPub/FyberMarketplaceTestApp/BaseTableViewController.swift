@@ -9,18 +9,19 @@
 import UIKit
 
 class BaseTableViewController: UITableViewController {
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         adjustBackgroundColor()
         NotificationCenter.default.addObserver(self, selector: #selector(self.didBecomeActive), name: UIApplication.didBecomeActiveNotification, object: nil)
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-    }
-    
     @objc func didBecomeActive(_ notification: Notification)  {
         adjustBackgroundColor()
+    }
+}
+//MARK: - UITableView Delegate
+extension BaseTableViewController {
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        UISelectionFeedbackGenerator().selectionChanged()
     }
 }

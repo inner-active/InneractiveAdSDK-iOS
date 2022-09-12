@@ -14,9 +14,8 @@ protocol SavedAdsManagerDelegate: AnyObject {
 }
 
 final class SavedAdsManager {
-    
     static let sharedInstance = SavedAdsManager()
-    
+    private let serialQueue = dispatch_queue_serial_t(label: "save.ad.manager.queue")
     private(set) var savedAds: [AdUnit]
     private let userDefaults: UserDefaults
     weak var delegate: SavedAdsManagerDelegate!
@@ -27,7 +26,7 @@ final class SavedAdsManager {
     }
     
     func addSavedAd(adUnit: AdUnit) {
-        DispatchQueue.global(qos: .userInitiated).async { [weak self] in
+        serialQueue.async { [weak self] in
             guard let self = self else { return }
             self.savedAds.removeAll(where: {(adUnit.id == $0.id && adUnit.format == $0.format) }) // avoid duplicate
             self.savedAds.insert(adUnit, at: 0)
@@ -39,7 +38,7 @@ final class SavedAdsManager {
     }
     
     func removeSavedAd(adUnit: AdUnit) {
-        DispatchQueue.global(qos: .userInitiated).async { [weak self] in
+        serialQueue.async { [weak self] in
             guard let self = self else { return }
             self.savedAds.removeAll(where: { (adUnit.id == $0.id && adUnit.format == $0.format) })
             self.userDefaults.savedAds = self.savedAds
@@ -52,17 +51,18 @@ final class SavedAdsManager {
 
 // MARK: - UserDefaults
 private extension UserDefaults {
+    static let savedAdsKey = "FMPSDKSavedAdsKey"
     var savedAds: [AdUnit] {
         get {
             var defaultValue = [AdUnit]()
             
-            defaultValue.append(AdUnit(id: "", "Production Banner", .Banner, .Production))
-            defaultValue.append(AdUnit(id: "", "Production Rectangle", .Rectangle, .Production))
-            defaultValue.append(AdUnit(id: "", "Production Interstitial", .Interstitial, .Production))
-            defaultValue.append(AdUnit(id: "", "Production Rewarded", .Rewarded, .Production))
+            defaultValue.append(AdUnit(id: "", name: "Production Banner", format: .Banner, source: .Production))
+            defaultValue.append(AdUnit(id: "", name: "Production Rectangle", format: .Rectangle, source: .Production))
+            defaultValue.append(AdUnit(id: "", name: "Production Interstitial", format: .Interstitial, source: .Production))
+            defaultValue.append(AdUnit(id: "", name: "Production Rewarded", format: .Rewarded, source: .Production))
             
             do {
-                guard let data = self.object(forKey:"SavedAdsKey" ) as? Data else {
+                guard let data = self.object(forKey:UserDefaults.savedAdsKey) as? Data else {
                     print("<SaveAdsManager> \(#function) Failed to fetch Data from UserDefaults.")
                     return defaultValue
                 }
@@ -78,7 +78,7 @@ private extension UserDefaults {
         set {
             do {
                 let data = try JSONEncoder().encode(newValue)
-                self.set(data, forKey: "SavedAdsKey")
+                self.set(data, forKey:UserDefaults.savedAdsKey)
             } catch {
                 print("<SaveAdsManager> \(#function) caught error: \(error)")
             }

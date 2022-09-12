@@ -9,7 +9,7 @@
 import Foundation
 
 protocol SampleSDKProtocolDelegate {
-    func adDidLoad(with type:SampleAdType)
+    func adDidLoad(with type:SampleAdTypeEnum)
     func adFailedToLoad(with error: String)
     func addConstraint(for adView: UIView)
     func adDidResize(to frame:CGRect) 
@@ -20,7 +20,7 @@ protocol SampleSDKProtocol {
     //MARK: - Properties
     var presentingViewController: AdViewController! { get set }
     var delegate: SampleSDKProtocolDelegate? {get set}
-    var requestAdType: SampleAdType? { get set }
+    var requestAdType: SampleAdTypeEnum? { get set }
     
     //MARK: - FMPMediationsAPIProtocol API
     
@@ -28,6 +28,7 @@ protocol SampleSDKProtocol {
     init(presentingViewController: AdViewController)
     
     func loadAd() -> Void
-    
     func showInterstitial() -> Void
+    
+    static func showMediationDebugger() -> Void
 }

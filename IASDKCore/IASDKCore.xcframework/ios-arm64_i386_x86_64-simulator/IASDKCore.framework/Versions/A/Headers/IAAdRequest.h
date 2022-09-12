@@ -35,17 +35,17 @@
  */
 @property (nonatomic) NSTimeInterval timeout;
 
-@property (nonatomic, copy, nullable) IAUserData *userData;
+@property (nonatomic, copy, nullable) IAUserData *userData DEPRECATED_MSG_ATTRIBUTE("In current version setting this property will not affect anything. In the next SDK version this property will be removed. Please use 'userData' property of IASDKCore instance instead.");
 
 /**
  *  @brief Single keyword string or several keywords, separated by comma.
  */
-@property (nonatomic, copy, nullable) NSString *keywords;
+@property (nonatomic, copy, nullable) NSString *keywords DEPRECATED_MSG_ATTRIBUTE("In current version setting this property will not affect anything. In the next SDK version this property will be removed. Please use 'keywords' property of IASDKCore instead.");
 
 /**
  *  @brief Current location. Use for better ad targeting.
  */
-@property (nonatomic, copy, nullable) CLLocation *location;
+@property (nonatomic, copy, nullable) CLLocation *location DEPRECATED_MSG_ATTRIBUTE("In current version setting this property will will not affect anything. In the next SDK version this property will be removed. Please use 'location' property of IASDKCore instance.");
 
 @property (nonatomic, copy, nullable) IADebugger *debugger;
 
@@ -59,7 +59,7 @@
 /**
  *  @brief In case is enabled and the responded creative supports this feature, the creative will start interacting without sound.
  */
-@property (nonatomic) BOOL muteAudio;
+@property (nonatomic) BOOL muteAudio DEPRECATED_MSG_ATTRIBUTE("In current version setting this property will not affect anything. In the next SDK version this property will be removed. Please use 'muteAudio' property of IASDKCore instance instead.");
 
 @end
 

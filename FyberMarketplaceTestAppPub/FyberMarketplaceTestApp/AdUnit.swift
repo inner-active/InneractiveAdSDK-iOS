@@ -8,28 +8,35 @@
 
 import Foundation
 
-enum AdUnitSource:String, Decodable, Encodable {
+enum AdUnitSourceEnum:String, Codable {
     case Mock = "Mock"
     case Production = "Production"
 }
 
 /**
- Represents Mock of ad unit.
+ *  @brief Represents Mock of ad unit.
  */
-public class AdUnit : NSObject, Decodable, Encodable {
+public class AdUnit: Codable {
+    static let defaultPortal = "4321"
     
-    internal let id: String
+    let id: String // mock Id
+    let name: String
+    let format: SampleAdTypeEnum
+    let source: AdUnitSourceEnum
     
-    internal let name: String
+    lazy private(set) var spotId: String! = format.defaultSpotId
+    lazy private(set) var portal: String! = AdUnit.defaultPortal
     
-    internal let format: SampleAdType
+    convenience init(id: String, name: String, format: SampleAdTypeEnum, source: AdUnitSourceEnum) {
+        self.init(id: id, name: name, format: format, source: source, spotid: format.defaultSpotId)
+    }
     
-    internal let source: AdUnitSource
-    
-    init(id:String,_ name:String,_ format: SampleAdType,_ source: AdUnitSource) {
+    init(id: String, name: String, format: SampleAdTypeEnum, source: AdUnitSourceEnum, spotid: String, portal: String = defaultPortal) {
         self.id = id
         self.name = name
         self.format = format
         self.source = source
+        self.spotId = spotid
+        self.portal = portal
     }
 }

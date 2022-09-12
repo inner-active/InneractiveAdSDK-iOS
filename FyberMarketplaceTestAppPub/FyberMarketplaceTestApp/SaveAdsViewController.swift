@@ -7,10 +7,9 @@
 //
 
 import UIKit
- 
-class SaveAdsViewController: BaseTableViewController {
+
+class SaveAdsViewController: MenuBaseViewController {
     private let dataSource = SaveAdsDatasource()
-    private let router = AdsViewRouter()
     
     //MARK: - LifeCycle
     override func viewDidLoad() {
@@ -23,27 +22,64 @@ class SaveAdsViewController: BaseTableViewController {
         navigationItem.rightBarButtonItems?.removeAll(where: {$0.title == "Settings"})
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        self.tabBarController?.tabBar.isHidden = false
+    @available(iOS 11.0, *)
+    override func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        let delete = self.delete(rowAtindexPath: indexPath)
+        let swipe = UISwipeActionsConfiguration(actions: [delete])
+        return swipe
+    }
+    
+    @available(iOS 11.0, *)
+    override func tableView(_ tableView: UITableView, leadingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        let edit = self.edit(rowAtindexPath: indexPath)
+        let swipe = UISwipeActionsConfiguration(actions: [edit])
+        return swipe
+    }
+    
+    //MARK: - IBAction
+    @IBAction func addButtonPressed(_ sender: Any) {
+        super.addCTAPressed(sender)
     }
     
     //MARK: - UITableView Delegate
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let cell = tableView.cellForRow(at: indexPath) as! AdUnitCustomCell
+        super.tableView(tableView, didSelectRowAt: indexPath)
         
-        UISelectionFeedbackGenerator().selectionChanged()
-        ClientRequestSettings.shared.updateClientRequest(with: cell.model!)
-        performSegue(withIdentifier: StoryboardsSegues.ShowAdVCSegue.rawValue, sender: cell.model)
+        showAdOnAdViewController(with: indexPath)
+    }
+}
+
+//MARK: - Service
+
+private extension SaveAdsViewController {
+    @available(iOS 11.0, *)
+    private func delete(rowAtindexPath indexPath: IndexPath) -> UIContextualAction {
+        let action = UIContextualAction(style: .destructive, title: "Delete") { [weak self] (_, _, _) in
+            guard let self = self else {return}
+            let cell = self.tableView.cellForRow(at: indexPath) as! AdUnitCustomCell
+            
+            SavedAdsManager.sharedInstance.removeSavedAd(adUnit: cell.model!)
+        }
+        
+        return action
     }
     
-    // MARK: - Navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard segue.identifier != StoryboardsSegues.ConsoleViewControllerSegues.rawValue else { return }
-        
-        self.tabBarController?.tabBar.isHidden = true
-        if segue.identifier == StoryboardsSegues.ShowAdVCSegue.rawValue  {
-            router.routeToAdViewController(segue: segue, sender: sender)
+    @available(iOS 11.0, *)
+    private func edit(rowAtindexPath indexPath: IndexPath) -> UIContextualAction {
+        let action = UIContextualAction(style: .normal, title: "Edit") {[weak self] (_, _, _) in
+            guard let self = self else {return}
+            let cell = self.tableView.cellForRow(at: indexPath) as! AdUnitCustomCell
+            let adUnit = cell.model
+            
+            ClientRequestSettings.shared.willEditAdUnit()
+            self.performSegue(withIdentifier: StoryboardsSegues.ShowNewAdUnitSegue.rawValue, sender: adUnit!)
         }
+        action.backgroundColor = .blue
+        return action
+    }
+    
+    private func showAdOnAdViewController(with indexPath: IndexPath) {
+        let cell = tableView.cellForRow(at: indexPath) as! AdUnitCustomCell
+        performSegue(withIdentifier: StoryboardsSegues.ShowAdVCSegue.rawValue, sender: cell.model)
     }
 }
