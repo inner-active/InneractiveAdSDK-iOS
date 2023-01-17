@@ -30,7 +30,7 @@
 /**
  *  @brief The content controller, that is relevant to the received ad unit.
  */
-@property (nonatomic, weak, readonly, nullable) IAContentController *activeContentController;
+@property (atomic, weak, readonly, nullable) IAContentController *activeContentController;
 
 /**
  *  @brief Clears all internal data. After use of this method, current unit controller is no more useable until a new response of same ad unit type is received.

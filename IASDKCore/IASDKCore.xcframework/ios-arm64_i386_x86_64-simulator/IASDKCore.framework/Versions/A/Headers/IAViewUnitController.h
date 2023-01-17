@@ -27,7 +27,7 @@
 
 @interface IAViewUnitController : IAUnitController <IAInterfaceBuilder, IAViewUnitControllerBuilder>
 
-@property (nonatomic, strong, readonly, nullable) IAAdView *adView;
+@property (atomic, strong, readonly, nullable) IAAdView *adView;
 
 + (instancetype _Nullable)build:(void(^ _Nonnull)(id<IAViewUnitControllerBuilder> _Nonnull builder))buildBlock;
 
