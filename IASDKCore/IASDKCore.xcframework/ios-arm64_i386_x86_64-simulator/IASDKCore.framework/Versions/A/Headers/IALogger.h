@@ -50,7 +50,7 @@ typedef NS_ENUM(NSUInteger, IALogLevel) {
  *
  *  @param logLevel log level
  */
-+ (void)setLogLevel:(IALogLevel)logLevel;
-+ (IALogLevel)logLevel:(IALogLevel)logLevel;
++ (void)setLogLevel:(IALogLevel)logLevel DEPRECATED_MSG_ATTRIBUTE("IALogger class is deprecated and will be removed in future versions; please use FMPLogger API instead.");
++ (IALogLevel)logLevel:(IALogLevel)logLevel DEPRECATED_MSG_ATTRIBUTE("IALogger class is deprecated and will be removed in future versions; please use FMPLogger API instead.");
 
 @end

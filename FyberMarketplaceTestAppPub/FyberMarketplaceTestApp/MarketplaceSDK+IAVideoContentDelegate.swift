@@ -26,6 +26,6 @@ extension MarketplaceSDK: IAVideoContentDelegate {
     }
     
     func iaVideoContentController(_ contentController: IAVideoContentController?, videoProgressUpdatedWithCurrentTime currentTime: TimeInterval, totalTime: TimeInterval) {
-        Console.shared.add(message:"IAVideoProgressUpdatedWithCurrentTime: \(currentTime) totalTime: \(totalTime)")
+        //Console.shared.add(message:"IAVideoProgressUpdatedWithCurrentTime: \(currentTime) totalTime: \(totalTime)")
     }
 }

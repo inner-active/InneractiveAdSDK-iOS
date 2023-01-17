@@ -34,7 +34,7 @@ typedef void (^IAAdSpotAdResponseBlock)(IAAdSpot * _Nullable adSpot, IAAdModel *
 /**
  *  @brief The unit controller, that is relevant to the received ad unit.
  */
-@property (nonatomic, weak, readonly, nullable) IAUnitController *activeUnitController;
+@property (atomic, weak, readonly, nullable) IAUnitController *activeUnitController;
 
 @property (nonatomic, strong, readonly, nullable) IAAdModel *model;
 

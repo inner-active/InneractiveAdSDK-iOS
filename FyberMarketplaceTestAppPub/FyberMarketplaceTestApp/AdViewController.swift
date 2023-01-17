@@ -24,49 +24,44 @@ class AdViewController: UIViewController {
     @IBOutlet weak var adViewWidth: NSLayoutConstraint!
     @IBOutlet weak var loadAdTopConstraintsToScrollViewTopForAdView: NSLayoutConstraint!
     @IBOutlet weak var loadAdTopConstraintToScrollViewTopForInterstitialView: NSLayoutConstraint!
-    
+
     //MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
         setupSubViews()
-        
+
         navigationItem.rightBarButtonItems?.removeAll(where: {$0.title == "Settings"})
-    
+
     }
-    
+
     override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
         if UIApplication.shared.statusBarOrientation != .unknown {
             adViewContent.adjustLoadAdTopConstraint()
         }
     }
-    
+
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         prepareSubViewToCorrectState()
     }
-    
+
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-        
+
         if self.isMovingFromParent {
+            sdkInstance?.disposeSDKInstance()
+            sdkInstance = nil
+
             self.navigationController?.popToRootViewController(animated: true)
         }
     }
-    
-    override func viewDidDisappear(_ animated: Bool) {
-        super.viewDidDisappear(animated)
-        
-        if self.isMovingFromParent {
-            sdkInstance = nil
-        }
-    }
-    
+
     //MARK: - IBOutlets
     @IBAction func LoadAdClicked(_ sender: Any) {
         UIImpactFeedbackGenerator(style: .light).impactOccurred()
         loadAd()
     }
-    
+
     @IBAction func ShowAdClicked(_ sender: Any) {
         loadAdButton.isUserInteractionEnabled = false
         loadAdButton.isEnabled = false
@@ -79,7 +74,7 @@ class AdViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         router.route(with: segue, sender: true)
     }
-    
+
     //MARK: - deInit
     deinit {
         Console.shared.add(message: "\(String(describing: self)) deinit")
@@ -102,59 +97,59 @@ private extension AdViewController {
     func setupSubViews() {
         setupAdViewContent()
         setupSpinnerStyle()
-        
+
         if adType.isInterstitial() {
             setupSubViewsForInterstitialAds()
         } else {
             setupSubviewsForNonInterstitialAds()
         }
     }
-    
+
     func setupSpinnerStyle() {
         if #available(iOS 13.0, *) {
             spinner.style = .large
         }
     }
-    
+
     func setupAdViewContent() {
         adViewContent = AdViewControllerContentState(with: adType)
         adViewContent.delegate = self
         adViewContent.adjustLoadAdTopConstraint()
     }
-    
+
     func setupSubViewsForInterstitialAds() {
         loadAdTopConstraintToScrollViewTopForInterstitialView.priority = .defaultHigh
         loadAdTopConstraintsToScrollViewTopForAdView.priority = .defaultLow
     }
     func setupSubviewsForNonInterstitialAds() {
         adView.isHidden = false
-        
+
         if ((adType == .Rectangle) || (adType == .Banner)) {
             adViewHeight.constant = adType.size.height
             adViewWidth.constant  = adType.size.width
         }
     }
-    
+
     func prepareSubViewToCorrectState() {
         loadAdButton.isUserInteractionEnabled = true
         loadAdButton.isEnabled = true
         tabBarController?.tabBar.isHidden = true
         removeUserAlertLabelIfNeeded()
     }
-    
+
     func loadAd() {
         if (!isLoadingAd) {
             Console.shared.add(message: "<Fyber> Will start loading ad... ", messageType: .debug)
             isLoadingAd = true
-            sdkInstance.loadAd()
+            sdkInstance?.loadAd()
             showAdButton.isHidden = true
             spinner.startAnimating()
         } else {
             Console.shared.add(message: "<Fyber> Loading ad is already in progress... ", messageType: .error)
         }
     }
-    
-    
+
+
     func removeUserAlertLabelIfNeeded() {
         guard let userAlertLabel = self.userAlertLabel else {return}
         UIView.animate(withDuration: 0.5, delay: 3) {
@@ -175,11 +170,11 @@ extension AdViewController: SampleSDKProtocolDelegate {
             self.spinner.stopAnimating()
             UINotificationFeedbackGenerator().notificationOccurred(.success)
             self.showAdButton.isHidden = !type.isInterstitial()
-            
+
             Console.shared.add(message: "Ad with type: \(type.stringValue) was loaded")
         }
     }
-    
+
     func adFailedToLoad(with error: String) {
         DispatchQueue.main.async {
             self.isLoadingAd = false
@@ -190,7 +185,7 @@ extension AdViewController: SampleSDKProtocolDelegate {
             Console.shared.add(message: "Failed to load ad with error: \(error)")
         }
     }
-    
+
     func addConstraint(for adView: UIView) {
         adView.translatesAutoresizingMaskIntoConstraints = false
         let constraints = [
@@ -198,10 +193,10 @@ extension AdViewController: SampleSDKProtocolDelegate {
             adView.heightAnchor.constraint(equalToConstant: adView.frame.size.height),
             adView.centerXAnchor.constraint(equalTo: self.adView.centerXAnchor),
             adView.centerYAnchor.constraint(equalTo: self.adView.centerYAnchor)]
-        
+
         NSLayoutConstraint.activate(constraints)
     }
-    
+
     func adDidResize(to frame:CGRect) {
         adViewWidth.constant = frame.width
         adViewHeight.constant = frame.height
@@ -215,7 +210,7 @@ extension AdViewController {
             userAlertLabel!.removeFromSuperview()
             userAlertLabel = nil;
         }
-        
+
         userAlertLabel = UILabel(frame: CGRect(x: 0, y: 0, width: 100, height: self.view.frame.height/5))
         userAlertLabel!.text = message
         userAlertLabel!.lineBreakMode = .byWordWrapping
@@ -223,20 +218,20 @@ extension AdViewController {
         userAlertLabel!.font = .systemFont(ofSize: 15)
         userAlertLabel!.translatesAutoresizingMaskIntoConstraints = false
         userAlertLabel!.alpha = 0
-        
+
         if #available(iOS 12.0, *) {
             if self.traitCollection.userInterfaceStyle == .light {
                 userAlertLabel!.textColor = .black
             }
         }
-        
+
         DispatchQueue.main.async {
             guard let userAlertLabel = self.userAlertLabel else {return}
             self.view.addSubview(userAlertLabel)
             self.view.addConstraint(NSLayoutConstraint.init(item: userAlertLabel, attribute: .centerX, relatedBy: .equal, toItem: self.view, attribute: .centerX, multiplier: 1, constant: 0))
             self.view.addConstraint(NSLayoutConstraint.init(item: userAlertLabel, attribute: .width, relatedBy: .equal, toItem: self.view, attribute: .width, multiplier: 0.8, constant: 0))
             self.view.addConstraint(NSLayoutConstraint.init(item: userAlertLabel, attribute: .centerY, relatedBy: .equal, toItem: self.view, attribute: .centerY, multiplier: 1, constant: 0))
-            
+
             UIView.animate(withDuration: 1, delay: 0, options: .allowUserInteraction) {
                 userAlertLabel.alpha = 1
             } completion: { res in
@@ -252,7 +247,7 @@ extension AdViewController:AdViewContentStateDelegate {
     func updateAdViewConstraintForAdView(with constant: CGFloat) {
         loadAdTopConstraintsToScrollViewTopForAdView.constant = constant
     }
-    
+
     func updateAdViewConstraintForAdInterstitialView(with constant: CGFloat) {
         loadAdTopConstraintToScrollViewTopForInterstitialView.constant = constant
     }

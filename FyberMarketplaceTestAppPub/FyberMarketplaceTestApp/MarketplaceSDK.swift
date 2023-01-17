@@ -63,16 +63,22 @@ class MarketplaceSDK: NSObject, SampleSDKProtocol {
     //MARK: - Service
 
     func setupRequestAndControllers() {
+        IASDKCore.sharedInstance().mediationType = nil
         IASDKCore.sharedInstance().keywords = "hell & brimstone + earthly/delight, diving,programming\new line"
-        let request = IAAdRequest .build({ (builder:IAAdRequestBuilder) in
+        
+        if let request = IAAdRequest.build({ (builder:IAAdRequestBuilder) in
             builder.spotID = ClientRequestSettings.shared.getValue(of: .SpotId) ?? ""
             builder.debugger = IADebugger.build({ (IADebuggerBuilder) in /* ... */ })
             builder.timeout = 15
-        })
-
-        ClientRequestSettings.shared.updateRequestObject(with: request!)
-        IASDKCore.sharedInstance().debugger = request?.debugger
-        initUnitAndContentController(with: request!)
+        }) {
+            ClientRequestSettings.shared.updateRequestObject(with: request)
+            IASDKCore.sharedInstance().debugger = request.debugger
+            initUnitAndContentController(with: request)
+        } else {
+            Console.shared.add(message: "IAAdRequest is nil. Will not continue loading ad process.")
+            delegate?.adFailedToLoad(with: "IAAdRequest is nil.")
+            requestTrackingPermissionsIfNeeded()
+        }
     }
     //MARK: - API
 
@@ -94,6 +100,10 @@ class MarketplaceSDK: NSObject, SampleSDKProtocol {
             Console.shared.add(message: "<Fyber> Marketplace SDK will show fullscreen ad.")
             self?.fullscreenUnitController?.showAd(animated: true, completion:nil)
         }
+    }
+    
+    func disposeSDKInstance() {
+        // dispose what is needed;
     }
     
     static func showMediationDebugger() {}

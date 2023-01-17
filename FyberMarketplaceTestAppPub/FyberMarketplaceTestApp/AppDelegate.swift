@@ -16,7 +16,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate , IAGlobalAdDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         let kAppIDForTest = "102960"
         
-        IALogger.setLogLevel(.verbose)
+        FMPLogger.setLogLevel(FMPLogLevel.debug)
         IADebugger.adReportingEnabled = true
         
         

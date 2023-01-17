@@ -29,6 +29,7 @@ protocol SampleSDKProtocol {
     
     func loadAd() -> Void
     func showInterstitial() -> Void
+    func disposeSDKInstance() -> Void
     
     static func showMediationDebugger() -> Void
 }
