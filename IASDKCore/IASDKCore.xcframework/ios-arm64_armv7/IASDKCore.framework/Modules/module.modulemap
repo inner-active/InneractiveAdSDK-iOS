@@ -1,14 +1,11 @@
-
 framework module IASDKCore {
-    umbrella header "IASDKCore.h"
-    export *
-    module * { export * }
+  umbrella header "IASDKCore.h"
 
-    link framework "SystemConfiguration"
-    link framework "CoreTelephony"
-    link framework "StoreKit"
-    link framework "AdSupport"
-    link framework "WebKit"
-    link framework "Foundation"
-    link framework "UIKit"
+  export *
+  module * { export * }
+}
+
+module IASDKCore.Swift {
+    header "IASDKCore-Swift.h"
+    requires objc
 }
