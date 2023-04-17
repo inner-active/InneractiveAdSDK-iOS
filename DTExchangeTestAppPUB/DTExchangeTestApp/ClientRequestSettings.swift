@@ -92,6 +92,14 @@ class ClientRequestSettings {
     }
 
     /**
+     User privacy preferences. Corresponds to and taken from IASDKCore.
+     */
+    private var coppa: String? = Constants.SDKSettings.coppaArray[IASDKCore.sharedInstance().coppaApplies.rawValue + 1] {
+        didSet {
+        }
+    }
+
+    /**
      Represents Mock Name as specified in Forest .
      */
     private var adUnitId: String?
@@ -194,6 +202,7 @@ class ClientRequestSettings {
         case .gdprData: return gdprData
         case .gdpr: return gdpr
         case .lgpd: return lgpd
+        case .coppa: return coppa
         case .sdkVersion: return IASDKCore.sharedInstance().version()
         case .userId: return userID
         }
@@ -214,7 +223,7 @@ class ClientRequestSettings {
 
     func updateRequestObject(with request: IAAdRequest) {
         let server = self.server == Constants.SDKSettings.kProduction ? "" : self.server
-        request.spotID = spotId!
+        request.spotID = spotId ?? ""
         if let debugger = request.debugger {
             debugger.server = server
             debugger.database = portal
@@ -293,6 +302,7 @@ extension ClientRequestSettings: ClientRequestSettingsDelegate {
         case .gdprData: gdprData = value
         case .gdpr: gdpr = value
         case .lgpd: lgpd = value
+        case .coppa: coppa = value
         case .userId: userID = value
         case .sdkVersion: return
         }
@@ -310,6 +320,6 @@ extension ClientRequestSettings: ScannerViewControllerDelegate {
     }
 
     func failedToFetchData(error: GetDataFailureReason) {
-        Console.shared.add(message: "<Fyber> Failed to read Mock with error:\n \(error.localizedDescription)")
+        Console.shared.add(message: "failed to read mock:\n \(error.localizedDescription)")
     }
 }

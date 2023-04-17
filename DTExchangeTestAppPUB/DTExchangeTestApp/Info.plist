@@ -32,7 +32,7 @@
 	<key>NSCameraUsageDescription</key>
 	<string>For using QR code</string>
 	<key>NSUserTrackingUsageDescription</key>
-	<string>For showing Fyber Marketplace SDK Ads</string>
+	<string>For showing DTX SDK ads</string>
 	<key>SKAdNetworkItems</key>
 	<array>
 		<dict>
@@ -318,6 +318,14 @@
 		<dict>
 			<key>SKAdNetworkIdentifier</key>
 			<string>t6d3zquu66.skadnetwork</string>
+		</dict>
+		<dict>
+			<key>SKAdNetworkIdentifier</key>
+			<string>47vhws6wlr.skadnetwork</string>
+		</dict>
+		<dict>
+			<key>SKAdNetworkIdentifier</key>
+			<string>5tjdwbrq8w.skadnetwork</string>
 		</dict>
 	</array>
 	<key>UILaunchStoryboardName</key>

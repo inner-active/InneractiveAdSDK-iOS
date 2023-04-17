@@ -96,7 +96,7 @@ class MarketplaceSDK: NSObject, SampleSDKProtocol {
     
     func showInterstitial() {
         DispatchQueue.main.async { [weak self] in
-            Console.shared.add(message: "<Fyber> Marketplace SDK will show fullscreen ad.")
+            Console.shared.add(message: "will show fullscreen ad")
             self?.fullscreenUnitController?.showAd(animated: true, completion: nil)
         }
     }
@@ -113,7 +113,7 @@ class MarketplaceSDK: NSObject, SampleSDKProtocol {
         if error != nil || spot == nil {
             let description = error?.localizedDescription ?? "empty spot"
             
-            Console.shared.add(message: "<Fyber> ad failed with error: \(description)")
+            Console.shared.add(message: "ad failed with error: \(description)")
             delegate?.adFailedToLoad(with: description)
             
             return
@@ -147,9 +147,9 @@ class MarketplaceSDK: NSObject, SampleSDKProtocol {
         let statusExplanationMap = [0: "not determined", 1: "restricted", 2: "denied", 3: "authorized"]
 
         ATTrackingManager.requestTrackingAuthorization { (status: ATTrackingManager.AuthorizationStatus) in
-            Console.shared.add(message: "<Fyber> Current tracking status is \(statusExplanationMap[Int(status.rawValue)]!)")
+            Console.shared.add(message: "current tracking status is \(statusExplanationMap[Int(status.rawValue)]!)")
             if status.rawValue == 3 {
-                Console.shared.add(message: "<Fyber> IDFA is authorized.")
+                Console.shared.add(message: "IDFA is authorized")
             }
         }
     }

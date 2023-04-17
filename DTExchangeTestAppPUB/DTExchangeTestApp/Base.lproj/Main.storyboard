@@ -50,7 +50,7 @@
                     </navigationItem>
                     <connections>
                         <segue destination="QsV-NQ-qoY" kind="show" identifier="AdView" id="NCv-Mk-CsV"/>
-                        <segue destination="Z2X-Mm-IQ8" kind="show" identifier="feedTableVCSegue" id="qFT-Eb-XCB"/>
+                        <segue destination="Z2X-Mm-IQ8" kind="show" identifier="FeedTableVC" id="qFT-Eb-XCB"/>
                         <segue destination="4wv-6r-dM1" kind="show" identifier="showNewAdUnitSegue" id="JVN-Ju-lqW"/>
                         <segue destination="fS8-h9-Jo3" kind="show" identifier="Scanner" id="bjo-3f-fND"/>
                     </connections>
@@ -612,7 +612,7 @@
                                         <rect key="frame" x="0.0" y="55.333332061767578" width="600" height="43.666667938232422"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="suf-zx-SSO" id="6j6-Rz-3gI">
-                                            <rect key="frame" x="0.0" y="0.0" width="573.66666666666663" height="43.666667938232422"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="362.66666666666669" height="43.666667938232422"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="zW1-pc-qkp">

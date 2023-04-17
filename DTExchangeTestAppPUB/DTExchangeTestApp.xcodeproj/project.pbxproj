@@ -8,11 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		2AA47D1B2369D89200104FD5 /* QRScanner.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2AA47D1A2369D89200104FD5 /* QRScanner.storyboard */; };
+		49FD03C65D86DE9DA1C5FEFA /* IASDKCore.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 21A78A28F861B8DA37EEFFD6 /* IASDKCore.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		525086D02739F48E00CBDA45 /* Console.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525086CC2739F48E00CBDA45 /* Console.swift */; };
 		525086D22739F48E00CBDA45 /* ConsoleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525086CD2739F48E00CBDA45 /* ConsoleViewController.swift */; };
 		525086D42739F48E00CBDA45 /* LoggingConsoleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525086CE2739F48E00CBDA45 /* LoggingConsoleViewController.swift */; };
 		525086D62739F48E00CBDA45 /* ConsoleViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 525086CF2739F48E00CBDA45 /* ConsoleViewController.xib */; };
-		6183F4AF963082B14DDD11F9 /* IASDKCore.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1A3D04A8069D1C2C8238515A /* IASDKCore.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		7A45DCAD282A407100F48B34 /* MarketplaceSDKInitializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A45DCAC282A407100F48B34 /* MarketplaceSDKInitializer.swift */; };
 		7A8057F028C6622B00781158 /* SDKBiddingFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A8057EF28C6622B00781158 /* SDKBiddingFactory.swift */; };
 		7A941FAA2830D4E500BB98FF /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A941FA92830D4E500BB98FF /* Constants.swift */; };
@@ -66,7 +66,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				6183F4AF963082B14DDD11F9 /* IASDKCore.xcframework in Embed Frameworks */,
+				49FD03C65D86DE9DA1C5FEFA /* IASDKCore.xcframework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -90,7 +90,7 @@
 		119F856C296AEE7F00BEE421 /* GADMAdapterFyberExtras.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GADMAdapterFyberExtras.m; path = "../../googleads-mobile-ios-mediation/adapters/DTExchange/DTExchangeAdapter/GADMAdapterFyberExtras.m"; sourceTree = "<group>"; };
 		119F8575296AEEC400BEE421 /* GADMAdapterFyberExtras.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GADMAdapterFyberExtras.h; path = "../../googleads-mobile-ios-mediation/adapters/DTExchange/Public/Headers/GADMAdapterFyberExtras.h"; sourceTree = "<group>"; };
 		119F8576296AEEC400BEE421 /* DTExchangeAdapter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DTExchangeAdapter.h; path = "../../googleads-mobile-ios-mediation/adapters/DTExchange/Public/Headers/DTExchangeAdapter.h"; sourceTree = "<group>"; };
-		1A3D04A8069D1C2C8238515A /* IASDKCore.xcframework */ = {isa = PBXFileReference; includeInIndex = 1; name = IASDKCore.xcframework; path = ../IASDKCore/IASDKCore.xcframework; sourceTree = "<group>"; };
+		21A78A28F861B8DA37EEFFD6 /* IASDKCore.xcframework */ = {isa = PBXFileReference; includeInIndex = 1; name = IASDKCore.xcframework; path = ../IASDKCore/IASDKCore.xcframework; sourceTree = "<group>"; };
 		2AA47D1A2369D89200104FD5 /* QRScanner.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = QRScanner.storyboard; sourceTree = "<group>"; };
 		525086CC2739F48E00CBDA45 /* Console.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Console.swift; sourceTree = "<group>"; };
 		525086CD2739F48E00CBDA45 /* ConsoleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConsoleViewController.swift; sourceTree = "<group>"; };
@@ -221,14 +221,6 @@
 				E88693AD1E3DFED900B12EAB /* Supporting Files */,
 			);
 			name = Resources;
-			sourceTree = "<group>";
-		};
-		96EBAA08D5177F44AF4A46D4 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				1A3D04A8069D1C2C8238515A /* IASDKCore.xcframework */,
-			);
-			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		9A3F93EE2703502900CC939B /* MultipleValuesCell */ = {
@@ -399,6 +391,14 @@
 			name = Router;
 			sourceTree = "<group>";
 		};
+		D6365E157A1BDC50F0F40E0C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				21A78A28F861B8DA37EEFFD6 /* IASDKCore.xcframework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		E88693A11E3DFED900B12EAB = {
 			isa = PBXGroup;
 			children = (
@@ -406,7 +406,7 @@
 				E88693AC1E3DFED900B12EAB /* DTExchangeTestApp */,
 				84C17897257B102A00702557 /* DTExchangeTestApp-Bridging-Header.h */,
 				E88693AB1E3DFED900B12EAB /* Products */,
-				96EBAA08D5177F44AF4A46D4 /* Frameworks */,
+				D6365E157A1BDC50F0F40E0C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -686,7 +686,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -745,7 +745,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
@@ -772,6 +772,7 @@
 					"CERT_BUILD=1",
 				);
 				INFOPLIST_FILE = DTExchangeTestApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -809,6 +810,7 @@
 					"CERT_BUILD=1",
 				);
 				INFOPLIST_FILE = DTExchangeTestApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

@@ -13,18 +13,17 @@ extension MarketplaceSDK {
         IASDKCore.sharedInstance()?.initWithAppID(appId, completionBlock: { (success: Bool, error: Error?) in
             if success {
                 let version = IASDKCore.sharedInstance().version() ?? ""
-                Console.shared.add(message: "Fyber Marketplace SDK has been initialised, version: \(version)")
+                Console.shared.add(message: "DTX SDK initialised: \(version)")
                 setMetaData()
                 setUserData()
             } else {
-                Console.shared.add(message: "Fyber Marketplace SDK init has failed: \(error.debugDescription)", messageType: .error)
+                Console.shared.add(message: "DTX SDK init failed: \(error.debugDescription)", messageType: .error)
             }
         }, completionQueue: DispatchQueue(label: "appDelegate queue"))
     }
     
     static fileprivate func setMetaData() {
         IASDKCore.sharedInstance().keywords = "tango, music"
-        IASDKCore.sharedInstance().location = CLLocation(latitude: 50.45, longitude: 30.52)
         IASDKCore.sharedInstance().muteAudio = true
     }
     
