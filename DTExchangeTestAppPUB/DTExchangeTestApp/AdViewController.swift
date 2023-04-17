@@ -16,6 +16,7 @@ class AdViewController: UIViewController {
     private var userAlertLabel: UILabel?
     private var adViewContent: AdViewControllerContentState!
     private var router: Router = RouterImpl()
+    private var inFocus = true
     @IBOutlet weak var loadAdButton: UIButton!
     @IBOutlet weak var showAdButton: UIButton!
     @IBOutlet weak var adView: UIView!
@@ -31,7 +32,6 @@ class AdViewController: UIViewController {
         setupSubViews()
 
         navigationItem.rightBarButtonItems?.removeAll(where: {$0.title == "Settings"})
-
     }
 
     override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
@@ -42,11 +42,14 @@ class AdViewController: UIViewController {
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        inFocus = true
         prepareSubViewToCorrectState()
     }
     
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
+        
+        guard inFocus else { return }
         
         let didReturnToMenu = self.view.window == nil && self.view.superview == nil
         
@@ -145,16 +148,15 @@ private extension AdViewController {
 
     func loadAd() {
         if !isLoadingAd {
-            Console.shared.add(message: "<Fyber> Will start loading ad... ", messageType: .debug)
+            Console.shared.add(message: "will start loading ad... ", messageType: .debug)
             isLoadingAd = true
             sdkInstance?.loadAd()
             showAdButton.isHidden = true
             spinner.startAnimating()
         } else {
-            Console.shared.add(message: "<Fyber> Loading ad is already in progress... ", messageType: .error)
+            Console.shared.add(message: "loading ad is already in progress... ", messageType: .error)
         }
     }
-
 
     func removeUserAlertLabelIfNeeded() {
         guard let userAlertLabel = self.userAlertLabel else {return}
@@ -178,7 +180,7 @@ extension AdViewController: SampleSDKProtocolDelegate {
             UINotificationFeedbackGenerator().notificationOccurred(.success)
             self.showAdButton.isHidden = !type.isInterstitial()
 
-            Console.shared.add(message: "Ad with type: \(type.stringValue) was loaded")
+            Console.shared.add(message: "ad of type: \(type.stringValue) was loaded")
         }
     }
 
@@ -188,8 +190,8 @@ extension AdViewController: SampleSDKProtocolDelegate {
             self.showAdButton.isHidden = true
             self.spinner.stopAnimating()
             UINotificationFeedbackGenerator().notificationOccurred(.error)
-            self.showError(with: "Failed to load Ad with error: \(error)")
-            Console.shared.add(message: "Failed to load ad with error: \(error)")
+            self.showError(with: "ad load failed: \(error)")
+            Console.shared.add(message: "ad load failed: \(error)")
         }
     }
 

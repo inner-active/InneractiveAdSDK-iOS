@@ -17,7 +17,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, IAGlobalAdDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         let kAppIDForTest = "102960"
         
-        FMPLogger.setLogLevel(FMPLogLevel.debug)
+        DTXLogger.setLogLevel(DTXLogLevel.debug)
         IADebugger.adReportingEnabled = true
         
         
@@ -55,19 +55,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate, IAGlobalAdDelegate {
     func adDidShow(with impressionData: IAImpressionData, with adRequest: IAAdRequest) {
         let impMessage = """
 ad did show with impression data:\n
-demandSourceName: \(impressionData.demandSourceName ?? "")\n
-country: \(impressionData.country ?? "")\n
-sessionID: \(impressionData.sessionID ?? "")\n
-advertiserDomain: \(impressionData.advertiserDomain ?? "")\n
-creativeID: \(impressionData.creativeID ?? "")\ncampaignID: \(impressionData.campaignID ?? "")\n
-pricing value: \(impressionData.pricingValue ?? NSNumber(0))\n
-pricingCurrency: \(impressionData.pricingCurrency ?? "")\n
-duration: \(impressionData.duration ?? NSNumber(0))\n
-isSkippable: \(impressionData.isSkippable ?"YES":"NO")\n
-spotID: \(adRequest.spotID)\n
+demandSourceName: \(impressionData.demandSourceName ?? "")
+country: \(impressionData.country ?? "")
+sessionID: \(impressionData.sessionID ?? "")
+advertiserDomain: \(impressionData.advertiserDomain ?? "")
+creativeID: \(impressionData.creativeID ?? "")\ncampaignID: \(impressionData.campaignID ?? "")
+pricing value: \(impressionData.pricingValue ?? NSNumber(0))
+pricingCurrency: \(impressionData.pricingCurrency ?? "")
+duration: \(impressionData.duration ?? NSNumber(0))
+isSkippable: \(impressionData.isSkippable ?"YES":"NO")
+spotID: \(adRequest.spotID)
 unitID: \(adRequest.unitID ?? "")\n
 """
-        
         Console.shared.add(message: impMessage)
     }
 }

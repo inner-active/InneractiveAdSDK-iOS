@@ -22,6 +22,7 @@ enum SampleSettingsEnum: String {
     case gdprData     = "GDPR Data"
     case gdpr         = "GDPR"
     case lgpd         = "LGPD"
+    case coppa        = "COPPA"
     case sdkVersion   = "SDK Version"
     case userId       = "User Id"
     

@@ -32,7 +32,7 @@
 	<key>NSCameraUsageDescription</key>
 	<string>For using QR code</string>
 	<key>NSUserTrackingUsageDescription</key>
-	<string>For showing Fyber Marketplace SDK Ads</string>
+	<string>For showing DTX SDK ads</string>
 	<key>SKAdNetworkItems</key>
 	<array>
 		<dict>
