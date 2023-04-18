@@ -22,14 +22,12 @@ class SaveAdsViewController: MenuBaseViewController {
         navigationItem.rightBarButtonItems?.removeAll(where: {$0.title == "Settings"})
     }
     
-    @available(iOS 11.0, *)
     override func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
         let delete = self.delete(rowAtindexPath: indexPath)
         let swipe = UISwipeActionsConfiguration(actions: [delete])
         return swipe
     }
     
-    @available(iOS 11.0, *)
     override func tableView(_ tableView: UITableView, leadingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
         let edit = self.edit(rowAtindexPath: indexPath)
         let swipe = UISwipeActionsConfiguration(actions: [edit])
@@ -52,7 +50,6 @@ class SaveAdsViewController: MenuBaseViewController {
 // MARK: - Service
 
 private extension SaveAdsViewController {
-    @available(iOS 11.0, *)
     private func delete(rowAtindexPath indexPath: IndexPath) -> UIContextualAction {
         let action = UIContextualAction(style: .destructive, title: "Delete") { [weak self] (_, _, _) in
             guard let self = self else {return}
@@ -64,7 +61,6 @@ private extension SaveAdsViewController {
         return action
     }
     
-    @available(iOS 11.0, *)
     private func edit(rowAtindexPath indexPath: IndexPath) -> UIContextualAction {
         let action = UIContextualAction(style: .normal, title: "Edit") {[weak self] (_, _, _) in
             guard let self = self else {return}

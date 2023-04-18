@@ -7,12 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0D5C6818CDF0ED04F0A782A5 /* IASDKCore.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8E7689D2785505C6D9779962 /* IASDKCore.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		2AA47D1B2369D89200104FD5 /* QRScanner.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2AA47D1A2369D89200104FD5 /* QRScanner.storyboard */; };
 		525086D02739F48E00CBDA45 /* Console.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525086CC2739F48E00CBDA45 /* Console.swift */; };
 		525086D22739F48E00CBDA45 /* ConsoleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525086CD2739F48E00CBDA45 /* ConsoleViewController.swift */; };
 		525086D42739F48E00CBDA45 /* LoggingConsoleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525086CE2739F48E00CBDA45 /* LoggingConsoleViewController.swift */; };
 		525086D62739F48E00CBDA45 /* ConsoleViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 525086CF2739F48E00CBDA45 /* ConsoleViewController.xib */; };
-		6183F4AF963082B14DDD11F9 /* IASDKCore.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1A3D04A8069D1C2C8238515A /* IASDKCore.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		7A45DCAD282A407100F48B34 /* MarketplaceSDKInitializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A45DCAC282A407100F48B34 /* MarketplaceSDKInitializer.swift */; };
 		7A8057F028C6622B00781158 /* SDKBiddingFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A8057EF28C6622B00781158 /* SDKBiddingFactory.swift */; };
 		7A941FAA2830D4E500BB98FF /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A941FA92830D4E500BB98FF /* Constants.swift */; };
@@ -66,7 +66,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				6183F4AF963082B14DDD11F9 /* IASDKCore.xcframework in Embed Frameworks */,
+				0D5C6818CDF0ED04F0A782A5 /* IASDKCore.xcframework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -76,21 +76,6 @@
 /* Begin PBXFileReference section */
 		11427864266E467B007D3038 /* DTExchange.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DTExchange.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1176CC0A2892AA9A00BB8B97 /* DTExchangeTestAppMediation-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "DTExchangeTestAppMediation-Info.plist"; sourceTree = "<group>"; };
-		119F8561296AEE7F00BEE421 /* GADMediationAdapterFyber.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GADMediationAdapterFyber.h; path = "../../googleads-mobile-ios-mediation/adapters/DTExchange/DTExchangeAdapter/GADMediationAdapterFyber.h"; sourceTree = "<group>"; };
-		119F8562296AEE7F00BEE421 /* GADMAdapterFyberUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GADMAdapterFyberUtils.h; path = "../../googleads-mobile-ios-mediation/adapters/DTExchange/DTExchangeAdapter/GADMAdapterFyberUtils.h"; sourceTree = "<group>"; };
-		119F8563296AEE7F00BEE421 /* GADMAdapterFyberInterstitialAd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GADMAdapterFyberInterstitialAd.h; path = "../../googleads-mobile-ios-mediation/adapters/DTExchange/DTExchangeAdapter/GADMAdapterFyberInterstitialAd.h"; sourceTree = "<group>"; };
-		119F8564296AEE7F00BEE421 /* GADMAdapterFyberRewardedAd.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GADMAdapterFyberRewardedAd.m; path = "../../googleads-mobile-ios-mediation/adapters/DTExchange/DTExchangeAdapter/GADMAdapterFyberRewardedAd.m"; sourceTree = "<group>"; };
-		119F8565296AEE7F00BEE421 /* GADMAdapterFyberRewardedAd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GADMAdapterFyberRewardedAd.h; path = "../../googleads-mobile-ios-mediation/adapters/DTExchange/DTExchangeAdapter/GADMAdapterFyberRewardedAd.h"; sourceTree = "<group>"; };
-		119F8566296AEE7F00BEE421 /* GADMAdapterFyberUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GADMAdapterFyberUtils.m; path = "../../googleads-mobile-ios-mediation/adapters/DTExchange/DTExchangeAdapter/GADMAdapterFyberUtils.m"; sourceTree = "<group>"; };
-		119F8567296AEE7F00BEE421 /* GADMAdapterFyberBannerAd.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GADMAdapterFyberBannerAd.m; path = "../../googleads-mobile-ios-mediation/adapters/DTExchange/DTExchangeAdapter/GADMAdapterFyberBannerAd.m"; sourceTree = "<group>"; };
-		119F8568296AEE7F00BEE421 /* GADMAdapterFyberInterstitialAd.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GADMAdapterFyberInterstitialAd.m; path = "../../googleads-mobile-ios-mediation/adapters/DTExchange/DTExchangeAdapter/GADMAdapterFyberInterstitialAd.m"; sourceTree = "<group>"; };
-		119F8569296AEE7F00BEE421 /* GADMediationAdapterFyber.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GADMediationAdapterFyber.m; path = "../../googleads-mobile-ios-mediation/adapters/DTExchange/DTExchangeAdapter/GADMediationAdapterFyber.m"; sourceTree = "<group>"; };
-		119F856A296AEE7F00BEE421 /* GADMAdapterFyberBannerAd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GADMAdapterFyberBannerAd.h; path = "../../googleads-mobile-ios-mediation/adapters/DTExchange/DTExchangeAdapter/GADMAdapterFyberBannerAd.h"; sourceTree = "<group>"; };
-		119F856B296AEE7F00BEE421 /* GADMAdapterFyberConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GADMAdapterFyberConstants.h; path = "../../googleads-mobile-ios-mediation/adapters/DTExchange/DTExchangeAdapter/GADMAdapterFyberConstants.h"; sourceTree = "<group>"; };
-		119F856C296AEE7F00BEE421 /* GADMAdapterFyberExtras.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GADMAdapterFyberExtras.m; path = "../../googleads-mobile-ios-mediation/adapters/DTExchange/DTExchangeAdapter/GADMAdapterFyberExtras.m"; sourceTree = "<group>"; };
-		119F8575296AEEC400BEE421 /* GADMAdapterFyberExtras.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GADMAdapterFyberExtras.h; path = "../../googleads-mobile-ios-mediation/adapters/DTExchange/Public/Headers/GADMAdapterFyberExtras.h"; sourceTree = "<group>"; };
-		119F8576296AEEC400BEE421 /* DTExchangeAdapter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DTExchangeAdapter.h; path = "../../googleads-mobile-ios-mediation/adapters/DTExchange/Public/Headers/DTExchangeAdapter.h"; sourceTree = "<group>"; };
-		1A3D04A8069D1C2C8238515A /* IASDKCore.xcframework */ = {isa = PBXFileReference; includeInIndex = 1; name = IASDKCore.xcframework; path = ../IASDKCore/IASDKCore.xcframework; sourceTree = "<group>"; };
 		2AA47D1A2369D89200104FD5 /* QRScanner.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = QRScanner.storyboard; sourceTree = "<group>"; };
 		525086CC2739F48E00CBDA45 /* Console.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Console.swift; sourceTree = "<group>"; };
 		525086CD2739F48E00CBDA45 /* ConsoleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConsoleViewController.swift; sourceTree = "<group>"; };
@@ -103,6 +88,7 @@
 		8001E98328DB4F1800258421 /* VERSION.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = VERSION.xcconfig; sourceTree = "<group>"; };
 		84C17897257B102A00702557 /* DTExchangeTestApp-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DTExchangeTestApp-Bridging-Header.h"; sourceTree = "<group>"; };
 		84C17898257B102B00702557 /* Stub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stub.swift; sourceTree = "<group>"; };
+		8E7689D2785505C6D9779962 /* IASDKCore.xcframework */ = {isa = PBXFileReference; includeInIndex = 1; name = IASDKCore.xcframework; path = ../IASDKCore/IASDKCore.xcframework; sourceTree = "<group>"; };
 		9A0E962E27A92D6C00504D12 /* AdViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdViewState.swift; sourceTree = "<group>"; };
 		9A24A27026DE215E00251686 /* UIViewController+UIAlertController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+UIAlertController.swift"; sourceTree = "<group>"; };
 		9A2CC2FF2785BF2A0015685A /* AdViewControllerContentState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdViewControllerContentState.swift; sourceTree = "<group>"; };
@@ -159,35 +145,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		11BC972426764A910070E03A /* MediationsAdapters */ = {
-			isa = PBXGroup;
-			children = (
-				11BC976826764F710070E03A /* Google */,
-			);
-			name = MediationsAdapters;
-			sourceTree = "<group>";
-		};
-		11BC976826764F710070E03A /* Google */ = {
-			isa = PBXGroup;
-			children = (
-				119F8576296AEEC400BEE421 /* DTExchangeAdapter.h */,
-				119F856A296AEE7F00BEE421 /* GADMAdapterFyberBannerAd.h */,
-				119F8567296AEE7F00BEE421 /* GADMAdapterFyberBannerAd.m */,
-				119F856B296AEE7F00BEE421 /* GADMAdapterFyberConstants.h */,
-				119F8575296AEEC400BEE421 /* GADMAdapterFyberExtras.h */,
-				119F856C296AEE7F00BEE421 /* GADMAdapterFyberExtras.m */,
-				119F8563296AEE7F00BEE421 /* GADMAdapterFyberInterstitialAd.h */,
-				119F8568296AEE7F00BEE421 /* GADMAdapterFyberInterstitialAd.m */,
-				119F8565296AEE7F00BEE421 /* GADMAdapterFyberRewardedAd.h */,
-				119F8564296AEE7F00BEE421 /* GADMAdapterFyberRewardedAd.m */,
-				119F8562296AEE7F00BEE421 /* GADMAdapterFyberUtils.h */,
-				119F8566296AEE7F00BEE421 /* GADMAdapterFyberUtils.m */,
-				119F8561296AEE7F00BEE421 /* GADMediationAdapterFyber.h */,
-				119F8569296AEE7F00BEE421 /* GADMediationAdapterFyber.m */,
-			);
-			name = Google;
-			sourceTree = "<group>";
-		};
 		525086CB2739F48E00CBDA45 /* Console */ = {
 			isa = PBXGroup;
 			children = (
@@ -221,14 +178,6 @@
 				E88693AD1E3DFED900B12EAB /* Supporting Files */,
 			);
 			name = Resources;
-			sourceTree = "<group>";
-		};
-		96EBAA08D5177F44AF4A46D4 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				1A3D04A8069D1C2C8238515A /* IASDKCore.xcframework */,
-			);
-			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		9A3F93EE2703502900CC939B /* MultipleValuesCell */ = {
@@ -399,6 +348,14 @@
 			name = Router;
 			sourceTree = "<group>";
 		};
+		BF4397126A79572287150722 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8E7689D2785505C6D9779962 /* IASDKCore.xcframework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		E88693A11E3DFED900B12EAB = {
 			isa = PBXGroup;
 			children = (
@@ -406,7 +363,7 @@
 				E88693AC1E3DFED900B12EAB /* DTExchangeTestApp */,
 				84C17897257B102A00702557 /* DTExchangeTestApp-Bridging-Header.h */,
 				E88693AB1E3DFED900B12EAB /* Products */,
-				96EBAA08D5177F44AF4A46D4 /* Frameworks */,
+				BF4397126A79572287150722 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -429,7 +386,6 @@
 				525086CB2739F48E00CBDA45 /* Console */,
 				7A941FA92830D4E500BB98FF /* Constants.swift */,
 				9A7AD6D426946FEF000ECCA4 /* Extensions */,
-				11BC972426764A910070E03A /* MediationsAdapters */,
 				8416219F1E71C86400F51F77 /* Resources */,
 				9A3F940227048A2200CC939B /* SampleAdTypeEnum.swift */,
 				9A7AD6B826946538000ECCA4 /* SDKs */,
@@ -664,7 +620,6 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
-				DEBUG_ACTIVITY_MODE = "";
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
@@ -686,7 +641,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -729,7 +684,6 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
-				DEBUG_ACTIVITY_MODE = "";
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -745,7 +699,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
@@ -772,6 +726,7 @@
 					"CERT_BUILD=1",
 				);
 				INFOPLIST_FILE = DTExchangeTestApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -809,6 +764,7 @@
 					"CERT_BUILD=1",
 				);
 				INFOPLIST_FILE = DTExchangeTestApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

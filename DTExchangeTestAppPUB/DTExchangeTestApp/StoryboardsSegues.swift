@@ -12,7 +12,7 @@ enum StoryboardsSegues: String {
     case showScannerSegue = "Scanner"
     case ShowAdVCSegue = "AdView"
     case showMultiValue = "MultiValue"
-    case feedTableVCSegue = "feedTableVCSegue"
+    case FeedTableVCSegue = "FeedTableVC"
     case ConsoleViewControllerSegues = "ConsoleViewControllerSegues"
     case ShowNewAdUnitSegue = "showNewAdUnitSegue"
     case ShowSettings = "ShowSettings"

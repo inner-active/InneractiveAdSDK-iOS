@@ -16,38 +16,38 @@ extension MarketplaceSDK: IAUnitDelegate {
     }
     
     func iaAdDidReceiveClick(_ unitController: IAUnitController?) {
-        Console.shared.add(message: "IAAdDidReceiveClick")
+        Console.shared.add(message: "ad event: click")
     }
     
     func iaAdWillLogImpression(_ unitController: IAUnitController?) {
-        Console.shared.add(message: "IAAdWillLogImpression")
+        Console.shared.add(message: "ad event: impression")
     }
     
     func iaAdDidReward(_ unitController: IAUnitController?) {
-        Console.shared.add(message: "IAAdDidReward")
+        Console.shared.add(message: "ad event: rewarded")
     }
     
     func iaUnitControllerWillPresentFullscreen(_ unitController: IAUnitController?) {
-        Console.shared.add(message: "IAUnitControllerDidPresentFullscreen")
+        Console.shared.add(message: "ad flow: will present fullscreen")
     }
     
     func iaUnitControllerDidPresentFullscreen(_ unitController: IAUnitController?) {
-        Console.shared.add(message: "IAUnitControllerDidPresentFullscreen")
+        Console.shared.add(message: "ad flow: did present fullscreen")
     }
     
     func iaUnitControllerWillDismissFullscreen(_ unitController: IAUnitController?) {
-        Console.shared.add(message: "IAUnitControllerWillDismissFullscreen")
+        Console.shared.add(message: "ad flow: will dismiss fullscreen")
     }
 
     func iaUnitControllerDidDismissFullscreen(_ unitController: IAUnitController?) {
-        Console.shared.add(message: "IAUnitControllerDidDismissFullscreen")
+        Console.shared.add(message: "ad flow: did dismiss fulsscreen")
     }
     
     func iaUnitControllerWillOpenExternalApp(_ unitController: IAUnitController?) {
-        Console.shared.add(message: "IAUnitControllerWillOpenExternalApp")
+        Console.shared.add(message: "ad flow: will open external app")
     }
     
     func iaAdDidExpire(_ unitController: IAUnitController?) {
-        Console.shared.add(message: "IAAdDidExpire")
+        Console.shared.add(message: "ad event: ad expired")
     }
 }

@@ -10,6 +10,7 @@ import Foundation
 
 @objc protocol Router: Route {
     func routeToAdView(segue: UIStoryboardSegue?, sender: Any?)
+    func routeToFeedTableVC(segue: UIStoryboardSegue?, sender: Any?)
     func routeToScanner(segue: UIStoryboardSegue?, sender: Any?)
     func routeToMultiValue(segue: UIStoryboardSegue?, sender: Any?)
     func routeToshowNewAdUnitSegue(segue: UIStoryboardSegue?, sender: Any?)

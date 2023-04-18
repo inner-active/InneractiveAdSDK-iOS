@@ -42,6 +42,14 @@ extension RouterImpl: Router {
         }
     }
     
+    func routeToFeedTableVC(segue: UIStoryboardSegue?, sender: Any?) {
+        if let sender = sender,
+           let model = sender as? AdUnit {
+            ClientRequestSettings.shared.updateClientRequest(with: model)
+            ClientRequestSettings.shared.removeUserDefaultsIfNeeded()
+        }
+    }
+    
     func routeToScanner(segue: UIStoryboardSegue?, sender: Any?) {
         if let segue = segue,
            let sender = sender,

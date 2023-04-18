@@ -33,7 +33,6 @@ class TextFieldCustomCell: UITableViewCell {
                 textFieldCell.title.text = field.rawValue
                 textFieldCell.userInput.delegate = textFieldCell
                 textFieldCell.clipsToBounds = true
-                
                 guard let value = field.ClientSettingsValue, !value.isEmpty else {
                     textFieldCell.setDefaultValues(field: field)
                     return textFieldCell
