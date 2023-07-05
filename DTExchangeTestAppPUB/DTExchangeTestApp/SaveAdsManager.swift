@@ -15,7 +15,7 @@ protocol SavedAdsManagerDelegate: AnyObject {
 
 final class SavedAdsManager {
     static let sharedInstance = SavedAdsManager()
-    private let serialQueue = dispatch_queue_serial_t(label: "save.ad.manager.queue")
+    private let serialQueue = DispatchQueue(label: "save.ad.manager.queue")
     private(set) var savedAds: [AdUnit]
     private let userDefaults: UserDefaults
     weak var delegate: SavedAdsManagerDelegate!

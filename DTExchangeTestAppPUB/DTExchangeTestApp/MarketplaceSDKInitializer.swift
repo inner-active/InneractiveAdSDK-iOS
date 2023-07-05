@@ -24,7 +24,6 @@ extension MarketplaceSDK {
     
     static fileprivate func setMetaData() {
         IASDKCore.sharedInstance().keywords = "tango, music"
-        IASDKCore.sharedInstance().muteAudio = true
     }
     
     static fileprivate func setUserData() {

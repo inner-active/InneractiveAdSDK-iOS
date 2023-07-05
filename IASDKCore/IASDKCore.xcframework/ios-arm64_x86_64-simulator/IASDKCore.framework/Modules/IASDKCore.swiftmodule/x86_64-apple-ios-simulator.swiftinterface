@@ -4,8 +4,10 @@
 import AdSupport
 import Foundation
 @_exported import IASDKCore
+import MachO
 import StoreKit
 import Swift
+import UIKit
 import _Concurrency
 extension Foundation.OperatingSystemVersion : Swift.Comparable {
   public static func == (lhs: Foundation.OperatingSystemVersion, rhs: Foundation.OperatingSystemVersion) -> Swift.Bool
