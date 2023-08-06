@@ -6,6 +6,6 @@ framework module IASDKCore {
 }
 
 module IASDKCore.Swift {
-    header "IASDKCore-Swift.h"
-    requires objc
+  header "IASDKCore-Swift.h"
+  requires objc
 }

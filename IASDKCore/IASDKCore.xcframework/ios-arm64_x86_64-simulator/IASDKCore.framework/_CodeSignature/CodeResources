@@ -142,7 +142,7 @@
 		</data>
 		<key>Headers/IASDKCore-Swift.h</key>
 		<data>
-		xz2dkAHCtNzv+lZ/HbWeEDM9/KM=
+		6eYgaPJR8oStVANcXeFmcjy2vB4=
 		</data>
 		<key>Headers/IASDKCore.h</key>
 		<data>
@@ -202,35 +202,51 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		ArPqnB9c6MLFrBzqPaebjeTQfCA=
+		q2pcDAK6qA4Wlw6SXs/duVKrm28=
+		</data>
+		<key>Modules/IASDKCore.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
+		<data>
+		PJcpAZ6ARThmXAB3tRgt638+ytw=
+		</data>
+		<key>Modules/IASDKCore.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
+		<data>
+		d2SKFayW4e0qIkxT8iPZ6Ri0PTc=
 		</data>
 		<key>Modules/IASDKCore.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		5PGS8UJmBYOauPdz195y732KW0Y=
+		jMB7WY46xZgT+ixwYKNpetXlrnE=
 		</data>
 		<key>Modules/IASDKCore.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		QFD90TWwM+qpSNGT4Nl7aHRjf3o=
+		d2SKFayW4e0qIkxT8iPZ6Ri0PTc=
 		</data>
 		<key>Modules/IASDKCore.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		iPNF/ndt7dEXM95BC7uzPl5/nQk=
+		LjvPmkEIzrqSVhckrSdG117W9Mo=
+		</data>
+		<key>Modules/IASDKCore.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
+		<data>
+		PJcpAZ6ARThmXAB3tRgt638+ytw=
+		</data>
+		<key>Modules/IASDKCore.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
+		<data>
+		XY52roSVBagznrsmvOMMiiOxrBE=
 		</data>
 		<key>Modules/IASDKCore.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		6gpGe565Wm7cdFVPFw+sQ8e/aIM=
+		Dr6/xEvqsOAVdLe12s5JUE366Ss=
 		</data>
 		<key>Modules/IASDKCore.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		5HPyxX25VeNruM3yZP2PtqyiYUE=
+		XY52roSVBagznrsmvOMMiiOxrBE=
 		</data>
 		<key>Modules/IASDKCore.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		DG5jIm3azJrW9toYF4w3GNzzsig=
+		wa79ZkRTtO1bTbaIe20KgoYljq0=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
-		2dILAFmyRZwVxAbggxlTlUk1QGM=
+		YfTB4tlG9ebBqNvIwwzafwa8ZgI=
 		</data>
 		<key>PrivateHeaders/DTXExceptionHandler.h</key>
 		<data>
@@ -266,7 +282,7 @@
 		</data>
 		<key>PrivateHeaders/FMPABTester.h</key>
 		<data>
-		aCx+KrAoC89QwrmjsQk10jpsaI8=
+		vlFadbrVXPq/Yla6/oK6gVoU994=
 		</data>
 		<key>PrivateHeaders/FMPABTestingBaseModel.h</key>
 		<data>
@@ -294,7 +310,7 @@
 		</data>
 		<key>PrivateHeaders/FMPABTestingParamsModel.h</key>
 		<data>
-		mUlmzFbrMzMXoIa2zQuLDcq14r0=
+		fqzLA+MLa4PSsm8paSouVVkdv9k=
 		</data>
 		<key>PrivateHeaders/FMPABTestingVariantsModel.h</key>
 		<data>
@@ -694,7 +710,7 @@
 		</data>
 		<key>PrivateHeaders/FYBBiddingCacheAdSource.h</key>
 		<data>
-		C3zgMG9IrIlsRP0PxnAa4oOl1rY=
+		wPHmE8wTSl8oftyvvoama6ummnI=
 		</data>
 		<key>PrivateHeaders/FYBCounterView.h</key>
 		<data>
@@ -742,7 +758,7 @@
 		</data>
 		<key>PrivateHeaders/IAAdSourceController.h</key>
 		<data>
-		rsBfaArEAQXps3tuefXKUWkQaHE=
+		rcY8FTrrFUsqG6jkh7PaeQefl5U=
 		</data>
 		<key>PrivateHeaders/IAAdSpotInternal.h</key>
 		<data>
@@ -782,7 +798,7 @@
 		</data>
 		<key>PrivateHeaders/IADiskCacheAdSource.h</key>
 		<data>
-		bLsDej20Xg4dLCTIY6YCVZ+TMRY=
+		LsL+DOb0knqoddI/pk8rsdYlWw0=
 		</data>
 		<key>PrivateHeaders/IADisplayConfigModel.h</key>
 		<data>
@@ -798,7 +814,7 @@
 		</data>
 		<key>PrivateHeaders/IAEventsReporter.h</key>
 		<data>
-		kaGKdYEKIL1YhRpjA4QkDGbiqLg=
+		/DFQy+uOtW3RX1H8z2C7/jC+DjQ=
 		</data>
 		<key>PrivateHeaders/IAFullscreenUnitControllerInternal.h</key>
 		<data>
@@ -811,10 +827,6 @@
 		<key>PrivateHeaders/IAGlobalConfigurationModel.h</key>
 		<data>
 		pWLtfAXiZqQAKZSu3p6rI0qBGe0=
-		</data>
-		<key>PrivateHeaders/IAHZRemoteConfig.h</key>
-		<data>
-		0BloPaRgnQnRNDalp1kPFJcL9+o=
 		</data>
 		<key>PrivateHeaders/IAImageTintButton.h</key>
 		<data>
@@ -930,7 +942,7 @@
 		</data>
 		<key>PrivateHeaders/IAMRAIDCommandsHandler.h</key>
 		<data>
-		aAxtXKtumyWMu6l51OPIKrYWKrs=
+		EQwKNPlMtc5xPCHvqtLjYbhFjkI=
 		</data>
 		<key>PrivateHeaders/IAMRAIDContentControllerInternal.h</key>
 		<data>
@@ -980,10 +992,6 @@
 		<data>
 		9S4ev9lm2CEhxg1N+CJTmZQRuLQ=
 		</data>
-		<key>PrivateHeaders/IAPublisherConfig.h</key>
-		<data>
-		I2VcDfOIMpMvBhYDuCLlrSWpbsk=
-		</data>
 		<key>PrivateHeaders/IAReachability.h</key>
 		<data>
 		RzhMA6COmHQRpvnhDXvh5G4B3WE=
@@ -998,7 +1006,7 @@
 		</data>
 		<key>PrivateHeaders/IARemoteConfigParser.h</key>
 		<data>
-		Xkte9R6GGWjUC/7TdNUdIjgjQuU=
+		zt1vzR2TXxtz+1LVEJa0MbnAklI=
 		</data>
 		<key>PrivateHeaders/IAReportAdController.h</key>
 		<data>
@@ -1031,10 +1039,6 @@
 		<key>PrivateHeaders/IASpinner.h</key>
 		<data>
 		HMjDkLy+sMr9P09YD91HEWrq9oI=
-		</data>
-		<key>PrivateHeaders/IASpotConfig.h</key>
-		<data>
-		qu1Nf1miCl5jW0SB1SZXwr9tTqg=
 		</data>
 		<key>PrivateHeaders/IASpotLevelConfigModel.h</key>
 		<data>
@@ -1086,11 +1090,11 @@
 		</data>
 		<key>PrivateHeaders/IAVASTMediaFile.h</key>
 		<data>
-		XtJ64QKGs3PcjKUiA2svgkcpShA=
+		2M3fxZo8Qd4lxWmoFPNX+z1o0eU=
 		</data>
 		<key>PrivateHeaders/IAVASTMediaFilePicker.h</key>
 		<data>
-		suSHvav1ZFVC/7QvlOe91MfBhgo=
+		aK+L3RKSlQlQfywIdrBMySMnj/8=
 		</data>
 		<key>PrivateHeaders/IAVASTModel.h</key>
 		<data>
@@ -1130,7 +1134,7 @@
 		</data>
 		<key>PrivateHeaders/IAVideoController.h</key>
 		<data>
-		tUAowNw57jxgS4sG6mJIFZOizyc=
+		fiBBs+HrRZ4fe/VMBBX3ULB+X6A=
 		</data>
 		<key>PrivateHeaders/IAVideoLayoutInternal.h</key>
 		<data>
@@ -1138,7 +1142,7 @@
 		</data>
 		<key>PrivateHeaders/IAVideoPlayer.h</key>
 		<data>
-		qK1iX7Pi5LV61ASUPDKjKUbifdk=
+		1JB0nWZv9U4KWSUr7xlj1LCJjic=
 		</data>
 		<key>PrivateHeaders/IAVideoPlayerBaseView.h</key>
 		<data>
@@ -1146,7 +1150,7 @@
 		</data>
 		<key>PrivateHeaders/IAVideoPlayerOverlayView.h</key>
 		<data>
-		sBGiB70bB0640s/cxXSLFV1VkLY=
+		7Drv7aI4xxO7brqTJ/5+oNuoZYQ=
 		</data>
 		<key>PrivateHeaders/IAVideoViewInternal.h</key>
 		<data>
@@ -1166,7 +1170,7 @@
 		</data>
 		<key>PrivateHeaders/IAVisibilityTester.h</key>
 		<data>
-		z1AWJSi2MfHshgB/RyfMLaspHVU=
+		6PmLzKfRqAvVNjNuRNcdt2SnRrE=
 		</data>
 		<key>PrivateHeaders/IAWeakReferenceHolder.h</key>
 		<data>
@@ -1190,7 +1194,7 @@
 		</data>
 		<key>PrivateHeaders/IAWebView.h</key>
 		<data>
-		dsXoQpE3bAc2vTGhLMJfAtdvzBg=
+		/qobdBv4ZBpdFGgcIk199/fNpRM=
 		</data>
 		<key>PrivateHeaders/IAXMLContentNetworkBuilder.h</key>
 		<data>
@@ -1327,6 +1331,14 @@
 		<key>close@3x.png</key>
 		<data>
 		NeUZ0CyXd2OTBLo8PB3RJx2jDgQ=
+		</data>
+		<key>digital_turbine_logo.png</key>
+		<data>
+		fcfWpV/+NOtdE2VAtFiwwmNQuxE=
+		</data>
+		<key>info_button.png</key>
+		<data>
+		VzpxUMDYSvNp2jv7PGGgAVmz+Lk=
 		</data>
 		<key>muteButton@2x.png</key>
 		<data>
@@ -1601,7 +1613,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			G5DIkaQvy056jya7YDDxMqLx78ef9a1Y1Sgflv/kIUc=
+			zPZPzzv5FxCIu7kZBXSVL6b0ebKoRD5+M8SpzbKhgKM=
 			</data>
 		</dict>
 		<key>Headers/IASDKCore.h</key>
@@ -1702,53 +1714,81 @@
 			runNQ3is/XGPlrZ57CBrLMvY/zO0GnfsJpYxAp3pJCs=
 			</data>
 		</dict>
+		<key>Modules/IASDKCore.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			efsEW36/5eUmDFimqEGKhfLCtqumpPvSy/Iht8L6jp8=
+			</data>
+		</dict>
+		<key>Modules/IASDKCore.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			L5+M9ssuHpPXwM0MOIP9NdHi7e1ZIS11QbApRymGqDA=
+			</data>
+		</dict>
 		<key>Modules/IASDKCore.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			UpCP5gNQpTfXgnGElIUdk3C8lsWU2PmkXCglLBQJcTA=
+			FgDh4tY3hvNIlSpP+MCLoIrJCa2/xu4hxePsOGO5UUw=
 			</data>
 		</dict>
 		<key>Modules/IASDKCore.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			Wy9684gB54mInuzVxr1qpzbmfy5HQM47HzIRvAFz7Ko=
+			L5+M9ssuHpPXwM0MOIP9NdHi7e1ZIS11QbApRymGqDA=
 			</data>
 		</dict>
 		<key>Modules/IASDKCore.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			s3eY43iBcz8EOBrGMjtHf4AKnbkQUvsgEZyMbEmkivc=
+			qhfFhv8JEpGukJhRCavJn8b+O3POiLjbUCZ9VUOiYEI=
+			</data>
+		</dict>
+		<key>Modules/IASDKCore.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			efsEW36/5eUmDFimqEGKhfLCtqumpPvSy/Iht8L6jp8=
+			</data>
+		</dict>
+		<key>Modules/IASDKCore.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			Uoj7E6yM/+flE1E8e6Y06ukBw1Ol7wWDHo1GP/kvnAU=
 			</data>
 		</dict>
 		<key>Modules/IASDKCore.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			ftRMumIbISsIWHsI9BSQuXp9+uLn7b3DpeVfbZoQdaA=
+			IiYa+ohRUltXs+FsNd51RXmEJChzvrKoLu6SqrpuMEg=
 			</data>
 		</dict>
 		<key>Modules/IASDKCore.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			IR10YNAArtvX/bBnEHN5UAUM/G8enJV9RYiVwigMZGA=
+			Uoj7E6yM/+flE1E8e6Y06ukBw1Ol7wWDHo1GP/kvnAU=
 			</data>
 		</dict>
 		<key>Modules/IASDKCore.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			byz4GSgzPyncP393Grlw+HHx29ySqQwNt2GI7mwtrjw=
+			6gzPlWwG5FvaQBYDcpy7VViqeS7wyuJCfgRrUD9AcJ0=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			PcIZNZUXwGGuNlggXZRngdXY6ZJmvjN4u4qkLhjWB3o=
+			AC3qe1JYC5zBmU9Nwi2S0U9WduP6Ii/UflYw6DoEj7Q=
 			</data>
 		</dict>
 		<key>PrivateHeaders/DTXExceptionHandler.h</key>
@@ -1811,7 +1851,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			MYRGArufXXKUMiMYtHkdbL74ar/WLDPc9lzwuXOaPqY=
+			CIONyZIuAA7+oTPGvfy8+mfkVUUr1vMwn/HW/nwVCnQ=
 			</data>
 		</dict>
 		<key>PrivateHeaders/FMPABTestingBaseModel.h</key>
@@ -1860,7 +1900,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			y1yyc7U02zjdS/dzfT2O5wSgOvJ9o1mnj9qxcM470mA=
+			FoMXoRDWl8UPyYl02Wbzt99OJerm90Vji4WdE8JoqMo=
 			</data>
 		</dict>
 		<key>PrivateHeaders/FMPABTestingVariantsModel.h</key>
@@ -2560,7 +2600,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			XpPfI+uLAzn+HRX/QhC9QjOpu+GYOERqVgm47XpmABs=
+			i8WaFRoHLjcPj5l9yCNsnnYhHsQKEM/LKqL1RJc6OMs=
 			</data>
 		</dict>
 		<key>PrivateHeaders/FYBCounterView.h</key>
@@ -2644,7 +2684,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			DGV1izmy63FNfOHI2Ge5GkQTMMLc9fRHzvMTItBN+ug=
+			MQ9io5VomOCE44IO1mMLfMBFxXfZAM7eRKzQrWyvQHs=
 			</data>
 		</dict>
 		<key>PrivateHeaders/IAAdSpotInternal.h</key>
@@ -2714,7 +2754,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			XeX9s5wq/poki/nuifFSFkmjPgNsyKT5K3cVRe7/8Zk=
+			8hiUcd19FHRkS+uP/s73GHoRsrcWtCt7jHQcYSQ5/7g=
 			</data>
 		</dict>
 		<key>PrivateHeaders/IADisplayConfigModel.h</key>
@@ -2742,7 +2782,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			6aAOr6IZbqAEj+dlJLIxdf8RhtnFRK2LZX76Cd4n4yw=
+			QoXOdFx1F9zKTmdA1IHNnj8UtuACYOQsx2O8uc5UqAY=
 			</data>
 		</dict>
 		<key>PrivateHeaders/IAFullscreenUnitControllerInternal.h</key>
@@ -2764,13 +2804,6 @@
 			<key>hash2</key>
 			<data>
 			qs8e2E7mXspHfxoOnw7GEIwG508o5PH2uIrhhxTmMcU=
-			</data>
-		</dict>
-		<key>PrivateHeaders/IAHZRemoteConfig.h</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			ngfB9aZZw1C8+o5hmXotg1ud53lCdh5jeSdgNmBba1c=
 			</data>
 		</dict>
 		<key>PrivateHeaders/IAImageTintButton.h</key>
@@ -2973,7 +3006,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			7KQYL64IVQvbT/pbNhb06Bsd9ePQw+tJyShCk6NkxO8=
+			EFvJC2O4bNLOWXtnBieObLKVtVWqSPKkr67vdMB22hM=
 			</data>
 		</dict>
 		<key>PrivateHeaders/IAMRAIDContentControllerInternal.h</key>
@@ -3060,13 +3093,6 @@
 			Bh8eqmN0pcRH2NT07MkrZXHMO35/bCvycqbjuL7BUSo=
 			</data>
 		</dict>
-		<key>PrivateHeaders/IAPublisherConfig.h</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			i4VyVU8Et8JXZFJfOt8T67YsTO+3lYWCi/+9r7a9i20=
-			</data>
-		</dict>
 		<key>PrivateHeaders/IAReachability.h</key>
 		<dict>
 			<key>hash2</key>
@@ -3092,7 +3118,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			IAZaST5VJ7Hcbtub47Z61Ipw62olydMcxLlVjffw5sg=
+			g6TtgadZsIwIULQa40T1ixMtn2ZtQ2FtCsWgDzNktHc=
 			</data>
 		</dict>
 		<key>PrivateHeaders/IAReportAdController.h</key>
@@ -3149,13 +3175,6 @@
 			<key>hash2</key>
 			<data>
 			3lp010wAbwJk8ZWhGlJYPhR11p494r9kcIJKNcf/o4k=
-			</data>
-		</dict>
-		<key>PrivateHeaders/IASpotConfig.h</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			+crUYgHQh10KE4rct9lUA0jLVpe+mVXKNTpivdvEHBE=
 			</data>
 		</dict>
 		<key>PrivateHeaders/IASpotLevelConfigModel.h</key>
@@ -3246,14 +3265,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			qe2cxwBiyFoTgFppPm1gjnpJwRUFXxeYnNCoyDG+I6M=
+			Rs56wSSwJ+hMs0rhqA1xm6gdkfaq2eT4K3no/8bhp6A=
 			</data>
 		</dict>
 		<key>PrivateHeaders/IAVASTMediaFilePicker.h</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			DYZrr6hKfTFBBc0Jk1yysNK9sQqA8Tzacs2FRqgDH9U=
+			yUK78kfXT2GTL0OFnTSsVxqWNr94tupi5lQ0Blu13WA=
 			</data>
 		</dict>
 		<key>PrivateHeaders/IAVASTModel.h</key>
@@ -3323,7 +3342,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			JGi5JwwsUs2l47ktTjdlmioIRQUQuEisKwuU2eLPf5E=
+			ugh+Amg+B46W0mXUBE9KbNK6hX97M+l52rrnvGzXoZM=
 			</data>
 		</dict>
 		<key>PrivateHeaders/IAVideoLayoutInternal.h</key>
@@ -3337,7 +3356,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			3y7al3OWn5pfxKU3DqdxSPVX84N3wS3nDj5GqovlMP8=
+			84cPwlRlk/AiVhx2Skfi1/OcXL+JR81UZKUrW1+gKgk=
 			</data>
 		</dict>
 		<key>PrivateHeaders/IAVideoPlayerBaseView.h</key>
@@ -3351,7 +3370,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			LUk9CyD1H1rjWDtXf69SSXeHzj0TLqX3rTQk+e3sZ1s=
+			lefuA1URMswGBi5Hg+dBlb2CtgVGXCamEys+3tOHZ9Q=
 			</data>
 		</dict>
 		<key>PrivateHeaders/IAVideoViewInternal.h</key>
@@ -3386,7 +3405,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			6KRRrmcOC+B04/IXsiyEYp561yeoDeRzYaGrKLNyem8=
+			btZsWVMHfMXaD1hBhXFrYHOv8q1Z4k29qaG8Mu6AZ0c=
 			</data>
 		</dict>
 		<key>PrivateHeaders/IAWeakReferenceHolder.h</key>
@@ -3428,7 +3447,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			tWEQ8KbA7BK6xRnRV/epDiMW3UkBUjs7mgypjVtonTg=
+			rz6AdjWY/SrpVSFz0rgyNApU2jnjGIfhlpdYuHs4l4g=
 			</data>
 		</dict>
 		<key>PrivateHeaders/IAXMLContentNetworkBuilder.h</key>
@@ -3667,6 +3686,20 @@
 			<key>hash2</key>
 			<data>
 			zmswnpWRC41m1ip4AkZbDw6Ahlt3DsnRDWkn+6QkSMQ=
+			</data>
+		</dict>
+		<key>digital_turbine_logo.png</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			m81b+NUoVRjLiFXK0zoeMbsw84xNwLL3K3YgsfE2Bzo=
+			</data>
+		</dict>
+		<key>info_button.png</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			41aOwgNFGEcR79XxcNTUiIkPutjR7t5F07avqwJO2dE=
 			</data>
 		</dict>
 		<key>muteButton@2x.png</key>
