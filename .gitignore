@@ -21,9 +21,6 @@ xcuserdata/
 *.xcuserstate
 
 ## Obj-C/Swift specific
-*.hmap
 *.ipa
-*.dSYM.zip
-*.dSYM
 
 InneractiveAdSample/InneractiveAdSample.xcodeproj/project.xcworkspace
