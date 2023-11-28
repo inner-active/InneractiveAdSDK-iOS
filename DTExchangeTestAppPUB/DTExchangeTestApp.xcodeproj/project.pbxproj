@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2AA47D1B2369D89200104FD5 /* QRScanner.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2AA47D1A2369D89200104FD5 /* QRScanner.storyboard */; };
-		37B112C13564FF82A2D6C653 /* IASDKCore.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 18C659B5868D543EF49D4874 /* IASDKCore.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		2D09C138C585F87A8938C4D7 /* IASDKCore.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 53C544CE8F7249C92820AF23 /* IASDKCore.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		525086D02739F48E00CBDA45 /* Console.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525086CC2739F48E00CBDA45 /* Console.swift */; };
 		525086D22739F48E00CBDA45 /* ConsoleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525086CD2739F48E00CBDA45 /* ConsoleViewController.swift */; };
 		525086D42739F48E00CBDA45 /* LoggingConsoleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525086CE2739F48E00CBDA45 /* LoggingConsoleViewController.swift */; };
@@ -66,7 +66,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				37B112C13564FF82A2D6C653 /* IASDKCore.xcframework in Embed Frameworks */,
+				2D09C138C585F87A8938C4D7 /* IASDKCore.xcframework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -76,12 +76,12 @@
 /* Begin PBXFileReference section */
 		11427864266E467B007D3038 /* DTExchange.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DTExchange.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1176CC0A2892AA9A00BB8B97 /* DTExchangeTestAppMediation-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "DTExchangeTestAppMediation-Info.plist"; sourceTree = "<group>"; };
-		18C659B5868D543EF49D4874 /* IASDKCore.xcframework */ = {isa = PBXFileReference; includeInIndex = 1; name = IASDKCore.xcframework; path = ../IASDKCore/IASDKCore.xcframework; sourceTree = "<group>"; };
 		2AA47D1A2369D89200104FD5 /* QRScanner.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = QRScanner.storyboard; sourceTree = "<group>"; };
 		525086CC2739F48E00CBDA45 /* Console.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Console.swift; sourceTree = "<group>"; };
 		525086CD2739F48E00CBDA45 /* ConsoleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConsoleViewController.swift; sourceTree = "<group>"; };
 		525086CE2739F48E00CBDA45 /* LoggingConsoleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoggingConsoleViewController.swift; sourceTree = "<group>"; };
 		525086CF2739F48E00CBDA45 /* ConsoleViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ConsoleViewController.xib; sourceTree = "<group>"; };
+		53C544CE8F7249C92820AF23 /* IASDKCore.xcframework */ = {isa = PBXFileReference; includeInIndex = 1; name = IASDKCore.xcframework; path = ../IASDKCore/IASDKCore.xcframework; sourceTree = "<group>"; };
 		7A45DCAC282A407100F48B34 /* MarketplaceSDKInitializer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketplaceSDKInitializer.swift; sourceTree = "<group>"; };
 		7A8057EF28C6622B00781158 /* SDKBiddingFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SDKBiddingFactory.swift; sourceTree = "<group>"; };
 		7A941FA92830D4E500BB98FF /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
@@ -178,14 +178,6 @@
 				E88693AD1E3DFED900B12EAB /* Supporting Files */,
 			);
 			name = Resources;
-			sourceTree = "<group>";
-		};
-		8CDEABFCFB8F0894701B8E36 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				18C659B5868D543EF49D4874 /* IASDKCore.xcframework */,
-			);
-			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		9A3F93EE2703502900CC939B /* MultipleValuesCell */ = {
@@ -356,14 +348,22 @@
 			name = Router;
 			sourceTree = "<group>";
 		};
+		DCADE1A7CEA69F7B7A5E3436 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				53C544CE8F7249C92820AF23 /* IASDKCore.xcframework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		E88693A11E3DFED900B12EAB = {
 			isa = PBXGroup;
 			children = (
-				8001E98328DB4F1800258421 /* VERSION.xcconfig */,
 				E88693AC1E3DFED900B12EAB /* DTExchangeTestApp */,
 				84C17897257B102A00702557 /* DTExchangeTestApp-Bridging-Header.h */,
 				E88693AB1E3DFED900B12EAB /* Products */,
-				8CDEABFCFB8F0894701B8E36 /* Frameworks */,
+				8001E98328DB4F1800258421 /* VERSION.xcconfig */,
+				DCADE1A7CEA69F7B7A5E3436 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};

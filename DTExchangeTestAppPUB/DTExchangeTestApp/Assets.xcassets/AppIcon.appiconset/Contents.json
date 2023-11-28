@@ -1,7 +1,7 @@
 {
   "images" : [
     {
-      "filename" : "dt_logo_40-1.png",
+      "filename" : "dt_logo_40.png",
       "idiom" : "iphone",
       "scale" : "2x",
       "size" : "20x20"
@@ -13,13 +13,13 @@
       "size" : "20x20"
     },
     {
-      "filename" : "dt_logo_29-1.png",
+      "filename" : "dt_logo_29.png",
       "idiom" : "iphone",
       "scale" : "1x",
       "size" : "29x29"
     },
     {
-      "filename" : "dt_logo_58-1.png",
+      "filename" : "dt_logo_58.png",
       "idiom" : "iphone",
       "scale" : "2x",
       "size" : "29x29"
@@ -31,13 +31,13 @@
       "size" : "29x29"
     },
     {
-      "filename" : "dt_logo_80-1.png",
+      "filename" : "dt_logo_80.png",
       "idiom" : "iphone",
       "scale" : "2x",
       "size" : "40x40"
     },
     {
-      "filename" : "dt_logo_120-1.png",
+      "filename" : "dt_logo_120.png",
       "idiom" : "iphone",
       "scale" : "3x",
       "size" : "40x40"
@@ -55,7 +55,7 @@
       "size" : "57x57"
     },
     {
-      "filename" : "dt_logo_120-2.png",
+      "filename" : "dt_logo_120.png",
       "idiom" : "iphone",
       "scale" : "2x",
       "size" : "60x60"
@@ -73,31 +73,31 @@
       "size" : "20x20"
     },
     {
-      "filename" : "dt_logo_40-2.png",
+      "filename" : "dt_logo_40.png",
       "idiom" : "ipad",
       "scale" : "2x",
       "size" : "20x20"
     },
     {
-      "filename" : "dt_logo_29-2.png",
+      "filename" : "dt_logo_29.png",
       "idiom" : "ipad",
       "scale" : "1x",
       "size" : "29x29"
     },
     {
-      "filename" : "dt_logo_58-2.png",
+      "filename" : "dt_logo_58.png",
       "idiom" : "ipad",
       "scale" : "2x",
       "size" : "29x29"
     },
     {
-      "filename" : "dt_logo_40-3.png",
+      "filename" : "dt_logo_40.png",
       "idiom" : "ipad",
       "scale" : "1x",
       "size" : "40x40"
     },
     {
-      "filename" : "dt_logo_80-2.png",
+      "filename" : "dt_logo_80.png",
       "idiom" : "ipad",
       "scale" : "2x",
       "size" : "40x40"

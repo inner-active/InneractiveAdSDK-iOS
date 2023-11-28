@@ -34,11 +34,17 @@ enum AdViewContentState {
     }
     
     static func getState(adType: SampleAdTypeEnum) -> AdViewContentState? {
-        guard !adType.isInterstitial() else {
-            return  UIDevice.current.orientation.isLandscape ? interstitialAndLandscape : interstitialAndPortrait
+        var isLandscape = UIDevice.current.orientation.isLandscape
+        
+        if UIDevice.current.userInterfaceIdiom == .pad {
+            isLandscape = UIApplication.shared.statusBarOrientation == .landscapeLeft || UIApplication.shared.statusBarOrientation == .landscapeRight
         }
         
-        if UIDevice.current.orientation.isLandscape {
+        guard !adType.isInterstitial() else {
+            return  isLandscape ? interstitialAndLandscape : interstitialAndPortrait
+        }
+        
+        if isLandscape {
             return (adType == .rectangle) ? rectangleAndLandscape : bannerAndLandscape
         } else {
             return (adType == .rectangle) ? rectangleAndPortrait : bannerAndPortrait
