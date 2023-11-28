@@ -55,11 +55,10 @@ private extension UserDefaults {
     var savedAds: [AdUnit] {
         get {
             var defaultValue = [AdUnit]()
-            
-            defaultValue.append(AdUnit(id: "", name: "Production Banner", format: .banner, source: .production))
-            defaultValue.append(AdUnit(id: "", name: "Production Rectangle", format: .rectangle, source: .production))
-            defaultValue.append(AdUnit(id: "", name: "Production Interstitial", format: .interstitial, source: .production))
-            defaultValue.append(AdUnit(id: "", name: "Production Rewarded", format: .rewarded, source: .production))
+            defaultValue.append(AdUnit(id: "", name: "PROD Banner", format: .banner, source: .production))
+            defaultValue.append(AdUnit(id: "", name: "PROD MREC", format: .rectangle, source: .production))
+            defaultValue.append(AdUnit(id: "", name: "PROD Interstitial", format: .interstitial, source: .production))
+            defaultValue.append(AdUnit(id: "", name: "PROD Rewarded", format: .rewarded, source: .production))
             
             do {
                 guard let data = self.object(forKey: UserDefaults.savedAdsKey) as? Data else {

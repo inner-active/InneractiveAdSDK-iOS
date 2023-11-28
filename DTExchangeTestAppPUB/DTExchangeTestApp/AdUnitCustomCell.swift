@@ -26,21 +26,21 @@ class AdUnitCustomCell: UITableViewCell {
         var acLabel = ""
         switch model.format {
         case .banner:
-            if (model.id == "bannerResponseForCI") {
+            if model.id == "bannerResponseForCI" {
                 acLabel = "Request Banner Ad"
             }
         case .rectangle:
-            if (model.id == "rectangleforci") {
-                acLabel = "Request Rectangle Ad"
+            if model.id == "rectangleforci" {
+                acLabel = "Request MREC Ad"
             }
         case .interstitial:
-            if (model.id == "7715") {
+            if model.id == "7715" {
                 acLabel = "Request Video Interstitial Ad"
-            } else if (model.id == "interstitialadresponseforcilandscape") {
+            } else if model.id == "interstitialadresponseforcilandscape" {
                 acLabel = "Request Display Interstitial Ad"
             }
         case .rewarded:
-            if (model.id == "7715") {
+            if model.id == "7715" {
                 acLabel = "Request Rewarded Ad"
             }
         default:
