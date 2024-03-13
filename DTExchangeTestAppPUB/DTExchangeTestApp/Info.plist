@@ -21,7 +21,7 @@
 	<key>CFBundleVersion</key>
 	<string>$(CURRENT_PROJECT_VERSION)</string>
 	<key>GADApplicationIdentifier</key>
-	<string>ca-app-pub-5168737516215182~8862768270</string>
+	<string>ca-app-pub-7444154872291065~5889320530</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>NSAppTransportSecurity</key>
@@ -338,6 +338,14 @@
 		<dict>
 			<key>SKAdNetworkIdentifier</key>
 			<string>gvn48r87g.skadnetwork</string>
+		</dict>
+		<dict>
+			<key>SKAdNetworkIdentifier</key>
+			<string>7fmhfwg9en.skadnetwork</string>
+		</dict>
+		<dict>
+			<key>SKAdNetworkIdentifier</key>
+			<string>tvvz7th9br.skadnetwork</string>
 		</dict>
 	</array>
 	<key>UILaunchStoryboardName</key>

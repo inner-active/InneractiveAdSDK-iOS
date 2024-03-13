@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Wvf-A6-3dJ">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Wvf-A6-3dJ">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -111,12 +112,21 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Mediations" id="QLh-Yl-JyX">
-                        <barButtonItem key="leftBarButtonItem" image="debug" id="dzk-5T-gL8">
-                            <color key="tintColor" systemColor="systemPinkColor"/>
-                            <connections>
-                                <action selector="mediationDebuggerPressed:" destination="gEV-Fb-rob" id="X2h-BP-tOy"/>
-                            </connections>
-                        </barButtonItem>
+                        <leftBarButtonItems>
+                            <barButtonItem id="zhM-rr-dUW" userLabel="Consent Button">
+                                <imageReference key="image" image="consent" variableValue="1"/>
+                                <color key="tintColor" systemColor="systemPinkColor"/>
+                                <connections>
+                                    <action selector="showUserMessagingPlatformConsentView" destination="gEV-Fb-rob" id="Jkd-lE-0RQ"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem image="debug" id="dzk-5T-gL8">
+                                <color key="tintColor" systemColor="systemPinkColor"/>
+                                <connections>
+                                    <action selector="mediationDebuggerPressed:" destination="gEV-Fb-rob" id="X2h-BP-tOy"/>
+                                </connections>
+                            </barButtonItem>
+                        </leftBarButtonItems>
                         <rightBarButtonItems>
                             <barButtonItem title="Settings" image="gearshape" catalog="system" id="hIE-Zm-pI1">
                                 <connections>
@@ -292,7 +302,7 @@
                         <viewControllerLayoutGuide type="bottom" id="rlQ-YK-bHE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="aFr-5B-GNb">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="783"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
@@ -736,19 +746,20 @@
     <inferredMetricsTieBreakers>
         <segue reference="JVN-Ju-lqW"/>
         <segue reference="7fx-K8-eYS"/>
-        <segue reference="HTk-Mg-jWg"/>
+        <segue reference="B4a-H8-nxX"/>
         <segue reference="bjo-3f-fND"/>
-        <segue reference="jha-S4-vEW"/>
-        <segue reference="NCv-Mk-CsV"/>
+        <segue reference="efw-Yo-hZl"/>
+        <segue reference="H1t-u9-9JF"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="Logs-icon" width="26" height="26"/>
         <image name="QR" width="33.333332061767578" height="33.333332061767578"/>
+        <image name="consent" width="31.666666030883789" height="31.666666030883789"/>
         <image name="debug" width="32" height="32"/>
         <image name="folder" catalog="system" width="128" height="96"/>
         <image name="gearshape" catalog="system" width="128" height="123"/>
         <image name="m.circle" catalog="system" width="128" height="123"/>
-        <image name="square.and.arrow.down" catalog="system" width="121" height="128"/>
+        <image name="square.and.arrow.down" catalog="system" width="112" height="128"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
