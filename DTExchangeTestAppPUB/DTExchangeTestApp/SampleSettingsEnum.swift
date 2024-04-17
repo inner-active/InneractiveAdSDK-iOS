@@ -25,6 +25,7 @@ enum SampleSettingsEnum: String {
     case coppa        = "COPPA"
     case sdkVersion   = "SDK Version"
     case userId       = "User Id"
+    case muteAudio    = "Mute Audio"
     
     var ClientSettingsValue: String? {
         return ClientRequestSettings.shared.getValue(of: self)

@@ -147,6 +147,15 @@ class ClientRequestSettings {
             IASDKCore.sharedInstance().userID = newValue
         }
     }
+    
+    private var muteAudio: Bool! {
+        get {
+            return IASDKCore.sharedInstance().muteAudio
+        }
+        set {
+            IASDKCore.sharedInstance().muteAudio = newValue
+        }
+    }
 
     private func loadGlobalConfig(from path: String) {
         IADebugger.globalConfigPath = path
@@ -205,6 +214,7 @@ class ClientRequestSettings {
         case .coppa: return coppa
         case .sdkVersion: return IASDKCore.sharedInstance().version()
         case .userId: return userID
+        case .muteAudio: return muteAudio.description
         }
     }
 
@@ -304,6 +314,7 @@ extension ClientRequestSettings: ClientRequestSettingsDelegate {
         case .lgpd: lgpd = value
         case .coppa: coppa = value
         case .userId: userID = value
+        case .muteAudio: muteAudio.toggle()
         case .sdkVersion: return
         }
     }
