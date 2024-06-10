@@ -1,7 +1,7 @@
 framework module IASDKCore {
   umbrella header "IASDKCore.h"
-
   export *
+
   module * { export * }
 }
 

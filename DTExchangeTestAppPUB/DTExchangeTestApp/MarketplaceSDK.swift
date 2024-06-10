@@ -87,6 +87,22 @@ class MarketplaceSDK: NSObject, SampleSDKProtocol {
         weak var weakSelf = self
         adSpot?.fetchAd(completion: { (adSpot: IAAdSpot?, adModel: IAAdModel?, error: Error?)  in
             weakSelf?.requestTrackingPermissionsIfNeeded()
+            if ((adSpot != nil) && (adModel != nil) && (error == nil)) {
+                let misloadType1 = ((weakSelf?.requestAdType == .banner) || (weakSelf?.requestAdType == .rectangle)) &&
+                (adSpot!.activeUnitController == weakSelf?.fullscreenUnitController)
+                let misloadType2 = ((weakSelf?.requestAdType == .interstitial) || (weakSelf?.requestAdType == .rewarded)) &&
+                (adSpot!.activeUnitController == weakSelf?.viewUnitController)
+                
+                if (misloadType1 || misloadType2) {
+                    let description = "Ad unit display type of looaded ad does not correspond to requested one."
+                    
+                    Console.shared.add(message: "ad failed with error: \(description)")
+                    weakSelf?.delegate?.adFailedToLoad(with: description)
+                    
+                    return
+                }
+            }
+            
             weakSelf?.renderAd(with: adSpot, model: adModel, error: error)
             adSpot?.setAdRefreshCompletion({ (adSpot: IAAdSpot?, adModel: IAAdModel?, error: Error?) in
                 weakSelf?.renderAd(with: adSpot, model: adModel, error: error)
