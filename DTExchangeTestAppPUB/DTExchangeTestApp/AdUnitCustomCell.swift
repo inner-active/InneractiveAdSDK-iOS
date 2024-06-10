@@ -17,6 +17,8 @@ class AdUnitCustomCell: UITableViewCell {
         contentView.clipsToBounds = true
         accessoryType = .disclosureIndicator
         selectionStyle = .default
+        textLabel?.numberOfLines = 0
+        textLabel?.lineBreakMode = .byCharWrapping
     }
     
     func configure(with model: AdUnit, indexPath: IndexPath) {
