@@ -50,19 +50,14 @@ FOUNDATION_EXPORT const unsigned char IASDKCoreVersionString[];
 #import <IASDKCore/IACoppaApplies.h>
 #import <IASDKCore/FMPBiddingManager.h>
 
-#import <IASDKCore/IASDKMRAID.h>
-
 #import <IASDKCore/IAMRAIDContentController.h>
 #import <IASDKCore/IAMRAIDContentDelegate.h>
 #import <IASDKCore/IAMRAIDContentModel.h>
-
-#import <IASDKCore/IASDKVideo.h>
 
 #import <IASDKCore/IAVideoContentController.h>
 #import <IASDKCore/IAVideoContentDelegate.h>
 #import <IASDKCore/IAVideoLayout.h>
 #import <IASDKCore/IAVideoContentModel.h>
-#import <IASDKCore/IAVideoView.h>
 
 typedef void (^IASDKCoreInitBlock)(BOOL success, NSError * _Nullable error);
 
@@ -266,13 +261,5 @@ typedef NS_ENUM(NSInteger, IASDKCoreInitErrorType) {
  *  @brief Clears all the LGPD related information. The state of the `LGPDConsent` property will become `-1` or `IALGPDConsentTypeUnknown`.
  */
 - (void)clearLGPDConsentData;
-
-/**
- *  @brief Enable in order to manage audio session on behalf of SDK.
- *
- *  @discussion Resolves an occasional issue wnen there is no sound in VAST in iPadOS 16.1+ on certain iPads, in case AVAudioSession isn't managed explicitly in host app.
- *  This method isn't thread-safe and should be used immediately after SDK init.
- */
-- (void)enableAutomaticAudioSessionManagement;
 
 @end

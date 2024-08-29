@@ -23,6 +23,22 @@ extension Foundation.OperatingSystemVersion : Swift.CustomStringConvertible {
     get
   }
 }
+public struct DTXConsentEvaluator {
+  public enum Consent : Swift.Int {
+    case unknown
+    case denied
+    case given
+    public init?(rawValue: Swift.Int)
+    public typealias RawValue = Swift.Int
+    public var rawValue: Swift.Int {
+      get
+    }
+  }
+  public struct ConsentData {
+  }
+  public func evaluatePurpose(with purposeConsents: Swift.String?, tcfPurposeEnabled: Swift.Bool) -> Swift.Bool
+  public func evaluateConsentData(with tcfVendorId: Swift.Int, vendorConsentsString: Swift.String?, tcString: Swift.String?, gdprConsentString: Swift.String?, gdprConsent: DTXConsentEvaluator.Consent) -> DTXConsentEvaluator.ConsentData
+}
 @objc public enum DTXLogLevel : Swift.Int {
   case off = 0
   case fault = 1
@@ -39,6 +55,9 @@ extension Foundation.OperatingSystemVersion : Swift.CustomStringConvertible {
   @objc public static func setLogLevel(_ logLevel: DTXLogLevel)
   @objc deinit
 }
+extension DTXConsentEvaluator.Consent : Swift.Equatable {}
+extension DTXConsentEvaluator.Consent : Swift.Hashable {}
+extension DTXConsentEvaluator.Consent : Swift.RawRepresentable {}
 extension DTXLogLevel : Swift.Equatable {}
 extension DTXLogLevel : Swift.Hashable {}
 extension DTXLogLevel : Swift.RawRepresentable {}

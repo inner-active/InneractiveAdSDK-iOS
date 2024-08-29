@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0F88B7AC172B28B86848A4C7 /* IASDKCore.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD6BDC901CCE14FD05D7BFB2 /* IASDKCore.xcframework */; };
 		2AA47D1B2369D89200104FD5 /* QRScanner.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2AA47D1A2369D89200104FD5 /* QRScanner.storyboard */; };
 		525086D02739F48E00CBDA45 /* Console.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525086CC2739F48E00CBDA45 /* Console.swift */; };
 		525086D22739F48E00CBDA45 /* ConsoleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525086CD2739F48E00CBDA45 /* ConsoleViewController.swift */; };
@@ -52,7 +53,6 @@
 		9AFE24F227031B830097E68B /* TextFieldCustomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9AFE24EF27031B830097E68B /* TextFieldCustomCell.xib */; };
 		9AFF135F2807181800E35024 /* BaseTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AFF135E2807181800E35024 /* BaseTableViewController.swift */; };
 		9AFF13632808052E00E35024 /* RouterImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AFF13622808052E00E35024 /* RouterImpl.swift */; };
-		AE8D01AD27BF72FA1A83FE4C /* IASDKCore.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6D463E17B8FCB3761E1793C /* IASDKCore.xcframework */; };
 		E88693B81E3DFED900B12EAB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E88693B61E3DFED900B12EAB /* Main.storyboard */; };
 		E88693BA1E3DFED900B12EAB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E88693B91E3DFED900B12EAB /* Assets.xcassets */; };
 		E88693BD1E3DFED900B12EAB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E88693BB1E3DFED900B12EAB /* LaunchScreen.storyboard */; };
@@ -123,7 +123,7 @@
 		9AFE24EF27031B830097E68B /* TextFieldCustomCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TextFieldCustomCell.xib; sourceTree = "<group>"; };
 		9AFF135E2807181800E35024 /* BaseTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTableViewController.swift; sourceTree = "<group>"; };
 		9AFF13622808052E00E35024 /* RouterImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouterImpl.swift; sourceTree = "<group>"; };
-		D6D463E17B8FCB3761E1793C /* IASDKCore.xcframework */ = {isa = PBXFileReference; includeInIndex = 1; name = IASDKCore.xcframework; path = ../IASDKCore/IASDKCore.xcframework; sourceTree = "<group>"; };
+		CD6BDC901CCE14FD05D7BFB2 /* IASDKCore.xcframework */ = {isa = PBXFileReference; includeInIndex = 1; name = IASDKCore.xcframework; path = ../IASDKCore/IASDKCore.xcframework; sourceTree = "<group>"; };
 		E88693AA1E3DFED900B12EAB /* DTExchange.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DTExchange.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E88693B71E3DFED900B12EAB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E88693B91E3DFED900B12EAB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -140,7 +140,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AE8D01AD27BF72FA1A83FE4C /* IASDKCore.xcframework in Frameworks */,
+				0F88B7AC172B28B86848A4C7 /* IASDKCore.xcframework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -156,14 +156,6 @@
 				525086CF2739F48E00CBDA45 /* ConsoleViewController.xib */,
 			);
 			path = Console;
-			sourceTree = "<group>";
-		};
-		5A1D067AFE93066B405B3CF2 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				D6D463E17B8FCB3761E1793C /* IASDKCore.xcframework */,
-			);
-			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		7A8057F328C68D7200781158 /* SDKBidding */ = {
@@ -358,6 +350,14 @@
 			name = Router;
 			sourceTree = "<group>";
 		};
+		B417CBB58DDB4189BDBA3558 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CD6BDC901CCE14FD05D7BFB2 /* IASDKCore.xcframework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		E88693A11E3DFED900B12EAB = {
 			isa = PBXGroup;
 			children = (
@@ -366,7 +366,7 @@
 				84C17897257B102A00702557 /* DTExchangeTestApp-Bridging-Header.h */,
 				E88693AB1E3DFED900B12EAB /* Products */,
 				8001E98328DB4F1800258421 /* VERSION.xcconfig */,
-				5A1D067AFE93066B405B3CF2 /* Frameworks */,
+				B417CBB58DDB4189BDBA3558 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};

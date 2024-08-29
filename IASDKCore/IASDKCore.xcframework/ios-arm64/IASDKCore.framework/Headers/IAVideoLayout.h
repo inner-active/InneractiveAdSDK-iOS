@@ -33,22 +33,6 @@ typedef NS_ENUM(NSUInteger, IAVideoClickActionType) {
 @interface IAVideoLayout : NSObject
 
 /**
- *  @brief Defines whether the action button (aka: CTA / "Visit Us" / VAST clickthrough) is visible in feed (native and non-fullscreen mode).
- *
- *  @discussion This is not OpenRTB Native 1.0 CTA, but VAST protocol CTA. There is also OpenRTB CTA asset in native ad unit (in case a response includes it).
- *
- * Default: <b>enabled</b>.
- *
- * If disabled, <b>will not be visible</b> in feed.
- */
-@property (nonatomic, getter=isActionButtonVisibleInFeed) BOOL actionButtonIsVisibleInFeed;
-
-/**
- *  @brief Defines whether progress bar is visible in feed (non-fullscreen mode).
- */
-@property (nonatomic, getter=isProgressBarVisibleInFeed) BOOL progressBarIsVisibleInFeed;
-
-/**
  *  @brief Progress bar progress track fill color.
  */
 @property (nonatomic, strong, nonnull) UIColor *progressBarFillColor;

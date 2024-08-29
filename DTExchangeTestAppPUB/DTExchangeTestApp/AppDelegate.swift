@@ -18,11 +18,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate, IAGlobalAdDelegate {
         let kAppIDForTest = "102960"
         
         DTXLogger.setLogLevel(DTXLogLevel.debug)
-        IADebugger.adReportingEnabled = true
         
         
         ClientRequestSettings.shared.appId = kAppIDForTest
         IASDKCore.sharedInstance().globalAdDelegate = self
+        
         
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         // swiftlint:disable force_cast
