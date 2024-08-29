@@ -59,7 +59,7 @@ class ClientRequestSettings {
      */
     private var globalConfig: String? {
         didSet {
-            if let globalConfig = globalConfig, !globalConfig.isEmpty {
+            if let globalConfig = globalConfig {
                 loadGlobalConfig(from: globalConfig)
             }
         }
@@ -158,7 +158,22 @@ class ClientRequestSettings {
     }
 
     private func loadGlobalConfig(from path: String) {
-        IADebugger.globalConfigPath = path
+        guard let url = URL(string: path) else {
+            Console.shared.add(message: "Failed to fetch custom global config - invalid URL \(path)")
+            IADebugger.perform(Selector(("updateGlobalConfigWith:")), with: nil)
+            return
+        }
+        
+        let request = URLRequest(url: url, cachePolicy: .reloadIgnoringLocalCacheData)
+        
+        URLSession.shared.dataTask(with: request) { data, _, error in
+            if let error = error {
+                Console.shared.add(message: "Failed to fetch custom global config - network error \(error)")
+                IADebugger.perform(Selector(("updateGlobalConfigWith:")), with: nil)
+            } else {
+                IADebugger.perform(Selector(("updateGlobalConfigWith:")), with: data)
+            }
+        }.resume()
     }
 
     private func isValidAdUnitValuesFromUserDefault(adValues: AdUnitValues) -> Bool {
@@ -172,7 +187,7 @@ class ClientRequestSettings {
         let userDefaultsAdUnitID = UserDefaults.standard.string(forKey: UserDefaultsKey.adUnitID.rawValue)
         let userDefaultsPortal = UserDefaults.standard.string(forKey: UserDefaultsKey.portal.rawValue)
 
-        return (userDefaultsServer, userDefaultsSpotID, userDefaultsAdUnitID, userDefaultsPortal)
+        return (userDefaultsAdUnitID, userDefaultsSpotID, userDefaultsServer, userDefaultsPortal)
     }
 
     private func removeLastAdFromUserDefault() {

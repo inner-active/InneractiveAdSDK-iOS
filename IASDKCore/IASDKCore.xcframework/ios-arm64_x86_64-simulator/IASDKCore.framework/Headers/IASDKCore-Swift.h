@@ -298,7 +298,6 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 #endif
 
 #if defined(__OBJC__)
-
 typedef SWIFT_ENUM(NSInteger, DTXLogLevel, open) {
   DTXLogLevelOff = 0,
   DTXLogLevelFault = 1,
@@ -633,7 +632,6 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 #endif
 
 #if defined(__OBJC__)
-
 typedef SWIFT_ENUM(NSInteger, DTXLogLevel, open) {
   DTXLogLevelOff = 0,
   DTXLogLevelFault = 1,

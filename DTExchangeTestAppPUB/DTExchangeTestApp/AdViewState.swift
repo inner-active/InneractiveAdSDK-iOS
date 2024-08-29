@@ -19,9 +19,9 @@ enum AdViewContentState {
     func getTopConstraint(from adType: SampleAdTypeEnum) -> CGFloat {
         switch self {
         case .bannerAndPortrait: // Use percentages to support different screen sizes
-            return ((UIScreen.main.fixedCoordinateSpace.bounds.height - adType.size.height) * 0.6)
+            return ((UIScreen.main.fixedCoordinateSpace.bounds.height - adType.size.height) * 0.5)
         case .bannerAndLandscape:
-            return ((UIScreen.main.fixedCoordinateSpace.bounds.width - adType.size.height) * 0.55)
+            return ((UIScreen.main.fixedCoordinateSpace.bounds.width - adType.size.height) * 0.25)
         case .rectangleAndPortrait:
             return ((UIScreen.main.fixedCoordinateSpace.bounds.height - adType.size.height) * 0.5)
         case .rectangleAndLandscape:
