@@ -56,7 +56,6 @@ FOUNDATION_EXPORT const unsigned char IASDKCoreVersionString[];
 
 #import <IASDKCore/IAVideoContentController.h>
 #import <IASDKCore/IAVideoContentDelegate.h>
-#import <IASDKCore/IAVideoLayout.h>
 #import <IASDKCore/IAVideoContentModel.h>
 
 typedef void (^IASDKCoreInitBlock)(BOOL success, NSError * _Nullable error);
@@ -194,10 +193,9 @@ typedef NS_ENUM(NSInteger, IASDKCoreInitErrorType) {
 @property (nonatomic, nullable) IAUserData *userData;
 
 /**
- *  @brief Single keyword string or several keywords, separated by comma.
- *  @discussion These keywords will be used in bidding flow, while bidding token creation.
+ *  @brief Deprecated.
  */
-@property (nonatomic, nullable) NSString *keywords;
+@property (nonatomic, nullable) NSString *keywords DEPRECATED_MSG_ATTRIBUTE("This API is deprecated.");
 
 /**
  *  @brief In case is enabled and the responded creative supports this feature, the creative will start interacting without sound.
