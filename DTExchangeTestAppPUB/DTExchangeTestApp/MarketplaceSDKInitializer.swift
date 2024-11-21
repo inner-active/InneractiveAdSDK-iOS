@@ -14,16 +14,11 @@ extension MarketplaceSDK {
             if success {
                 let version = IASDKCore.sharedInstance().version() ?? ""
                 Console.shared.add(message: "DTX SDK initialised: \(version)")
-                setMetaData()
                 setUserData()
             } else {
                 Console.shared.add(message: "DTX SDK init failed: \(error.debugDescription)", messageType: .error)
             }
         }, completionQueue: DispatchQueue(label: "appDelegate queue"))
-    }
-    
-    static fileprivate func setMetaData() {
-        IASDKCore.sharedInstance().keywords = "tango, music"
     }
     
     static fileprivate func setUserData() {

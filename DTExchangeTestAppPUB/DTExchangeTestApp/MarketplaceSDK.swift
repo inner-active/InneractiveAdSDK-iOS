@@ -64,7 +64,6 @@ class MarketplaceSDK: NSObject, SampleSDKProtocol {
 
     func setupRequestAndControllers() {
         IASDKCore.sharedInstance().mediationType = nil
-        IASDKCore.sharedInstance().keywords = "hell & brimstone + earthly/delight, diving,programming\new line"
         
         if let request = IAAdRequest.build({ (builder: IAAdRequestBuilder) in
             builder.spotID = ClientRequestSettings.shared.getValue(of: .spotId) ?? ""
