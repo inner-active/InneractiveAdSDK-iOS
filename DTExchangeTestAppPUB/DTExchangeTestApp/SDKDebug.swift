@@ -19,7 +19,6 @@ enum SDKDebugKeys: String {
 
 enum UserDefaultsKey: String {
     case shouldLoadCurrentAdAfterStartup = "FMPShouldLoadCurrentAdAfterStartup"
-    case audioSessionManagementEnabled = "AudioSessionManagementEnabled"
     case spotID = "FMPSpotID"
     case adUnitID = "FMPAdUnitID"
     case server = "FMPServer"
