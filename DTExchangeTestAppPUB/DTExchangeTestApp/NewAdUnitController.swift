@@ -59,6 +59,9 @@ class NewAdUnitController: UIViewController {
         }
         
         let adUnitResult = dataSource.createNewAdUnit()
+        if case .success(let adUnit) = adUnitResult {
+            SavedAdsManager.sharedInstance.addSavedAd(adUnit: adUnit)
+        }
         
         do {
             _ = try adUnitResult.get()

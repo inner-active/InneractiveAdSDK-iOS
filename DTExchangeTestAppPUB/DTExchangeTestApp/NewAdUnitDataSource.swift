@@ -18,6 +18,7 @@ struct NewAdUnitSection {
 enum InputError: Error {
     case spotIdMissing
     case portalOrMockMissing
+    case otherError(String)
 }
 
 extension InputError: LocalizedError {
@@ -27,6 +28,8 @@ extension InputError: LocalizedError {
             return NSLocalizedString("Please fill spot ID field.", comment: "")
         case .portalOrMockMissing:
             return NSLocalizedString("Please fill at least portal or mock fields.", comment: "")
+        case .otherError(let error):
+            return NSLocalizedString("\(error)", comment: "")
         }
     }
 }
@@ -63,27 +66,24 @@ class NewAdUnitDataSource: NSObject {
     }
     
     func createNewAdUnit() -> Result<AdUnit, InputError> {
-        var adUnit: AdUnit
-        let inputResult = validateUserInputs()
+        guard let adFormat = ClientRequestSettings.shared.getValue(of: .adFormat) else {
+            return .failure(.otherError("Missing Ad Format"))
+        }
         
-        do {
-            let userInput = try inputResult.get()
-            let unitType = SampleAdTypeEnum(rawValue: ClientRequestSettings.shared.getValue(of: .adFormat)!)
-            adUnit = AdUnit(id: userInput.mock,
+        guard let unitType = SampleAdTypeEnum(rawValue: adFormat) else {
+            return .failure(.otherError("Invalid Ad Format: \(adFormat)"))
+        }
+        
+        
+        return validateUserInputs().map { userInput in
+            AdUnit(id: userInput.mock,
                             name: userInput.mock,
-                            format: unitType!,
+                            format: unitType,
                             source: .mock,
                             spotid: userInput.spot,
                             portal: userInput.portal)
-            
-            SavedAdsManager.sharedInstance.addSavedAd(adUnit: adUnit)
-        } catch {
-            // swiftlint:disable force_cast
-            return .failure(error as! InputError)
-            // swiftlint:enable force_cast
         }
         
-        return .success(adUnit)
     }
     
     private func validateUserInputs() -> Result<UserInput, InputError> {
