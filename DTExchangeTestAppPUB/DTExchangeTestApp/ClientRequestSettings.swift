@@ -48,7 +48,7 @@ class ClientRequestSettings {
     /**
      Optional text to for user extra data on ccpa param.
      */
-    private var ccpaString: String? = IASDKCore.sharedInstance().ccpaString ?? "1YYY" {
+    private var ccpaString: String? = IASDKCore.sharedInstance().ccpaString {
         didSet {
             IASDKCore.sharedInstance().ccpaString = ccpaString
         }
