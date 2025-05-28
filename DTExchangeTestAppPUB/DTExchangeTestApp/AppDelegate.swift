@@ -35,22 +35,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate, IAGlobalAdDelegate {
     
     // MARK: - Service
     
-    // MARK: - inits
-    
-    func topViewController() -> UIViewController {
-        var topVC: UIViewController = (UIApplication.shared.keyWindow?.rootViewController)!
-        
-        if topVC is UINavigationController {
-            if let navigationVC: UINavigationController = topVC as? UINavigationController {
-                topVC = navigationVC.topViewController!
-            }
-        }
-        while topVC.presentingViewController != nil {
-            topVC = topVC.presentedViewController!
-        }
-        return topVC
-    }
-    
     // MARK: - IAGlobalAdDelegate
     func adDidShow(with impressionData: IAImpressionData, with adRequest: IAAdRequest) {
         let impMessage = """
