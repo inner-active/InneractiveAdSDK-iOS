@@ -12,7 +12,7 @@
 		525086D22739F48E00CBDA45 /* ConsoleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525086CD2739F48E00CBDA45 /* ConsoleViewController.swift */; };
 		525086D42739F48E00CBDA45 /* LoggingConsoleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525086CE2739F48E00CBDA45 /* LoggingConsoleViewController.swift */; };
 		525086D62739F48E00CBDA45 /* ConsoleViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 525086CF2739F48E00CBDA45 /* ConsoleViewController.xib */; };
-		5BEEA05C5C637A0900B5FA0E /* IASDKCore.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93C7E0535D65C5F396E74041 /* IASDKCore.xcframework */; };
+		75CAFDE0F9B59E834C218D8D /* IASDKCore.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B977B25AF41160B620D39DC /* IASDKCore.xcframework */; };
 		7A45DCAD282A407100F48B34 /* MarketplaceSDKInitializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A45DCAC282A407100F48B34 /* MarketplaceSDKInitializer.swift */; };
 		7A8057F028C6622B00781158 /* SDKBiddingFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A8057EF28C6622B00781158 /* SDKBiddingFactory.swift */; };
 		7A941FAA2830D4E500BB98FF /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A941FA92830D4E500BB98FF /* Constants.swift */; };
@@ -88,7 +88,7 @@
 		8001E98328DB4F1800258421 /* VERSION.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = VERSION.xcconfig; sourceTree = "<group>"; };
 		84C17897257B102A00702557 /* DTExchangeTestApp-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DTExchangeTestApp-Bridging-Header.h"; sourceTree = "<group>"; };
 		84C17898257B102B00702557 /* Stub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stub.swift; sourceTree = "<group>"; };
-		93C7E0535D65C5F396E74041 /* IASDKCore.xcframework */ = {isa = PBXFileReference; includeInIndex = 1; name = IASDKCore.xcframework; path = ../IASDKCore/IASDKCore.xcframework; sourceTree = "<group>"; };
+		8B977B25AF41160B620D39DC /* IASDKCore.xcframework */ = {isa = PBXFileReference; includeInIndex = 1; name = IASDKCore.xcframework; path = ../IASDKCore/IASDKCore.xcframework; sourceTree = "<group>"; };
 		9A0E962E27A92D6C00504D12 /* AdViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdViewState.swift; sourceTree = "<group>"; };
 		9A24A27026DE215E00251686 /* UIViewController+UIAlertController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+UIAlertController.swift"; sourceTree = "<group>"; };
 		9A2CC2FF2785BF2A0015685A /* AdViewControllerContentState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdViewControllerContentState.swift; sourceTree = "<group>"; };
@@ -140,17 +140,17 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5BEEA05C5C637A0900B5FA0E /* IASDKCore.xcframework in Frameworks */,
+				75CAFDE0F9B59E834C218D8D /* IASDKCore.xcframework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		143D6F47FCFBF7F8DCCD6CF9 /* Frameworks */ = {
+		3F0580C312BEECC3E1F15DB8 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				93C7E0535D65C5F396E74041 /* IASDKCore.xcframework */,
+				8B977B25AF41160B620D39DC /* IASDKCore.xcframework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -366,7 +366,7 @@
 				84C17897257B102A00702557 /* DTExchangeTestApp-Bridging-Header.h */,
 				E88693AB1E3DFED900B12EAB /* Products */,
 				8001E98328DB4F1800258421 /* VERSION.xcconfig */,
-				143D6F47FCFBF7F8DCCD6CF9 /* Frameworks */,
+				3F0580C312BEECC3E1F15DB8 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -732,7 +732,7 @@
 					"CERT_BUILD=1",
 				);
 				INFOPLIST_FILE = DTExchangeTestApp/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -771,7 +771,7 @@
 					"CERT_BUILD=1",
 				);
 				INFOPLIST_FILE = DTExchangeTestApp/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

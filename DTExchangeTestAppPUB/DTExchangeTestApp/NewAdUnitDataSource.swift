@@ -74,7 +74,6 @@ class NewAdUnitDataSource: NSObject {
             return .failure(.otherError("Invalid Ad Format: \(adFormat)"))
         }
         
-        
         return validateUserInputs().map { userInput in
             AdUnit(id: userInput.mock,
                             name: userInput.mock,

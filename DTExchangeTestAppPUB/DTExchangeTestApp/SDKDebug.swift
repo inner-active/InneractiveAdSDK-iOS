@@ -13,8 +13,6 @@ enum SDKDebugKeys: String {
     case DTXUserDefaultsPortalAndMockKey = "DTXUserDefaultsPortalAndMockKey"
     case DTXPortalKey = "DTXPortalKey"
     case DTXMockResponseKey = "DTXMockResponseKey"
-    case DTXSetProxyNotification = "DTXSetProxyNotification"
-    case DTXRemoveProxyNotification = "DTXRemoveProxyNotification"
 }
 
 enum UserDefaultsKey: String {
@@ -27,8 +25,4 @@ enum UserDefaultsKey: String {
     case sdkEventsDebugMode = "FMPSDKEventsDebugMode"
     case sdkBiddingMode = "FMPSDKBiddingMode"
     case sdkBiddingDeviceIP = "FMPSDKBiddingDeviceIP"
-    case clientProxyState = "FMPClientProxyState"
-    case clientProxySetting = "ClientProxySetting"
-    case clientProxyServerAddress = "FMPClientProxyServer"
-    case clientProxyPort = "FMPClientProxyPort"
 }
