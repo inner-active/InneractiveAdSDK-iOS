@@ -170,11 +170,11 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		Y1UGOhYAqkb3pT4sZqgc8+kfgRk=
+		UpnF+8gJB9+v2eslzT0bXXURVHg=
 		</data>
 		<key>Modules/IASDKCore.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<data>
-		juAH26JpjxWsdnV5zvMYY0x00pc=
+		s8vUVIAMlHcX+QxBvAW51GCZ2IY=
 		</data>
 		<key>Modules/IASDKCore.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
@@ -190,11 +190,11 @@
 		</data>
 		<key>Modules/IASDKCore.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		xTQqQq4wXMjBJ2eR4z/kd9YQdok=
+		zXOwAs4f7d8fEBKk7eMM0O/U4fI=
 		</data>
 		<key>Modules/IASDKCore.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
-		juAH26JpjxWsdnV5zvMYY0x00pc=
+		s8vUVIAMlHcX+QxBvAW51GCZ2IY=
 		</data>
 		<key>Modules/IASDKCore.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
@@ -210,7 +210,7 @@
 		</data>
 		<key>Modules/IASDKCore.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		mckd7dzCCMvm8zh01BvcAQysszs=
+		lNz6CawLFIpA+50cPtRVCjLJ9nE=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -258,15 +258,11 @@
 		</data>
 		<key>PrivateHeaders/FMPABTester.h</key>
 		<data>
-		XRmnaA0ab2Ac9yh13tPW/Glpqcc=
+		4UKfWXl2Tm4CR7WY2LxZPIobZdY=
 		</data>
 		<key>PrivateHeaders/FMPABTestingConfigManager.h</key>
 		<data>
 		rbIFDbYZaxSdAuRHIapzV9g8BZQ=
-		</data>
-		<key>PrivateHeaders/FMPAnimationsUtils.h</key>
-		<data>
-		AqJ04iXVzj8uQ9NnReG1XZHpv50=
 		</data>
 		<key>PrivateHeaders/FMPBaseProxy.h</key>
 		<data>
@@ -343,10 +339,6 @@
 		<key>PrivateHeaders/FMPEventLimitValidator.h</key>
 		<data>
 		hEMXPLbOZgb0Efy4MnuxqoF+SgA=
-		</data>
-		<key>PrivateHeaders/FMPHandAnimationManager.h</key>
-		<data>
-		Qg8xwaUCmQYbCjix5b1DKwYVWuQ=
 		</data>
 		<key>PrivateHeaders/FMPMediaFilesVASTParser.h</key>
 		<data>
@@ -554,7 +546,7 @@
 		</data>
 		<key>PrivateHeaders/IACILogger.h</key>
 		<data>
-		H4c8vvntzcVWPeYdNoZBT3rSvC8=
+		+/9Ac0+6Nd/8xLY9bWtKrQFIT18=
 		</data>
 		<key>PrivateHeaders/IAConfigurationManager.h</key>
 		<data>
@@ -566,7 +558,7 @@
 		</data>
 		<key>PrivateHeaders/IAEndcardViewController.h</key>
 		<data>
-		Ox9wWJF00CWlNXW5FAnYIYqhc9Y=
+		8H42TSANblNn4jyGeWkgLldpUyY=
 		</data>
 		<key>PrivateHeaders/IAEventsAggregator.h</key>
 		<data>
@@ -898,7 +890,7 @@
 		</data>
 		<key>PrivateHeaders/IAWebView.h</key>
 		<data>
-		/qobdBv4ZBpdFGgcIk199/fNpRM=
+		hkeOuJzaIZ9mVp5tg2JRpUmuGGk=
 		</data>
 		<key>PrivateHeaders/IAXMLContentNetworkBuilder.h</key>
 		<data>
@@ -1410,11 +1402,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			juAH26JpjxWsdnV5zvMYY0x00pc=
+			s8vUVIAMlHcX+QxBvAW51GCZ2IY=
 			</data>
 			<key>hash2</key>
 			<data>
-			+zBXNHRxckf6BVXNlqJHDPGGDb0ZzfGa4HoPGcdMOu0=
+			xg17E6y0Q3xlMkfr+ojejR+loPpajF7Ko8q6YehigoQ=
 			</data>
 		</dict>
 		<key>Modules/IASDKCore.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
@@ -1454,22 +1446,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			xTQqQq4wXMjBJ2eR4z/kd9YQdok=
+			zXOwAs4f7d8fEBKk7eMM0O/U4fI=
 			</data>
 			<key>hash2</key>
 			<data>
-			a9CdmbG+PLNLEwyU2HJpw06AinwfkouZ4wqYugBDhms=
+			f7V3F4w68fxVhr0xZPizD1xBERCKq0mEFosPCFf8tOo=
 			</data>
 		</dict>
 		<key>Modules/IASDKCore.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			juAH26JpjxWsdnV5zvMYY0x00pc=
+			s8vUVIAMlHcX+QxBvAW51GCZ2IY=
 			</data>
 			<key>hash2</key>
 			<data>
-			+zBXNHRxckf6BVXNlqJHDPGGDb0ZzfGa4HoPGcdMOu0=
+			xg17E6y0Q3xlMkfr+ojejR+loPpajF7Ko8q6YehigoQ=
 			</data>
 		</dict>
 		<key>Modules/IASDKCore.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
@@ -1509,11 +1501,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			mckd7dzCCMvm8zh01BvcAQysszs=
+			lNz6CawLFIpA+50cPtRVCjLJ9nE=
 			</data>
 			<key>hash2</key>
 			<data>
-			h71qS/BAjhHQKHJElnsM3180ImyZ/2T/ebQ2jx/N+HE=
+			fbXqJTQ8AO6wExIReakj39URsjkhgtODEuEQcpYeNX8=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
@@ -1641,11 +1633,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			XRmnaA0ab2Ac9yh13tPW/Glpqcc=
+			4UKfWXl2Tm4CR7WY2LxZPIobZdY=
 			</data>
 			<key>hash2</key>
 			<data>
-			F82DxqU9YZYG4NcoJ9EThtNHfuyQZBjydaOc7HogD08=
+			O9fSPG3wTmbugwQ2dSVvLrENySgGWQ8jZDqt2k30GcM=
 			</data>
 		</dict>
 		<key>PrivateHeaders/FMPABTestingConfigManager.h</key>
@@ -1657,17 +1649,6 @@
 			<key>hash2</key>
 			<data>
 			ArTawi7Rovw69GfiJmUhQ5gGMUocgbdBCEhk1kElRAA=
-			</data>
-		</dict>
-		<key>PrivateHeaders/FMPAnimationsUtils.h</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			AqJ04iXVzj8uQ9NnReG1XZHpv50=
-			</data>
-			<key>hash2</key>
-			<data>
-			Q6pN1EuoxQcyEhOGUdlW29uX9y0jL3vjvoG655UYg9g=
 			</data>
 		</dict>
 		<key>PrivateHeaders/FMPBaseProxy.h</key>
@@ -1877,17 +1858,6 @@
 			<key>hash2</key>
 			<data>
 			MGI+AdkYBeT4Gk3RzGeE4uSUI4PKhbcAa6oz6NeLqJo=
-			</data>
-		</dict>
-		<key>PrivateHeaders/FMPHandAnimationManager.h</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			Qg8xwaUCmQYbCjix5b1DKwYVWuQ=
-			</data>
-			<key>hash2</key>
-			<data>
-			xDEoovkNRtYUHc1Tgf/VuwijHIrXVilV/q0Ih76zi/s=
 			</data>
 		</dict>
 		<key>PrivateHeaders/FMPMediaFilesVASTParser.h</key>
@@ -2455,11 +2425,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			H4c8vvntzcVWPeYdNoZBT3rSvC8=
+			+/9Ac0+6Nd/8xLY9bWtKrQFIT18=
 			</data>
 			<key>hash2</key>
 			<data>
-			SX4o/sZL8vMRNDJCAB3XNlmc44sVUK5sW0E7SmKXIVU=
+			BiK4D8iN+1ZKm12zIZZfW8MySFwMYL5gpK2h9ciCBog=
 			</data>
 		</dict>
 		<key>PrivateHeaders/IAConfigurationManager.h</key>
@@ -2488,11 +2458,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			Ox9wWJF00CWlNXW5FAnYIYqhc9Y=
+			8H42TSANblNn4jyGeWkgLldpUyY=
 			</data>
 			<key>hash2</key>
 			<data>
-			MQ9wPLDrv8YiQoVY0W2J3Qj9mk4e3OPnEfT4BjMAuAE=
+			vXPhOSXxicPCp9gPgDIM3Mx9U3xx3Rc0SNs40MfgPO8=
 			</data>
 		</dict>
 		<key>PrivateHeaders/IAEventsAggregator.h</key>
@@ -3401,11 +3371,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			/qobdBv4ZBpdFGgcIk199/fNpRM=
+			hkeOuJzaIZ9mVp5tg2JRpUmuGGk=
 			</data>
 			<key>hash2</key>
 			<data>
-			rz6AdjWY/SrpVSFz0rgyNApU2jnjGIfhlpdYuHs4l4g=
+			a6pQeLwA9OWKgmfvZfXhSAWo0t90xFCjUyeHuXvG4f0=
 			</data>
 		</dict>
 		<key>PrivateHeaders/IAXMLContentNetworkBuilder.h</key>
