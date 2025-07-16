@@ -12,12 +12,12 @@
 		525086D22739F48E00CBDA45 /* ConsoleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525086CD2739F48E00CBDA45 /* ConsoleViewController.swift */; };
 		525086D42739F48E00CBDA45 /* LoggingConsoleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525086CE2739F48E00CBDA45 /* LoggingConsoleViewController.swift */; };
 		525086D62739F48E00CBDA45 /* ConsoleViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 525086CF2739F48E00CBDA45 /* ConsoleViewController.xib */; };
-		75CAFDE0F9B59E834C218D8D /* IASDKCore.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B977B25AF41160B620D39DC /* IASDKCore.xcframework */; };
 		7A45DCAD282A407100F48B34 /* MarketplaceSDKInitializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A45DCAC282A407100F48B34 /* MarketplaceSDKInitializer.swift */; };
 		7A8057F028C6622B00781158 /* SDKBiddingFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A8057EF28C6622B00781158 /* SDKBiddingFactory.swift */; };
 		7A941FAA2830D4E500BB98FF /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A941FA92830D4E500BB98FF /* Constants.swift */; };
 		7AC0C976282015760082D862 /* MenuBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AC0C975282015760082D862 /* MenuBaseViewController.swift */; };
 		84C17899257B102B00702557 /* Stub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C17898257B102B00702557 /* Stub.swift */; };
+		876D4CBF75D811E81C71B34E /* IASDKCore.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66863BE0C567FEA4DC52562A /* IASDKCore.xcframework */; };
 		9A0E962F27A92D6C00504D12 /* AdViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A0E962E27A92D6C00504D12 /* AdViewState.swift */; };
 		9A24A27126DE215E00251686 /* UIViewController+UIAlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A24A27026DE215E00251686 /* UIViewController+UIAlertController.swift */; };
 		9A2CC3002785BF2A0015685A /* AdViewControllerContentState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A2CC2FF2785BF2A0015685A /* AdViewControllerContentState.swift */; };
@@ -81,6 +81,7 @@
 		525086CD2739F48E00CBDA45 /* ConsoleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConsoleViewController.swift; sourceTree = "<group>"; };
 		525086CE2739F48E00CBDA45 /* LoggingConsoleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoggingConsoleViewController.swift; sourceTree = "<group>"; };
 		525086CF2739F48E00CBDA45 /* ConsoleViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ConsoleViewController.xib; sourceTree = "<group>"; };
+		66863BE0C567FEA4DC52562A /* IASDKCore.xcframework */ = {isa = PBXFileReference; includeInIndex = 1; name = IASDKCore.xcframework; path = ../IASDKCore/IASDKCore.xcframework; sourceTree = "<group>"; };
 		7A45DCAC282A407100F48B34 /* MarketplaceSDKInitializer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketplaceSDKInitializer.swift; sourceTree = "<group>"; };
 		7A8057EF28C6622B00781158 /* SDKBiddingFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SDKBiddingFactory.swift; sourceTree = "<group>"; };
 		7A941FA92830D4E500BB98FF /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
@@ -88,7 +89,6 @@
 		8001E98328DB4F1800258421 /* VERSION.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = VERSION.xcconfig; sourceTree = "<group>"; };
 		84C17897257B102A00702557 /* DTExchangeTestApp-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DTExchangeTestApp-Bridging-Header.h"; sourceTree = "<group>"; };
 		84C17898257B102B00702557 /* Stub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stub.swift; sourceTree = "<group>"; };
-		8B977B25AF41160B620D39DC /* IASDKCore.xcframework */ = {isa = PBXFileReference; includeInIndex = 1; name = IASDKCore.xcframework; path = ../IASDKCore/IASDKCore.xcframework; sourceTree = "<group>"; };
 		9A0E962E27A92D6C00504D12 /* AdViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdViewState.swift; sourceTree = "<group>"; };
 		9A24A27026DE215E00251686 /* UIViewController+UIAlertController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+UIAlertController.swift"; sourceTree = "<group>"; };
 		9A2CC2FF2785BF2A0015685A /* AdViewControllerContentState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdViewControllerContentState.swift; sourceTree = "<group>"; };
@@ -140,21 +140,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				75CAFDE0F9B59E834C218D8D /* IASDKCore.xcframework in Frameworks */,
+				876D4CBF75D811E81C71B34E /* IASDKCore.xcframework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		3F0580C312BEECC3E1F15DB8 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				8B977B25AF41160B620D39DC /* IASDKCore.xcframework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 		525086CB2739F48E00CBDA45 /* Console */ = {
 			isa = PBXGroup;
 			children = (
@@ -358,6 +350,14 @@
 			name = Router;
 			sourceTree = "<group>";
 		};
+		DF7B5DE61ED171F48E3C1CBD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				66863BE0C567FEA4DC52562A /* IASDKCore.xcframework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		E88693A11E3DFED900B12EAB = {
 			isa = PBXGroup;
 			children = (
@@ -366,7 +366,7 @@
 				84C17897257B102A00702557 /* DTExchangeTestApp-Bridging-Header.h */,
 				E88693AB1E3DFED900B12EAB /* Products */,
 				8001E98328DB4F1800258421 /* VERSION.xcconfig */,
-				3F0580C312BEECC3E1F15DB8 /* Frameworks */,
+				DF7B5DE61ED171F48E3C1CBD /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
