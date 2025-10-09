@@ -16,6 +16,66 @@ import _Concurrency
 import _StringProcessing
 import _SwiftConcurrencyShims
 import os
+@objc public protocol IANativeAdSpotBuilder {
+  @objc var adRequest: IASDKCore.IAAdRequest? { get set }
+  @objc var userInfo: [Swift.String : Any]? { get set }
+  @objc var delegate: (any IASDKCore.IANativeAdDelegate)? { get set }
+}
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objcMembers final public class IANativeAdSpot : ObjectiveC.NSObject {
+  @objc final public let adRequest: IASDKCore.IAAdRequest?
+  @objc final public let userInfo: [Swift.String : Any]?
+  @objc weak final public var delegate: (any IASDKCore.IANativeAdDelegate)?
+  @objc final public var spotId: Swift.String? {
+    @objc get
+  }
+  @objc final public var muteVideo: Swift.Bool {
+    @objc get
+    @objc set
+  }
+  @objc final public class func build(_ builder: (any IASDKCore.IANativeAdSpotBuilder) -> Swift.Void) -> IASDKCore.IANativeAdSpot
+  @objc final public func loadAd(withMarkup adMarkup: Swift.String, withCompletion completion: @escaping (_ nativeAdAssets: IASDKCore.IANativeAdAssets?, _ error: (any Swift.Error)?) -> Swift.Void)
+  @available(*, unavailable, message: "Use build(_:) to create IANativeAdSpot")
+  @objc override dynamic public init()
+  @objc deinit
+}
+extension IASDKCore.IANativeAdSpot : IASDKCore.IAUnitDelegate {
+  @objc final public func iaParentViewController(for unitController: IASDKCore.IAUnitController?) -> UIKit.UIViewController
+  @objc final public func iaAdDidReceiveClick(_ unitController: IASDKCore.IAUnitController?)
+  @objc final public func iaAdWillLogImpression(_ unitController: IASDKCore.IAUnitController?)
+  @objc final public func iaUnitControllerWillOpenExternalApp(_ unitController: IASDKCore.IAUnitController?)
+  @objc final public func iaAdDidExpire(_ unitController: IASDKCore.IAUnitController?)
+  @objc final public func iaUnitControllerWillPresentFullscreen(_ unitController: IASDKCore.IAUnitController?)
+  @objc final public func iaUnitControllerDidPresentFullscreen(_ unitController: IASDKCore.IAUnitController?)
+  @objc final public func iaUnitControllerWillDismissFullscreen(_ unitController: IASDKCore.IAUnitController?)
+  @objc final public func iaUnitControllerDidDismissFullscreen(_ unitController: IASDKCore.IAUnitController?)
+}
+extension IASDKCore.IANativeAdSpot : IASDKCore.IAVideoContentDelegate {
+  @objc final public func iaVideoCompleted(_ contentController: IASDKCore.IAVideoContentController?)
+  @objc final public func iaVideoContentController(_ contentController: IASDKCore.IAVideoContentController?, videoInterruptedWithError error: any Swift.Error)
+  @objc final public func iaVideoContentController(_ contentController: IASDKCore.IAVideoContentController?, videoDurationUpdated videoDuration: Foundation.TimeInterval)
+  @objc final public func iaVideoContentController(_ contentController: IASDKCore.IAVideoContentController?, videoProgressUpdatedWithCurrentTime currentTime: Foundation.TimeInterval, totalTime: Foundation.TimeInterval)
+}
+extension IASDKCore.IANativeAdSpot : IASDKCore.DTXNativeImageContentDelegate {
+  @objc final public func nativeImage(_ nativeImageContentController: IASDKCore.DTXNativeImageContentController?, loadedImageFrom url: Foundation.URL)
+  @objc final public func nativeImage(_ nativeImageContentController: IASDKCore.DTXNativeImageContentController?, failedToLoadImageFrom url: Foundation.URL, error: any Swift.Error)
+}
+@objc public protocol IANativeAdDelegate {
+  @objc func iaParentViewController(forAdSpot adSpot: IASDKCore.IANativeAdSpot?) -> UIKit.UIViewController
+  @objc optional func iaNativeAdDidReceiveClick(_ adSpot: IASDKCore.IANativeAdSpot?, origin: Swift.String?)
+  @objc optional func iaNativeAdWillLogImpression(_ adSpot: IASDKCore.IANativeAdSpot?)
+  @objc optional func iaNativeAdWillOpenExternalApp(_ adSpot: IASDKCore.IANativeAdSpot?)
+  @objc optional func iaNativeAdDidExpire(_ adSpot: IASDKCore.IANativeAdSpot?)
+  @objc optional func iaNativeAdWillPresentFullscreen(_ adSpot: IASDKCore.IANativeAdSpot?)
+  @objc optional func iaNativeAdDidPresentFullscreen(_ adSpot: IASDKCore.IANativeAdSpot?)
+  @objc optional func iaNativeAdWillDismissFullscreen(_ adSpot: IASDKCore.IANativeAdSpot?)
+  @objc optional func iaNativeAdDidDismissFullscreen(_ adSpot: IASDKCore.IANativeAdSpot?)
+  @objc optional func iaNativeAdVideoCompleted(_ adSpot: IASDKCore.IANativeAdSpot?)
+  @objc optional func iaNativeAd(_ adSpot: IASDKCore.IANativeAdSpot?, videoInterruptedWithError error: any Swift.Error)
+  @objc optional func iaNativeAd(_ adSpot: IASDKCore.IANativeAdSpot?, videoDurationUpdated videoDuration: Foundation.TimeInterval)
+  @objc optional func iaNativeAd(_ adSpot: IASDKCore.IANativeAdSpot?, videoProgressUpdatedWithCurrentTime currentTime: Foundation.TimeInterval, totalTime: Foundation.TimeInterval)
+  @objc optional func iaNativeAd(_ adSpot: IASDKCore.IANativeAdSpot?, didLoadImageFromUrl url: Foundation.URL)
+  @objc optional func iaNativeAdSpot(_ adSpot: IASDKCore.IANativeAdSpot?, didFailToLoadImageFromUrl: Foundation.URL, with error: any Swift.Error)
+}
 extension Foundation.OperatingSystemVersion : Swift.Comparable {
   public static func == (lhs: Foundation.OperatingSystemVersion, rhs: Foundation.OperatingSystemVersion) -> Swift.Bool
   public static func < (lhs: Foundation.OperatingSystemVersion, rhs: Foundation.OperatingSystemVersion) -> Swift.Bool
@@ -24,6 +84,31 @@ extension Foundation.OperatingSystemVersion : Swift.CustomStringConvertible {
   public var description: Swift.String {
     get
   }
+}
+@objc public enum ViewTag : Swift.Int {
+  case title = 1
+  case mediaView = 2
+  case icon = 4
+  case description = 5
+  case rating = 6
+  case cta = 7
+  case root = 8
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+@objc @_hasMissingDesignatedInitializers @objcMembers final public class IANativeAdAssets : ObjectiveC.NSObject {
+  @objc final public let adTitle: Swift.String?
+  @objc final public let adDescription: Swift.String?
+  @objc final public let callToActionText: Swift.String?
+  @objc final public let appIcon: UIKit.UIView?
+  @objc final public let mediaView: UIKit.UIView
+  @objc final public let rating: Foundation.NSNumber?
+  @objc final public let mediaAspectRatio: Foundation.NSNumber?
+  @objc(registerViewForInteraction:mediaView:iconView:clickableViews:) final public func registerViewForInteraction(rootView: UIKit.UIView?, mediaView: UIKit.UIView?, iconView: UIKit.UIView?, clickableViews: [UIKit.UIView]?)
+  @objc deinit
 }
 public struct DTXConsentEvaluator {
   public enum Consent : Swift.Int {
@@ -41,7 +126,17 @@ public struct DTXConsentEvaluator {
   public func evaluatePurpose(with purposeConsents: Swift.String?, tcfPurposeEnabled: Swift.Bool) -> Swift.Bool
   public func evaluateConsentData(with tcfVendorId: Swift.Int, vendorConsentsString: Swift.String?, tcString: Swift.String?, gdprConsentString: Swift.String?, gdprConsent: IASDKCore.DTXConsentEvaluator.Consent) -> IASDKCore.DTXConsentEvaluator.ConsentData
 }
-@objc public enum DTXLogLevel : Swift.Int {
+public struct DTXDisposable {
+  public init(syncQueue: Dispatch.DispatchQueue, cancel: @escaping () -> Swift.Void)
+  public func dispose()
+  public static let empty: IASDKCore.DTXDisposable
+}
+public struct DTXTask<A> {
+}
+extension IASDKCore.DTXTask {
+  public func subscribe(_ handler: @escaping (A) -> Swift.Void) -> IASDKCore.DTXDisposable
+}
+@objc public enum DTXLogLevel : Swift.Int, Swift.Codable {
   case off = 0
   case fault = 1
   case error = 2
@@ -57,6 +152,9 @@ public struct DTXConsentEvaluator {
   @objc public static func setLogLevel(_ logLevel: IASDKCore.DTXLogLevel)
   @objc deinit
 }
+extension IASDKCore.ViewTag : Swift.Equatable {}
+extension IASDKCore.ViewTag : Swift.Hashable {}
+extension IASDKCore.ViewTag : Swift.RawRepresentable {}
 extension IASDKCore.DTXConsentEvaluator.Consent : Swift.Equatable {}
 extension IASDKCore.DTXConsentEvaluator.Consent : Swift.Hashable {}
 extension IASDKCore.DTXConsentEvaluator.Consent : Swift.RawRepresentable {}
