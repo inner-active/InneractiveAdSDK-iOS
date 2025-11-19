@@ -18,7 +18,7 @@
 		</data>
 		<key>Headers/IAAdRequest.h</key>
 		<data>
-		tAw72iFaoCUS0ur0ycL4WEsJ/EU=
+		/zoFXBHw63BEoAAT5a2Oj2UTAK0=
 		</data>
 		<key>Headers/IAAdSpot.h</key>
 		<data>
@@ -138,7 +138,7 @@
 		</data>
 		<key>Headers/IASDKCore-Swift.h</key>
 		<data>
-		dhmA98YSEB4ToyZpXI6Kq3PxlmQ=
+		EyPQT8SHbr/baptT8Su5zvOApgI=
 		</data>
 		<key>Headers/IASDKCore.h</key>
 		<data>
@@ -162,7 +162,7 @@
 		</data>
 		<key>Headers/IAVideoContentDelegate.h</key>
 		<data>
-		uVEC4xh918b7n4SU0Ca1CDsOjTw=
+		D6gN45TJGQFu8v/OUFZbMAa6+Fs=
 		</data>
 		<key>Headers/IAVideoContentModel.h</key>
 		<data>
@@ -174,11 +174,11 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		xBDwRah28SuBkG8zVEOA3UIHxaI=
+		1DBoPRbRjECtHrcdx6yG18DBJ7w=
 		</data>
 		<key>Modules/IASDKCore.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<data>
-		HGLoGEEtYLvp1SYOMnK5+0W2lbk=
+		y3pIwi3nuANfWkXfSRsdGlX3kuY=
 		</data>
 		<key>Modules/IASDKCore.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
@@ -186,7 +186,7 @@
 		</data>
 		<key>Modules/IASDKCore.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		PMfWi3gg6NPOpeutEKfsgc7pqPg=
+		j746hytjl4S/sBtFe/DF3uWfo/k=
 		</data>
 		<key>Modules/IASDKCore.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<data>
@@ -194,11 +194,11 @@
 		</data>
 		<key>Modules/IASDKCore.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		XwbkA2+h8bjxAmlS9/JT+jk17xA=
+		tu5B6FIEWCUfNYVc2pO76FYodUg=
 		</data>
 		<key>Modules/IASDKCore.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
-		HGLoGEEtYLvp1SYOMnK5+0W2lbk=
+		y3pIwi3nuANfWkXfSRsdGlX3kuY=
 		</data>
 		<key>Modules/IASDKCore.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
@@ -206,7 +206,7 @@
 		</data>
 		<key>Modules/IASDKCore.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		cFFFMUDvJjY7wPFwLYflP9VBi80=
+		cVwbldGfq9Qe4MiAb985lB7wHnQ=
 		</data>
 		<key>Modules/IASDKCore.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<data>
@@ -214,7 +214,7 @@
 		</data>
 		<key>Modules/IASDKCore.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		ue1ulF1lzrdRb3jtxI0Xz6NVSvE=
+		K/Pclm9eEy1B7emkxLQZ81Zchkc=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -490,7 +490,7 @@
 		</data>
 		<key>PrivateHeaders/FYBBiddingCacheAdSource.h</key>
 		<data>
-		M1pbPPvW78WlfaGp5PBEaUmEA9w=
+		Q7GjoXwWSZYQ3Ar/vpBJX5uhoRQ=
 		</data>
 		<key>PrivateHeaders/FYBCounterView.h</key>
 		<data>
@@ -518,15 +518,15 @@
 		</data>
 		<key>PrivateHeaders/IAAdModelInternal.h</key>
 		<data>
-		h9FHWgP3s9hWij6fZVTo9GbvTPE=
+		TfRsJyjpvyTbD41vhYhI+azHWGg=
 		</data>
 		<key>PrivateHeaders/IAAdRequestHelper.h</key>
 		<data>
-		dTnXsKHGHh216aMm0dHENozl7hE=
+		c/sEDmvsKkLJiIlroBcGEgLQQm8=
 		</data>
 		<key>PrivateHeaders/IAAdRequestInternal.h</key>
 		<data>
-		0LofFEzANnsvyCc3qSVLSujiHww=
+		6q7M5vdQRg/PdL91RiGIN99kcdI=
 		</data>
 		<key>PrivateHeaders/IAAdSourceController.h</key>
 		<data>
@@ -922,11 +922,11 @@
 		</data>
 		<key>PrivateHeaders/NSNumber+IAUtils.h</key>
 		<data>
-		KP/g9ksXHjH2T9nWfyRcpiPq06Q=
+		sQkT3iQsf+TBd3cIfY6e4pfT030=
 		</data>
 		<key>PrivateHeaders/NSObject+IAUtils.h</key>
 		<data>
-		VJMxdLejsISrF1hZiod7KOY6Uag=
+		7fToQnA1e5HcsRERibDLzpacO14=
 		</data>
 		<key>PrivateHeaders/NSString+IAUtils.h</key>
 		<data>
@@ -996,11 +996,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			tAw72iFaoCUS0ur0ycL4WEsJ/EU=
+			/zoFXBHw63BEoAAT5a2Oj2UTAK0=
 			</data>
 			<key>hash2</key>
 			<data>
-			gR3cGCqBR3Ux4o11GnwvJtG+alpEM5krqDJwduuHu8w=
+			JCIuRvFka5mXlUI/PUCSG+u6XW57gHKmnJKl3wcGVic=
 			</data>
 		</dict>
 		<key>Headers/IAAdSpot.h</key>
@@ -1326,11 +1326,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			dhmA98YSEB4ToyZpXI6Kq3PxlmQ=
+			EyPQT8SHbr/baptT8Su5zvOApgI=
 			</data>
 			<key>hash2</key>
 			<data>
-			+zOtLKgvtp5Xby6FD/T4v5MzLwZLc6JOT2NdKK5SpSw=
+			8AcBMhgGXzqYTqijOr2soUcy0LOPZ+Tumt+vIAGD9yI=
 			</data>
 		</dict>
 		<key>Headers/IASDKCore.h</key>
@@ -1392,11 +1392,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			uVEC4xh918b7n4SU0Ca1CDsOjTw=
+			D6gN45TJGQFu8v/OUFZbMAa6+Fs=
 			</data>
 			<key>hash2</key>
 			<data>
-			pA4rgdSWPaLokmmFn3cjngaM4Y+yJbc7ECDsnxTgcsE=
+			/ahMhctkl9Oh/0/P9aT+jm2kFwRvgrANEW0CsN3bAeg=
 			</data>
 		</dict>
 		<key>Headers/IAVideoContentModel.h</key>
@@ -1425,11 +1425,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			HGLoGEEtYLvp1SYOMnK5+0W2lbk=
+			y3pIwi3nuANfWkXfSRsdGlX3kuY=
 			</data>
 			<key>hash2</key>
 			<data>
-			w0vuONxphMSvUkakRJZwEb0X7uNS5jB8VwF/mW7Q9DE=
+			PS1h/Ouf6zJ0izlk4VgYt2VmO9vMREfvVxlGwMlHrcI=
 			</data>
 		</dict>
 		<key>Modules/IASDKCore.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
@@ -1447,11 +1447,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			PMfWi3gg6NPOpeutEKfsgc7pqPg=
+			j746hytjl4S/sBtFe/DF3uWfo/k=
 			</data>
 			<key>hash2</key>
 			<data>
-			+DsJpE0YlJxEuLyahJspbefLulX07bXh8EIPV0WSCdA=
+			dOJWcmv52Y6NGZVOsx4JAA82JR/Z5JB9J/wMTwTM2sA=
 			</data>
 		</dict>
 		<key>Modules/IASDKCore.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
@@ -1469,22 +1469,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			XwbkA2+h8bjxAmlS9/JT+jk17xA=
+			tu5B6FIEWCUfNYVc2pO76FYodUg=
 			</data>
 			<key>hash2</key>
 			<data>
-			gxUFo6kL8W5Os/S0IOtLH0Ng6cCJyfStmacHhOyfZtQ=
+			jI23e52wHi0CG+g1xW3atoSwOpSfgc/LiQFRI7sBGSA=
 			</data>
 		</dict>
 		<key>Modules/IASDKCore.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			HGLoGEEtYLvp1SYOMnK5+0W2lbk=
+			y3pIwi3nuANfWkXfSRsdGlX3kuY=
 			</data>
 			<key>hash2</key>
 			<data>
-			w0vuONxphMSvUkakRJZwEb0X7uNS5jB8VwF/mW7Q9DE=
+			PS1h/Ouf6zJ0izlk4VgYt2VmO9vMREfvVxlGwMlHrcI=
 			</data>
 		</dict>
 		<key>Modules/IASDKCore.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
@@ -1502,11 +1502,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			cFFFMUDvJjY7wPFwLYflP9VBi80=
+			cVwbldGfq9Qe4MiAb985lB7wHnQ=
 			</data>
 			<key>hash2</key>
 			<data>
-			pTQX8LrFEbXj+CbCBc3DHbOuolbQ29i50oxmNMyBkUw=
+			kO9Kme41gW5siujyUvYmjC6d4SCL6QMsmH/3SD6xY98=
 			</data>
 		</dict>
 		<key>Modules/IASDKCore.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
@@ -1524,11 +1524,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			ue1ulF1lzrdRb3jtxI0Xz6NVSvE=
+			K/Pclm9eEy1B7emkxLQZ81Zchkc=
 			</data>
 			<key>hash2</key>
 			<data>
-			YkpysAl9Uu47yhAc+vQ3+u8Eom5onJMNx7z7vCwYcC4=
+			5sIS8BHVTW7nlD/ya1WaIrj9hHJM7Muu5lwgxszd3ac=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
@@ -2283,11 +2283,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			M1pbPPvW78WlfaGp5PBEaUmEA9w=
+			Q7GjoXwWSZYQ3Ar/vpBJX5uhoRQ=
 			</data>
 			<key>hash2</key>
 			<data>
-			w7IQ2NZ3gUvOx+ivIY9cvzhu1tntn8Cc0U6K1W5fdwc=
+			w+dhY3lVKRYfcjZCH334dZ5C/ziFuoYcPXGasWrZg+E=
 			</data>
 		</dict>
 		<key>PrivateHeaders/FYBCounterView.h</key>
@@ -2360,33 +2360,33 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			h9FHWgP3s9hWij6fZVTo9GbvTPE=
+			TfRsJyjpvyTbD41vhYhI+azHWGg=
 			</data>
 			<key>hash2</key>
 			<data>
-			Ozra8Z/F/uwEYJ9kpqBwJG0TaCi3u2rvNubF8koo0sk=
+			1JInqgVNQ+e0p5raMt6uoAOpnK+HZ5ODrm6aqD2owRo=
 			</data>
 		</dict>
 		<key>PrivateHeaders/IAAdRequestHelper.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			dTnXsKHGHh216aMm0dHENozl7hE=
+			c/sEDmvsKkLJiIlroBcGEgLQQm8=
 			</data>
 			<key>hash2</key>
 			<data>
-			3/hT2kjGtAuXYxWGTVeErAxEdc22sRXewJAzXskSR1E=
+			NgErr6N1mpoLYx8FpzXO2a/CZM8DhXc/BB8W6V+0OQ0=
 			</data>
 		</dict>
 		<key>PrivateHeaders/IAAdRequestInternal.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			0LofFEzANnsvyCc3qSVLSujiHww=
+			6q7M5vdQRg/PdL91RiGIN99kcdI=
 			</data>
 			<key>hash2</key>
 			<data>
-			ZnK7UpyGwXmowhbzF6VMvNPlNxrKX0cpO2dZ4Jhv5xE=
+			sKkQGBDxU4j7WtW6hXy4vHiubgEPMpYHdBj+VqYyCJ4=
 			</data>
 		</dict>
 		<key>PrivateHeaders/IAAdSourceController.h</key>
@@ -3471,22 +3471,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			KP/g9ksXHjH2T9nWfyRcpiPq06Q=
+			sQkT3iQsf+TBd3cIfY6e4pfT030=
 			</data>
 			<key>hash2</key>
 			<data>
-			ej8NPXTxD0pkE2xDRH0bIjw31OulDdfW4DTfrxEwkeI=
+			ZtcqFPbj+yvGNK4naIZOv7IuhkAiSmKqWVeIvyp4OhU=
 			</data>
 		</dict>
 		<key>PrivateHeaders/NSObject+IAUtils.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			VJMxdLejsISrF1hZiod7KOY6Uag=
+			7fToQnA1e5HcsRERibDLzpacO14=
 			</data>
 			<key>hash2</key>
 			<data>
-			94/obs/WYsIfBhgt2mlK9XrEgth3QqBAthZV5b/I6kM=
+			t1/opmCMWEPIs/1X/WVEjJW7th/Rb83f5H5cODuvfGM=
 			</data>
 		</dict>
 		<key>PrivateHeaders/NSString+IAUtils.h</key>
