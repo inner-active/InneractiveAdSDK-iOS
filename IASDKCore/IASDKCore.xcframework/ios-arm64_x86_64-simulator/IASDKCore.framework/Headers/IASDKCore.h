@@ -258,4 +258,17 @@ DEPRECATED_MSG_ATTRIBUTE("This API is deprecated, please use `initWithAppID:comp
  */
 - (void)clearLGPDConsentData;
 
+/**
+ * @brief Sets a key-value pair in the SDK's extra data.
+ *
+ * @param key The key (non-nil string) for the extra data to set.
+ * @param value The string value associated with the key.
+ *
+ * @discussion For adding multiple data, call this method for every key-value pair. For removing, pass `nil` for the value.
+ *
+ * This method must be called after the SDK init and before the ad-request / bidding-token creation.
+ */
+- (void)setExtraDataForKey:(nonnull NSString *)key
+                     value:(nullable NSString *)value NS_SWIFT_NAME(setExtraData(key:value:));
+
 @end
