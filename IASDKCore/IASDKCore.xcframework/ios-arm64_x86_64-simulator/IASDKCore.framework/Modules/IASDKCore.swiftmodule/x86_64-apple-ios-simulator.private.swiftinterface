@@ -110,32 +110,6 @@ extension Foundation.OperatingSystemVersion : Swift.CustomStringConvertible {
   @objc(registerViewForInteraction:mediaView:iconView:clickableViews:) final public func registerViewForInteraction(rootView: UIKit.UIView?, mediaView: UIKit.UIView?, iconView: UIKit.UIView?, clickableViews: [UIKit.UIView]?)
   @objc deinit
 }
-public struct DTXConsentEvaluator {
-  public enum Consent : Swift.Int {
-    case unknown
-    case denied
-    case given
-    public init?(rawValue: Swift.Int)
-    public typealias RawValue = Swift.Int
-    public var rawValue: Swift.Int {
-      get
-    }
-  }
-  public struct ConsentData {
-  }
-  public func evaluatePurpose(with purposeConsents: Swift.String?, tcfPurposeEnabled: Swift.Bool) -> Swift.Bool
-  public func evaluateConsentData(with tcfVendorId: Swift.Int, vendorConsentsString: Swift.String?, tcString: Swift.String?, gdprConsentString: Swift.String?, gdprConsent: DTXConsentEvaluator.Consent) -> DTXConsentEvaluator.ConsentData
-}
-public struct DTXDisposable {
-  public init(syncQueue: Dispatch.DispatchQueue, cancel: @escaping () -> Swift.Void)
-  public func dispose()
-  public static let empty: DTXDisposable
-}
-public struct DTXTask<A> {
-}
-extension DTXTask {
-  public func subscribe(_ handler: @escaping (A) -> Swift.Void) -> DTXDisposable
-}
 @objc public enum DTXLogLevel : Swift.Int, Swift.Codable {
   case off = 0
   case fault = 1
@@ -155,9 +129,6 @@ extension DTXTask {
 extension ViewTag : Swift.Equatable {}
 extension ViewTag : Swift.Hashable {}
 extension ViewTag : Swift.RawRepresentable {}
-extension DTXConsentEvaluator.Consent : Swift.Equatable {}
-extension DTXConsentEvaluator.Consent : Swift.Hashable {}
-extension DTXConsentEvaluator.Consent : Swift.RawRepresentable {}
 extension DTXLogLevel : Swift.Equatable {}
 extension DTXLogLevel : Swift.Hashable {}
 extension DTXLogLevel : Swift.RawRepresentable {}
