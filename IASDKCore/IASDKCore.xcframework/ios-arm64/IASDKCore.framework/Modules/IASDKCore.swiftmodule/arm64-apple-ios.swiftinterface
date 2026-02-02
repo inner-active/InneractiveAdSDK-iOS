@@ -34,6 +34,7 @@ import os
   }
   @objc final public class func build(_ builder: (any IANativeAdSpotBuilder) -> Swift.Void) -> IANativeAdSpot
   @objc final public func loadAd(withMarkup adMarkup: Swift.String, withCompletion completion: @escaping (_ nativeAdAssets: IANativeAdAssets?, _ error: (any Swift.Error)?) -> Swift.Void)
+  @objc final public func loadAd(withMarkup adMarkup: Swift.String, withWatermarkData watermarkData: Foundation.Data, withCompletion completion: @escaping (_ nativeAdAssets: IANativeAdAssets?, _ error: (any Swift.Error)?) -> Swift.Void)
   @available(*, unavailable, message: "Use build(_:) to create IANativeAdSpot")
   @objc override dynamic public init()
   @objc deinit
