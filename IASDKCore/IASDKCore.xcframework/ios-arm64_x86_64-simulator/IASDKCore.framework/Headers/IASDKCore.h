@@ -156,19 +156,13 @@ typedef NS_ENUM(NSInteger, IASDKCoreInitErrorType) {
 /**
  *  @brief The COPPA complience status.
  *
- *  @discussion Use this property in order to set the COPPA complience accoring to your preferences.
+ *  @discussion Use this property in order to set the COPPA complience status.
  *
- * It can be used as one of the following, in order to allow/restrict:
+ * It can be used as one of the following:
  *
- * - `[IASDKCore.sharedInstance setCoppaApplies:YES]`
+ * - `IASDKCore.sharedInstance.coppaApplies = IACoppaAppliesTypeTrue`
  *
- * - `[IASDKCore.sharedInstance setCoppaApplies:true]`
- *
- * - `IASDKCore.sharedInstance.coppaApplies = NO`
- *
- * - `IASDKCore.sharedInstance.coppaApplies = 1`
- *
- * - `IASDKCore.sharedInstance.setCoppaApplies = IACoppaAppliesTypeGiven`
+ * - `IASDKCore.sharedInstance.coppaApplies = IACoppaAppliesTypeFalse`
  *
  * Or it can be cleared by using the following:
  *
