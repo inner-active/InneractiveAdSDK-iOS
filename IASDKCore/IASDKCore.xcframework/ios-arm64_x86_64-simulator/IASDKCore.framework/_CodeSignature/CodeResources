@@ -6,7 +6,7 @@
 	<dict>
 		<key>Headers/DTXNativeImageContentController.h</key>
 		<data>
-		hmfLSz5f8KOPoYDUgNMFPba0WIE=
+		hWk4n8KQvcTJUOhKWGhdoo2K814=
 		</data>
 		<key>Headers/FMPBiddingManager.h</key>
 		<data>
@@ -86,7 +86,7 @@
 		</data>
 		<key>Headers/IALGPDConsent.h</key>
 		<data>
-		WQG9/3zd464azbEVayJF3eppLaI=
+		6I2LyLCdZa9z0pbzw7h+EwtS8zM=
 		</data>
 		<key>Headers/IAMRAIDAdView.h</key>
 		<data>
@@ -154,11 +154,11 @@
 		</data>
 		<key>Headers/IAUserData.h</key>
 		<data>
-		v+pxlVUIgxAmrtvMnrBfFPhWFeg=
+		5jtcwUckbThwKpeq//ROLpkb1nY=
 		</data>
 		<key>Headers/IAVideoContentController.h</key>
 		<data>
-		sF6mLQE8O8qsZxso9XGalEMnNZg=
+		G68gS4zRXSamJcOgNgGP03rOBDo=
 		</data>
 		<key>Headers/IAVideoContentDelegate.h</key>
 		<data>
@@ -174,15 +174,15 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		1nQ6mawAbyTj8McxR1fFiLbrJlc=
+		wD7pbs8KSvJDAcHgbZ/fO87kEgI=
 		</data>
 		<key>Modules/IASDKCore.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<data>
-		5Bx/YMoSzDxqNLvLlawaB64mb6E=
+		FQpVjWZVhSsrrcijX7TrzKJfybw=
 		</data>
 		<key>Modules/IASDKCore.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		hgO0NNd8YRm2PME3eU6SdpLW5/8=
+		uUKHr0nCWxdQnJRceJgGfYkZclM=
 		</data>
 		<key>Modules/IASDKCore.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<data>
@@ -190,19 +190,19 @@
 		</data>
 		<key>Modules/IASDKCore.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		hgO0NNd8YRm2PME3eU6SdpLW5/8=
+		uUKHr0nCWxdQnJRceJgGfYkZclM=
 		</data>
 		<key>Modules/IASDKCore.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		acvtz30MrTMIQa1ztwnGt+l89wQ=
+		DxDo2H1CGv8AhW+VWGhC67KkfUc=
 		</data>
 		<key>Modules/IASDKCore.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
-		5Bx/YMoSzDxqNLvLlawaB64mb6E=
+		FQpVjWZVhSsrrcijX7TrzKJfybw=
 		</data>
 		<key>Modules/IASDKCore.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		EGT3cYe3THr/xVDpeOFNfnqbWBk=
+		Kt1A9Q2oV+YyApL8z2MGIoCQFfM=
 		</data>
 		<key>Modules/IASDKCore.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
@@ -210,11 +210,11 @@
 		</data>
 		<key>Modules/IASDKCore.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		EGT3cYe3THr/xVDpeOFNfnqbWBk=
+		Kt1A9Q2oV+YyApL8z2MGIoCQFfM=
 		</data>
 		<key>Modules/IASDKCore.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		jqDob8MdZ1CTiTKKb7wMKspocUo=
+		cMvtnEc+gBD6CVpGBFKSYYVPIRY=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -235,6 +235,10 @@
 		<key>PrivateHeaders/DTXLoggerInternal.h</key>
 		<data>
 		N0tglT78ZVExbDo7qoClJ7PtpeI=
+		</data>
+		<key>PrivateHeaders/DTXNativeImageViewControllerDelegate.h</key>
+		<data>
+		pgFlHpYeHPuYYW+eG039W9I1Unc=
 		</data>
 		<key>PrivateHeaders/DTXOMIDDisplayAdSession.h</key>
 		<data>
@@ -378,7 +382,7 @@
 		</data>
 		<key>PrivateHeaders/IAAdRequestHelper.h</key>
 		<data>
-		clLVYIItgyWoQ+kKJoOAHQR4iGw=
+		U+KrdwXiluaCAzOwwHsd7D5K2tk=
 		</data>
 		<key>PrivateHeaders/IAAdRequestInternal.h</key>
 		<data>
@@ -426,7 +430,7 @@
 		</data>
 		<key>PrivateHeaders/IAEventsReporter.h</key>
 		<data>
-		zfq5ZiqhHvUrqxovfymk0EQk7Vw=
+		E/3f9Hetfc1O+R5nbzFzAtYEQKQ=
 		</data>
 		<key>PrivateHeaders/IAFullscreenUnitControllerInternal.h</key>
 		<data>
@@ -434,7 +438,7 @@
 		</data>
 		<key>PrivateHeaders/IAGDPRConsentInternal.h</key>
 		<data>
-		T8K6+BTKEHEsHqxx7hF1X37XPTY=
+		5JC19+pLqHK0SrZ3Dn6Tz8Y+Ljc=
 		</data>
 		<key>PrivateHeaders/IAImageTintButton.h</key>
 		<data>
@@ -606,7 +610,7 @@
 		</data>
 		<key>PrivateHeaders/IASDKCoreInternal.h</key>
 		<data>
-		8fbWMkDZ+nM+Nk8FTbH82aIQ43s=
+		Z+ndT+2TH/qksRLigwicC/bF0SA=
 		</data>
 		<key>PrivateHeaders/IASDKErrorCodesInternal.h</key>
 		<data>
@@ -819,11 +823,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			hmfLSz5f8KOPoYDUgNMFPba0WIE=
+			hWk4n8KQvcTJUOhKWGhdoo2K814=
 			</data>
 			<key>hash2</key>
 			<data>
-			qOWGlEtnVN4OAHAwQwEpWpKTBAliRi0Llafm9Fy7bag=
+			9rkcloWr8+oYb5gWDIpb/5jcVibsSg2e9d077LNfwLY=
 			</data>
 		</dict>
 		<key>Headers/FMPBiddingManager.h</key>
@@ -1039,11 +1043,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			WQG9/3zd464azbEVayJF3eppLaI=
+			6I2LyLCdZa9z0pbzw7h+EwtS8zM=
 			</data>
 			<key>hash2</key>
 			<data>
-			BRSZW85mGyvMQpWHipRiL2lPZ47ITqV8JX78+iFWk1Q=
+			qFBnKrPPYZcmO9GiGKEww1vViLchFGjR+2G62Ctq8S0=
 			</data>
 		</dict>
 		<key>Headers/IAMRAIDAdView.h</key>
@@ -1226,22 +1230,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			v+pxlVUIgxAmrtvMnrBfFPhWFeg=
+			5jtcwUckbThwKpeq//ROLpkb1nY=
 			</data>
 			<key>hash2</key>
 			<data>
-			xFcoPMk9kBdNpvxfGIwquhQigcJcA8Rprbz/HBJtsU8=
+			NgGlv4CNHjWLHQ108Y5ueLAqk7RW1wteI5/QdrdscQ4=
 			</data>
 		</dict>
 		<key>Headers/IAVideoContentController.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			sF6mLQE8O8qsZxso9XGalEMnNZg=
+			G68gS4zRXSamJcOgNgGP03rOBDo=
 			</data>
 			<key>hash2</key>
 			<data>
-			Ue3li4MCmEVRVglXWdRlvczd5TZ89LD42pEBR14M7/A=
+			Y2i9UyUx3jWurO12jNGu6bMyTyxKOa0QaHtTjhXe4II=
 			</data>
 		</dict>
 		<key>Headers/IAVideoContentDelegate.h</key>
@@ -1281,22 +1285,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			5Bx/YMoSzDxqNLvLlawaB64mb6E=
+			FQpVjWZVhSsrrcijX7TrzKJfybw=
 			</data>
 			<key>hash2</key>
 			<data>
-			LH5um0KORyVl7cjN4mLhMNVCj1pmbXUO7u5pkYLEdao=
+			0NY5x43q2ys6AzWbUJMgInIqgzkVfafQtL6MQ2xLP5w=
 			</data>
 		</dict>
 		<key>Modules/IASDKCore.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			hgO0NNd8YRm2PME3eU6SdpLW5/8=
+			uUKHr0nCWxdQnJRceJgGfYkZclM=
 			</data>
 			<key>hash2</key>
 			<data>
-			Vlexm6RTNd5RCrBHWM/EYUy8Gye1Hhz4lvp/GmoeQIY=
+			M6bKroSlyrFFPUfMMpUWS60OlTvw+93UYQBGZ4bR5L4=
 			</data>
 		</dict>
 		<key>Modules/IASDKCore.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
@@ -1314,44 +1318,44 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			hgO0NNd8YRm2PME3eU6SdpLW5/8=
+			uUKHr0nCWxdQnJRceJgGfYkZclM=
 			</data>
 			<key>hash2</key>
 			<data>
-			Vlexm6RTNd5RCrBHWM/EYUy8Gye1Hhz4lvp/GmoeQIY=
+			M6bKroSlyrFFPUfMMpUWS60OlTvw+93UYQBGZ4bR5L4=
 			</data>
 		</dict>
 		<key>Modules/IASDKCore.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			acvtz30MrTMIQa1ztwnGt+l89wQ=
+			DxDo2H1CGv8AhW+VWGhC67KkfUc=
 			</data>
 			<key>hash2</key>
 			<data>
-			XcFcggd1x5YFkyTne1gq5hrECMxR/fmlyMw9RbfNtyE=
+			K8xE0EHiKXuV0NVyLNo6jCKO1rwmx8T3fXUaQ0Is4d0=
 			</data>
 		</dict>
 		<key>Modules/IASDKCore.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			5Bx/YMoSzDxqNLvLlawaB64mb6E=
+			FQpVjWZVhSsrrcijX7TrzKJfybw=
 			</data>
 			<key>hash2</key>
 			<data>
-			LH5um0KORyVl7cjN4mLhMNVCj1pmbXUO7u5pkYLEdao=
+			0NY5x43q2ys6AzWbUJMgInIqgzkVfafQtL6MQ2xLP5w=
 			</data>
 		</dict>
 		<key>Modules/IASDKCore.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			EGT3cYe3THr/xVDpeOFNfnqbWBk=
+			Kt1A9Q2oV+YyApL8z2MGIoCQFfM=
 			</data>
 			<key>hash2</key>
 			<data>
-			dn2ISE66prvwzqVenZWrReJbldSWUMzklMWwlkA5cnM=
+			DjXxVc78YW8nsuLlvZ0ZulMa+4ShzbQMuzKIcI8Oapw=
 			</data>
 		</dict>
 		<key>Modules/IASDKCore.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
@@ -1369,22 +1373,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			EGT3cYe3THr/xVDpeOFNfnqbWBk=
+			Kt1A9Q2oV+YyApL8z2MGIoCQFfM=
 			</data>
 			<key>hash2</key>
 			<data>
-			dn2ISE66prvwzqVenZWrReJbldSWUMzklMWwlkA5cnM=
+			DjXxVc78YW8nsuLlvZ0ZulMa+4ShzbQMuzKIcI8Oapw=
 			</data>
 		</dict>
 		<key>Modules/IASDKCore.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			jqDob8MdZ1CTiTKKb7wMKspocUo=
+			cMvtnEc+gBD6CVpGBFKSYYVPIRY=
 			</data>
 			<key>hash2</key>
 			<data>
-			QAwWlZhvvwxeVe7S8OUvoqV59CmPsIhBem3KNKcr9uo=
+			B+3NWTRJoFuPJCC4W6yfhkUqaODt7SYhpxKAQfaKNDo=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
@@ -1440,6 +1444,17 @@
 			<key>hash2</key>
 			<data>
 			TdKT0Wmg+xtROBkAxA5NubS7b1Wys1g9WwCA4YvEYCs=
+			</data>
+		</dict>
+		<key>PrivateHeaders/DTXNativeImageViewControllerDelegate.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			pgFlHpYeHPuYYW+eG039W9I1Unc=
+			</data>
+			<key>hash2</key>
+			<data>
+			K75BT8RWs45WEGNB5vVuszbK2fK0xXb/lN2VnzNQdWQ=
 			</data>
 		</dict>
 		<key>PrivateHeaders/DTXOMIDDisplayAdSession.h</key>
@@ -1831,11 +1846,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			clLVYIItgyWoQ+kKJoOAHQR4iGw=
+			U+KrdwXiluaCAzOwwHsd7D5K2tk=
 			</data>
 			<key>hash2</key>
 			<data>
-			ul1LV8WhD0GbZUpYUuk9d9uKhtb3HISnDFp/Xl4qUQc=
+			Vi5JBtoSkMl6WfxFkowPfRf6aefVmoHc8kQ91aut6/s=
 			</data>
 		</dict>
 		<key>PrivateHeaders/IAAdRequestInternal.h</key>
@@ -1963,11 +1978,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			zfq5ZiqhHvUrqxovfymk0EQk7Vw=
+			E/3f9Hetfc1O+R5nbzFzAtYEQKQ=
 			</data>
 			<key>hash2</key>
 			<data>
-			NV7TDhNfVXFc62KHhOoA7gCjUb692JNqc36bNdBCR0I=
+			tT8w17IZEX5M3yq6uuOyiUJzg8rQOVw2MtXlUnyZUbw=
 			</data>
 		</dict>
 		<key>PrivateHeaders/IAFullscreenUnitControllerInternal.h</key>
@@ -1985,11 +2000,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			T8K6+BTKEHEsHqxx7hF1X37XPTY=
+			5JC19+pLqHK0SrZ3Dn6Tz8Y+Ljc=
 			</data>
 			<key>hash2</key>
 			<data>
-			jKv8QOKEx9PO2Ji5PygMq4IVcEfmtc9gnRyVCqEwcU0=
+			uC8uVZNF1JZA0pthzHQh/bNBZQyh+xSPzmkbZ/nFcuI=
 			</data>
 		</dict>
 		<key>PrivateHeaders/IAImageTintButton.h</key>
@@ -2458,11 +2473,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			8fbWMkDZ+nM+Nk8FTbH82aIQ43s=
+			Z+ndT+2TH/qksRLigwicC/bF0SA=
 			</data>
 			<key>hash2</key>
 			<data>
-			SirdbRR067B5Unk0c2nNdm5rEW+RfWsGmSqVfSyxK3k=
+			2pFo//PPi2pG1t50aSO3cQbomk7tbrYW4wW3LNrkQc4=
 			</data>
 		</dict>
 		<key>PrivateHeaders/IASDKErrorCodesInternal.h</key>
