@@ -77,15 +77,6 @@ extension IASDKCore.IANativeAdSpot : IASDKCore.DTXNativeImageContentDelegate {
   @objc optional func iaNativeAd(_ adSpot: IASDKCore.IANativeAdSpot?, didLoadImageFromUrl url: Foundation.URL)
   @objc optional func iaNativeAdSpot(_ adSpot: IASDKCore.IANativeAdSpot?, didFailToLoadImageFromUrl: Foundation.URL, with error: any Swift.Error)
 }
-extension Foundation.OperatingSystemVersion : Swift.Comparable {
-  public static func == (lhs: Foundation.OperatingSystemVersion, rhs: Foundation.OperatingSystemVersion) -> Swift.Bool
-  public static func < (lhs: Foundation.OperatingSystemVersion, rhs: Foundation.OperatingSystemVersion) -> Swift.Bool
-}
-extension Foundation.OperatingSystemVersion : Swift.CustomStringConvertible {
-  public var description: Swift.String {
-    get
-  }
-}
 @objc public enum ViewTag : Swift.Int {
   case title = 1
   case mediaView = 2
