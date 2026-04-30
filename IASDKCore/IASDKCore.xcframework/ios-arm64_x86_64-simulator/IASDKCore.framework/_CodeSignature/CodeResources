@@ -174,11 +174,11 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		wD7pbs8KSvJDAcHgbZ/fO87kEgI=
+		V7Xx7Py/7dBn7hZrUr9NYAmwXIg=
 		</data>
 		<key>Modules/IASDKCore.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<data>
-		FQpVjWZVhSsrrcijX7TrzKJfybw=
+		CUpaHtuPygH2xcpAtxORy1mcSOE=
 		</data>
 		<key>Modules/IASDKCore.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
@@ -194,11 +194,11 @@
 		</data>
 		<key>Modules/IASDKCore.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		DxDo2H1CGv8AhW+VWGhC67KkfUc=
+		sN8k7TqsVcAaysoK7Y28ucJLtxA=
 		</data>
 		<key>Modules/IASDKCore.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
-		FQpVjWZVhSsrrcijX7TrzKJfybw=
+		CUpaHtuPygH2xcpAtxORy1mcSOE=
 		</data>
 		<key>Modules/IASDKCore.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
@@ -214,7 +214,7 @@
 		</data>
 		<key>Modules/IASDKCore.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		cMvtnEc+gBD6CVpGBFKSYYVPIRY=
+		zuPSteb9xIyHf1SqwrntCcdEWpM=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -250,11 +250,15 @@
 		</data>
 		<key>PrivateHeaders/DTXSKAdModel.h</key>
 		<data>
-		vh7h8IM7k521j/mjPryteATfOz8=
+		etTxBh9fV2bKSG4I/3XR3kIIlOc=
 		</data>
 		<key>PrivateHeaders/DTXSKAdService.h</key>
 		<data>
 		klKPlXrlq7UlabyZQuaXOZSe/0E=
+		</data>
+		<key>PrivateHeaders/DTXWebBrowserOverlayView.h</key>
+		<data>
+		xXT+vb1hw4mvdORqkMUnDHyRXEU=
 		</data>
 		<key>PrivateHeaders/FMPABTester.h</key>
 		<data>
@@ -378,7 +382,7 @@
 		</data>
 		<key>PrivateHeaders/IAAdModelInternal.h</key>
 		<data>
-		fcUZIgkN8rVgitm1rwAupkwtXOM=
+		G1RboZrpBH1Nrt8+8xlTPZAKMms=
 		</data>
 		<key>PrivateHeaders/IAAdRequestHelper.h</key>
 		<data>
@@ -410,7 +414,7 @@
 		</data>
 		<key>PrivateHeaders/IACILogger.h</key>
 		<data>
-		ehuMrWStSVvNX8Xizqt4YZMQa9A=
+		bvNnWOjTT/iYl74fdPDw8/W64wM=
 		</data>
 		<key>PrivateHeaders/IAConfigurationManager.h</key>
 		<data>
@@ -750,7 +754,7 @@
 		</data>
 		<key>PrivateHeaders/IAWebBrowserController.h</key>
 		<data>
-		CLlEeI24c5OWx1+IfElyu2UbbzQ=
+		L8rG1FVeUCLWW0tSwgBBYrQsaJc=
 		</data>
 		<key>PrivateHeaders/IAWebController.h</key>
 		<data>
@@ -1285,11 +1289,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			FQpVjWZVhSsrrcijX7TrzKJfybw=
+			CUpaHtuPygH2xcpAtxORy1mcSOE=
 			</data>
 			<key>hash2</key>
 			<data>
-			0NY5x43q2ys6AzWbUJMgInIqgzkVfafQtL6MQ2xLP5w=
+			77lh7ulcQ7fqKHZJ4DdMh7dV7g8ZXW8OWCoKki7Nm0c=
 			</data>
 		</dict>
 		<key>Modules/IASDKCore.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
@@ -1329,22 +1333,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			DxDo2H1CGv8AhW+VWGhC67KkfUc=
+			sN8k7TqsVcAaysoK7Y28ucJLtxA=
 			</data>
 			<key>hash2</key>
 			<data>
-			K8xE0EHiKXuV0NVyLNo6jCKO1rwmx8T3fXUaQ0Is4d0=
+			3TJvYDGcNOVVHqmY1+7ZYpZ0SziSgikqbwtB/UpZkxw=
 			</data>
 		</dict>
 		<key>Modules/IASDKCore.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			FQpVjWZVhSsrrcijX7TrzKJfybw=
+			CUpaHtuPygH2xcpAtxORy1mcSOE=
 			</data>
 			<key>hash2</key>
 			<data>
-			0NY5x43q2ys6AzWbUJMgInIqgzkVfafQtL6MQ2xLP5w=
+			77lh7ulcQ7fqKHZJ4DdMh7dV7g8ZXW8OWCoKki7Nm0c=
 			</data>
 		</dict>
 		<key>Modules/IASDKCore.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
@@ -1384,11 +1388,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			cMvtnEc+gBD6CVpGBFKSYYVPIRY=
+			zuPSteb9xIyHf1SqwrntCcdEWpM=
 			</data>
 			<key>hash2</key>
 			<data>
-			B+3NWTRJoFuPJCC4W6yfhkUqaODt7SYhpxKAQfaKNDo=
+			H2cIuC2ueoCHtp0YCuRj5g0PNqVpsPw+0hycix3yFbI=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
@@ -1483,11 +1487,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			vh7h8IM7k521j/mjPryteATfOz8=
+			etTxBh9fV2bKSG4I/3XR3kIIlOc=
 			</data>
 			<key>hash2</key>
 			<data>
-			uaJ+2ZzB1a/odxsngbam1xjz/AwnYkptJ0wY0EbcGFM=
+			lfle3FR8Gxx8M2BnKJnDjr8PV25FPvGwqMaeHgRUF6E=
 			</data>
 		</dict>
 		<key>PrivateHeaders/DTXSKAdService.h</key>
@@ -1499,6 +1503,17 @@
 			<key>hash2</key>
 			<data>
 			AMU0n593UcWs4TYIWg6fxSaqyzyDFbDQyYNhqeOY7zs=
+			</data>
+		</dict>
+		<key>PrivateHeaders/DTXWebBrowserOverlayView.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			xXT+vb1hw4mvdORqkMUnDHyRXEU=
+			</data>
+			<key>hash2</key>
+			<data>
+			WGYRxJqZfG+YGaCXdoeb9tP+CTC5wb4QN8LkMYz8kf8=
 			</data>
 		</dict>
 		<key>PrivateHeaders/FMPABTester.h</key>
@@ -1835,11 +1850,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			fcUZIgkN8rVgitm1rwAupkwtXOM=
+			G1RboZrpBH1Nrt8+8xlTPZAKMms=
 			</data>
 			<key>hash2</key>
 			<data>
-			kd7hvkVGXlEGOzA88Jg8ffWYpxLWpq5Yn4dNOwjH9Yc=
+			mSOzZFOWK09UWDyQCQ8QwX4G9CdxfM/6qqRKupCm6IU=
 			</data>
 		</dict>
 		<key>PrivateHeaders/IAAdRequestHelper.h</key>
@@ -1923,11 +1938,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			ehuMrWStSVvNX8Xizqt4YZMQa9A=
+			bvNnWOjTT/iYl74fdPDw8/W64wM=
 			</data>
 			<key>hash2</key>
 			<data>
-			gkrOG49N9nGS4pqD7YGwkMo14B+JG+hkFEI7HUx6uAU=
+			q/LBtzLBgJjBaHsyYodi5bc4ijc4S/5UGLrtOKu8Sh8=
 			</data>
 		</dict>
 		<key>PrivateHeaders/IAConfigurationManager.h</key>
@@ -2858,11 +2873,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			CLlEeI24c5OWx1+IfElyu2UbbzQ=
+			L8rG1FVeUCLWW0tSwgBBYrQsaJc=
 			</data>
 			<key>hash2</key>
 			<data>
-			rwYtky/j6GmhtA8JlhM+13MwbbldcNNA62eNCNOL0HE=
+			wgeiV1xjVna0Qy49lIOJjUR5UjxDeDerwLWlOY9Nw3U=
 			</data>
 		</dict>
 		<key>PrivateHeaders/IAWebController.h</key>
