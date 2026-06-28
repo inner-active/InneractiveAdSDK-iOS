@@ -7,10 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		02FB11303C39FF97B560729B /* IASDKCore.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = AE2FC9DE70FBBE516234F49F /* IASDKCore.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		11730DA12E997D900056B158 /* VERSION.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 11730DA02E997D900056B158 /* VERSION.xcconfig */; };
 		11B2567E2EA501990007F1F5 /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = 11B2567D2EA501990007F1F5 /* PrivacyInfo.xcprivacy */; };
-		497F3DEA23DFE452BC196394 /* IASDKCore.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE7128A9C4FA5BCABC1E9E6E /* IASDKCore.xcframework */; };
-		DE30D5E8619292240ABA16C0 /* IASDKCore.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = EE7128A9C4FA5BCABC1E9E6E /* IASDKCore.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		4B2962C1E98A8C84AF6FCEE8 /* IASDKCore.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE2FC9DE70FBBE516234F49F /* IASDKCore.xcframework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -20,7 +20,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				DE30D5E8619292240ABA16C0 /* IASDKCore.xcframework in Embed Frameworks */,
+				02FB11303C39FF97B560729B /* IASDKCore.xcframework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -32,7 +32,7 @@
 		116698672E7C01CB00D43213 /* IASDKCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = IASDKCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		11730DA02E997D900056B158 /* VERSION.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = VERSION.xcconfig; path = ../VERSION.xcconfig; sourceTree = "<group>"; };
 		11B2567D2EA501990007F1F5 /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
-		EE7128A9C4FA5BCABC1E9E6E /* IASDKCore.xcframework */ = {isa = PBXFileReference; includeInIndex = 1; name = IASDKCore.xcframework; path = ../IASDKCore/IASDKCore.xcframework; sourceTree = "<group>"; };
+		AE2FC9DE70FBBE516234F49F /* IASDKCore.xcframework */ = {isa = PBXFileReference; includeInIndex = 1; name = IASDKCore.xcframework; path = ../IASDKCore/IASDKCore.xcframework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -61,7 +61,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				497F3DEA23DFE452BC196394 /* IASDKCore.xcframework in Frameworks */,
+				4B2962C1E98A8C84AF6FCEE8 /* IASDKCore.xcframework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -91,7 +91,7 @@
 			isa = PBXGroup;
 			children = (
 				116698672E7C01CB00D43213 /* IASDKCore.framework */,
-				EE7128A9C4FA5BCABC1E9E6E /* IASDKCore.xcframework */,
+				AE2FC9DE70FBBE516234F49F /* IASDKCore.xcframework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
