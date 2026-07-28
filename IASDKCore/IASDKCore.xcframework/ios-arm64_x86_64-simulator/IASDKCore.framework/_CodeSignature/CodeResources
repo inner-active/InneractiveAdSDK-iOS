@@ -138,11 +138,11 @@
 		</data>
 		<key>Headers/IASDKCore-Swift.h</key>
 		<data>
-		t+VzJX/U3fu2Pask3N8Bj93UPIA=
+		+ixDD3pc4XLtjm3XopXUwHBku9E=
 		</data>
 		<key>Headers/IASDKCore.h</key>
 		<data>
-		SdXKISHyUtPODhXvuU90qwFIwoc=
+		Jz9Y74aEUXprhmDWWxOVzsm+QII=
 		</data>
 		<key>Headers/IAUnitController.h</key>
 		<data>
@@ -174,47 +174,47 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		jLxuqDp8JnE9Xtfw9lRUymhmdGY=
+		otOjxtCjS61hDi7mtnyZtaDf474=
 		</data>
 		<key>Modules/IASDKCore.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<data>
-		AF+zt51bWQjIsyv4l091sWaBByw=
+		KKSqM1HjQ4Zab8YWucfWZp8+OSM=
 		</data>
 		<key>Modules/IASDKCore.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		Q4EUVptdxDzy2PG9ldorgc0Qakg=
+		m1km7loS3lCLpj0ppgPocwqfvQs=
 		</data>
 		<key>Modules/IASDKCore.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		twWQHVGGQXW97M1x3AYgBq2twRM=
+		cFdl6vp1CEP5j2FjYSm0sPMBGaA=
 		</data>
 		<key>Modules/IASDKCore.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		Q4EUVptdxDzy2PG9ldorgc0Qakg=
+		m1km7loS3lCLpj0ppgPocwqfvQs=
 		</data>
 		<key>Modules/IASDKCore.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		eCUdcEUZeayMDZ3rovfZfmXRsMc=
+		N+D/QtA4FsyT/e3OHC+JGzRdxtU=
 		</data>
 		<key>Modules/IASDKCore.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
-		AF+zt51bWQjIsyv4l091sWaBByw=
+		KKSqM1HjQ4Zab8YWucfWZp8+OSM=
 		</data>
 		<key>Modules/IASDKCore.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		i5Wb2d01ja1EoJpGQIrRsakGw0k=
+		5UxMIVaWLPNZWGpVBPi6pBYg4oc=
 		</data>
 		<key>Modules/IASDKCore.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		Fl6lj5q66VGrYLZ7sNfRA331EDQ=
+		ijX7K+Dcq+hQgPIvO6wp2Odn6aM=
 		</data>
 		<key>Modules/IASDKCore.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		i5Wb2d01ja1EoJpGQIrRsakGw0k=
+		5UxMIVaWLPNZWGpVBPi6pBYg4oc=
 		</data>
 		<key>Modules/IASDKCore.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		+0TwSjYFSXuj1LqJGNcWLk8onjA=
+		Dt0zTRsZdX1lKfKf9kSFAp88cY0=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -254,7 +254,7 @@
 		</data>
 		<key>PrivateHeaders/DTXSKAdService.h</key>
 		<data>
-		klKPlXrlq7UlabyZQuaXOZSe/0E=
+		s8Nuup+0AwwE/2vebUHgtA1Wpbg=
 		</data>
 		<key>PrivateHeaders/DTXWebBrowserOverlayView.h</key>
 		<data>
@@ -284,14 +284,6 @@
 		<data>
 		7AKUmftVhlXgQZzakeur6j1bQ+0=
 		</data>
-		<key>PrivateHeaders/FMPCompanionAdsVASTParser.h</key>
-		<data>
-		Op46mF6+5c9WB5G9VI5c5VQBHyc=
-		</data>
-		<key>PrivateHeaders/FMPCompanionAssetsParser.h</key>
-		<data>
-		dpmq7haaq9kcEkSRzMfpQ8QKaOM=
-		</data>
 		<key>PrivateHeaders/FMPCompanionManager.h</key>
 		<data>
 		GpOosjqMRqQHYc3Xu0I5aqr+xAI=
@@ -312,10 +304,6 @@
 		<data>
 		hEMXPLbOZgb0Efy4MnuxqoF+SgA=
 		</data>
-		<key>PrivateHeaders/FMPMediaFilesVASTParser.h</key>
-		<data>
-		UqyXzzpjWbog9bpY6Bh2P09Btac=
-		</data>
 		<key>PrivateHeaders/FMPPlayableUserEngagement.h</key>
 		<data>
 		QZfcqdFb60rpWR54yMcrfsmYcvQ=
@@ -331,22 +319,6 @@
 		<key>PrivateHeaders/FMPStopwatch.h</key>
 		<data>
 		W8aXaeOPgrHLUVfXTxIEdMT4Ogc=
-		</data>
-		<key>PrivateHeaders/FMPTrackingEventsVASTParser.h</key>
-		<data>
-		tqNIKXANbH6Q9TX6KftevAufRmg=
-		</data>
-		<key>PrivateHeaders/FMPVASTExtensionsParser.h</key>
-		<data>
-		ZTIdOCwA9twmU56LUk1aTMIhCAU=
-		</data>
-		<key>PrivateHeaders/FMPVASTParserBase.h</key>
-		<data>
-		iPM3k1vX9WpoX334TZuA7/pi4sg=
-		</data>
-		<key>PrivateHeaders/FMPVASTVersionParser.h</key>
-		<data>
-		+i0mhqluTZMdFYEbUmkvzfvLAz4=
 		</data>
 		<key>PrivateHeaders/FMPValidator.h</key>
 		<data>
@@ -386,7 +358,7 @@
 		</data>
 		<key>PrivateHeaders/IAAdRequestHelper.h</key>
 		<data>
-		U+KrdwXiluaCAzOwwHsd7D5K2tk=
+		+fPGwXvle4Q2xQBw8fg5mZealxM=
 		</data>
 		<key>PrivateHeaders/IAAdRequestInternal.h</key>
 		<data>
@@ -638,7 +610,7 @@
 		</data>
 		<key>PrivateHeaders/IAStoreKitProvider.h</key>
 		<data>
-		9ELeQVXbf7RsKy34hEW/TPn0tB8=
+		lHzMiFU44Oxgk7mv7D58xbXe4gY=
 		</data>
 		<key>PrivateHeaders/IATextTintButton.h</key>
 		<data>
@@ -678,7 +650,7 @@
 		</data>
 		<key>PrivateHeaders/IAVASTModel.h</key>
 		<data>
-		NhksYWNyPZXclqK0EHQ1f/Qz6LI=
+		LpDee5DucEVL64XzUNJoD16ngn0=
 		</data>
 		<key>PrivateHeaders/IAVASTTracker.h</key>
 		<data>
@@ -687,10 +659,6 @@
 		<key>PrivateHeaders/IAVASTURLWithID.h</key>
 		<data>
 		pcCrKXWAibzpK0i8G84BPU7PPeo=
-		</data>
-		<key>PrivateHeaders/IAVASTXMLValidator.h</key>
-		<data>
-		BkN9PXHQPbRZM562O5cwDmHPl3Q=
 		</data>
 		<key>PrivateHeaders/IAVideoContentControllerInternal.h</key>
 		<data>
@@ -1058,14 +1026,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			Lk91Dw3oVIQA5A+P+DXkipDZWIGhsq6gZV6deK6YSy8=
+			rHlnhRoEm21SPRMIpaKgQ+K3T8BREm45E5sGlwr1I5g=
 			</data>
 		</dict>
 		<key>Headers/IASDKCore.h</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			qOv4E80XK0UNipIR23f9q7D6mqmfW9HXLi26evVI5yo=
+			7pHJlZjBoYlYomqjZNZEQP8VJcksZ1TY7euWO7+LUB0=
 			</data>
 		</dict>
 		<key>Headers/IAUnitController.h</key>
@@ -1121,70 +1089,70 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			IyYoF10a/Pt4ZbfD5HKNWZgVcGJnNKNNb357QJPrxCc=
+			oGZAKpbxduSY5OFsQ/fPpGp59e7BkWzx4XXFE2bGh+c=
 			</data>
 		</dict>
 		<key>Modules/IASDKCore.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			VGx4ZJz549rD6Qqs/dQC9BqfNh79bP4BT16rEXmAOqs=
+			oHDXbvErZ3ehBSYbDt53ulVSaq0zqLdlGAOzzM2K2eQ=
 			</data>
 		</dict>
 		<key>Modules/IASDKCore.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			HDQA46PZTMD/zfOEQTPy5FlXcQkHOe7U+efRENkfWwg=
+			fosYZG2r8NuIMP3ESAAd+6smNSZoWbRyZAt3e5POQkk=
 			</data>
 		</dict>
 		<key>Modules/IASDKCore.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			VGx4ZJz549rD6Qqs/dQC9BqfNh79bP4BT16rEXmAOqs=
+			oHDXbvErZ3ehBSYbDt53ulVSaq0zqLdlGAOzzM2K2eQ=
 			</data>
 		</dict>
 		<key>Modules/IASDKCore.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			K4hb6EhkpYN4Jvr5VuhsQwV46/tTAeuZNgTTNcixdfI=
+			QTambaZiiuGT/30WOaHOc5Y+hRFfvrKyYYFKFonNa5k=
 			</data>
 		</dict>
 		<key>Modules/IASDKCore.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			IyYoF10a/Pt4ZbfD5HKNWZgVcGJnNKNNb357QJPrxCc=
+			oGZAKpbxduSY5OFsQ/fPpGp59e7BkWzx4XXFE2bGh+c=
 			</data>
 		</dict>
 		<key>Modules/IASDKCore.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			wUBzxkb8pXHx4SjB6qOQev2nXQvJHxQzG7cvqYPm0Y0=
+			CtzvoXTLaCZlYXZfhKZZDdmP1PBXhqqvfn78b3W0H+Y=
 			</data>
 		</dict>
 		<key>Modules/IASDKCore.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			8i4OpL38d2xbad58UwLDLeMUoIf2k8GT/XTX8UWQzm4=
+			vznK7biXRY82fzIaYHxsg2xzxjcxBxCWFUSYQgpJACc=
 			</data>
 		</dict>
 		<key>Modules/IASDKCore.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			wUBzxkb8pXHx4SjB6qOQev2nXQvJHxQzG7cvqYPm0Y0=
+			CtzvoXTLaCZlYXZfhKZZDdmP1PBXhqqvfn78b3W0H+Y=
 			</data>
 		</dict>
 		<key>Modules/IASDKCore.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			EbyVdZjOV8dtOzTUFWEmirXopf73KJHil+y4erLlABQ=
+			CESZ/SuidwtbZwFLgwl5jHdTHR1PlvM5SyWLXTP9l9Y=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
@@ -1254,7 +1222,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			AMU0n593UcWs4TYIWg6fxSaqyzyDFbDQyYNhqeOY7zs=
+			feE46kiN422bUIjV9HrSpUS966bWfOY8P98JOQJ3Dd0=
 			</data>
 		</dict>
 		<key>PrivateHeaders/DTXWebBrowserOverlayView.h</key>
@@ -1306,20 +1274,6 @@
 			+yUiehuvb3vegm8E+hB8ZUvSFZEMpNyH+OwMjdLqZrQ=
 			</data>
 		</dict>
-		<key>PrivateHeaders/FMPCompanionAdsVASTParser.h</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			sNV7uAwozJDQc4u3nO/CoILPbKS+mqtgjVjuNhXxzpk=
-			</data>
-		</dict>
-		<key>PrivateHeaders/FMPCompanionAssetsParser.h</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			xOYLkWBemVqvHPX6dFU1+zOJIlBLIi+h75mqDharkco=
-			</data>
-		</dict>
 		<key>PrivateHeaders/FMPCompanionManager.h</key>
 		<dict>
 			<key>hash2</key>
@@ -1355,13 +1309,6 @@
 			MGI+AdkYBeT4Gk3RzGeE4uSUI4PKhbcAa6oz6NeLqJo=
 			</data>
 		</dict>
-		<key>PrivateHeaders/FMPMediaFilesVASTParser.h</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			rBMNGbcWlVKfyKr/4IfgoJYlEgdGpii9MDiKMt+zb3E=
-			</data>
-		</dict>
 		<key>PrivateHeaders/FMPPlayableUserEngagement.h</key>
 		<dict>
 			<key>hash2</key>
@@ -1388,34 +1335,6 @@
 			<key>hash2</key>
 			<data>
 			hRrdCqiDWb4FV6IH6oa5CLIm+PRpomUpmWvaBXgg4oo=
-			</data>
-		</dict>
-		<key>PrivateHeaders/FMPTrackingEventsVASTParser.h</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			2yCwHpwJmbomLpLIyGi9Uf4gO9LkpMm4Xhk7t+mO4Ts=
-			</data>
-		</dict>
-		<key>PrivateHeaders/FMPVASTExtensionsParser.h</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			VYlPlsDHnXQCTl09Iu7zxfjVmkwag/wfYvCNsvC2UM8=
-			</data>
-		</dict>
-		<key>PrivateHeaders/FMPVASTParserBase.h</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			SjO2zFYN0z0HpLGNcKEgjiHcYHbBwArNTqALlwnx5jE=
-			</data>
-		</dict>
-		<key>PrivateHeaders/FMPVASTVersionParser.h</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			DDwYrbRxFs+lC2ROlAir2cE+zCj9oWyWutZO/WiIpaw=
 			</data>
 		</dict>
 		<key>PrivateHeaders/FMPValidator.h</key>
@@ -1485,7 +1404,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			Vi5JBtoSkMl6WfxFkowPfRf6aefVmoHc8kQ91aut6/s=
+			gOMuifFDYSfqUyx/vYKVbXDqKi6EdPExGWS9GxpyP48=
 			</data>
 		</dict>
 		<key>PrivateHeaders/IAAdRequestInternal.h</key>
@@ -1926,7 +1845,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			1iFCp3y86ay4Z17J8UVtzAUUhUhFnG7Uiz7WOmmRoEo=
+			8FOPtcghMzvfIOURUwHZAA3wJSd81C9wHPUGX+jIvt8=
 			</data>
 		</dict>
 		<key>PrivateHeaders/IATextTintButton.h</key>
@@ -1996,7 +1915,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			pmXheDXe+AB8FmGDpdHNEu14oVCQKN+ufJKdr4rtNb8=
+			K0Ewi2ZaQPQhiT587LAL7WE7LaYkrqAYusZCmiCPWMA=
 			</data>
 		</dict>
 		<key>PrivateHeaders/IAVASTTracker.h</key>
@@ -2011,13 +1930,6 @@
 			<key>hash2</key>
 			<data>
 			2sCUJjxKOlvddQWjKS1oFDAIXTYR3rMCr5y2wuVyjf0=
-			</data>
-		</dict>
-		<key>PrivateHeaders/IAVASTXMLValidator.h</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			yO7FiNwAOp2f0mWQKyMIUFSAgpvG+txtr7BDoRMg1lc=
 			</data>
 		</dict>
 		<key>PrivateHeaders/IAVideoContentControllerInternal.h</key>
