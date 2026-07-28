@@ -179,16 +179,11 @@ final class UIKitNativeAdFullScreenLayout: UIViewController {
         ctaButton.layer.cornerRadius = 3
         ctaButton.translatesAutoresizingMaskIntoConstraints = false
 
-        if #available(iOS 15.0, *) {
-            var cfg = UIButton.Configuration.filled()
-            cfg.baseBackgroundColor = .systemBlue
-            cfg.baseForegroundColor = .white
-            cfg.contentInsets = NSDirectionalEdgeInsets(top: 6, leading: 18, bottom: 6, trailing: 18)
-            ctaButton.configuration = cfg
-        } else {
-            ctaButton.backgroundColor  = .systemBlue
-            ctaButton.contentEdgeInsets = UIEdgeInsets(top: 6, left: 18, bottom: 6, right: 18)
-        }
+        var cfg = UIButton.Configuration.filled()
+        cfg.baseBackgroundColor = .systemBlue
+        cfg.baseForegroundColor = .white
+        cfg.contentInsets = NSDirectionalEdgeInsets(top: 6, leading: 18, bottom: 6, trailing: 18)
+        ctaButton.configuration = cfg
     }
 
     private func buildConstraints() {
