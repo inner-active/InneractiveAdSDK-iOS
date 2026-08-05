@@ -1,7 +1,7 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 6.3.3 effective-5.10 (swiftlang-6.3.3.1.3 clang-2100.1.1.101)
-// swift-module-flags: -target x86_64-apple-ios15.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -O -enable-experimental-feature DebugDescriptionMacro -enable-bare-slash-regex -module-name IASDKCore
-// swift-module-flags-ignorable: -no-verify-emitted-module-interface -formal-cxx-interoperability-mode=off -interface-compiler-version 6.3.3
+// swift-compiler-version: Apple Swift version 6.2.1 effective-5.10 (swiftlang-6.2.1.4.8 clang-1700.4.4.1)
+// swift-module-flags: -target x86_64-apple-ios15.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-experimental-feature DebugDescriptionMacro -enable-bare-slash-regex -module-name IASDKCore
+// swift-module-flags-ignorable: -no-verify-emitted-module-interface -formal-cxx-interoperability-mode=off -interface-compiler-version 6.2.1
 import Accelerate
 import AdSupport
 import AppTrackingTransparency
@@ -17,65 +17,137 @@ import _StringProcessing
 import _SwiftConcurrencyShims
 import os
 @objc public protocol IANativeAdSpotBuilder {
+  #if compiler(>=5.3) && $NonescapableTypes
   @objc var adRequest: IAAdRequest? { get set }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   @objc var userInfo: [Swift.String : Any]? { get set }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   @objc var delegate: (any IANativeAdDelegate)? { get set }
+  #endif
 }
 @objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objcMembers final public class IANativeAdSpot : ObjectiveC.NSObject {
   @objc final public let adRequest: IAAdRequest?
   @objc final public let userInfo: [Swift.String : Any]?
   @objc weak final public var delegate: (any IANativeAdDelegate)?
+  #if compiler(>=5.3) && $NonescapableTypes
   @objc final public var spotId: Swift.String? {
     @objc get
   }
+  #endif
   @objc final public var muteVideo: Swift.Bool {
     @objc get
     @objc set
   }
   @objc final public class func build(_ builder: (any IANativeAdSpotBuilder) -> Swift.Void) -> IANativeAdSpot
+  #if compiler(>=5.3) && $NonescapableTypes
   @objc final public func loadAd(withMarkup adMarkup: Swift.String, withCompletion completion: @escaping (_ nativeAdAssets: IANativeAdAssets?, _ error: (any Swift.Error)?) -> Swift.Void)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   @objc final public func loadAd(withMarkup adMarkup: Swift.String, withWatermarkData watermarkData: Foundation.Data, withCompletion completion: @escaping (_ nativeAdAssets: IANativeAdAssets?, _ error: (any Swift.Error)?) -> Swift.Void)
+  #endif
   @available(*, unavailable, message: "Use build(_:) to create IANativeAdSpot")
   @objc override dynamic public init()
   @objc deinit
 }
 extension IANativeAdSpot : IAUnitDelegate {
+  #if compiler(>=5.3) && $NonescapableTypes
   @objc final public func iaParentViewController(for unitController: IAUnitController?) -> UIKit.UIViewController
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   @objc final public func iaAdDidReceiveClick(_ unitController: IAUnitController?)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   @objc final public func iaAdWillLogImpression(_ unitController: IAUnitController?)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   @objc final public func iaUnitControllerWillOpenExternalApp(_ unitController: IAUnitController?)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   @objc final public func iaAdDidExpire(_ unitController: IAUnitController?)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   @objc final public func iaUnitControllerWillPresentFullscreen(_ unitController: IAUnitController?)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   @objc final public func iaUnitControllerDidPresentFullscreen(_ unitController: IAUnitController?)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   @objc final public func iaUnitControllerWillDismissFullscreen(_ unitController: IAUnitController?)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   @objc final public func iaUnitControllerDidDismissFullscreen(_ unitController: IAUnitController?)
+  #endif
 }
 extension IANativeAdSpot : IAVideoContentDelegate {
+  #if compiler(>=5.3) && $NonescapableTypes
   @objc final public func iaVideoCompleted(_ contentController: IAVideoContentController?)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   @objc final public func iaVideoContentController(_ contentController: IAVideoContentController?, videoInterruptedWithError error: any Swift.Error)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   @objc final public func iaVideoContentController(_ contentController: IAVideoContentController?, videoDurationUpdated videoDuration: Foundation.TimeInterval)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   @objc final public func iaVideoContentController(_ contentController: IAVideoContentController?, videoProgressUpdatedWithCurrentTime currentTime: Foundation.TimeInterval, totalTime: Foundation.TimeInterval)
+  #endif
 }
 extension IANativeAdSpot : DTXNativeImageContentDelegate {
+  #if compiler(>=5.3) && $NonescapableTypes
   @objc final public func nativeImage(_ nativeImageContentController: DTXNativeImageContentController?, loadedImageFrom url: Foundation.URL)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   @objc final public func nativeImage(_ nativeImageContentController: DTXNativeImageContentController?, failedToLoadImageFrom url: Foundation.URL, error: any Swift.Error)
+  #endif
 }
 @objc public protocol IANativeAdDelegate {
+  #if compiler(>=5.3) && $NonescapableTypes
   @objc func iaParentViewController(forAdSpot adSpot: IANativeAdSpot?) -> UIKit.UIViewController
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   @objc optional func iaNativeAdDidReceiveClick(_ adSpot: IANativeAdSpot?, origin: Swift.String?)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   @objc optional func iaNativeAdWillLogImpression(_ adSpot: IANativeAdSpot?)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   @objc optional func iaNativeAdWillOpenExternalApp(_ adSpot: IANativeAdSpot?)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   @objc optional func iaNativeAdDidExpire(_ adSpot: IANativeAdSpot?)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   @objc optional func iaNativeAdWillPresentFullscreen(_ adSpot: IANativeAdSpot?)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   @objc optional func iaNativeAdDidPresentFullscreen(_ adSpot: IANativeAdSpot?)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   @objc optional func iaNativeAdWillDismissFullscreen(_ adSpot: IANativeAdSpot?)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   @objc optional func iaNativeAdDidDismissFullscreen(_ adSpot: IANativeAdSpot?)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   @objc optional func iaNativeAdVideoCompleted(_ adSpot: IANativeAdSpot?)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   @objc optional func iaNativeAd(_ adSpot: IANativeAdSpot?, videoInterruptedWithError error: any Swift.Error)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   @objc optional func iaNativeAd(_ adSpot: IANativeAdSpot?, videoDurationUpdated videoDuration: Foundation.TimeInterval)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   @objc optional func iaNativeAd(_ adSpot: IANativeAdSpot?, videoProgressUpdatedWithCurrentTime currentTime: Foundation.TimeInterval, totalTime: Foundation.TimeInterval)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   @objc optional func iaNativeAd(_ adSpot: IANativeAdSpot?, didLoadImageFromUrl url: Foundation.URL)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   @objc optional func iaNativeAdSpot(_ adSpot: IANativeAdSpot?, didFailToLoadImageFromUrl: Foundation.URL, with error: any Swift.Error)
+  #endif
 }
 @objc public enum ViewTag : Swift.Int {
   case title = 1
@@ -85,7 +157,9 @@ extension IANativeAdSpot : DTXNativeImageContentDelegate {
   case rating = 6
   case cta = 7
   case root = 8
+  #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Swift.Int)
+  #endif
   public typealias RawValue = Swift.Int
   public var rawValue: Swift.Int {
     get
@@ -99,7 +173,9 @@ extension IANativeAdSpot : DTXNativeImageContentDelegate {
   @objc final public let mediaView: UIKit.UIView
   @objc final public let rating: Foundation.NSNumber?
   @objc final public let mediaAspectRatio: Foundation.NSNumber?
+  #if compiler(>=5.3) && $NonescapableTypes
   @objc(registerViewForInteraction:mediaView:iconView:clickableViews:) final public func registerViewForInteraction(rootView: UIKit.UIView?, mediaView: UIKit.UIView?, iconView: UIKit.UIView?, clickableViews: [UIKit.UIView]?)
+  #endif
   @objc deinit
 }
 @objc public enum DTXLogLevel : Swift.Int, Swift.Codable {
@@ -108,7 +184,9 @@ extension IANativeAdSpot : DTXNativeImageContentDelegate {
   case error = 2
   case info = 3
   case debug = 4
+  #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Swift.Int)
+  #endif
   public typealias RawValue = Swift.Int
   public var rawValue: Swift.Int {
     get
