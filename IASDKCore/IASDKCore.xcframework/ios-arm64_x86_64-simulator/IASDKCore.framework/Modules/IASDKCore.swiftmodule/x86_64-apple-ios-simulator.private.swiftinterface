@@ -6,10 +6,12 @@ import Accelerate
 import AdSupport
 import AppTrackingTransparency
 import AudioToolbox
+import CoreTelephony
 import Foundation
 @_exported import IASDKCore
 import StoreKit
 import Swift
+import SystemConfiguration
 import UIKit
 import WebKit
 import _Concurrency
