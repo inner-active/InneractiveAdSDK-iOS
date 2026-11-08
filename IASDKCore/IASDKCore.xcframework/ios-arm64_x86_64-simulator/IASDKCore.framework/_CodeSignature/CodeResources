@@ -174,11 +174,11 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		ANkqkg6gC5g03/xrQiXfXxI5sCw=
+		yVdEX7Xt410AQdLaO/tGy09RN1U=
 		</data>
 		<key>Modules/IASDKCore.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<data>
-		H/BddgVx10Bz8cxRaLBTXoXA4Eg=
+		2PgikFYDrzmk0t56UrHbRcuV3Ew=
 		</data>
 		<key>Modules/IASDKCore.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
@@ -194,11 +194,11 @@
 		</data>
 		<key>Modules/IASDKCore.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		imMbyUURZpai+DdMlhgf2p23tBk=
+		6vqEoQUvacbikfIKuGWVEuGMIWA=
 		</data>
 		<key>Modules/IASDKCore.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
-		H/BddgVx10Bz8cxRaLBTXoXA4Eg=
+		2PgikFYDrzmk0t56UrHbRcuV3Ew=
 		</data>
 		<key>Modules/IASDKCore.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
@@ -214,7 +214,7 @@
 		</data>
 		<key>Modules/IASDKCore.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		9qashTD0/Bu7oVO003kk1zqxJjc=
+		DFBhNFKeRTUAU8lwyaBJxGXCK38=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -279,22 +279,6 @@
 		<key>PrivateHeaders/FMPCompanionManager.h</key>
 		<data>
 		GpOosjqMRqQHYc3Xu0I5aqr+xAI=
-		</data>
-		<key>PrivateHeaders/FMPEvent.h</key>
-		<data>
-		jSJeSqic6gdUST6lTFl8FvC7mzM=
-		</data>
-		<key>PrivateHeaders/FMPEventLimitPerIntervalValidator.h</key>
-		<data>
-		qFasU3Tco5TZxP1+ZYR5m3M5mVE=
-		</data>
-		<key>PrivateHeaders/FMPEventLimitPerServerSessionValidator.h</key>
-		<data>
-		NMP1/+dlkZ+TRJBVBRhDk8ordGA=
-		</data>
-		<key>PrivateHeaders/FMPEventLimitValidator.h</key>
-		<data>
-		hEMXPLbOZgb0Efy4MnuxqoF+SgA=
 		</data>
 		<key>PrivateHeaders/FMPPlayableUserEngagement.h</key>
 		<data>
@@ -378,19 +362,11 @@
 		</data>
 		<key>PrivateHeaders/IAContentControllerInternal.h</key>
 		<data>
-		7cID4LfUwRvu66HZ1MSJEAQfEeM=
+		yTt01dPbRsALNw0MTiGxPjxmJg8=
 		</data>
 		<key>PrivateHeaders/IAEndcardViewController.h</key>
 		<data>
 		SFVUlmXZR3T8v4TEe06UwYE4ieU=
-		</data>
-		<key>PrivateHeaders/IAEventsAggregator.h</key>
-		<data>
-		ft6P92wUFQy9l5+CSMs1OazYvlg=
-		</data>
-		<key>PrivateHeaders/IAEventsReporter.h</key>
-		<data>
-		zVljI2zbrVogwI+DQ2pxNjGsrDI=
 		</data>
 		<key>PrivateHeaders/IAFullscreenUnitControllerInternal.h</key>
 		<data>
@@ -534,7 +510,7 @@
 		</data>
 		<key>PrivateHeaders/IAMRAIDProtocolController.h</key>
 		<data>
-		8gW55ID0ns5sxT6wYbjUT80sEYo=
+		NBVzQlCsum+xPSpm3B2o+3fn1G8=
 		</data>
 		<key>PrivateHeaders/IAMRAIDProtocolDimView.h</key>
 		<data>
@@ -654,7 +630,7 @@
 		</data>
 		<key>PrivateHeaders/IAVideoContentLoader.h</key>
 		<data>
-		5BZlOu0wyAZKoNbmgmxG+3UeEVM=
+		TenHcb+ZwkhE5/hw92j95WAWNL8=
 		</data>
 		<key>PrivateHeaders/IAVideoContentModelInternal.h</key>
 		<data>
@@ -1073,7 +1049,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			GLx+C1FJhBMNx2MDXN2tTyZl5AuKrxGrgkXajTZ9BTo=
+			g2lPFhsUXCJCRDJ9idJLeOx93xAX2hSOPYN97a+yhW0=
 			</data>
 		</dict>
 		<key>Modules/IASDKCore.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
@@ -1101,14 +1077,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			LX2RzzTeo+bCEjA0K0gaW4KcE/RU6uy83VusYcRucHc=
+			rN0GKt7JRncmpcoaMe7mQUqAiug8lH1ePsu0GHypW3Y=
 			</data>
 		</dict>
 		<key>Modules/IASDKCore.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			GLx+C1FJhBMNx2MDXN2tTyZl5AuKrxGrgkXajTZ9BTo=
+			g2lPFhsUXCJCRDJ9idJLeOx93xAX2hSOPYN97a+yhW0=
 			</data>
 		</dict>
 		<key>Modules/IASDKCore.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
@@ -1136,7 +1112,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			euUtMkNbhHOxiXDVo8JqVpgAcfQyiax0G423Yh9lCz0=
+			wQ3+kfzfGgRMp0g1P7A/eb40y0MQYNGdrQKSQjq4JQs=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
@@ -1249,34 +1225,6 @@
 			<key>hash2</key>
 			<data>
 			T81Q2LEHZt0bQEBWUboAlmurSiMxvBt4CbVZb9FQSsk=
-			</data>
-		</dict>
-		<key>PrivateHeaders/FMPEvent.h</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			XSC1HPbcH+II+E710tvW5uEHTbfOPBtL1Scyz/2PcVU=
-			</data>
-		</dict>
-		<key>PrivateHeaders/FMPEventLimitPerIntervalValidator.h</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			8FGoIAva8x7yAaGmaIZrVDXsEKYxWy9YBJXemz6mhFI=
-			</data>
-		</dict>
-		<key>PrivateHeaders/FMPEventLimitPerServerSessionValidator.h</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			MKZLafKtO3pNsNS/1ItN4to2FGBEGOc6vzeplHumKUc=
-			</data>
-		</dict>
-		<key>PrivateHeaders/FMPEventLimitValidator.h</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			MGI+AdkYBeT4Gk3RzGeE4uSUI4PKhbcAa6oz6NeLqJo=
 			</data>
 		</dict>
 		<key>PrivateHeaders/FMPPlayableUserEngagement.h</key>
@@ -1423,7 +1371,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			mpheUNZp3VUtJO4yVbHq0av95JKvXYjnpalJ7p8aYdU=
+			T2567Wh/AsoDJKKH7d+8YN+/ad2PfhZr3kApjmAgp0w=
 			</data>
 		</dict>
 		<key>PrivateHeaders/IAEndcardViewController.h</key>
@@ -1431,20 +1379,6 @@
 			<key>hash2</key>
 			<data>
 			UF+UNMvyrHn5M/KnK+Yp1QDNov75UfQCf83YPg9nSTk=
-			</data>
-		</dict>
-		<key>PrivateHeaders/IAEventsAggregator.h</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			REeucawv0qTCHH52P/z99JNF+HQuV9TbyMWMZAcOMX0=
-			</data>
-		</dict>
-		<key>PrivateHeaders/IAEventsReporter.h</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			u1hRLF+8q5a5EVwQcGaslzR3tlxorOfzp/jBUkxpG9I=
 			</data>
 		</dict>
 		<key>PrivateHeaders/IAFullscreenUnitControllerInternal.h</key>
@@ -1696,7 +1630,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			MVq93mOuieNvphqMry3spakHa30oinaPaqqNoiTW7AQ=
+			dMzEuHqWRUkV9/DoYC6EDTiG3TtPPyTi7ZVpvBjxAOA=
 			</data>
 		</dict>
 		<key>PrivateHeaders/IAMRAIDProtocolDimView.h</key>
@@ -1906,7 +1840,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			QAkkgww1oHK4++sUnd0vWkbsE35hIMPsfKoNuzK6w0M=
+			IFWDZ2w1Hide0goUxwELgiG60DYp+xIbi221d/puSvs=
 			</data>
 		</dict>
 		<key>PrivateHeaders/IAVideoContentModelInternal.h</key>
